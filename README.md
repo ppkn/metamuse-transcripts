@@ -9,3 +9,6 @@ This project hosts transcripts for [Metamuse](https://museapp.com/podcast/), a p
 
 ## Methodology
 After trying a couple of homegrown approaches, I landed on using automated transcription from [Rev](https://rev.com/) to get the original transcripts and I'm using their online editor to fix things. I'm keeping files up here so people can open pull requests to fix any errors they find in the transcripts.
+
+## Contributing
+I'll try to organize things with Issues so if you want to contribute, you can assign an issue to yourself so you aren't duplicating someone elses work.
