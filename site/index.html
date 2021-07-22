@@ -1,0 +1,9 @@
+---
+layout: default
+---
+<h1>Metamuse Transcripts</h1>
+{% for episode in site.episodes %}
+<h2>
+  <a href="{{ episode.url }}">{{ episode.number }}: {{ episode.title }}</a>
+</h2>
+{% endfor %}
