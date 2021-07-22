@@ -1,17 +1,17 @@
 Geoffrey Litt (00:00):
 Rather than giving someone this hermetically sealed box, can we use an analogy, like build a beautiful Lego set for them and hand it to them where if they like it just as this that's fine. And if they want to add one Lego right there, it's not a big deal. They sort of see the composition of how this thing was made. They have a little bit of flexibility to tweak it because it's made out of parts. They understand
 
-Geoffrey Litt (00:24):
-Hello and welcome to Metamuse. Muse is a tool for thought on iPad. This podcast isn't about Muse the product, it's about Muse the company, and the small team behind it. I'm Adam Wiggins here with my colleague Mark McGranaghan.
+Adam Wiggins (00:24):
+Hello and welcome to Metamuse. Muse is a tool for thought on iPad. This podcast isn't about Muse the product, it's about Muse the company, and the small team behind it. I'm Adam Wiggins here with my colleague Mark McGranaghan.`
 
 Mark McGranaghan (00:36):
 Hey Adam.
 
-Geoffrey Litt (00:37):
+Adam Wiggins (00:37):
 and joined by Geoffrey Litt.
 
 Geoffrey Litt (00:40):
-Hello. It's going to be here.
+Hello hello. It's good to be here.
 
 Geoffrey Litt (00:42):
 So Geoffrey, one thing I'm thinking about these days in raising my young child is growing up in a multilingual household since both of her parents are from two different countries and we're living in a third country. I know you grew up in a multi-lingual household as an adult. What are your reflections on that experience?
@@ -19,19 +19,19 @@ So Geoffrey, one thing I'm thinking about these days in raising my young child i
 Geoffrey Litt (00:59):
 Yeah, so my mom's Japanese and I grew up sort of half my childhood in the US half in Japan. And when I was a kid, my mom sort of forced me and my brother to learn Japanese when we were in the US. And I was just thinking about how I'm so grateful now that she's sort of overrode our preferences as children and that now I have some proficiency in the language. And so raising kids is complicated.
 
-Geoffrey Litt (01:20):
+Adam Wiggins (01:20):
 There is going to be, I can see this already at this young age. And I think that it gets only more so as children get more agency naturally with age, which is parents do know better, they're just older and wiser and know how the world works. And at the same time, a kid needs to find their own way. And authoritarian upbringing doesn't sound particularly like a good way to blossom as a person. So finding that balance between what's prescribed by parents "you'll thank me when you're older" in this case, literally so, versus "let a kid find their own path." I think that's an ongoing, philosophical, moral dilemma.
 
 Geoffrey Litt (01:57):
 Yeah. Especially for something as difficult as learning a language. You know, I do think with whether it's sports or music or these skills that take a lot of time to master, I've also been grateful that my parents helped me learn to love Japanese and building some of that motivation, whether that's from visits to Japan, to hang out there as a kid, I tend to believe that the goal of education at a young age, isn't primarily to transfer the skill it's to, as they say, light that fire that eventually keeps learning, going into this day. I'm practicing my Japanese, trying to keep it up. And so I think that's an important balance to strike too.
 
-Geoffrey Litt (02:30):
+Adam Wiggins (02:30):
 What's that saying, if you want to set sail on a boat, you're building, you don't teach someone to build a boat. You teach them to yearn for the ocean.
 
 Geoffrey Litt (02:40):
 Yeah, exactly. I think there's a lot of that at play.
 
-Geoffrey Litt (02:43):
+Adam Wiggins (02:43):
 So Geoffrey I'd been wanting to get you on the podcast for a while here. We got the chance to work together on the Cambria project at Ink & Switch last year, but I'd love to hear just a little bit about your background, how you came to be doing this work in the tools for thought and independent research space.
 
 Geoffrey Litt (02:59):
@@ -40,7 +40,7 @@ Yeah. So I'm currently doing a PhD at MIT in Computer Science. I'm in a lab call
 Geoffrey Litt (03:47):
 I would have laughed at you and said, you know, no, I'm not that kind of academically minded person, but over my time in startups, I got really interested in these topics. And I decided that rather than go try to start a company or something, the academic environment offers a certain amount of freedom from the need to ship real software immediately, The need to make money immediately that I thought would be really valuable for kind of thinking more deeply about what the problem actually is here. And maybe bigger picture ways to reorient the way that we build software.
 
-Geoffrey Litt (04:19):
+Adam Wiggins (04:19):
 Yeah, that makes sense. You have both industry background, as they might say, ship stuff, fast, solve real customer problems and kind of academic mindset, longer time horizons, more of a search for basic truths, trying to think bigger and more expansively and more philosophically. And that's actually, I think a place that Ink & Switch kind of excels or a part of its reason for existence is to kind of be in that middle space between those two worlds, which I think is not well occupied. And certainly for creative tools. Generally, I feel like that at least right now is the space where we need the most minds and the most effort.
 
 Geoffrey Litt (04:56):
