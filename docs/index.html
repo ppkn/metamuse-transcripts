@@ -1,0 +1,10 @@
+---
+layout: default
+---
+<h1>Metamuse Transcripts</h1>
+{% assign episodes = site.episodes | sort: "number" | reverse %}
+{% for episode in episodes %}
+<h2>
+  <a href="{{ site.baseurl }}{{ episode.url }}">{{ episode.number }} // {{ episode.title }}</a>
+</h2>
+{% endfor %}
