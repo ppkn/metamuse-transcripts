@@ -1,5 +1,7 @@
 # Metamuse Transcripts
 
+**Update (08/2021):** I'm looking for help! See the [contribution guide](CONTRIBUTING.md) for more info.
+
 This project hosts transcripts for [Metamuse](https://museapp.com/podcast/), a podcast about tools for thought, product design, and how to have good ideas, from the team behind [Muse](https://museapp.com/).
 
 ## Structure
@@ -11,6 +13,6 @@ This project hosts transcripts for [Metamuse](https://museapp.com/podcast/), a p
 After trying a couple of homegrown approaches, I landed on using automated transcription from [Rev](https://rev.com/) to get the original transcripts and I'm using their online editor to fix things. I'm keeping files up here so people can open pull requests to fix any errors they find in the transcripts. I got this idea from [Design Details](https://github.com/designdetails/designdetails). It's a great podcast and you should listen to it.
 
 ## Contributing
-I've found using [Rev's](https://rev.com) online editor the best way to correct the transcripts. If you are interested in contributing, open an Issue in this repo or contact me directly.
+TL;DR there is an open issue to correct the auto-generated transcript for each episode. Copy the file from `original/` to `plaintext/`, fix the errors, and open an MR.
 
-I'll try to organize things with Issues so if you want to contribute, you can assign an issue to yourself so you aren't duplicating someone elses work.
+Detailed info for contributing can be found [here](CONTRIBUTING.md)
