@@ -1,0 +1,3834 @@
+﻿WEBVTT
+
+1
+00:00:00.120 --> 00:00:03.690
+<v 0>Maybe the past generation of programmers was sort of subjected to a really awful</v>
+
+2
+00:00:03.691 --> 00:00:04.860
+version of visual programming,
+
+3
+00:00:05.190 --> 00:00:09.840
+but it would be really sad to let that frustration that other people have felt
+
+4
+00:00:10.080 --> 00:00:14.220
+ruin what visual programming could be in a much better design format or just
+
+5
+00:00:14.221 --> 00:00:18.540
+done in very different ways, done in ways that combine graphics and text.
+
+6
+00:00:24.680 --> 00:00:28.880
+<v 1>Hello and welcome to Metamuse. Muse is a tool for thought on iPad.</v>
+
+7
+00:00:28.880 --> 00:00:32.000
+But this podcast isn't about Muse the product.
+
+8
+00:00:32.001 --> 00:00:34.280
+It's about Muse the company and the small team behind it.
+
+9
+00:00:35.090 --> 00:00:37.940
+I'm Adam Wiggins joined by my colleague, Mark McGranaghan.
+
+10
+00:00:37.940 --> 00:00:37.940
+<v 2>Hey Adam.</v>
+
+11
+00:00:37.940 --> 00:00:41.750
+<v 1>And our guest Maggie Appleton from Egghead.</v>
+
+12
+00:00:41.750 --> 00:00:41.750
+<v 0>Hello.</v>
+
+13
+00:00:41.750 --> 00:00:44.660
+<v 1>Thanks for joining us. Maggie.</v>
+
+14
+00:00:44.661 --> 00:00:48.800
+Now listeners to the podcast will know that Mark and I are fans of computing
+
+15
+00:00:48.801 --> 00:00:49.370
+history.
+
+16
+00:00:49.370 --> 00:00:53.600
+We think sometimes the technology industry is a little unaware of its own
+
+17
+00:00:53.601 --> 00:00:54.021
+history.
+
+18
+00:00:54.021 --> 00:00:57.710
+And I understand you recently visited a museum on that topic in your area.
+
+19
+00:00:57.710 --> 00:01:01.580
+<v 0>I did. I got last weekend to go up to Cambridge,</v>
+
+20
+00:01:01.581 --> 00:01:06.080
+which is about an hour away from London and visited the Computer History Museum
+
+21
+00:01:06.081 --> 00:01:06.914
+of Cambridge,
+
+22
+00:01:06.980 --> 00:01:11.060
+which was mostly a warehouse that some people had put an old N64 in and an old
+
+23
+00:01:11.300 --> 00:01:14.090
+Mac and got to play a bit of Pong and Space Invaders,
+
+24
+00:01:14.390 --> 00:01:15.890
+which is terribly educational,
+
+25
+00:01:15.891 --> 00:01:19.100
+but probably not a comprehensive history of computing.
+
+26
+00:01:20.540 --> 00:01:23.420
+<v 1>Now, depending on what generation you grew up with, you know,</v>
+
+27
+00:01:23.421 --> 00:01:26.870
+so now I'm old enough that I go to a computer history museum,
+
+28
+00:01:26.871 --> 00:01:30.470
+or sometimes there's like the pinball museum in Alameda,
+
+29
+00:01:30.471 --> 00:01:33.080
+there in San Francisco or some of these arcade ones.
+
+30
+00:01:33.170 --> 00:01:37.430
+And I remember this stuff when it was new, maybe as a kid. So in that case,
+
+31
+00:01:37.431 --> 00:01:42.260
+it can be as much a sense of nostalgia or a comparison with your
+
+32
+00:01:42.261 --> 00:01:46.190
+sort of adult perspective on something that loomed large as a child.
+
+33
+00:01:46.191 --> 00:01:49.730
+Were there things there you recognized or was this all like essentially stuff
+
+34
+00:01:49.731 --> 00:01:51.260
+that predated your time?
+
+35
+00:01:52.250 --> 00:01:55.970
+<v 0>I was definitely of the N64 generation and definitely the,</v>
+
+36
+00:01:56.180 --> 00:01:57.740
+I don't know which version of the Mac it was,
+
+37
+00:01:57.820 --> 00:02:00.650
+but I have a very clear memory of going into a friend's house who had the Mac.
+
+38
+00:02:01.370 --> 00:02:04.100
+Windows 95 was maybe what we had had at home. I mean,
+
+39
+00:02:04.101 --> 00:02:07.400
+I was grew up sort of in the noughties. So I'm that generation.
+
+40
+00:02:08.530 --> 00:02:10.130
+<v 1>Is that we're calling it now I've heard the naughts.</v>
+
+41
+00:02:10.250 --> 00:02:13.010
+<v 0>I know the naughts. There's no good word for it. I mean.</v>
+
+42
+00:02:13.010 --> 00:02:17.060
+<v 1>The zeroes. Turn of the century, maybe we could go with.</v>
+
+43
+00:02:19.310 --> 00:02:20.780
+So before we get into our topic,
+
+44
+00:02:20.810 --> 00:02:23.270
+love to hear a little bit about your background, Maggie,
+
+45
+00:02:23.271 --> 00:02:25.340
+as well as a little bit about what you do at Egghead.
+
+46
+00:02:25.340 --> 00:02:28.040
+<v 0>Sure. So yeah,</v>
+
+47
+00:02:28.220 --> 00:02:32.900
+Egghead is where I currently work and it's a web development education platform.
+
+48
+00:02:32.930 --> 00:02:35.330
+So we kind of we'll joke it's Netflix for developers.
+
+49
+00:02:35.331 --> 00:02:39.170
+It's mostly video tutorials, teaching anything mostly on JavaScript,
+
+50
+00:02:39.200 --> 00:02:41.780
+lots of React, Angular, Vue, that sort of thing.
+
+51
+00:02:42.260 --> 00:02:45.770
+And I'm the art director/designer/illustrator there.
+
+52
+00:02:46.190 --> 00:02:49.730
+So essentially I handle most of anything that is visual design.
+
+53
+00:02:50.030 --> 00:02:52.760
+And I also do quite a bit of UX design there.
+
+54
+00:02:52.760 --> 00:02:56.090
+It's sort of a small company so you get to be a bit of an all-rounder and
+
+55
+00:02:56.120 --> 00:02:57.980
+because it's a very developer focused company,
+
+56
+00:02:57.981 --> 00:03:00.760
+I also develop mostly working in React.
+
+57
+00:03:00.850 --> 00:03:04.540
+I like to call myself a mediocre developer, so I'm not intense, you know,
+
+58
+00:03:04.541 --> 00:03:08.050
+I don't really like dig into, you know, the deep code, but I know my way around,
+
+59
+00:03:08.380 --> 00:03:10.450
+you know, front end database. So yeah, that's kind of me.
+
+60
+00:03:10.450 --> 00:03:14.340
+<v 1>It seems like you came maybe from the, I dunno,</v>
+
+61
+00:03:14.370 --> 00:03:16.410
+illustration or design side,
+
+62
+00:03:16.411 --> 00:03:19.710
+and then that led you to kind of the development side or was it the other way
+
+63
+00:03:19.711 --> 00:03:20.544
+around?
+
+64
+00:03:20.910 --> 00:03:23.880
+<v 0>Yes, it was definitely design and illustration first.</v>
+
+65
+00:03:23.881 --> 00:03:26.610
+So I had grown up in a very technological household.
+
+66
+00:03:26.611 --> 00:03:29.700
+My parents were both programmers. I had a lot of access to technology,
+
+67
+00:03:29.701 --> 00:03:32.940
+quite young, so I learned, you know, HTML and CSS,
+
+68
+00:03:32.941 --> 00:03:36.180
+but I wasn't really introduced to proper programming young and you know,
+
+69
+00:03:36.181 --> 00:03:38.880
+there wasn't any like IT education in school.
+
+70
+00:03:39.480 --> 00:03:43.380
+So I went more into design and illustration in my early twenties and then
+
+71
+00:03:43.680 --> 00:03:47.370
+learned programming mostly out of employment necessity. You know, I was,
+
+72
+00:03:47.371 --> 00:03:48.930
+I was designing websites and, you know,
+
+73
+00:03:48.931 --> 00:03:52.200
+starting to learn JavaScript a bit and figuring out how to get a modal to work.
+
+74
+00:03:52.201 --> 00:03:54.270
+And then of course, once I started working at Egghead,
+
+75
+00:03:54.870 --> 00:03:58.530
+got a lot more into programming and development. So I very much come at it from,
+
+76
+00:03:58.890 --> 00:04:01.350
+I struggled to learn it. I'm maybe not,
+
+77
+00:04:01.950 --> 00:04:04.650
+I don't want to get into natural types of people,
+
+78
+00:04:04.651 --> 00:04:07.860
+but of course some people have an affinity for being able to do abstract
+
+79
+00:04:07.861 --> 00:04:08.310
+reasoning.
+
+80
+00:04:08.310 --> 00:04:12.150
+And they're very good programmers because they can hold a ton of cognitive
+
+81
+00:04:12.360 --> 00:04:16.050
+context in their head about what component is connected to what database,
+
+82
+00:04:16.051 --> 00:04:18.060
+you know, where messages being passed.
+
+83
+00:04:18.420 --> 00:04:20.580
+And I am not strong on a lot of those fronts.
+
+84
+00:04:20.581 --> 00:04:25.530
+So I do development as someone who needs things visually displayed in front
+
+85
+00:04:25.531 --> 00:04:30.420
+of me. I need a lot of explicit feedback from the machine telling me what's
+
+86
+00:04:30.421 --> 00:04:32.190
+happening and what things are connected.
+
+87
+00:04:32.191 --> 00:04:35.790
+So my perspective I kind of bring to programming is I'm the person that
+
+88
+00:04:35.791 --> 00:04:36.870
+struggles with it. So I really,
+
+89
+00:04:36.871 --> 00:04:40.710
+really want tools that actually help you program if you're not naturally
+
+90
+00:04:40.711 --> 00:04:42.120
+inclined to abstract reasoning.
+
+91
+00:04:42.120 --> 00:04:46.440
+<v 1>I think it's interesting that you saw basic programming through</v>
+
+92
+00:04:46.441 --> 00:04:48.630
+HTML and JavaScript as being,
+
+93
+00:04:48.630 --> 00:04:50.910
+it almost sounds like a table stakes for your career.
+
+94
+00:04:50.911 --> 00:04:53.430
+And I think that's the nature of the computing medium.
+
+95
+00:04:53.431 --> 00:04:58.320
+You can imagine doing visual illustration design work in print, for example,
+
+96
+00:04:58.440 --> 00:05:00.600
+and there, you probably need to learn some things about printers,
+
+97
+00:05:00.601 --> 00:05:01.470
+but for the most part,
+
+98
+00:05:01.650 --> 00:05:04.110
+you're fine just doing everything in pixels on the screen.
+
+99
+00:05:04.111 --> 00:05:06.090
+You hand that over and there you go.
+
+100
+00:05:06.091 --> 00:05:08.400
+And that's probably true in other realms as well,
+
+101
+00:05:08.401 --> 00:05:10.140
+but once you're on the computer,
+
+102
+00:05:10.410 --> 00:05:15.270
+now you're working in the dynamic medium and your ability to express things is
+
+103
+00:05:15.271 --> 00:05:17.880
+very limited. If you're stuck with what's static,
+
+104
+00:05:18.420 --> 00:05:20.790
+I think that's going to become more and more true here in the future.
+
+105
+00:05:20.790 --> 00:05:23.550
+<v 0>Yeah, I think it was good.</v>
+
+106
+00:05:23.551 --> 00:05:26.760
+I was ignorant of the fact at the time that I was in the generation where people
+
+107
+00:05:26.761 --> 00:05:29.490
+were designing websites in Photoshop and I didn't know that was an option.
+
+108
+00:05:29.580 --> 00:05:33.330
+So I went and learned CSS and JavaScript because I couldn't figure out how any
+
+109
+00:05:33.331 --> 00:05:34.380
+other way to build a website.
+
+110
+00:05:34.381 --> 00:05:37.590
+I didn't know I could just mock up pixels and hand it to a developer.
+
+111
+00:05:38.010 --> 00:05:39.450
+So I'm very glad I was ignorant of that.
+
+112
+00:05:42.070 --> 00:05:43.990
+<v 1>So our topic today is visual programming.</v>
+
+113
+00:05:44.530 --> 00:05:49.300
+And also to some degree its relationship to the learnability of programming.
+
+114
+00:05:49.780 --> 00:05:51.520
+And since you suggested this one, Maggie,
+
+115
+00:05:51.521 --> 00:05:54.700
+maybe you can explain a little bit for the audience what the basics--
+
+116
+00:05:55.120 --> 00:05:58.610
+What is visual programming? Why is it interesting area?
+
+117
+00:05:58.610 --> 00:05:59.053
+<v 0>Sure.</v>
+
+118
+00:06:00.200 --> 00:06:04.490
+So visual programming is sort of a catch-all name for a whole bunch of
+
+119
+00:06:04.491 --> 00:06:07.790
+approaches to trying to do programming differently. I want to say,
+
+120
+00:06:07.791 --> 00:06:11.060
+I think the name itself is problematic, which we can get into a bit,
+
+121
+00:06:11.420 --> 00:06:16.310
+but it's essentially trying to explore graphical interfaces for programming in
+
+122
+00:06:16.311 --> 00:06:17.144
+various ways.
+
+123
+00:06:17.450 --> 00:06:21.740
+And there's been a long history of people trying to do this and a fair amount of
+
+124
+00:06:21.741 --> 00:06:24.530
+pushback to versions of it that have gone quite badly,
+
+125
+00:06:24.560 --> 00:06:26.660
+which we can also get into. But yes,
+
+126
+00:06:26.810 --> 00:06:30.230
+it's essentially trying to explore ways of doing programming that is not just
+
+127
+00:06:30.620 --> 00:06:33.530
+based in text, you know, linear text in a text editor,
+
+128
+00:06:33.920 --> 00:06:36.050
+which is kind of the default nowadays.
+
+129
+00:06:37.000 --> 00:06:38.500
+<v 1>Yeah. Certainly when people think of programming,</v>
+
+130
+00:06:38.501 --> 00:06:41.140
+they think of it as being synonymous with coding.
+
+131
+00:06:41.530 --> 00:06:45.250
+I think of that Hollywood hacker view where they're sitting in front of the
+
+132
+00:06:45.251 --> 00:06:45.821
+terminal,
+
+133
+00:06:45.821 --> 00:06:50.680
+the text is probably green on black and it's a bunch of text in
+
+134
+00:06:50.830 --> 00:06:53.230
+this computer language. Now,
+
+135
+00:06:53.380 --> 00:06:57.310
+is there a well-known example of what would count as visual programming?
+
+136
+00:06:57.310 --> 00:07:01.770
+<v 0>The two that jumped to my mind I'd say</v>
+
+137
+00:07:01.771 --> 00:07:06.510
+most famous is probably MIT has a programming language called Scratch
+
+138
+00:07:06.810 --> 00:07:11.040
+that is technically designed for children in order to teach kids programming
+
+139
+00:07:11.220 --> 00:07:12.960
+sort of as their first programming language.
+
+140
+00:07:13.410 --> 00:07:17.130
+And I think this gets referenced a lot in visual programming circles,
+
+141
+00:07:17.131 --> 00:07:21.750
+because it gets rid of needing to use sort of arbitrary syntax symbols to
+
+142
+00:07:21.751 --> 00:07:24.180
+define things like objects and functions.
+
+143
+00:07:24.660 --> 00:07:28.740
+Instead it uses drag and drop blocks with colors that correlate to the type of
+
+144
+00:07:28.741 --> 00:07:29.574
+each element.
+
+145
+00:07:29.790 --> 00:07:34.010
+So it's a very interesting example of how you can kind of lower the bar to
+
+146
+00:07:34.080 --> 00:07:37.050
+people coming in and doing programming since it is designed for children.
+
+147
+00:07:37.680 --> 00:07:38.970
+So that's one that gets famous,
+
+148
+00:07:38.971 --> 00:07:42.930
+but others that I would count as being some form of visual programming that will
+
+149
+00:07:42.931 --> 00:07:46.620
+be very familiar to the audience are tools like Zapier,
+
+150
+00:07:47.100 --> 00:07:51.210
+If This Then That, Integromat. Now the sort of the whole low code,
+
+151
+00:07:51.390 --> 00:07:55.980
+no code movement where people are essentially building node based logic flows,
+
+152
+00:07:56.100 --> 00:07:59.310
+where they're saying, you know, if this happens, then do this else do that.
+
+153
+00:07:59.760 --> 00:08:02.160
+They're doing, you know, programmatic logic,
+
+154
+00:08:02.460 --> 00:08:05.130
+but they're doing it in a very graphical interface.
+
+155
+00:08:05.550 --> 00:08:07.440
+And I count that as visual programming,
+
+156
+00:08:07.441 --> 00:08:10.800
+but I think there's also a wide diversity of, we can talk about, you know,
+
+157
+00:08:11.070 --> 00:08:15.210
+the amount of power each of these platforms might have the amount of flexibility
+
+158
+00:08:15.211 --> 00:08:18.780
+and control they give to the user. But yeah, those would count,
+
+159
+00:08:18.840 --> 00:08:20.100
+I would say as visual programming.
+
+160
+00:08:21.330 --> 00:08:24.960
+<v 1>One it comes from my childhood, thinking of kids learning programming is,</v>
+
+161
+00:08:25.440 --> 00:08:28.740
+there's a game called Rocky's Boots. It was like a 1980s,
+
+162
+00:08:28.890 --> 00:08:30.360
+ran on the Apple II or something.
+
+163
+00:08:30.630 --> 00:08:32.490
+And it showed you how to put together logic gates,
+
+164
+00:08:32.491 --> 00:08:36.930
+the same kind that you use in electrical engineering to make circuits and solve
+
+165
+00:08:36.931 --> 00:08:37.764
+problems.
+
+166
+00:08:37.890 --> 00:08:42.090
+And that was one of the things that maybe introduced me to this sort of formal
+
+167
+00:08:42.211 --> 00:08:44.760
+logic that eventually led to my interest in programming.
+
+168
+00:08:45.120 --> 00:08:47.880
+But one thing I think is interesting about that is in fact,
+
+169
+00:08:47.910 --> 00:08:51.870
+electrical engineers, designing circuits work with a form of visual program.
+
+170
+00:08:51.880 --> 00:08:56.280
+You make a diagram that shows where the resistors and the capacitors and the
+
+171
+00:08:56.281 --> 00:09:00.600
+LEDs and whatever else go in this form that is very much,
+
+172
+00:09:00.930 --> 00:09:04.740
+I guess it's less of a flow diagram and more shows where the electricity flows,
+
+173
+00:09:05.190 --> 00:09:08.910
+which may or may not exactly represent sort of the abstract logic.
+
+174
+00:09:09.330 --> 00:09:13.110
+But I think that's a professional context where there's kind of a visual
+
+175
+00:09:13.111 --> 00:09:15.570
+programming at least representation.
+
+176
+00:09:15.570 --> 00:09:18.690
+<v 2>And we can also talk about examples of</v>
+
+177
+00:09:18.900 --> 00:09:20.730
+visual augmentation.
+
+178
+00:09:21.000 --> 00:09:24.510
+So with Scratch kind of the whole environment is inherently very visual.
+
+179
+00:09:24.870 --> 00:09:28.200
+Other examples we could look at are spreadsheets where you have the cells
+
+180
+00:09:28.201 --> 00:09:31.680
+themselves are like texts formulas more like a typical programming language,
+
+181
+00:09:31.950 --> 00:09:36.150
+but it has this visual element of layout and spatial based variable naming.
+
+182
+00:09:36.920 --> 00:09:39.750
+Another example from when I was learning programming is the,
+
+183
+00:09:40.320 --> 00:09:42.720
+I think it was called Dr. Scheme. I think it has a new name now,
+
+184
+00:09:42.721 --> 00:09:44.880
+or maybe a change to that from something else I forget,
+
+185
+00:09:44.881 --> 00:09:47.580
+but it was the scheme development environment,
+
+186
+00:09:47.610 --> 00:09:49.110
+which first of all was all in one, which is great.
+
+187
+00:09:49.110 --> 00:09:51.360
+So you've got this like one executable, you could run and do everything,
+
+188
+00:09:51.600 --> 00:09:55.260
+but also when you hit errors, which is the dreaded case of a new programmer,
+
+189
+00:09:55.590 --> 00:09:59.280
+it just drew lines to everything you needed to look at, which sounds so basic,
+
+190
+00:09:59.610 --> 00:10:02.070
+but just connecting the dots between this is your call site,
+
+191
+00:10:02.071 --> 00:10:04.320
+and this is your function definition and there's something wrong, you know,
+
+192
+00:10:04.350 --> 00:10:05.850
+check where these two lines terminate and see what's up.
+
+193
+00:10:06.360 --> 00:10:08.670
+We can talk about all kinds of examples of visual augmentation As well.
+
+194
+00:10:08.670 --> 00:10:12.320
+<v 0>Yeah. And I know you guys are also familiar with a few,</v>
+
+195
+00:10:12.560 --> 00:10:15.320
+maybe more powerful visual languages like Origami.
+
+196
+00:10:15.800 --> 00:10:19.910
+And I think Xcode is quite visual in the way that it allows people to program.
+
+197
+00:10:19.911 --> 00:10:20.160
+So yeah,
+
+198
+00:10:20.160 --> 00:10:24.590
+they're all fully fledged IDEs that have visual elements to them and might not
+
+199
+00:10:24.591 --> 00:10:26.930
+be fully fledged visual programming environments.
+
+200
+00:10:26.960 --> 00:10:30.680
+But the hybrid is actually much more interesting than this idea of pure visual
+
+201
+00:10:30.681 --> 00:10:32.150
+programming, but we can get there.
+
+202
+00:10:33.040 --> 00:10:37.330
+<v 1>Our colleague Leonard uses Origami for some design prototyping.</v>
+
+203
+00:10:37.510 --> 00:10:41.530
+We even put some screenshots into one of the beta memos we did. I'll link that,
+
+204
+00:10:41.531 --> 00:10:46.510
+but it's interesting because he's doing design work and typically he can do that
+
+205
+00:10:46.570 --> 00:10:49.120
+in a tool like Figma and pretty static mock-ups.
+
+206
+00:10:49.121 --> 00:10:52.210
+And then we go from there working with Julia, our interface engineers,
+
+207
+00:10:52.600 --> 00:10:57.310
+they connect the static screens to behavior, but there are certain things.
+
+208
+00:10:57.311 --> 00:10:57.821
+For example,
+
+209
+00:10:57.821 --> 00:11:02.080
+when we were working on this whole infinite canvas flex boards feature where
+
+210
+00:11:02.230 --> 00:11:05.980
+just how it felt and how it behaved was the whole design.
+
+211
+00:11:05.981 --> 00:11:10.060
+And you just couldn't evaluate that by looking at a static screen.
+
+212
+00:11:10.061 --> 00:11:12.400
+And furthermore, just the standard click prototypes,
+
+213
+00:11:12.401 --> 00:11:15.970
+like you get in a lot of modern design tools just won't cut it.
+
+214
+00:11:16.420 --> 00:11:20.320
+And so he ended up doing some fairly complex programs that you could then in
+
+215
+00:11:20.321 --> 00:11:24.700
+turn, run on the iPad and really feel how it worked. It's quite impressive.
+
+216
+00:11:25.990 --> 00:11:29.860
+<v 2>Yeah it's going to be very tempting to market this episode with a D&amp;D style</v>
+
+217
+00:11:29.861 --> 00:11:33.970
+alignment chart for visual programming tools like lawful good is, you know,
+
+218
+00:11:33.971 --> 00:11:38.650
+Scratch and what's the other corner chaotic evil is a meme generator
+
+219
+00:11:39.041 --> 00:11:41.890
+is a programming tool or something like that. We'll see if we can pull it off.
+
+220
+00:11:43.480 --> 00:11:45.010
+<v 0>Yeah. I'm thinking of other ones I've seen.</v>
+
+221
+00:11:45.310 --> 00:11:48.250
+I think there's a category of them that I think was very popular in the
+
+222
+00:11:48.251 --> 00:11:48.641
+nineties.
+
+223
+00:11:48.641 --> 00:11:52.600
+I was specifically thinking of LabVIEW gets a lot of negative press I'll say is
+
+224
+00:11:52.601 --> 00:11:54.040
+maybe not chaotic evil,
+
+225
+00:11:54.041 --> 00:11:57.190
+but it's one of the infamous ones that I think was proprietary.
+
+226
+00:11:57.191 --> 00:12:00.640
+So you kind of got locked into the system and then there's a whole Tumblr.
+
+227
+00:12:01.120 --> 00:12:02.830
+We can put it in the show notes when I find the link to it.
+
+228
+00:12:02.831 --> 00:12:06.400
+But I can't remember the name now that is just screenshots of awful literal
+
+229
+00:12:06.401 --> 00:12:09.910
+spaghetti code because it's a node-based visual programming language.
+
+230
+00:12:09.911 --> 00:12:14.650
+So it would just be thousands of boxes and lines running between all of them and
+
+231
+00:12:14.680 --> 00:12:19.060
+literal just a visual spaghetti that you can't tell down from up. But yeah,
+
+232
+00:12:19.061 --> 00:12:20.800
+that would be somewhere in the evil dimension.
+
+233
+00:12:22.380 --> 00:12:22.531
+<v 1>Yeah.</v>
+
+234
+00:12:22.531 --> 00:12:26.910
+The boxes connected by lines also reminds me of another big category that I've
+
+235
+00:12:27.030 --> 00:12:30.750
+come across in my, I guess not my day job would be the way to put it,
+
+236
+00:12:30.751 --> 00:12:34.230
+but music production is something that's been of great interest to me,
+
+237
+00:12:34.350 --> 00:12:37.590
+particularly earlier in my life. And so I worked a lot with software,
+
+238
+00:12:37.591 --> 00:12:41.400
+like Logic Audio, for example, sequencers or something like Reason,
+
+239
+00:12:41.401 --> 00:12:44.760
+which is a kind of an all-in-one synthesizer plus sequencer.
+
+240
+00:12:45.180 --> 00:12:49.830
+And these typically have various ways to essentially wire stuff together.
+
+241
+00:12:49.831 --> 00:12:53.280
+But I think one reason that the visual thing works well there,
+
+242
+00:12:53.520 --> 00:12:56.430
+is you have this clear kind of input/output flow.
+
+243
+00:12:56.431 --> 00:13:01.050
+The output is always going to be an audio stream or in some cases there's video
+
+244
+00:13:01.051 --> 00:13:01.741
+tools as well,
+
+245
+00:13:01.741 --> 00:13:05.850
+where there's a video stream and it's a single sort of time-based flow.
+
+246
+00:13:05.851 --> 00:13:07.860
+And so like a music track or something like that,
+
+247
+00:13:07.980 --> 00:13:11.490
+you've just got seven minutes of music output and you can in Logic, for example,
+
+248
+00:13:11.491 --> 00:13:15.420
+go to the quote unquote environment and there you can just string together.
+
+249
+00:13:15.421 --> 00:13:17.850
+Okay. I want to take the source material.
+
+250
+00:13:17.851 --> 00:13:20.250
+I don't know someone playing a guitar and I'm going to put it through these
+
+251
+00:13:20.251 --> 00:13:22.530
+filters and I'm going to fork it off this way.
+
+252
+00:13:22.770 --> 00:13:26.850
+And then the end output just goes out through, you know, your master volume.
+
+253
+00:13:26.851 --> 00:13:30.090
+And obviously that is very much designed for professional,
+
+254
+00:13:30.360 --> 00:13:33.090
+very serious use cases, but these are non-programmers.
+
+255
+00:13:34.440 --> 00:13:37.860
+<v 0>The visual effects industry has a lot of those same sort of interfaces.</v>
+
+256
+00:13:37.861 --> 00:13:39.420
+So the node model box in there,
+
+257
+00:13:39.421 --> 00:13:42.240
+I was just connecting different things together and really just showing data
+
+258
+00:13:42.241 --> 00:13:45.630
+transformation over time, which is when a flow diagram actually comes in useful.
+
+259
+00:13:47.580 --> 00:13:51.750
+<v 1>And then another one I think it'd be remiss not to mention is iOS has a</v>
+
+260
+00:13:52.290 --> 00:13:54.390
+automation system built in called Shortcuts,
+
+261
+00:13:54.420 --> 00:13:58.530
+which was originally a very cool indie app that apple acquired called Workflow.
+
+262
+00:13:58.890 --> 00:14:02.520
+And this essentially gives you sort of a Scratch style model,
+
+263
+00:14:02.820 --> 00:14:06.930
+but probably even simpler in the sense that you don't have a lot of nesting.
+
+264
+00:14:06.931 --> 00:14:10.470
+And what have you, you just sort of assemble these blocks top to bottom.
+
+265
+00:14:10.471 --> 00:14:11.520
+You can do it on a phone,
+
+266
+00:14:11.910 --> 00:14:14.880
+which actually is pretty interesting that it's possible to do reasonable
+
+267
+00:14:14.940 --> 00:14:16.770
+programming on a phone. And again,
+
+268
+00:14:16.771 --> 00:14:19.590
+I think it does rely on a fairly linear input and output.
+
+269
+00:14:20.010 --> 00:14:22.470
+You're going to apply your shortcut to this image.
+
+270
+00:14:22.471 --> 00:14:25.440
+You're going to do some stuff to it. Something comes out the other side.
+
+271
+00:14:25.650 --> 00:14:28.080
+Maybe it's a transformed image. Maybe it's something else,
+
+272
+00:14:28.530 --> 00:14:33.210
+but that's a good example of a place where visual programming
+
+273
+00:14:33.211 --> 00:14:36.930
+maybe is actually the mainstream in a way that a lot of folks don't even
+
+274
+00:14:36.931 --> 00:14:36.931
+acknowledge.
+
+275
+00:14:36.931 --> 00:14:41.840
+<v 0>Yeah it kind of transitions us into the idea that visual programming</v>
+
+276
+00:14:41.841 --> 00:14:45.110
+ends up being this really large umbrella that I think a lot of the debates
+
+277
+00:14:45.111 --> 00:14:46.160
+around to get into people,
+
+278
+00:14:46.161 --> 00:14:49.580
+just not having an agreed definition of what we're really talking about.
+
+279
+00:14:50.300 --> 00:14:54.020
+And so I mentioned we would come back to it being that it's kind of a terrible
+
+280
+00:14:54.021 --> 00:14:58.880
+name because to call something visual programming suggests that it
+
+281
+00:14:58.881 --> 00:15:01.220
+is something visible with human eyes,
+
+282
+00:15:01.670 --> 00:15:05.690
+which would most certainly include text or a screen.
+
+283
+00:15:06.140 --> 00:15:10.490
+So that would include all programming. So when people say visual programming,
+
+284
+00:15:10.550 --> 00:15:14.900
+I think what it's really getting at is this is my sort of opinion on it I
+
+285
+00:15:14.901 --> 00:15:15.350
+suppose.
+
+286
+00:15:15.350 --> 00:15:19.310
+It's trying to take things that would otherwise be implicit in programming.
+
+287
+00:15:19.311 --> 00:15:21.350
+So parts of the program we don't see,
+
+288
+00:15:21.590 --> 00:15:26.360
+so right data transforming over time or a variable being passed through a
+
+289
+00:15:26.361 --> 00:15:29.600
+function and making it visible in some way.
+
+290
+00:15:30.080 --> 00:15:34.280
+And this is kind of where it gets into the balance that visual programming
+
+291
+00:15:34.310 --> 00:15:38.870
+platforms or languages have to kind of grapple with is how much do you make
+
+292
+00:15:38.871 --> 00:15:40.250
+visible? And in what context,
+
+293
+00:15:40.251 --> 00:15:43.490
+because you can't make everything visible because the point of programming is
+
+294
+00:15:43.491 --> 00:15:48.290
+abstraction and working with higher level primitives and sort of taking away
+
+295
+00:15:48.320 --> 00:15:51.410
+things we don't want to always deal with, right? Like where memory is allocated,
+
+296
+00:15:51.411 --> 00:15:54.350
+you don't want that visible in a higher level programming language.
+
+297
+00:15:54.890 --> 00:15:59.240
+So I always see it as how we take programming and we make different aspects of
+
+298
+00:15:59.241 --> 00:16:02.690
+it visible in different contexts, depending on what we're trying to do.
+
+299
+00:16:04.020 --> 00:16:08.460
+<v 1>Is there a better name, or if you were in charge of the rebrand on this somehow,</v>
+
+300
+00:16:08.580 --> 00:16:09.031
+what would you go for?
+
+301
+00:16:09.031 --> 00:16:13.730
+<v 0>I feel like graphical programming would at least more accurately</v>
+
+302
+00:16:13.731 --> 00:16:17.510
+describe what a lot of these platforms are trying to do. I mean,
+
+303
+00:16:17.540 --> 00:16:21.740
+a lot of them are simply just trying to apply better UX and interaction design
+
+304
+00:16:21.741 --> 00:16:22.580
+to programming, right.
+
+305
+00:16:22.581 --> 00:16:27.470
+They're just trying to make it a more enjoyable experience that gives the user
+
+306
+00:16:27.500 --> 00:16:29.090
+or in this case, you know, it's a developer,
+
+307
+00:16:29.450 --> 00:16:32.540
+what they need at the right time without overloading them with information,
+
+308
+00:16:32.720 --> 00:16:33.020
+you know,
+
+309
+00:16:33.020 --> 00:16:37.310
+it really just being a good cognitive tool for them to get their work done. So,
+
+310
+00:16:37.311 --> 00:16:38.870
+yeah, but graphical programming,
+
+311
+00:16:38.871 --> 00:16:43.730
+I think would more accurately describe node based interfaces or
+
+312
+00:16:43.731 --> 00:16:47.960
+drag and drop, you know, ones like Scratch or even debuggers really,
+
+313
+00:16:47.961 --> 00:16:50.450
+I think are a form of visual programming in a way,
+
+314
+00:16:50.451 --> 00:16:54.530
+ones that really walk you through how the program is executing over time.
+
+315
+00:16:54.710 --> 00:16:57.680
+Although I think it's kind of wild that you wait until something goes wrong
+
+316
+00:16:57.681 --> 00:17:00.260
+until those tools come into the picture.
+
+317
+00:17:01.490 --> 00:17:04.880
+Like why isn't there an inline debugger in every IDE, but you know.
+
+318
+00:17:06.640 --> 00:17:08.380
+<v 1>Actually one of the first sort of,</v>
+
+319
+00:17:08.381 --> 00:17:11.110
+one of my mentors when I was getting started with the professional programming,
+
+320
+00:17:11.560 --> 00:17:16.060
+he strongly felt that you would go and put break points at every interesting
+
+321
+00:17:16.061 --> 00:17:17.080
+point in the code.
+
+322
+00:17:17.650 --> 00:17:20.860
+The first time you ran it and you wouldn't run it and just see what happens,
+
+323
+00:17:21.100 --> 00:17:24.040
+you're going to step through inspect the variables,
+
+324
+00:17:24.730 --> 00:17:26.380
+watch every single point.
+
+325
+00:17:26.620 --> 00:17:29.530
+And only once you've been through it all and watched it all execute from the
+
+326
+00:17:29.531 --> 00:17:31.510
+inside. And everything's what you expect.
+
+327
+00:17:31.720 --> 00:17:33.520
+Then you can look and see what lands on the screen,
+
+328
+00:17:33.520 --> 00:17:36.580
+if that's what you expected or not, but that's kind of the final step.
+
+329
+00:17:36.581 --> 00:17:39.220
+That's more your victory lap, not your first test of whether,
+
+330
+00:17:39.221 --> 00:17:40.090
+what you did worked.
+
+331
+00:17:40.090 --> 00:17:43.010
+<v 0>I think you mentioned that console logs, right.</v>
+
+332
+00:17:43.100 --> 00:17:47.660
+Are one method of sort of putting out or making the program more visible at
+
+333
+00:17:47.661 --> 00:17:48.860
+certain points in time.
+
+334
+00:17:49.410 --> 00:17:51.950
+I was trying to think of a good metaphor for what console logs are, right.
+
+335
+00:17:51.960 --> 00:17:53.670
+It's like if the stream of the program, and it's like,
+
+336
+00:17:53.730 --> 00:17:56.820
+you're shooting up a small bit of information at a point in time.
+
+337
+00:17:56.820 --> 00:17:57.324
+<v 2>Yeah.</v>
+
+338
+00:17:58.071 --> 00:18:03.050
+It's sort of like if you have a map of a territory and you take a journey
+
+339
+00:18:03.051 --> 00:18:03.920
+along the territory.
+
+340
+00:18:04.100 --> 00:18:07.340
+We go in loops and you cross back over your own path and you make jumps and
+
+341
+00:18:07.341 --> 00:18:10.880
+stuff kind of captures all that in a linearized form.
+
+342
+00:18:11.150 --> 00:18:13.760
+And then I see as a compliment to the map, you know,
+
+343
+00:18:13.761 --> 00:18:15.410
+the map gives you the nature of the--
+
+344
+00:18:16.490 --> 00:18:18.140
+Now people can get mad at me on the internet for saying that,
+
+345
+00:18:18.141 --> 00:18:20.960
+but you know that the map has some correlation to the territory, hopefully,
+
+346
+00:18:21.290 --> 00:18:25.550
+but also the linear view of everything that you encountered is also very useful.
+
+347
+00:18:26.920 --> 00:18:31.330
+<v 1>One idea I would raise for the rebrand question I asked earlier was in the Ink</v>
+
+348
+00:18:31.420 --> 00:18:33.250
+and Switch piece we did on end-user computing.
+
+349
+00:18:33.280 --> 00:18:36.340
+And we can talk about the relationship of visual programming to end user
+
+350
+00:18:36.341 --> 00:18:36.791
+computing.
+
+351
+00:18:36.791 --> 00:18:41.530
+But we talked about this property of embodiment and it's exactly what you said,
+
+352
+00:18:41.531 --> 00:18:46.300
+the idea of taking something implicit and potentially very abstract and making
+
+353
+00:18:46.301 --> 00:18:50.770
+it visible. And I think a lot of times in discussions I've seen about this,
+
+354
+00:18:50.771 --> 00:18:55.270
+which are often among people who are already professional software engineers.
+
+355
+00:18:55.540 --> 00:18:59.140
+And that includes both people who are very enthusiastic about end user
+
+356
+00:18:59.141 --> 00:19:02.200
+programming, or just increasing the accessibility of programming,
+
+357
+00:19:02.440 --> 00:19:05.620
+but they themselves are still professional programmers. I have that background,
+
+358
+00:19:05.920 --> 00:19:06.753
+Mark does as well.
+
+359
+00:19:07.210 --> 00:19:11.020
+And whether or not they're pro or con they're coming from that perspective of
+
+360
+00:19:11.021 --> 00:19:14.920
+someone who, for whatever reason found it was drawn to,
+
+361
+00:19:14.921 --> 00:19:19.750
+or was good at holding all of that abstraction in their minds.
+
+362
+00:19:20.230 --> 00:19:24.430
+And so in some ways, I wonder when I see the objection of, I don't know,
+
+363
+00:19:24.550 --> 00:19:26.140
+there's so much visual spaghetti here,
+
+364
+00:19:26.141 --> 00:19:30.370
+but that spaghetti all exists in symbolic code as well.
+
+365
+00:19:30.371 --> 00:19:32.950
+You just can't see it and you have to mentally model it.
+
+366
+00:19:33.100 --> 00:19:34.990
+And some people are unbelievably good at that.
+
+367
+00:19:34.991 --> 00:19:38.770
+And a lot of those people are people who go on to be really great programmers.
+
+368
+00:19:39.280 --> 00:19:41.260
+I'm probably kind of in the middle on that.
+
+369
+00:19:41.261 --> 00:19:44.350
+My complexity threshold is not that great.
+
+370
+00:19:44.351 --> 00:19:47.980
+And I tend to always want to like factor my code in a way to make it more
+
+371
+00:19:47.981 --> 00:19:51.970
+comprehensible and give myself more visibility and that sort of thing.
+
+372
+00:19:52.660 --> 00:19:56.020
+So I wonder how much the needs of visual programming,
+
+373
+00:19:56.021 --> 00:19:57.910
+or this umbrella we're calling visual programming,
+
+374
+00:19:57.911 --> 00:20:02.200
+those serve sort of hypothetical people that today are not programmers,
+
+375
+00:20:02.230 --> 00:20:04.570
+but maybe would have that capability,
+
+376
+00:20:05.320 --> 00:20:07.210
+which I think is the other dimension of this. Right.
+
+377
+00:20:07.211 --> 00:20:09.070
+Which is the learnability side of it.
+
+378
+00:20:09.070 --> 00:20:11.970
+<v 0>Yeah. I definitely agree with that,</v>
+
+379
+00:20:11.971 --> 00:20:14.400
+that I do like to be the representative, for, yeah,
+
+380
+00:20:14.430 --> 00:20:19.200
+mediocre programmers or people who aren't naturally inclined to it and that I
+
+381
+00:20:19.201 --> 00:20:23.070
+have heard a lot of the debates around it of people saying, well, I love Vim.
+
+382
+00:20:23.071 --> 00:20:25.620
+Don't take Vim away from me. You know, if you try to make it visual,
+
+383
+00:20:25.740 --> 00:20:30.390
+I won't be able to work in my crazy text editor with all my customized hotkeys.
+
+384
+00:20:30.391 --> 00:20:33.660
+And I'll say like, textual programming is not going anywhere. You know,
+
+385
+00:20:33.661 --> 00:20:34.050
+it's like,
+
+386
+00:20:34.050 --> 00:20:38.670
+this is all going to be additional affordances built on top of a
+
+387
+00:20:38.730 --> 00:20:40.920
+textual paradigm. You know, text is not leaving,
+
+388
+00:20:41.520 --> 00:20:44.100
+but people say they can't understand why we would ever need it.
+
+389
+00:20:44.400 --> 00:20:47.680
+Whereas my perspective coming into programming, you know,
+
+390
+00:20:47.681 --> 00:20:49.330
+starting when I was 20 or so.
+
+391
+00:20:49.720 --> 00:20:53.800
+When I was first shown VS Code and the Javascript tool chain that I was supposed
+
+392
+00:20:53.801 --> 00:20:56.830
+to work in, and NPM and the command line, I just went,
+
+393
+00:20:57.130 --> 00:20:58.720
+you can't possibly be serious.
+
+394
+00:20:58.720 --> 00:21:03.310
+Like this can't possibly be the way that I'm going to do this.
+
+395
+00:21:04.180 --> 00:21:06.310
+And my computer looks like it's just stepped back into the eighties.
+
+396
+00:21:06.311 --> 00:21:07.540
+Like I don't understand, you know,
+
+397
+00:21:07.541 --> 00:21:12.070
+I've grown up in the rich graphical user interface that gives me what I need
+
+398
+00:21:12.071 --> 00:21:13.960
+visually. And it was just shocking.
+
+399
+00:21:14.380 --> 00:21:18.220
+So I do think that people who are programmers or professional programmers,
+
+400
+00:21:18.580 --> 00:21:20.230
+are maybe ones that I don't know if they want to say,
+
+401
+00:21:20.231 --> 00:21:25.120
+they're more willing to step into that world of invisible connections
+
+402
+00:21:25.121 --> 00:21:26.800
+and implicit logic.
+
+403
+00:21:27.310 --> 00:21:31.180
+And then it is everyone that maybe would shy away from that or would find that
+
+404
+00:21:31.420 --> 00:21:35.080
+more stressful or just less intuitive. They end up being like, okay, well,
+
+405
+00:21:35.470 --> 00:21:35.801
+programming is not for me.
+
+406
+00:21:35.801 --> 00:21:38.970
+<v 2>That really resonates with my experience.</v>
+
+407
+00:21:38.971 --> 00:21:40.410
+And I think there's a few things going on here.
+
+408
+00:21:40.411 --> 00:21:43.560
+One is this issue of accidental complexity,
+
+409
+00:21:44.010 --> 00:21:48.630
+where you have aspects of the experience that are just not really essential to
+
+410
+00:21:48.720 --> 00:21:49.740
+doing the actual programming work.
+
+411
+00:21:49.830 --> 00:21:52.830
+Like basically the tools are designed poorly and unnecessarily so.
+
+412
+00:21:53.100 --> 00:21:54.810
+There's too many things going on. And some of them don't work.
+
+413
+00:21:54.840 --> 00:21:56.040
+They're unnecessarily confusing.
+
+414
+00:21:56.250 --> 00:21:59.850
+I had a similar experience when I first wanted to do a web app at a time,
+
+415
+00:21:59.940 --> 00:22:02.370
+the state of the art was like these Java servlet things.
+
+416
+00:22:02.610 --> 00:22:06.960
+This is like full on enterprise Java wildness. And when I encountered that,
+
+417
+00:22:06.961 --> 00:22:09.120
+I was like, there's no way I'm going to do this. Sorry.
+
+418
+00:22:09.330 --> 00:22:12.270
+And so I went back to my DrScheme where everything is in a nice little bubble.
+
+419
+00:22:12.480 --> 00:22:14.820
+Eventually you got Ruby on Rails and everything was fine and so forth,
+
+420
+00:22:15.240 --> 00:22:19.170
+but there's this other issue of communication and information theory.
+
+421
+00:22:19.170 --> 00:22:20.250
+So by that, I mean,
+
+422
+00:22:20.760 --> 00:22:23.370
+a lesson that I learned from management is whenever you're communicating
+
+423
+00:22:23.371 --> 00:22:24.900
+something, something is said,
+
+424
+00:22:25.170 --> 00:22:27.450
+and then something else is received on the other end,
+
+425
+00:22:27.690 --> 00:22:30.510
+that's like a lossy process. And I think the reason,
+
+426
+00:22:30.570 --> 00:22:35.370
+a lot of programmers like text-based interfaces is that they have very low
+
+427
+00:22:35.371 --> 00:22:37.680
+loss there. They kind of understand what all those symbols mean.
+
+428
+00:22:37.681 --> 00:22:41.070
+And furthermore, they're very dense, whereas a new programmer.
+
+429
+00:22:41.071 --> 00:22:43.680
+And I was once one of these, basically it all gets lost.
+
+430
+00:22:43.681 --> 00:22:45.630
+It just looked like a garble of like alien symbols.
+
+431
+00:22:46.140 --> 00:22:49.950
+So one of the reasons that visual programming environments could be so appealing
+
+432
+00:22:49.951 --> 00:22:52.440
+is they have lower underlying information density,
+
+433
+00:22:52.650 --> 00:22:56.190
+but they're constructed in a way the optical clarity is higher, right.
+
+434
+00:22:56.191 --> 00:22:58.290
+More information gets through to the other side.
+
+435
+00:22:58.740 --> 00:23:02.490
+And I think ultimately that suggests that there's this end game of you get both
+
+436
+00:23:02.520 --> 00:23:06.660
+the very high bandwidth potential of textile interfaces with the
+
+437
+00:23:07.050 --> 00:23:09.450
+augmentation that you can get from other visual aids.
+
+438
+00:23:09.690 --> 00:23:10.780
+I don't know exactly what that looks like. Right.
+
+439
+00:23:10.850 --> 00:23:11.683
+But I think there's something there.
+
+440
+00:23:12.570 --> 00:23:16.020
+<v 0>I definitely, I think discovered that when, as part of my work for Egghead,</v>
+
+441
+00:23:16.200 --> 00:23:18.900
+a lot of my work is illustrating programming concepts, right?
+
+442
+00:23:18.901 --> 00:23:20.490
+So it's very much just educational material,
+
+443
+00:23:20.490 --> 00:23:24.600
+we're talking like articles or animations that kind of go along with the video
+
+444
+00:23:24.601 --> 00:23:29.010
+lessons where, you know, I'm visually explaining things like, you know,
+
+445
+00:23:29.011 --> 00:23:32.910
+how GraphQL works or how React hooks work.
+
+446
+00:23:32.911 --> 00:23:34.380
+So it's just taking concepts.
+
+447
+00:23:34.381 --> 00:23:38.670
+And what I believe I'm doing is making visible the mental models.
+
+448
+00:23:39.000 --> 00:23:42.210
+I tend to use the word metaphors because I'm from more of a cultural
+
+449
+00:23:42.211 --> 00:23:46.070
+anthropology background and I've read a lot of thinkers like George Lakoff and
+
+450
+00:23:46.071 --> 00:23:46.731
+Mark Johnson,
+
+451
+00:23:46.731 --> 00:23:51.230
+who talk about embodied metaphors and sort of the fact that almost everything
+
+452
+00:23:51.231 --> 00:23:55.280
+that we talk about in the abstract realm is based in our embodied experience of
+
+453
+00:23:55.281 --> 00:23:58.340
+the world. So we have this inherent understanding that, like,
+
+454
+00:23:58.610 --> 00:24:00.920
+up is good and is more and is happy.
+
+455
+00:24:00.920 --> 00:24:04.610
+We'll say the stock market went up and the stock market didn't physically move
+
+456
+00:24:04.640 --> 00:24:07.880
+upwards, right? Like it had more money move into it,
+
+457
+00:24:08.360 --> 00:24:12.170
+but we use the term up to think more, good, better, right. And we'll say like,
+
+458
+00:24:12.171 --> 00:24:14.780
+you know, I'm feeling down today means I'm feeling sad.
+
+459
+00:24:14.781 --> 00:24:16.460
+You're not physically moving downwards.
+
+460
+00:24:16.850 --> 00:24:21.740
+But the point is that we have these metaphors that are based in being
+
+461
+00:24:21.741 --> 00:24:24.410
+humans with bodies that have like fronts and backs and ups and downs.
+
+462
+00:24:24.411 --> 00:24:26.840
+And we map all our abstract reasoning on top of that.
+
+463
+00:24:27.560 --> 00:24:31.430
+And when you have to draw like programming function,
+
+464
+00:24:32.150 --> 00:24:35.210
+you really have to look at the language we use around programming functions and
+
+465
+00:24:35.211 --> 00:24:36.170
+really figure out like, okay,
+
+466
+00:24:36.171 --> 00:24:39.890
+there is a physical metaphor baked in here because all things are based off
+
+467
+00:24:39.891 --> 00:24:43.130
+physical understanding. Um, and then drawing it, you know, you draw, okay,
+
+468
+00:24:43.131 --> 00:24:44.000
+there's a component,
+
+469
+00:24:44.001 --> 00:24:46.850
+that's a higher order component in top of a lower order component.
+
+470
+00:24:46.850 --> 00:24:48.260
+It's passing data.
+
+471
+00:24:48.261 --> 00:24:51.560
+So it's mimicking this idea of physical objects moving through space.
+
+472
+00:24:52.130 --> 00:24:55.670
+So it was very obvious to me and trying to draw programming concepts that it's
+
+473
+00:24:55.671 --> 00:25:00.410
+based in physical knowledge and visual programming languages or
+
+474
+00:25:00.411 --> 00:25:03.230
+visual interfaces, just make that explicit. Right.
+
+475
+00:25:03.231 --> 00:25:06.050
+They like actually draw a box that is above another box,
+
+476
+00:25:06.440 --> 00:25:07.970
+or what is to the right of another box,
+
+477
+00:25:07.971 --> 00:25:11.060
+which suggests it's in the future because we think the future is to the right.
+
+478
+00:25:11.480 --> 00:25:14.510
+And the past is to the left, at least in English, Western speaking countries.
+
+479
+00:25:14.511 --> 00:25:15.590
+That's how we map time.
+
+480
+00:25:15.980 --> 00:25:20.180
+So I've always just been kind of fascinated by how we can sort of use these
+
+481
+00:25:20.181 --> 00:25:23.930
+embodied metaphors to help people understand programming concepts,
+
+482
+00:25:23.931 --> 00:25:26.270
+because everyone has a body. So you get these things for free.
+
+483
+00:25:26.300 --> 00:25:30.470
+Like we all get the concept of front back and we can use those in interfaces to
+
+484
+00:25:30.530 --> 00:25:32.000
+communicate to people, you know,
+
+485
+00:25:32.001 --> 00:25:36.590
+the relationship of these otherwise very abstract lines of code that are just
+
+486
+00:25:37.100 --> 00:25:40.400
+encoded things on a hard drive that would otherwise be incomprehensible.
+
+487
+00:25:41.230 --> 00:25:42.280
+<v 1>That's super interesting.</v>
+
+488
+00:25:42.281 --> 00:25:45.640
+And also it actually connects to our design ethos for Muse.
+
+489
+00:25:45.850 --> 00:25:49.990
+A lot of our concept there is we want to tap more into, for example,
+
+490
+00:25:49.991 --> 00:25:54.430
+your spatial reasoning, which is very strong for most humans, as well as yeah,
+
+491
+00:25:54.520 --> 00:25:56.890
+things like the direct manipulation and touch. And so on.
+
+492
+00:25:56.891 --> 00:26:01.330
+Basically taking advantage more of our bodies' and our minds'
+
+493
+00:26:01.360 --> 00:26:05.860
+natural, you might call them talents, or just built in capabilities.
+
+494
+00:26:05.890 --> 00:26:07.690
+Because of course so much what we do with computers,
+
+495
+00:26:07.691 --> 00:26:12.220
+we're really bringing ourselves into an abstract intellectual
+
+496
+00:26:12.221 --> 00:26:14.440
+realm and we can learn to do it,
+
+497
+00:26:14.470 --> 00:26:19.180
+but it is very much a learned and a learned over a long period of time skill.
+
+498
+00:26:19.180 --> 00:26:19.533
+<v 2>Yeah.</v>
+
+499
+00:26:20.621 --> 00:26:25.000
+And I think this idea of understanding whether that's through metaphors or
+
+500
+00:26:25.001 --> 00:26:29.500
+physical embodiment or mental models is really important because ultimately
+
+501
+00:26:29.740 --> 00:26:34.600
+most programming errors or failures are ones of understanding and
+
+502
+00:26:34.601 --> 00:26:38.560
+not ones of like mistyping. And I think a lot of our tools,
+
+503
+00:26:38.561 --> 00:26:41.110
+they focus on the mistyping issues and it's much harder,
+
+504
+00:26:41.111 --> 00:26:43.210
+yet more important to get at the ones of understanding.
+
+505
+00:26:43.440 --> 00:26:46.500
+Like if you think about the most gnarly bugs you've dealt with,
+
+506
+00:26:46.920 --> 00:26:51.060
+it's usually because you misunderstood something about the world you're modeling
+
+507
+00:26:51.270 --> 00:26:54.270
+or how your program worked. Not because you typo'd something,
+
+508
+00:26:54.271 --> 00:26:56.280
+if you did typo something that kind of gets fixed quickly.
+
+509
+00:26:56.490 --> 00:27:00.150
+So anything that can help us understand what actually is, is very powerful,
+
+510
+00:27:00.151 --> 00:27:00.601
+which by the way,
+
+511
+00:27:00.601 --> 00:27:03.480
+is another reason why I'm a huge fan of logs because they are a sort of ground
+
+512
+00:27:03.481 --> 00:27:05.940
+truth with very high information density of what actually happened in your
+
+513
+00:27:05.941 --> 00:27:05.941
+program.
+
+514
+00:27:05.941 --> 00:27:06.774
+<v 0>Yeah.</v>
+
+515
+00:27:07.701 --> 00:27:11.480
+I've actually recently been working on a project that really sort of emphasized
+
+516
+00:27:11.481 --> 00:27:14.390
+to me how important this is, right? If the mismatch between the program,
+
+517
+00:27:14.391 --> 00:27:18.050
+creators mental model and the person trying to write the programming language.
+
+518
+00:27:18.290 --> 00:27:21.110
+So of course I've mentioned JavaScript because that's just kind of the world I
+
+519
+00:27:21.111 --> 00:27:21.920
+work in.
+
+520
+00:27:21.920 --> 00:27:25.610
+So this is a collaboration project that I worked on with a programmer named Dan
+
+521
+00:27:25.611 --> 00:27:28.820
+Abramov, who's a really wonderful kind of well-known JavaScript developer,
+
+522
+00:27:28.821 --> 00:27:30.080
+who's on the React core team.
+
+523
+00:27:30.650 --> 00:27:35.480
+And so we've been collaborating to help create a course that visually diagrams
+
+524
+00:27:35.481 --> 00:27:39.560
+and animates the underlying mental models of JavaScript the way that it actually
+
+525
+00:27:39.561 --> 00:27:40.394
+executes.
+
+526
+00:27:41.060 --> 00:27:45.260
+Which helps people get over a lot of the bugs that are written into JavaScript
+
+527
+00:27:45.261 --> 00:27:48.380
+code, simply because they don't understand what happens when you say,
+
+528
+00:27:48.560 --> 00:27:52.490
+let banana equals fruit, whatever. And then you reference that later,
+
+529
+00:27:52.520 --> 00:27:56.930
+but if it's been reassigned or it's inside an object and it's been passed
+
+530
+00:27:56.931 --> 00:27:57.764
+through a function,
+
+531
+00:27:57.830 --> 00:28:01.310
+they aren't tracking in their head exactly where the variables gone and how it's
+
+532
+00:28:01.311 --> 00:28:04.940
+changed over time, because it's not visible in the program. So anyway,
+
+533
+00:28:04.941 --> 00:28:09.700
+this project is all about showing people, literal, explicit diagrams,
+
+534
+00:28:09.701 --> 00:28:13.580
+showing them what happens when certain types of code executes in JavaScript.
+
+535
+00:28:13.581 --> 00:28:17.180
+And it corrects a lot of the mental models that are incorrectly taught in a lot
+
+536
+00:28:17.181 --> 00:28:18.290
+of JavaScript textbooks.
+
+537
+00:28:18.680 --> 00:28:22.340
+And this is where working with Dan and being able to help visualize this course,
+
+538
+00:28:22.640 --> 00:28:26.240
+I completely reformed my understanding of how JavaScript code executes,
+
+539
+00:28:26.720 --> 00:28:28.640
+but there's no IDE that was going to show me that.
+
+540
+00:28:28.880 --> 00:28:30.470
+So it was just one where I went,
+
+541
+00:28:30.680 --> 00:28:32.900
+it's great to make educational materials for this stuff,
+
+542
+00:28:32.930 --> 00:28:34.130
+but it's not built into the tool.
+
+543
+00:28:34.130 --> 00:28:34.574
+<v 2>Exactly.</v>
+
+544
+00:28:35.930 --> 00:28:39.860
+It reminds me of one of the earlier programming courses I took was in C and it
+
+545
+00:28:39.861 --> 00:28:44.510
+was kind of notorious because there was this one point in the course where a lot
+
+546
+00:28:44.511 --> 00:28:47.600
+of people hit a wall, which was when you introduced pointers, you know,
+
+547
+00:28:47.601 --> 00:28:51.740
+it's this incredibly important and fundamental thing that totally changes how
+
+548
+00:28:51.741 --> 00:28:54.650
+the variable behaves. But it's just the little star, you know,
+
+549
+00:28:54.651 --> 00:28:56.030
+in front of the variable name or whatever.
+
+550
+00:28:56.330 --> 00:28:59.480
+And it kind of resonates with what you were saying about the mismatch between
+
+551
+00:28:59.840 --> 00:29:02.240
+how people are thinking about what's happening versus when it's actually
+
+552
+00:29:02.241 --> 00:29:03.530
+happening and the importance of correcting that.
+
+553
+00:29:04.810 --> 00:29:09.070
+<v 1>How do you go about coming up with a metaphor when you're working on something</v>
+
+554
+00:29:09.071 --> 00:29:13.570
+like the Just JavaScript course or any of these Egghead pieces,
+
+555
+00:29:13.900 --> 00:29:17.230
+presumably you need to develop your own understanding of it either from your own
+
+556
+00:29:17.231 --> 00:29:19.960
+experience or from the course materials,
+
+557
+00:29:20.320 --> 00:29:23.890
+but then you want to go to translate that to some kind of visual thinking or
+
+558
+00:29:23.891 --> 00:29:27.820
+create a metaphor, hopefully one that's correct and useful, how do you do that?
+
+559
+00:29:27.821 --> 00:29:28.780
+Can you give us an example?
+
+560
+00:29:28.780 --> 00:29:33.090
+<v 0>Sure. I'll say this sort of a spectrum. I mean, I like spectrums anywhere.</v>
+
+561
+00:29:33.120 --> 00:29:36.270
+There's a spectrum of visual programming and there's a spectrum of metaphors,
+
+562
+00:29:36.271 --> 00:29:36.571
+I'll say.
+
+563
+00:29:36.571 --> 00:29:40.710
+So the Just JavaScript project with Dan probably leaned a lot more on very
+
+564
+00:29:40.710 --> 00:29:44.650
+direct, spatial metaphors. It was very much like what is connected to what,
+
+565
+00:29:44.651 --> 00:29:45.730
+what is above what?
+
+566
+00:29:45.970 --> 00:29:50.080
+So it's sort of circles and arrows in a very classic diagrammatic way.
+
+567
+00:29:50.560 --> 00:29:54.310
+But a lot of the other work I've done for Egghead is illustrating programming
+
+568
+00:29:54.311 --> 00:29:54.731
+concepts.
+
+569
+00:29:54.731 --> 00:29:58.840
+And what I would say is on more towards the poetic spectrum of metaphor,
+
+570
+00:29:59.080 --> 00:30:02.080
+where it's not technically like, you know, the most accurate,
+
+571
+00:30:02.081 --> 00:30:05.350
+it doesn't exactly map to syntax showing what happens at each point,
+
+572
+00:30:05.740 --> 00:30:09.700
+but I'll make a lot of illustrations that will be metaphors that give you an
+
+573
+00:30:09.701 --> 00:30:12.790
+understanding of like, oh, okay. If it's a waterfall image, it's like, okay,
+
+574
+00:30:12.791 --> 00:30:14.080
+this is something about data flow.
+
+575
+00:30:14.140 --> 00:30:18.040
+That sort of level of poetic metaphor that gives you more of the gist of an idea
+
+576
+00:30:18.041 --> 00:30:22.180
+more than the little syntax interpretation. But I'm thinking of one of like,
+
+577
+00:30:22.180 --> 00:30:26.620
+I did one for Redux, which is a state management system for React.
+
+578
+00:30:27.010 --> 00:30:30.580
+And I use like a little joystick with space aliens, like shooting,
+
+579
+00:30:30.940 --> 00:30:34.000
+cause it has actions. So it's like, you can like shoot out actions from Redux,
+
+580
+00:30:34.001 --> 00:30:37.780
+from like a single state source. So that's one where it's a bit more fun.
+
+581
+00:30:38.020 --> 00:30:41.110
+Obviously it's a lot more visually interesting than just doing a box and arrow
+
+582
+00:30:41.111 --> 00:30:41.944
+diagram,
+
+583
+00:30:42.130 --> 00:30:45.190
+but it gets the concept across to people that you have a central place and it's
+
+584
+00:30:45.191 --> 00:30:46.420
+shooting actions out from it.
+
+585
+00:30:46.930 --> 00:30:50.860
+And that the process I kind of do for that is whenever I'm given something to
+
+586
+00:30:50.890 --> 00:30:53.230
+design a metaphor for, I will read docs, you know,
+
+587
+00:30:53.231 --> 00:30:54.850
+I'll read programming articles,
+
+588
+00:30:54.851 --> 00:30:57.550
+I'll go see what people are talking about on Twitter related to the thing.
+
+589
+00:30:57.910 --> 00:30:59.290
+Stack Overflow questions.
+
+590
+00:30:59.350 --> 00:31:02.530
+And sometimes if the community is already speaking about it in certain
+
+591
+00:31:02.531 --> 00:31:06.070
+metaphors, I just use that because they clearly already understand it.
+
+592
+00:31:06.400 --> 00:31:08.740
+If they're trying to explain it to each other on Stack Overflow and they're
+
+593
+00:31:08.741 --> 00:31:12.040
+using these metaphors, that's usually what they'll base them on.
+
+594
+00:31:12.400 --> 00:31:16.090
+But a lot of the time I'm just kind of doing basic reasoning of going, okay,
+
+595
+00:31:16.091 --> 00:31:19.330
+what are the functions of this thing, what are its qualities.
+
+596
+00:31:19.420 --> 00:31:22.840
+And then you do a bit more creative lateral thinking to say, okay,
+
+597
+00:31:22.841 --> 00:31:25.240
+what else in the world has those functions and those qualities?
+
+598
+00:31:26.370 --> 00:31:27.203
+<v 1>Yeah, I think that,</v>
+
+599
+00:31:27.420 --> 00:31:31.350
+that points to another reason to have this kind of illustration in learning
+
+600
+00:31:31.351 --> 00:31:35.430
+materials, which is just to make it fun and break things up. And, yeah,
+
+601
+00:31:35.610 --> 00:31:39.090
+visuals to break up for example, long streams of text,
+
+602
+00:31:39.091 --> 00:31:42.660
+or if it's more of a video format on strings of speaking,
+
+603
+00:31:42.661 --> 00:31:46.380
+or you're just looking at a screen that kind of looks the same the whole time.
+
+604
+00:31:46.381 --> 00:31:48.420
+You know, it's just a code editor window or something.
+
+605
+00:31:48.900 --> 00:31:53.280
+I'm reminded a bit of Why's Poignant Guide to Ruby which was a
+
+606
+00:31:53.460 --> 00:31:56.910
+beloved introduction to programming for the Ruby language and have these
+
+607
+00:31:56.970 --> 00:32:01.260
+adorable cartoon characters and kind of a web comic style. And you know,
+
+608
+00:32:01.261 --> 00:32:06.030
+a lot of it was not specifically helpful for helping you learn it.
+
+609
+00:32:06.450 --> 00:32:11.190
+It just made the thing just more fun to consume and more memorable because you
+
+610
+00:32:11.191 --> 00:32:13.440
+connect chunky bacon with, you know,
+
+611
+00:32:13.441 --> 00:32:17.040
+some of these more practical concepts that are being taught to you.
+
+612
+00:32:17.040 --> 00:32:19.680
+<v 2>Chunky bacon. That's a throwback man. Wow.</v>
+
+613
+00:32:21.690 --> 00:32:21.690
+<v 1>Now,</v>
+
+614
+00:32:21.690 --> 00:32:26.160
+I can't believe we got this far without mentioning Bret Victor's seminal piece
+
+615
+00:32:26.161 --> 00:32:27.180
+Learnable Programming.
+
+616
+00:32:27.780 --> 00:32:31.500
+And maybe somewhat to the point you've both made in various ways,
+
+617
+00:32:31.501 --> 00:32:35.910
+which is it doesn't have to be either or the idea of creating embodiment or
+
+618
+00:32:35.911 --> 00:32:39.920
+visualization or showing more of happening.
+
+619
+00:32:39.921 --> 00:32:42.230
+The abstract pieces, how things are connected,
+
+620
+00:32:42.260 --> 00:32:46.670
+how things flow in time can also go with symbolic
+
+621
+00:32:46.970 --> 00:32:50.030
+code and this piece from some years back now.
+
+622
+00:32:50.031 --> 00:32:53.900
+But I think has been influential in terms of, well people lamenting,
+
+623
+00:32:53.901 --> 00:32:57.140
+we don't have programming environments that are a bit more like this,
+
+624
+00:32:57.141 --> 00:33:01.100
+but demonstrates lots of interesting and inspiring ways to potentially make,
+
+625
+00:33:01.101 --> 00:33:03.530
+for example, control flow more visible.
+
+626
+00:33:03.530 --> 00:33:03.913
+<v 0>Yeah.</v>
+
+627
+00:33:04.960 --> 00:33:08.980
+The Bret Victor piece has kind of been a seminal launching point for this whole
+
+628
+00:33:09.130 --> 00:33:12.940
+visual programming industry. Of course it was alive and thriving well before.
+
+629
+00:33:12.941 --> 00:33:14.860
+I mean you can kind of trace it back to of course,
+
+630
+00:33:15.220 --> 00:33:19.270
+Alan Kay and Xerox PARC and Smalltalk. And there's a lot of precedence for this,
+
+631
+00:33:19.271 --> 00:33:20.590
+but the learnable programming piece,
+
+632
+00:33:20.591 --> 00:33:24.850
+I think is the one I've seen referenced the most and has gotten the most people,
+
+633
+00:33:25.150 --> 00:33:27.010
+you know, maybe in the last five to ten years,
+
+634
+00:33:27.100 --> 00:33:30.370
+more interested in it and to get them to go exploring and to go, okay,
+
+635
+00:33:30.580 --> 00:33:33.490
+maybe the way we program now doesn't have to be the way we're always going to
+
+636
+00:33:33.491 --> 00:33:36.910
+program. And the thing I really loved about Victor's piece, I mean,
+
+637
+00:33:36.911 --> 00:33:40.090
+of course it's a long article and there's many aspects to it that we could kind
+
+638
+00:33:40.091 --> 00:33:44.470
+of dive into. But this idea of just that, because code,
+
+639
+00:33:44.471 --> 00:33:45.310
+when it comes down to it,
+
+640
+00:33:45.460 --> 00:33:48.880
+it's something being executed in full on machine code and byte code.
+
+641
+00:33:49.140 --> 00:33:51.700
+And with so many layers of abstraction up from there,
+
+642
+00:33:52.150 --> 00:33:54.370
+it's not like we only have to represent it in one way.
+
+643
+00:33:54.400 --> 00:33:57.010
+When you get into the higher level programming languages,
+
+644
+00:33:57.820 --> 00:34:02.770
+syntax is one way of displaying what that machine code is actually running and
+
+645
+00:34:03.071 --> 00:34:06.580
+the rendered UI is another way of displaying what that machine code is running.
+
+646
+00:34:06.970 --> 00:34:11.880
+And I don't know why there's not a reason why we can't flexibly display this
+
+647
+00:34:11.881 --> 00:34:16.870
+same set of machine code in different ways and turn it on and off and you
+
+648
+00:34:16.871 --> 00:34:20.860
+know, say, okay, I want to look at it in visual data flow setting,
+
+649
+00:34:21.070 --> 00:34:25.390
+or I want to look at it in a way that shows me the component architecture,
+
+650
+00:34:25.391 --> 00:34:29.740
+if it's like a componentry kind of context. So just flexibly,
+
+651
+00:34:29.741 --> 00:34:33.580
+displaying it in different visual formats rather than saying, okay,
+
+652
+00:34:34.120 --> 00:34:37.360
+syntax is the only way I'm ever going to interact with this code until it
+
+653
+00:34:37.361 --> 00:34:38.650
+becomes the final output.
+
+654
+00:34:38.650 --> 00:34:40.450
+<v 2>Yeah. Interesting.</v>
+
+655
+00:34:40.451 --> 00:34:43.510
+And now that you mentioned that I feel like as is often the case,
+
+656
+00:34:43.840 --> 00:34:47.320
+the gamers are ahead of us. I mean, particularly the game designers,
+
+657
+00:34:47.590 --> 00:34:48.430
+like I'm not an expert in this,
+
+658
+00:34:48.431 --> 00:34:50.380
+but my understanding is that the game engine environments,
+
+659
+00:34:50.560 --> 00:34:52.510
+like the very sophisticated, there's like the code view,
+
+660
+00:34:52.780 --> 00:34:56.290
+then there's like the object graph view. And you can like, you know,
+
+661
+00:34:56.291 --> 00:34:58.720
+turn on different pieces of the visual environment.
+
+662
+00:34:59.050 --> 00:35:02.890
+And there's all kinds of performance-based views for looking at memory and CPU
+
+663
+00:35:02.891 --> 00:35:04.240
+and GPU usage and so on.
+
+664
+00:35:04.570 --> 00:35:06.370
+So there's perhaps something to learn from that industry.
+
+665
+00:35:06.370 --> 00:35:09.820
+<v 0>I also think the data visualization industry is one.</v>
+
+666
+00:35:09.821 --> 00:35:13.060
+We could really draw a lot from like I know Bret Victor had mentioned he had
+
+667
+00:35:13.090 --> 00:35:17.260
+researched a lot in Edward Tufte's work, who is a information designer,
+
+668
+00:35:17.261 --> 00:35:18.520
+I suppose, is the best term for him.
+
+669
+00:35:18.521 --> 00:35:21.280
+But he's written a number of books like Visual Explanations and Beautiful
+
+670
+00:35:21.281 --> 00:35:26.200
+Evidence that cover kind of the best practices for how you can represent data
+
+671
+00:35:26.290 --> 00:35:31.270
+as visual charts in a way that actually respects the original data and
+
+672
+00:35:31.330 --> 00:35:36.130
+presents it in an accurate way that isn't bending it or being too manipulative
+
+673
+00:35:36.131 --> 00:35:38.520
+about the way that you're it. But he has yeah,
+
+674
+00:35:38.521 --> 00:35:41.610
+a wonderful set of sort of principles for how to do it well.
+
+675
+00:35:41.611 --> 00:35:44.820
+And Victor had talked about how he read him before writing Learnable
+
+676
+00:35:44.941 --> 00:35:45.774
+Programming,
+
+677
+00:35:46.080 --> 00:35:49.290
+but the data vis community in general has done a ton of work on thinking of
+
+678
+00:35:49.650 --> 00:35:52.590
+different ways to visualize numbers.
+
+679
+00:35:52.950 --> 00:35:56.880
+And they are fairly well known for it. Do you guys know of in dashboards,
+
+680
+00:35:56.881 --> 00:36:00.390
+you can sort of turn on line chart or you can turn on bar chart.
+
+681
+00:36:00.420 --> 00:36:03.540
+You can sort of jump through different modes of being able to look at the same
+
+682
+00:36:03.541 --> 00:36:05.790
+numbers. And that's sort of in my head,
+
+683
+00:36:06.120 --> 00:36:10.590
+what we might be able to do with syntax in sort of maybe IDE plugins in the
+
+684
+00:36:10.591 --> 00:36:12.090
+future. Of course,
+
+685
+00:36:12.091 --> 00:36:15.180
+there's plenty of IDE plugins that do help you look at your code in different
+
+686
+00:36:15.181 --> 00:36:15.960
+ways.
+
+687
+00:36:15.960 --> 00:36:19.830
+But more of that is kind of what I would love to see is like more plugins that
+
+688
+00:36:19.831 --> 00:36:23.460
+just like, I'm just going to show you the architecture side of your code.
+
+689
+00:36:23.461 --> 00:36:26.700
+I'm just going to show you how this variable changes over time in your code.
+
+690
+00:36:27.420 --> 00:36:29.700
+I'm like one of those where you're kind of like, am I missing something?
+
+691
+00:36:29.701 --> 00:36:30.990
+Like why isn't this happening?
+
+692
+00:36:32.210 --> 00:36:33.410
+<v 2>Yeah, totally. I'd love to see more of it.</v>
+
+693
+00:36:33.411 --> 00:36:37.880
+And I think it can come both from the IDE language plugin layer,
+
+694
+00:36:37.881 --> 00:36:41.480
+but also bottoms up from individual projects. I feel like I must've,
+
+695
+00:36:41.481 --> 00:36:44.900
+at some point done one of these things where you write a little script that like
+
+696
+00:36:44.901 --> 00:36:48.170
+takes your code or your system and compiles a DOT graph so they can visualize
+
+697
+00:36:48.470 --> 00:36:51.290
+nodes and edges with one of these standard DOT visualization tools.
+
+698
+00:36:51.890 --> 00:36:54.260
+And I feel like there's a lot of opportunity to do that in individual projects.
+
+699
+00:36:54.261 --> 00:36:57.140
+Like you feel the need to have a different,
+
+700
+00:36:57.260 --> 00:36:59.930
+more graphical view into your project. Well, you're a programmer,
+
+701
+00:36:59.931 --> 00:37:00.321
+you can make it so.
+
+702
+00:37:00.321 --> 00:37:04.280
+<v 0>And it kind of, to bring us back to what end user programming. I mean,</v>
+
+703
+00:37:04.460 --> 00:37:08.090
+the strange thing about programmers, right, is they are end-user programming,
+
+704
+00:37:08.091 --> 00:37:09.470
+like of all the industries.
+
+705
+00:37:09.770 --> 00:37:13.400
+They're the only ones where they are both the users who have the ability to
+
+706
+00:37:13.401 --> 00:37:17.000
+actually build their own tools and to actually get in and change their own
+
+707
+00:37:17.001 --> 00:37:19.580
+applications and no other, I guess,
+
+708
+00:37:19.581 --> 00:37:22.550
+community that uses computational tools is able to do that.
+
+709
+00:37:23.000 --> 00:37:26.050
+<v 1>Here you're talking about a programmer writing their own VS Code plugin,</v>
+
+710
+00:37:26.090 --> 00:37:26.541
+something like that.
+
+711
+00:37:26.541 --> 00:37:31.070
+<v 0>Yeah, exactly. Or even if you use a certain language or framework,</v>
+
+712
+00:37:31.071 --> 00:37:33.050
+you can build a library that adds on to that, right.
+
+713
+00:37:33.051 --> 00:37:34.670
+Even if you're not on the core team and you,
+
+714
+00:37:34.671 --> 00:37:38.330
+aren't going to PR into the main repo of that framework or tool,
+
+715
+00:37:38.690 --> 00:37:40.160
+you can build extensions off it. You know,
+
+716
+00:37:40.161 --> 00:37:44.660
+it's the beauty of being able to fork and change and collaborate on these things
+
+717
+00:37:44.661 --> 00:37:47.930
+means that there's so much flexibility and in developers having their own
+
+718
+00:37:47.931 --> 00:37:48.381
+authorship power.
+
+719
+00:37:48.381 --> 00:37:50.550
+<v 2>Maybe we need more,</v>
+
+720
+00:37:50.551 --> 00:37:54.560
+a culture of jig making and software as there is in woodworking.
+
+721
+00:37:54.740 --> 00:37:57.500
+Woodworking is interesting because it's one of the rare fields where maybe it's
+
+722
+00:37:57.501 --> 00:38:00.380
+the only one I can think of where they have that ability to kind of build their
+
+723
+00:38:00.381 --> 00:38:01.280
+own tools in wood.
+
+724
+00:38:01.730 --> 00:38:04.490
+And there there's this whole culture of making jigs to help you build the
+
+725
+00:38:04.491 --> 00:38:05.061
+furniture. In fact,
+
+726
+00:38:05.061 --> 00:38:07.520
+you might spend most of your time making the jigs and then the furniture is kind
+
+727
+00:38:07.521 --> 00:38:09.260
+of this final culminating step.
+
+728
+00:38:09.770 --> 00:38:11.240
+Perhaps we need more of that in the software world.
+
+729
+00:38:11.240 --> 00:38:15.650
+<v 1>Some of the ways to visualize your code or your program differently</v>
+
+730
+00:38:15.830 --> 00:38:18.380
+that you both have mentioned like, yeah, in game world,
+
+731
+00:38:18.381 --> 00:38:19.640
+maybe something like Unity,
+
+732
+00:38:20.030 --> 00:38:24.500
+or you tend to build stuff into the game that lets you look at the scene graph
+
+733
+00:38:24.501 --> 00:38:27.530
+in different ways. And I think we have that a little bit in the web world.
+
+734
+00:38:27.531 --> 00:38:30.710
+Dev tools is one that we tend to give a lot of love to.
+
+735
+00:38:30.711 --> 00:38:33.500
+I think we talked about that a good bit with Geoffrey recently here on the
+
+736
+00:38:33.501 --> 00:38:37.180
+podcast, but there it is an example of what you said, you see the output,
+
+737
+00:38:37.570 --> 00:38:41.050
+but there's also the kind of hover over elements and highlight,
+
+738
+00:38:41.080 --> 00:38:43.030
+which is where and what the extents are.
+
+739
+00:38:43.031 --> 00:38:46.930
+And then there's also the margins and padding stuff that kind of goes down in
+
+740
+00:38:46.931 --> 00:38:47.741
+the lower right corner.
+
+741
+00:38:47.741 --> 00:38:52.630
+But then you've also got a expanding hierarchal graph and you can see those all
+
+742
+00:38:52.631 --> 00:38:55.330
+at the same time. And even as you're mousing over, it's highlighting.
+
+743
+00:38:55.331 --> 00:39:00.280
+So you're looking at exactly the same thing in three different ways
+
+744
+00:39:00.281 --> 00:39:04.900
+and you can spot different problems or understand by visualizing in these
+
+745
+00:39:04.901 --> 00:39:05.734
+different ways.
+
+746
+00:39:06.040 --> 00:39:09.310
+And I would further argue that we see that a little bit in more the native
+
+747
+00:39:09.311 --> 00:39:12.490
+development world with toolkits like Flutter and Swift UI,
+
+748
+00:39:12.820 --> 00:39:17.410
+where there often is even a live, side by side, here's your interface output,
+
+749
+00:39:17.710 --> 00:39:18.610
+here's the code.
+
+750
+00:39:18.850 --> 00:39:22.240
+And often you can change things on both sides and it flows bidirectionally.
+
+751
+00:39:23.230 --> 00:39:24.730
+But I think in all of those cases,
+
+752
+00:39:24.731 --> 00:39:27.550
+it's already something where it's a visual output.
+
+753
+00:39:27.580 --> 00:39:31.840
+And so you're interacting with some of the under the hood stuff around that
+
+754
+00:39:31.841 --> 00:39:34.270
+visual output. It feels very natural to visualize that.
+
+755
+00:39:34.750 --> 00:39:38.200
+When you come back to the more abstract things like program flow over time,
+
+756
+00:39:38.560 --> 00:39:41.560
+that's where maybe it's less obvious to do that.
+
+757
+00:39:41.561 --> 00:39:45.370
+Or maybe it's just less clear how you would do it in the first place. But yeah,
+
+758
+00:39:45.371 --> 00:39:49.660
+I think that visual debugging or visual understanding of something that has
+
+759
+00:39:49.661 --> 00:39:54.310
+already a visual output to begin with is actually a pretty rich place for this
+
+760
+00:39:54.311 --> 00:39:55.144
+stuff.
+
+761
+00:39:55.930 --> 00:39:56.770
+<v 0>And especially, I mean,</v>
+
+762
+00:39:56.771 --> 00:40:01.030
+you had mentioned the two way or bi-directional aspect of it is super important.
+
+763
+00:40:01.390 --> 00:40:01.721
+I mean,
+
+764
+00:40:01.721 --> 00:40:06.640
+one thing I'm really liking is there's kind of a new rise in state charts and
+
+765
+00:40:06.641 --> 00:40:09.820
+state machines, but visual ones that flow both ways.
+
+766
+00:40:09.880 --> 00:40:10.870
+I'm specifically thinking of,
+
+767
+00:40:11.020 --> 00:40:14.770
+there's a tool called XState that works for React where you can change either
+
+768
+00:40:14.771 --> 00:40:17.620
+the diagram or the code in a side-by-side and they mirror each other.
+
+769
+00:40:18.070 --> 00:40:21.340
+Whereas if I want to debug some CSS thing in the browser, it's like,
+
+770
+00:40:21.341 --> 00:40:22.750
+I'll go test out in the browser,
+
+771
+00:40:22.900 --> 00:40:25.660
+but then I still need to go back to my IDE and like actually change the actual
+
+772
+00:40:25.661 --> 00:40:26.380
+code.
+
+773
+00:40:26.380 --> 00:40:29.470
+And it's just that like slight friction of you're not actually changing the
+
+774
+00:40:29.650 --> 00:40:32.440
+thing itself. You're like mocking it up in one.
+
+775
+00:40:32.441 --> 00:40:35.440
+And then you go back to the actual source. We'll know, and, you know,
+
+776
+00:40:35.441 --> 00:40:36.221
+interaction design,
+
+777
+00:40:36.221 --> 00:40:39.250
+any amount of friction you put into a tool or an interface it's just causing
+
+778
+00:40:39.251 --> 00:40:40.960
+that much more cognitive load on the user.
+
+779
+00:40:42.380 --> 00:40:45.440
+<v 1>I'm looking at XState right now. I hadn't seen this before. It is very cool,</v>
+
+780
+00:40:45.441 --> 00:40:48.440
+like code and flowchart diagram side by side.
+
+781
+00:40:48.830 --> 00:40:53.170
+We've done a bit of research on the bi-directional editing capability as part of
+
+782
+00:40:53.270 --> 00:40:56.900
+Ink and Switch. And it can be very, very hard to do that well.
+
+783
+00:40:56.901 --> 00:41:00.710
+If you have something like maybe a tool like Apparatus would be a good example,
+
+784
+00:41:00.711 --> 00:41:01.910
+I can link that in the show notes,
+
+785
+00:41:01.911 --> 00:41:05.180
+but something where you have the ability to do direct manipulation with dragging
+
+786
+00:41:05.181 --> 00:41:08.870
+something with the mouse or your finger in one kind of pane and the other,
+
+787
+00:41:08.871 --> 00:41:13.100
+you have code that you can update, but having not one be the end state,
+
+788
+00:41:13.130 --> 00:41:16.430
+the output, I don't know the bad version of this is Dreamweaver, right?
+
+789
+00:41:17.810 --> 00:41:22.460
+The output it writes is just completely incomprehensible and you can't kind of
+
+790
+00:41:22.461 --> 00:41:23.690
+go back from there.
+
+791
+00:41:24.050 --> 00:41:28.340
+So that bi-directional thing I think is sort of a holy grail in one way,
+
+792
+00:41:28.341 --> 00:41:30.170
+but also it's very hard to do technically.
+
+793
+00:41:30.171 --> 00:41:34.430
+And I think also depends a lot on the nature of the programming language itself
+
+794
+00:41:34.760 --> 00:41:39.080
+and the tools you use to edit kind of the symbolic representation.
+
+795
+00:41:39.080 --> 00:41:39.080
+<v 0>Yeah</v>
+
+796
+00:41:40.780 --> 00:41:44.860
+I usually take the long stream of maybe I don't want to say failures,
+
+797
+00:41:44.861 --> 00:41:47.050
+but disappointments in the WYSIWYG world, you know,
+
+798
+00:41:47.051 --> 00:41:48.280
+everyone that's ever dreamed of,
+
+799
+00:41:48.280 --> 00:41:52.690
+yeah Dreamweaver where you draw the website and you can change the
+
+800
+00:41:52.750 --> 00:41:55.000
+size of the div and the code, you know,
+
+801
+00:41:55.001 --> 00:41:59.140
+reacts appropriately the fact that no one's solved it after this long and that
+
+802
+00:41:59.470 --> 00:42:01.330
+many probably billions of dollars. I'm not quite sure.
+
+803
+00:42:01.720 --> 00:42:03.850
+It shows that it must be an incredibly hard problem, you know?
+
+804
+00:42:05.300 --> 00:42:06.090
+<v 1>Yeah, indeed.</v>
+
+805
+00:42:06.090 --> 00:42:10.560
+And I know in the Xcode world where it ships with this interface builder,
+
+806
+00:42:10.561 --> 00:42:15.180
+which is essentially a drag and drop GUI system for setting up your interface,
+
+807
+00:42:15.490 --> 00:42:19.050
+very often, I've seen iOS developers. They prefer to say,
+
+808
+00:42:19.051 --> 00:42:20.250
+just don't use interface builder,
+
+809
+00:42:20.341 --> 00:42:24.330
+write everything in code because sooner or later you're going to be basically
+
+810
+00:42:24.331 --> 00:42:25.590
+working in code anyways.
+
+811
+00:42:25.591 --> 00:42:28.650
+And if you have some of your program is represented in this visual thing,
+
+812
+00:42:28.651 --> 00:42:29.820
+that's edited one way,
+
+813
+00:42:30.090 --> 00:42:33.900
+some of your program is represented in code the two interact with each other in
+
+814
+00:42:33.901 --> 00:42:37.520
+a bunch of complex ways. You'd rather have just the one medium.
+
+815
+00:42:37.530 --> 00:42:40.350
+It's actually better longterm. Now,
+
+816
+00:42:40.351 --> 00:42:44.760
+another great article that I came across by total coincidence just as you and I,
+
+817
+00:42:44.761 --> 00:42:49.590
+Maggie were talking about possibly doing a podcast on this topic is an article
+
+818
+00:42:49.591 --> 00:42:54.180
+that is called Hacker News folk wisdom on visual programming and it essentially
+
+819
+00:42:54.181 --> 00:42:58.980
+is a pretty large scale analysis of every single time
+
+820
+00:42:59.190 --> 00:43:02.520
+something visual programming related has come up on Hacker News and sort of like
+
+821
+00:43:02.521 --> 00:43:07.290
+distilling out the common themes and then starts with the really common
+
+822
+00:43:07.291 --> 00:43:09.450
+and fairly shallow reactions.
+
+823
+00:43:09.690 --> 00:43:13.470
+And it goes into some much more nuanced and interesting discussion.
+
+824
+00:43:13.860 --> 00:43:16.380
+So there's lots here, including some we've already talked about,
+
+825
+00:43:16.381 --> 00:43:19.800
+but is there any pieces of this article that are especially interesting to you?
+
+826
+00:43:19.801 --> 00:43:19.801
+Maggie?
+
+827
+00:43:19.801 --> 00:43:21.600
+<v 0>It's funny.</v>
+
+828
+00:43:21.600 --> 00:43:24.270
+I had been following a lot of those same threads and there's a fair number of
+
+829
+00:43:24.271 --> 00:43:27.000
+them and they're the sort of Hacker News topics that go for hundreds of
+
+830
+00:43:27.001 --> 00:43:29.220
+comments, right? People just go deep on this stuff.
+
+831
+00:43:29.760 --> 00:43:32.160
+I had been reading a lot of those same ones and passing through them,
+
+832
+00:43:32.161 --> 00:43:35.040
+right when that article was published and I tweeted the author, I said,
+
+833
+00:43:35.220 --> 00:43:35.290
+you know,
+
+834
+00:43:35.290 --> 00:43:38.700
+thank you so much for doing the hard work of distilling that all for us.
+
+835
+00:43:39.240 --> 00:43:42.600
+But I think the thing I found most interesting about it and just from reading
+
+836
+00:43:42.601 --> 00:43:45.690
+the threads is, I mean the strong opinions people have on it,
+
+837
+00:43:45.691 --> 00:43:49.770
+or you really get into people have very emotional, I want to say like,
+
+838
+00:43:49.890 --> 00:43:53.550
+reactions to visual programming and sort of the cultural anthropologist side of
+
+839
+00:43:53.551 --> 00:43:58.080
+me just finds that quite an intriguing thing to look at where many of them,
+
+840
+00:43:58.081 --> 00:44:01.230
+I want to say have almost been like emotionally scarred by past visual
+
+841
+00:44:01.231 --> 00:44:02.280
+programming languages,
+
+842
+00:44:02.610 --> 00:44:05.880
+like the stories they're telling in the comments of the time they had to work on
+
+843
+00:44:05.881 --> 00:44:09.990
+the most horrendous proprietary visual programming platform.
+
+844
+00:44:10.350 --> 00:44:11.700
+And no one could find anything.
+
+845
+00:44:11.850 --> 00:44:15.870
+And the literal spaghetti code is just all over the place and they just wanted
+
+846
+00:44:15.871 --> 00:44:16.860
+to go back to text.
+
+847
+00:44:17.130 --> 00:44:21.180
+So I think there's some very legitimate critiques that should be acknowledged
+
+848
+00:44:21.210 --> 00:44:23.400
+that maybe the past generation of programmers,
+
+849
+00:44:23.521 --> 00:44:26.550
+was sort of subjected to a really awful version of visual programming.
+
+850
+00:44:26.880 --> 00:44:31.620
+But it would be really sad to let that frustration that other people have
+
+851
+00:44:31.621 --> 00:44:36.210
+felt ruin what visual programming could be in a much better design format or
+
+852
+00:44:36.211 --> 00:44:40.890
+just done in very different ways done in ways that combine graphics and text.
+
+853
+00:44:41.680 --> 00:44:44.160
+Yeah, so that was my main takeaway from it is almost like you have to do some
+
+854
+00:44:44.161 --> 00:44:47.100
+historical healing before you can kind of move forward with this concept.
+
+855
+00:44:48.150 --> 00:44:51.650
+<v 1>It is interesting that it can be such an emotional topic because I think if we</v>
+
+856
+00:44:51.651 --> 00:44:55.400
+were to boil it down to a bit of a duality, you have both people, like,
+
+857
+00:44:55.760 --> 00:44:59.960
+I think those of us here talking right now who really believe in some kind of
+
+858
+00:45:00.320 --> 00:45:04.070
+end-user programming future or programming being more accessible or just
+
+859
+00:45:04.310 --> 00:45:07.940
+computing as a medium is so important for humanity's future.
+
+860
+00:45:07.941 --> 00:45:12.860
+And we need just more humans and a broader array of types of
+
+861
+00:45:12.861 --> 00:45:13.341
+humans,
+
+862
+00:45:13.341 --> 00:45:17.930
+different perspectives and different backgrounds to be able to access
+
+863
+00:45:17.960 --> 00:45:21.590
+this medium. And so that's maybe something we feel strongly about.
+
+864
+00:45:21.591 --> 00:45:26.210
+Certainly I feel very passionately about. On the flip side is maybe as you said,
+
+865
+00:45:26.211 --> 00:45:29.600
+first of all, the bad experiences that have scarred people,
+
+866
+00:45:29.810 --> 00:45:32.600
+but also you do come back to this again,
+
+867
+00:45:32.601 --> 00:45:36.680
+the Hacker News comments are people who many and most are probably professional
+
+868
+00:45:36.681 --> 00:45:37.640
+software engineers.
+
+869
+00:45:38.180 --> 00:45:41.960
+They are people for whom the pure text model and classic text editors and IDEs
+
+870
+00:45:42.261 --> 00:45:44.090
+and so on serve well,
+
+871
+00:45:44.390 --> 00:45:47.420
+or maybe it's less about being served well.
+
+872
+00:45:47.510 --> 00:45:50.990
+And more that they've had to go through the pain and suffering to get over that
+
+873
+00:45:50.991 --> 00:45:51.440
+hump,
+
+874
+00:45:51.440 --> 00:45:55.220
+to learn all those abstractions and managed to hold all that stuff in their
+
+875
+00:45:55.221 --> 00:45:55.940
+head.
+
+876
+00:45:55.940 --> 00:45:59.690
+And then in a way maybe they would feel robbed if someone else can just kind of
+
+877
+00:45:59.691 --> 00:46:02.000
+skip over that. I actually had that feeling.
+
+878
+00:46:02.210 --> 00:46:05.000
+I learned a little bit of electrical engineering many, many years ago,
+
+879
+00:46:05.210 --> 00:46:06.680
+doing Burning Man art projects.
+
+880
+00:46:07.081 --> 00:46:10.730
+I wanted to make stuff that lit up in cool patterns with LEDs and so on.
+
+881
+00:46:11.180 --> 00:46:14.090
+And I had to go through the whole kind of classic electrical engineering
+
+882
+00:46:14.300 --> 00:46:17.000
+process. And I found it very challenging.
+
+883
+00:46:17.001 --> 00:46:18.770
+It didn't really fit with how my brain worked.
+
+884
+00:46:18.771 --> 00:46:21.680
+I thought it would be relatively easy because I'm a computer programmer,
+
+885
+00:46:21.681 --> 00:46:26.090
+but circuits are a whole other thing. And just a few years later,
+
+886
+00:46:26.330 --> 00:46:31.280
+we had the Raspberry Pi and the Arduino and increasing number of these kits
+
+887
+00:46:31.281 --> 00:46:34.910
+and Adafruit and all these much more accessible things.
+
+888
+00:46:34.911 --> 00:46:36.950
+I remembered talking to a friend who said, oh, you know,
+
+889
+00:46:36.951 --> 00:46:40.970
+I'm going to set up my project that will have, you know, these LEDs or whatever,
+
+890
+00:46:40.971 --> 00:46:43.670
+it'll color cycle like this. And like everything you're describing there,
+
+891
+00:46:43.671 --> 00:46:46.580
+that's going to be a lot of work. I hope you really budgeted some time.
+
+892
+00:46:47.000 --> 00:46:48.890
+And I don't know he bought these kits, you know, off Adafruit.
+
+893
+00:46:49.310 --> 00:46:51.530
+And a week later he had this amazing thing working.
+
+894
+00:46:51.531 --> 00:46:54.650
+And I went in and asked him about it and realized that he just didn't need to
+
+895
+00:46:54.651 --> 00:46:58.310
+learn all this stuff about debouncing with capacitors or whatever that I had to
+
+896
+00:46:58.311 --> 00:47:01.850
+fight through because there are these just more accessible platforms and there's
+
+897
+00:47:01.851 --> 00:47:04.700
+a knee jerk, I think I had that then, a knee jerk kind of like, wait,
+
+898
+00:47:04.701 --> 00:47:08.690
+I had to walk uphill both ways in the snow to learn to do this other people
+
+899
+00:47:08.691 --> 00:47:12.560
+should have to too, or I wasted my time or something like that. But of course,
+
+900
+00:47:12.710 --> 00:47:17.660
+I think it's much better that there are much more people that can now do things
+
+901
+00:47:17.661 --> 00:47:21.440
+like make cool light up projects because these technologies are more accessible.
+
+902
+00:47:21.740 --> 00:47:25.880
+I feel like there's probably a version of that for today's
+
+903
+00:47:26.090 --> 00:47:30.160
+programmers versus people that might access it in the future.
+
+904
+00:47:30.161 --> 00:47:31.240
+If it was a little bit more learnable.
+
+905
+00:47:31.240 --> 00:47:34.920
+<v 0>Definitely. There's also another, I suppose,</v>
+
+906
+00:47:34.921 --> 00:47:38.370
+trend in people that are a bit anti visual programming,
+
+907
+00:47:38.371 --> 00:47:40.350
+or I'll say resistant to it, or have some, you know,
+
+908
+00:47:40.351 --> 00:47:43.140
+skepticism and reservation around it. Is this,
+
+909
+00:47:43.380 --> 00:47:46.680
+I have found this sort of a duality where people lump themselves into going,
+
+910
+00:47:46.681 --> 00:47:50.280
+okay, I'm a math logic person and art people are on the other side of campus.
+
+911
+00:47:50.281 --> 00:47:53.880
+And I am not an art person and everything visual is art.
+
+912
+00:47:54.180 --> 00:47:56.190
+And this idea that they're not visual thinkers.
+
+913
+00:47:56.191 --> 00:47:59.430
+I hear that all the time from people who are in programming and I can't really
+
+914
+00:47:59.431 --> 00:48:02.310
+fathom what that means in a lot of cases, because I go, well,
+
+915
+00:48:02.310 --> 00:48:05.010
+visual is about embodiment. You have a body. And I think, you know,
+
+916
+00:48:05.011 --> 00:48:08.340
+you could probably draw a box and an arrow and communicate some visual stuff.
+
+917
+00:48:08.370 --> 00:48:12.780
+If you weren't trying to draw some detailed drawing. But yeah, I think the, the,
+
+918
+00:48:13.140 --> 00:48:17.490
+I'll say historical divide of art from science and visual from logic,
+
+919
+00:48:17.491 --> 00:48:21.900
+and this idea that math happens in textual syntax is a bit of a hangover that
+
+920
+00:48:21.901 --> 00:48:25.140
+people just think, well, visuals don't belong in math and programming,
+
+921
+00:48:25.530 --> 00:48:27.900
+but I mean, this is why I think cultural anthropology,
+
+922
+00:48:27.901 --> 00:48:32.790
+one of the sort of points of it is to sort of show people the vast diversity
+
+923
+00:48:32.791 --> 00:48:36.390
+of expressions that human life and culture can take.
+
+924
+00:48:36.510 --> 00:48:40.170
+And that everything we have was invented at one point in history.
+
+925
+00:48:40.320 --> 00:48:45.090
+And we are one very specific narrow manifestation of possible human culture.
+
+926
+00:48:45.510 --> 00:48:48.930
+And there are many others and we could switch to them or move towards them.
+
+927
+00:48:48.960 --> 00:48:52.950
+And we don't have to live in some world where math and art live on alternate
+
+928
+00:48:52.951 --> 00:48:54.000
+sides of a dichotomy.
+
+929
+00:48:55.180 --> 00:48:58.060
+<v 1>That's a really powerful point, Maggie. I feel like we should wrap it up there,</v>
+
+930
+00:48:58.061 --> 00:49:01.420
+but for people who are wondering about examples,
+
+931
+00:49:01.421 --> 00:49:03.100
+they want to see what this looks like,
+
+932
+00:49:03.101 --> 00:49:07.030
+because indeed it is a visual topic beyond the ones we've already mentioned,
+
+933
+00:49:07.390 --> 00:49:11.350
+are there some good resources you can name that allow someone to flip through
+
+934
+00:49:11.351 --> 00:49:15.010
+and see the variety of different experiments folks have tried for visual
+
+935
+00:49:15.011 --> 00:49:15.844
+programming?
+
+936
+00:49:16.110 --> 00:49:16.501
+<v 0>Definitely.</v>
+
+937
+00:49:16.501 --> 00:49:20.490
+There's some people who have done a lot of wonderful labor compiling screenshots
+
+938
+00:49:20.491 --> 00:49:23.910
+of, I think every possible visual programming language or platform that's ever
+
+939
+00:49:23.911 --> 00:49:26.040
+existed. And one I want to point to that,
+
+940
+00:49:26.041 --> 00:49:29.700
+we'll put in the show notes is a Visual Programming Codex that Ivan Reese put
+
+941
+00:49:29.701 --> 00:49:33.690
+together, which is a GitHub repo with just a wonderful array of examples.
+
+942
+00:49:34.050 --> 00:49:36.630
+And there's another one called Whole Code Catalog.
+
+943
+00:49:36.990 --> 00:49:41.550
+So a nice play on the Whole Earth Catalog that has again a nice sort of
+
+944
+00:49:41.551 --> 00:49:46.200
+categorized collection of different programming platforms and alternatives and
+
+945
+00:49:46.201 --> 00:49:49.710
+the sort of the different qualities each of them has all nicely organized in a
+
+946
+00:49:49.830 --> 00:49:50.663
+beautiful website.
+
+947
+00:49:52.370 --> 00:49:54.800
+<v 1>Well, thanks everyone for listening. If you have feedback,</v>
+
+948
+00:49:54.860 --> 00:49:59.180
+you can write us on Twitter at MuseAppHQ, or on email, hello@museapp.com. You
+
+949
+00:50:00.890 --> 00:50:04.370
+can help us out by leaving a review on Apple Podcasts and Maggie.
+
+950
+00:50:04.371 --> 00:50:08.660
+I'm really glad you're out advocating for making programming more visual,
+
+951
+00:50:08.690 --> 00:50:10.430
+more embodied, more learnable,
+
+952
+00:50:10.910 --> 00:50:15.830
+and I'm especially inspired by the idea of having a less bifurcated world
+
+953
+00:50:15.831 --> 00:50:19.820
+between the art thinkers and the math thinkers. I think we need that.
+
+954
+00:50:19.821 --> 00:50:21.320
+That's a beautiful vision for me.
+
+955
+00:50:22.080 --> 00:50:23.130
+<v 0>Thank you so much for having me on.</v>
+
+956
+00:50:23.131 --> 00:50:26.070
+I really appreciated getting to come on the show and I've mentioned to you,
+
+957
+00:50:26.071 --> 00:50:29.150
+I adore the podcast. I think I've listen to every episode up until now.
+
+958
+00:50:29.151 --> 00:50:31.850
+So it was really wonderful to get to finally come be a guest.
+
