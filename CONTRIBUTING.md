@@ -1,15 +1,10 @@
-# Contributing to Transcripts
+# Contributing to Metamuse Transcripts
 
-:bow: Thanks for considering contributing. This is a big project for anyone to do alone so any help is appreciated! :bow:
+Are you a [Metamuse](https://museapp.com/podcast/) listener and want to contribute by helping with transcription for an episode? Then this document is for you. Thanks for considering contributing. This is a big project for anyone to do alone so any help is appreciated! :bow:
 
 This process is still in its infancy so expect it to be a little rough at first.
 
 New to contributing on GitHub? [This article](https://docs.github.com/en/github/managing-files-in-a-repository/managing-files-on-github/editing-files-in-another-users-repository) may help you get started.
-
-## Ways to contribute
-
-- new transcripts
-- corrections
 
 ## New Transcripts
 
@@ -27,3 +22,21 @@ Have you noticed an existing problem with an episode transcript? Here's how you 
 1. Edit the corresponding file in `plaintext/`
 2. Open a pull request of the changes.
 3. Your MR will be reviewed and merged into the main branch.
+
+## Common Problems
+
+* Speaker names
+  * This is usually the first thing I look at. Gotta make sure to spell their name correctly.
+  * We've also had problems with speaker misattribution (Mark instead of Adam).
+
+- Jargon or project names
+  - in can switch: Ink & Switch
+  - (met) amuse: Metamuse
+  - muses: Muse is
+  - Xerox Park: Xerox PARC
+- Periods and commas
+  - Sentences can go on for a long time and not be broken up by commas.
+  - Sentences can be cut short.
+    - "... make it. So ..." instead of "... make it so."
+    - "... do it. Well..." instead of "... do it well."
+
