@@ -1,8 +1,8 @@
 # Metamuse Transcripts
 
-**Update (08/2021):** I'm looking for help! See the [contribution guide](CONTRIBUTING.md) for more info.
+:sparkles:**Update (09/2021):** I'm looking for help! See the [contribution guide](CONTRIBUTING.md) for more info.
 
-This project hosts transcripts for [Metamuse](https://museapp.com/podcast/), a podcast about tools for thought, product design, and how to have good ideas, from the team behind [Muse](https://museapp.com/).
+This project hosts transcripts for [Metamuse](https://museapp.com/podcast/), a podcast about tools for thought, product design, and how to have good ideas, from the team behind [Muse](https://museapp.com/). You can see an sample hosted at https://ppkn.github.io/metamuse-transcripts/
 
 ## Structure
 - `original/` has the transcripts as they came out from Rev. I don't expect these to be useful to anyone, I just thought they would be interesting to see.
@@ -16,3 +16,4 @@ After trying a couple of homegrown approaches, I landed on using automated trans
 TL;DR there is an open issue to correct the auto-generated transcript for each episode. Copy the file from `original/` to `plaintext/`, fix the errors, and open an MR.
 
 Detailed info for contributing can be found [here](CONTRIBUTING.md)
+
