@@ -112,7 +112,7 @@ Yeah. I think we have a lot to learn from the web in terms of how to promote sor
 Geoffrey Litt (19:20):
 And I think that's a really interesting goal to aspire to in more software, as opposed to a more traditional plugin API, like in a lot of platforms, if there's no API for it, you're stuck. You can't customize that aspect of the software. Of course there are trade-offs, you know, the reverse engineering approach is harder. It tends to be less secure and it's a lot harder to maintain over time because things change out from under you. But on the other hand, I think there's a certain beauty to being able to make changes that not only did the original authors of the software not anticipate and explicitly authorize you to make, but even sometimes ones that they actively don't want you to make. Right? So ad blocker as being the prime example of that. And so I'm very excited about the potential for browser extensions as a mechanism for a more customizable kind of software, especially as the web just seems to keep growing and growing as where all software is going to end up living. Yeah.
 
-Geoffrey Litt (20:13):
+Adam Wiggins (20:13):
 One of my favorite party tricks is opening the dev tools console in someone's browser and doing something like just changing a background color, or some text on any website you want Facebook, cnn.com, whitehouse.gov, and you know, it can blow people's minds. Wow, you're an uber hacker. But I actually also use that as an entry point for getting people interested in programming, letting them see without needing to install any new tools in their computer, kind of how the web works a little bit under the hood and that they can do this too.
 
 Geoffrey Litt (20:43):

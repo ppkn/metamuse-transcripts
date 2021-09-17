@@ -1498,7 +1498,7 @@ software is going to end up living. Yeah.
 
 375
 00:20:13.130 --> 00:20:17.060
-One of my favorite party tricks is opening the dev tools console in someone's
+<v 3>One of my favorite party tricks is opening the dev tools console in someone's</v>
 
 376
 00:20:17.061 --> 00:20:20.180
@@ -1533,2894 +1533,2898 @@ letting them see without needing to install any new tools in their computer,
 kind of how the web works a little bit under the hood and that they can do this
 
 384
-00:20:43.100 --> 00:20:46.550
-too. I love doing that too. If I'm trying to teach kids about HTML,
+00:20:43.100 --> 00:20:43.520
+too.
 
 385
+00:20:43.520 --> 00:20:46.550
+<v 0>I love doing that too. If I'm trying to teach kids about HTML,</v>
+
+386
 00:20:46.551 --> 00:20:50.620
 I'll always have them vandalize their school website in the Chrome dev tools
 
-386
+387
 00:20:51.130 --> 00:20:53.980
 inspector, and they just get such a thrill. I think it's, you know,
 
-387
+388
 00:20:54.700 --> 00:20:58.360
 if you're brought up in this world where software seems to be this immutable
 
-388
+389
 00:20:58.390 --> 00:21:00.430
 object that is just presented to you,
 
-389
+390
 00:21:00.670 --> 00:21:02.140
 and then someone shows you this little trick,
 
-390
+391
 00:21:02.141 --> 00:21:05.860
 you can play that all of a sudden makes it yours and something you can mess
 
-391
+392
 00:21:05.861 --> 00:21:09.400
 with. I think that's just a really powerful ethos to instill in people.
 
-392
+393
 00:21:09.850 --> 00:21:13.690
 I think Alan Kay would call it popping open the hood and seeing something
 
-393
+394
 00:21:13.691 --> 00:21:17.200
 sensible inside and just a little bit of that ability to mess with the
 
-394
+395
 00:21:17.201 --> 00:21:19.990
 internals, I think can go a long way. Adults too. You know,
 
-395
+396
 00:21:19.991 --> 00:21:23.770
 I've shown like salespeople, how to fake a mock-up in the browser.
 
-396
+397
 00:21:23.771 --> 00:21:24.640
 And I've seen people,
 
-397
+398
 00:21:24.641 --> 00:21:28.000
 adults scream with delight when they realize they can do this stuff.
 
-398
+399
 00:21:28.660 --> 00:21:30.820
 I do think there's also a problem,
 
-399
+400
 00:21:30.880 --> 00:21:35.650
 which is that stepping from a little bit of DOM hacking in dev tools to actually
 
-400
+401
 00:21:35.651 --> 00:21:39.820
 making a real browser extension is this enormous leap.
 
-401
+402
 00:21:40.300 --> 00:21:42.070
 Like if you think about it, you know,
 
-402
+403
 00:21:42.071 --> 00:21:45.100
 to publish a browser extension or even to save one for yourself,
 
-403
+404
 00:21:45.460 --> 00:21:48.460
 you go from messing around in dev tools to, okay,
 
-404
+405
 00:21:48.820 --> 00:21:53.440
 I'm going to learn all these weird APIs and I'm going to open up a code editor
 
-405
+406
 00:21:53.441 --> 00:21:58.300
 now and I have to learn some JavaScript. And there's just this huge chasm.
 
-406
+407
 00:21:58.450 --> 00:22:02.560
 And one of the things I'm interested in is finding ways to, I guess,
 
-407
+408
 00:22:02.561 --> 00:22:03.430
 bridge that gap,
 
-408
+409
 00:22:03.730 --> 00:22:08.020
 or just make it a smoother slope from that first hint of
 
-409
+410
 00:22:08.470 --> 00:22:13.330
 malleability to taking further steps down that path. I think for example,
 
-410
+411
 00:22:13.331 --> 00:22:14.860
 spreadsheets do this really well.
 
-411
+412
 00:22:15.370 --> 00:22:18.160
 And this is one of my favorite things about the way spreadsheets are designed.
 
-412
+413
 00:22:18.550 --> 00:22:20.620
 There's a lot of things that make spreadsheets magical for me,
 
-413
+414
 00:22:20.980 --> 00:22:23.890
 but one of them is that you can take your first step of just typing in some
 
-414
+415
 00:22:23.891 --> 00:22:27.220
 numbers, right? It's just a data table. There's nothing special.
 
-415
+416
 00:22:27.640 --> 00:22:30.190
 And then you want to add together some numbers.
 
-416
+417
 00:22:30.191 --> 00:22:32.500
 So you learn to use the sum function, let's say,
 
-417
+418
 00:22:32.950 --> 00:22:36.100
 and then you just keep taking these little, little steps.
 
-418
+419
 00:22:36.400 --> 00:22:38.740
 There's not that much learning involved with any one of them.
 
-419
+420
 00:22:38.770 --> 00:22:42.490
 There's not that many concepts involved and fast forward two years.
 
-420
+421
 00:22:42.491 --> 00:22:46.240
 And you're like running a whole business on like a bunch of V lookups, right?
 
-421
+422
 00:22:46.241 --> 00:22:50.710
 And I've met so many people who don't consider themselves that technically
 
-422
+423
 00:22:50.711 --> 00:22:53.200
 literate who are in fact incredibly capable in this medium.
 
-423
+424
 00:22:53.590 --> 00:22:55.960
 And I think a lot of it has to do with the fact that you can sort of
 
-424
+425
 00:22:56.290 --> 00:23:00.670
 accidentally end up becoming an expert because no one of those steps was too
 
-425
+426
 00:23:00.671 --> 00:23:02.920
 big, even though it is the case that in fact,
 
-426
+427
 00:23:02.921 --> 00:23:04.750
 if you add up all the little steps, you did learn a lot,
 
-427
+428
 00:23:05.050 --> 00:23:08.530
 there was work invested, but it's a much smoother path to mastery.
 
-428
+429
 00:23:08.530 --> 00:23:13.030
 <v 3>Yeah end user programming is something I think we're all passionate</v>
 
-429
+430
 00:23:13.090 --> 00:23:16.090
 about here and we've written about at Ink &amp; Switch and elsewhere.
 
-430
+431
 00:23:16.420 --> 00:23:20.680
 But this particular element of a gradual step by step,
 
-431
+432
 00:23:20.710 --> 00:23:25.360
 rather than having this big jump from user of software to producer of software,
 
-432
+433
 00:23:25.361 --> 00:23:27.400
 I think is a really key part of it.
 
-433
+434
 00:23:27.700 --> 00:23:31.120
 We haven't cracked the code on that yet as an industry,
 
-434
+435
 00:23:31.121 --> 00:23:34.510
 let's say one great discussion of this. Again,
 
-435
+436
 00:23:34.511 --> 00:23:38.380
 coming back to the web is there's a YouTube talk I'll link in the show notes,
 
-436
+437
 00:23:38.410 --> 00:23:42.280
 but essentially someone talks about how they had at first were using.
 
-437
+438
 00:23:42.340 --> 00:23:42.671
 I think it was Livejournal.
 
-438
+439
 00:23:42.671 --> 00:23:46.550
 They quickly learned that you can customize the background color or something by
 
-439
+440
 00:23:46.551 --> 00:23:48.860
 pasting this little magic snippet of CSS.
 
-440
+441
 00:23:49.220 --> 00:23:51.980
 And that leads you to doing more customizations.
 
-441
+442
 00:23:51.981 --> 00:23:56.210
 And then you go from there to kind of going to full HTML and CSS.
 
-442
+443
 00:23:56.240 --> 00:23:58.130
 There are some break points there. If you're going to, you know,
 
-443
+444
 00:23:58.140 --> 00:24:01.670
 move off to your own hosting or whatever, there's a similar kind of path.
 
-444
+445
 00:24:01.671 --> 00:24:06.200
 Also with HTML that are just files that you FTP to a
 
-445
+446
 00:24:06.440 --> 00:24:11.000
 shared server or shared hosts of some kind. And then you're just writing HTML,
 
-446
+447
 00:24:11.001 --> 00:24:14.000
 but you can actually break out into PHP with these little code.
 
-447
+448
 00:24:14.010 --> 00:24:17.120
 So all of these technologies, perhaps not even purposefully,
 
-448
+449
 00:24:17.121 --> 00:24:20.840
 I'm not even sure they were specifically designed to have that gradual ramp,
 
-449
+450
 00:24:21.140 --> 00:24:24.470
 but they do, spreadsheets, HTML, PHP,
 
-450
+451
 00:24:24.471 --> 00:24:26.450
 all have that kind of ramp.
 
-451
+452
 00:24:26.690 --> 00:24:30.800
 And that ramp is how you can avoid hitting some wall where you have to have some
 
-452
+453
 00:24:30.801 --> 00:24:32.420
 deep intrinsic motivation.
 
-453
+454
 00:24:32.421 --> 00:24:36.530
 I want to learn to be a software engineer or manipulate computers in this way.
 
-454
+455
 00:24:36.740 --> 00:24:39.020
 And instead you're just on the way to solving your problem.
 
-455
+456
 00:24:39.320 --> 00:24:42.890
 You find some ways to do that by pasting some magic codes into your thing.
 
-456
+457
 00:24:42.891 --> 00:24:45.470
 Maybe you get a little curious and you follow where that leads.
 
-457
+458
 00:24:45.710 --> 00:24:48.110
 And pretty soon you're an empowered computer user.
 
-458
+459
 00:24:48.340 --> 00:24:51.670
 <v 0>For me, this comes back to the, bring your own client thing.</v>
 
-459
+460
 00:24:52.270 --> 00:24:55.090
 One of the most frustrating experiences for me in software is when you're in
 
-460
+461
 00:24:55.091 --> 00:24:58.810
 some sort of monolithic ecosystem and you hit a wall of something you really
 
-461
+462
 00:24:58.811 --> 00:25:00.010
 want to do, but you can't do.
 
-462
+463
 00:25:00.520 --> 00:25:03.820
 And depending on how the ecosystem around you is arranged,
 
-463
+464
 00:25:04.180 --> 00:25:06.400
 you might just have no choice. That's sort of it,
 
-464
+465
 00:25:06.401 --> 00:25:09.820
 you can file a feedback request with the company that makes the software and
 
-465
+466
 00:25:09.821 --> 00:25:10.810
 they will tell you, you know,
 
-466
+467
 00:25:11.230 --> 00:25:13.450
 we have put it on the backlog and good luck with that.
 
-467
+468
 00:25:13.690 --> 00:25:15.730
 <v 3>Yeah. It's on our roadmap. Honestly,</v>
 
-468
+469
 00:25:15.731 --> 00:25:18.820
 I make that answer myself in a Muse support request all the time.
 
-469
+470
 00:25:18.821 --> 00:25:19.900
 And it's genuinely true,
 
-470
+471
 00:25:19.901 --> 00:25:23.410
 but I've never worked on a software project that doesn't have a roadmap,
 
-471
+472
 00:25:23.411 --> 00:25:23.891
 backlog,
 
-472
+473
 00:25:23.891 --> 00:25:27.640
 whatever it is that is just way longer than what you could ever hope to do in a
 
-473
+474
 00:25:27.641 --> 00:25:28.474
 lifetime.
 
-474
+475
 00:25:28.660 --> 00:25:30.490
 <v 0>I've been on both sides of that too. Actually,</v>
 
-475
+476
 00:25:30.491 --> 00:25:34.600
 a lot of how I got into this whole topic to begin with was from my experience
 
-476
+477
 00:25:34.601 --> 00:25:36.070
 being on the other side of that conversation.
 
-477
+478
 00:25:36.460 --> 00:25:41.380
 So before starting a PhD and doing research stuff worked in startups,
 
-478
+479
 00:25:41.800 --> 00:25:45.040
 I spent a while at an education technology company where we were building
 
-479
+480
 00:25:45.041 --> 00:25:49.510
 software for K through 12 schools. And when we started,
 
-480
+481
 00:25:49.870 --> 00:25:52.300
 we were a very small team. I was fortunate enough to join early.
 
-481
+482
 00:25:52.630 --> 00:25:56.050
 We were like six people living in a house together. We only had a few customers.
 
-482
+483
 00:25:56.051 --> 00:26:00.670
 And so we had the ability to focus a lot of attention on any individual request
 
-483
+484
 00:26:00.671 --> 00:26:03.550
 that came in. But as we grew over time,
 
-484
+485
 00:26:03.760 --> 00:26:06.760
 starting to serve thousands of schools across the country,
 
-485
+486
 00:26:07.360 --> 00:26:10.330
 it just became harder and harder to manage all this feedback.
 
-486
+487
 00:26:10.750 --> 00:26:14.620
 And I think the default answer and what you're supposed to do given the way
 
-487
+488
 00:26:14.621 --> 00:26:17.260
 software is currently arranged is to just get better at saying no.
 
-488
+489
 00:26:17.860 --> 00:26:21.130
 So you sort of assume, well, we're a resource constraint team.
 
-489
+490
 00:26:21.370 --> 00:26:23.110
 We are the only ones who can change the software.
 
-490
+491
 00:26:23.560 --> 00:26:25.690
 We don't have the time to do everything everyone wants.
 
-491
+492
 00:26:26.020 --> 00:26:27.850
 And so we're just going to do less.
 
-492
+493
 00:26:28.420 --> 00:26:33.280
 And I think that on the one hand that can reflect sort of a wise style of design
 
-493
+494
 00:26:33.281 --> 00:26:35.320
 where you're not just building a faster horse,
 
-494
+495
 00:26:35.321 --> 00:26:38.140
 you're like digging deeper and really building something better than they could
 
-495
+496
 00:26:38.200 --> 00:26:40.960
 have asked for. But often in my experience, it was not that at all.
 
-496
+497
 00:26:41.320 --> 00:26:44.670
 It was just that only five people wanted something. And I agreed with them,
 
-497
+498
 00:26:44.671 --> 00:26:47.430
 you know? Sure. That makes total sense for you. I can see why you want that.
 
-498
+499
 00:26:47.460 --> 00:26:51.600
 I wish I could build it for you, but there's only five of you. And so I'm sorry.
 
-499
+500
 00:26:51.660 --> 00:26:56.220
 And that just really, I think, was a frustrating experience for me.
 
-500
+501
 00:26:56.220 --> 00:26:59.130
 And I found myself wondering why does my team, you know,
 
-501
+502
 00:26:59.131 --> 00:27:00.090
 in this office in Boston,
 
-502
+503
 00:27:00.091 --> 00:27:04.470
 have to be making these decisions for these teachers in like Idaho or whatever.
 
-503
+504
 00:27:04.890 --> 00:27:08.010
 One of the bright spots against that sort of philosophy though,
 
-504
+505
 00:27:08.011 --> 00:27:09.480
 was coming back to spreadsheets.
 
-505
+506
 00:27:09.960 --> 00:27:13.830
 I remember this feedback call we had with a customer where we wanted to ask
 
-506
+507
 00:27:13.831 --> 00:27:16.440
 them, how did you like our data reports that we're showing you?
 
-507
+508
 00:27:16.590 --> 00:27:20.400
 Cause we were essentially building data dashboards for schools and they told us,
 
-508
+509
 00:27:20.970 --> 00:27:23.910
 oh yeah, we don't use your data reports at all. We use spreadsheets,
 
-509
+510
 00:27:24.060 --> 00:27:27.690
 let me show you. And so they had exported the CSV and made their own thing.
 
-510
+511
 00:27:28.320 --> 00:27:32.520
 And on the one hand it was sort of annoying for us having spent so much of our
 
-511
+512
 00:27:32.521 --> 00:27:34.620
 time trying to build this beautiful product experience for them.
 
-512
+513
 00:27:35.100 --> 00:27:35.701
 But on the other hand,
 
-513
+514
 00:27:35.701 --> 00:27:39.720
 it was so cool to see how they had built this really weird and ugly,
 
-514
+515
 00:27:40.020 --> 00:27:42.900
 but extremely functional spreadsheet that did exactly what they wanted for their
 
-515
+516
 00:27:42.901 --> 00:27:46.260
 school and aggregated the data in a completely different way that had to do with
 
-516
+517
 00:27:46.590 --> 00:27:50.100
 how the teams worked within their school. And I thought,
 
-517
+518
 00:27:50.101 --> 00:27:53.160
 what was neat about that was that spreadsheets were this flexible toolkit that
 
-518
+519
 00:27:53.161 --> 00:27:56.010
 they could use to build their own thing,
 
-519
+520
 00:27:56.040 --> 00:27:59.970
 even something as tiny as changing a single word of copy that might've been
 
-520
+521
 00:27:59.971 --> 00:28:03.540
 bothering them and causing friction in their whatever political environment in
 
-521
+522
 00:28:03.541 --> 00:28:04.374
 their school.
 
-522
+523
 00:28:04.620 --> 00:28:07.320
 There's so many tiny things that I think people would change if they could,
 
-523
+524
 00:28:07.830 --> 00:28:10.980
 but it's just that the way software is built requires everything to funnel
 
-524
+525
 00:28:11.010 --> 00:28:13.620
 through the original team building thing, which isn't,
 
-525
+526
 00:28:13.710 --> 00:28:14.640
 he was never going to have the time.
 
-526
+527
 00:28:14.730 --> 00:28:18.360
 And so I wish we could reorganize software to support more of that style of
 
-527
+528
 00:28:18.361 --> 00:28:19.194
 customization.
 
-528
+529
 00:28:20.400 --> 00:28:23.190
 <v 3>So we've already touched on some of your work here,</v>
 
-529
+530
 00:28:23.220 --> 00:28:27.570
 Geoffrey I'll link your articles on bring your own client as well as one about
 
-530
+531
 00:28:27.630 --> 00:28:29.190
 browser extensions being underrated.
 
-531
+532
 00:28:29.760 --> 00:28:33.870
 But then maybe you can also talk about some of the projects you've done that
 
-532
+533
 00:28:34.080 --> 00:28:38.400
 have to do with how you see solving this problem more broadly.
 
-533
+534
 00:28:39.560 --> 00:28:41.060
 <v 0>On the topic of interoperability.</v>
 
-534
+535
 00:28:41.630 --> 00:28:45.140
 One idea that I'm excited about is thinking about better ways to synchronize
 
-535
+536
 00:28:45.141 --> 00:28:49.850
 across existing cloud applications. So I think there's a way in which, you know,
 
-536
+537
 00:28:49.851 --> 00:28:51.770
 if you're using one app and I'm using a different app,
 
-537
+538
 00:28:52.190 --> 00:28:56.210
 and if we can establish a bridge between them where let's say I'm editing a doc
 
-538
+539
 00:28:56.300 --> 00:28:59.300
 in Google docs and you're using Dropbox paper or your preferred editor,
 
-539
+540
 00:28:59.690 --> 00:29:03.380
 and imagine every single keystroke, data is being transmitted live between them.
 
-540
+541
 00:29:03.890 --> 00:29:07.520
 That starts to create this more flexible feeling where the data's not locked in
 
-541
+542
 00:29:07.521 --> 00:29:10.490
 any individual app in a more kind of lives between the apps.
 
-542
+543
 00:29:11.120 --> 00:29:15.470
 And so one new project that I'm sort of embarking on now is trying to create
 
-543
+544
 00:29:15.471 --> 00:29:18.320
 tools that mediate, that kind of synchronization across tools.
 
-544
+545
 00:29:18.950 --> 00:29:22.520
 Some of the hardest part comes back to that partial compatibility issue.
 
-545
+546
 00:29:22.521 --> 00:29:24.950
 We talked about earlier, where if there's changes,
 
-546
+547
 00:29:24.951 --> 00:29:27.380
 I'm making better going to mess up your experience or that aren't going to
 
-547
+548
 00:29:27.381 --> 00:29:28.700
 propagate to the app you're using.
 
-548
+549
 00:29:29.150 --> 00:29:33.530
 How can we help users understand the relationship between these apps and feel
 
-549
+550
 00:29:33.531 --> 00:29:37.430
 comfortable with the overall user experience of stitching them together?
 
-550
+551
 00:29:37.940 --> 00:29:41.470
 And I think this gets at some of the toughest challenges and these sort of more
 
-551
+552
 00:29:41.471 --> 00:29:44.740
 flexible software ecosystems is that if we're all using the same thing,
 
-552
+553
 00:29:44.890 --> 00:29:47.770
 it's really easy for me to know what you see and what your experience looks
 
-553
+554
 00:29:47.771 --> 00:29:49.480
 like. And the more we diverge,
 
-554
+555
 00:29:50.020 --> 00:29:53.380
 I think it's really important that I'm at least able to preserve a mental model
 
-555
+556
 00:29:53.381 --> 00:29:56.620
 of maybe there's some data I'm putting in that you're not able to see for some
 
-556
+557
 00:29:56.621 --> 00:29:59.440
 reason. And if I'm not aware of that, that's going to cause problems. Right?
 
-557
+558
 00:29:59.740 --> 00:30:03.220
 And so a lot of my thinking these days is about building these sorts of sync
 
-558
+559
 00:30:03.221 --> 00:30:04.630
 tools to mediate that gap.
 
-559
+560
 00:30:04.630 --> 00:30:07.410
 <v 3>And I can think of a few examples of that,</v>
 
-560
+561
 00:30:07.411 --> 00:30:10.530
 particularly in the enterprise world, for example,
 
-561
+562
 00:30:10.531 --> 00:30:14.520
 kind of Salesforce to SQL database stuff,
 
-562
+563
 00:30:14.521 --> 00:30:16.950
 where your sales team wants to use their CRM,
 
-563
+564
 00:30:16.951 --> 00:30:19.460
 because that's got all these tools and things that suit them.
 
-564
+565
 00:30:19.470 --> 00:30:22.380
 They're typing stuff into a web dashboard and getting reminders about who they
 
-565
+566
 00:30:22.381 --> 00:30:26.910
 need to follow up on, but then your data team or your programmers, you know,
 
-566
+567
 00:30:26.911 --> 00:30:29.970
 they're not going to go click around in the Salesforce interface.
 
-567
+568
 00:30:29.971 --> 00:30:33.420
 They need to pull stuff into a proper database like a Postgres database.
 
-568
+569
 00:30:33.720 --> 00:30:37.260
 And so sinking seamlessly between those is valuable.
 
-569
+570
 00:30:37.560 --> 00:30:39.150
 Do you have other concrete examples?
 
-570
+571
 00:30:39.151 --> 00:30:41.280
 You mentioned the project management tool case.
 
-571
+572
 00:30:41.610 --> 00:30:44.760
 What are some other ones that you see as kind of like key use cases?
 
-572
+573
 00:30:44.760 --> 00:30:45.144
 <v 0>Yeah.</v>
 
-573
+574
 00:30:45.631 --> 00:30:49.140
 It's funny sales data is one I've heard a lot about too from people and it's
 
-574
+575
 00:30:49.141 --> 00:30:50.430
 sort of a more mundane use case.
 
-575
+576
 00:30:50.431 --> 00:30:53.400
 I'm not sure I would classify it in sort of the creative tool space,
 
-576
+577
 00:30:53.430 --> 00:30:57.150
 but I think it points to how this need just pops up a lot inside of companies.
 
-577
+578
 00:30:57.150 --> 00:31:00.780
 <v 3>I'll go ahead and count sales as creative work actually have this discussion a</v>
 
-578
+579
 00:31:00.781 --> 00:31:01.230
 fair--
 
-579
+580
 00:31:01.230 --> 00:31:01.411
 <v 0>Yeah, that's fair.</v>
 
-580
+581
 00:31:01.411 --> 00:31:03.210
 <v 3>Bit, which is sort of,</v>
 
-581
+582
 00:31:03.211 --> 00:31:06.030
 I like to use the term creative professional when I talk about sort of the
 
-582
+583
 00:31:06.031 --> 00:31:07.770
 target audience for Muse,
 
-583
+584
 00:31:07.771 --> 00:31:10.950
 but also maybe just the kind of person I'm interested in serving generally.
 
-584
+585
 00:31:11.310 --> 00:31:14.040
 And a lot of people do respond to that with, oh,
 
-585
+586
 00:31:14.041 --> 00:31:18.900
 well I'm an attorney or I'm an accountant. Is that really creative work?
 
-586
+587
 00:31:19.260 --> 00:31:22.770
 And I think it is, I think there is creativity that goes into, for example,
 
-587
+588
 00:31:22.771 --> 00:31:26.400
 financial modeling and absolutely there can be creativity that goes into sales.
 
-588
+589
 00:31:26.401 --> 00:31:30.540
 It's not traditional artist type stuff. So I would go ahead and count that.
 
-589
+590
 00:31:31.020 --> 00:31:32.400
 <v 0>That's totally fair. And in fact,</v>
 
-590
+591
 00:31:32.880 --> 00:31:35.880
 I think it points to why tools matter in any profession.
 
-591
+592
 00:31:35.881 --> 00:31:39.540
 Like there's a reason that people want to synchronize HubSpot with MailChimp.
 
-592
+593
 00:31:40.080 --> 00:31:43.290
 There's something going on there about what individual tools are good at in the
 
-593
+594
 00:31:43.291 --> 00:31:45.570
 entire life cycle of how you want to run your process.
 
-594
+595
 00:31:45.990 --> 00:31:50.340
 And the need for sync emerges from the reality that no one tool can do
 
-595
+596
 00:31:50.341 --> 00:31:53.130
 everything perfectly. And so I think that's totally valid.
 
-596
+597
 00:31:53.550 --> 00:31:56.160
 <v 3>I'm reminded of the phrase toolmaker humility,</v>
 
-597
+598
 00:31:56.550 --> 00:32:00.300
 which came up in our podcast with Balint, from Craft,
 
-598
+599
 00:32:00.630 --> 00:32:04.020
 where he really tries to keep that in his heart,
 
-599
+600
 00:32:04.290 --> 00:32:08.460
 as he designs the product is knowing you're not only not the only tool that
 
-600
+601
 00:32:08.461 --> 00:32:13.380
 people are using, but you're probably a large collection of both process.
 
-601
+602
 00:32:13.381 --> 00:32:15.900
 And over time your toolkit is changing and that sort of thing.
 
-602
+603
 00:32:15.901 --> 00:32:19.860
 And I just feel it's so easy for toolmakers to want to make the everything tool.
 
-603
+604
 00:32:20.100 --> 00:32:20.551
 Don't worry,
 
-604
+605
 00:32:20.551 --> 00:32:23.340
 we'll just do everything and you can put everything in here and we'll be all in
 
-605
+606
 00:32:23.341 --> 00:32:25.770
 one place and then it can all work together seamlessly.
 
-606
+607
 00:32:26.130 --> 00:32:28.710
 And that has never been how the world has worked.
 
-607
+608
 00:32:28.890 --> 00:32:31.110
 It has never going to be how the world works.
 
-608
+609
 00:32:31.500 --> 00:32:35.280
 And if you can design your tool to play as well as possible and be aware of that
 
-609
+610
 00:32:35.580 --> 00:32:37.590
 reality, I think everyone's better off.
 
-610
+611
 00:32:38.400 --> 00:32:39.200
 <v 0>I think it's tricky though,</v>
 
-611
+612
 00:32:39.200 --> 00:32:42.830
 because you need not only the willingness of the toolmakers to play with other
 
-612
+613
 00:32:42.831 --> 00:32:43.490
 tools,
 
-613
+614
 00:32:43.490 --> 00:32:47.210
 but you need a platform that supports that interoperability in the right way.
 
-614
+615
 00:32:47.660 --> 00:32:50.300
 So I think Craft is the perfect specific example of this.
 
-615
+616
 00:32:50.660 --> 00:32:53.900
 I think they've done the best possible thing you could expect a writing tool to
 
-616
+617
 00:32:53.901 --> 00:32:57.500
 do today, which is that I think as Balint mentioned on this podcast,
 
-617
+618
 00:32:57.860 --> 00:33:00.350
 they let you save your documents either to their cloud,
 
-618
+619
 00:33:00.860 --> 00:33:04.070
 which gives you real-time collaboration. You can comment and things like that,
 
-619
+620
 00:33:04.280 --> 00:33:06.950
 or you can save it to a file, which gives you more control.
 
-620
+621
 00:33:07.460 --> 00:33:09.740
 It is sort of locally stored with you.
 
-621
+622
 00:33:09.741 --> 00:33:11.990
 You have the ability to save it wherever you want.
 
-622
+623
 00:33:11.991 --> 00:33:14.900
 Other people can potentially open those files in different applications,
 
-623
+624
 00:33:14.901 --> 00:33:17.000
 I think is a ultimate goal of that team's,
 
-624
+625
 00:33:17.480 --> 00:33:22.070
 but it's an either or so if you want to collaborate in real time and have that
 
-625
+626
 00:33:22.071 --> 00:33:25.100
 flexibility to open those files and other applications,
 
-626
+627
 00:33:25.340 --> 00:33:28.970
 there's no technological solution to that today that exists.
 
-627
+628
 00:33:29.000 --> 00:33:33.710
 There's no platform that team can build on to support that. And to me,
 
-628
+629
 00:33:33.711 --> 00:33:37.580
 that's the key missing piece. There's this ecosystem missing there.
 
-629
+630
 00:33:38.030 --> 00:33:42.260
 That means that even in this dream world where Google decides they want third
 
-630
+631
 00:33:42.261 --> 00:33:46.370
 party editors to exist for Google docs or something supporting that technically
 
-631
+632
 00:33:46.371 --> 00:33:47.270
 is very challenging.
 
-632
+633
 00:33:47.780 --> 00:33:50.660
 And so I think we need better platform support for that kind of thing.
 
-633
+634
 00:33:50.960 --> 00:33:54.770
 In addition to thinking about business incentives for people to even want to do
 
-634
+635
 00:33:54.771 --> 00:33:55.101
 in the first place.
 
-635
+636
 00:33:55.101 --> 00:33:58.240
 <v 2>Yeah. This is a great example to bring up. I agree.</v>
 
-636
+637
 00:33:58.241 --> 00:34:01.540
 There's a huge technical challenge here.
 
-637
+638
 00:34:01.541 --> 00:34:04.630
 It's one that I and many people around Muse and the Ink &amp; Switch research lab
 
-638
+639
 00:34:04.750 --> 00:34:06.850
 had been working on for some years now. Yeah.
 
-639
+640
 00:34:06.851 --> 00:34:11.200
 So you would need to have that in play something like files for the real time
 
-640
+641
 00:34:11.201 --> 00:34:14.980
 collaborative internet, what is that abstraction? And then on top of that,
 
-641
+642
 00:34:14.981 --> 00:34:19.660
 you do have this whole issue of business and incentives and dynamics
 
-642
+643
 00:34:19.720 --> 00:34:21.490
 and path dependence,
 
-643
+644
 00:34:21.820 --> 00:34:26.740
 because let's say conservatively that creating this technology takes 10
 
-644
+645
 00:34:26.770 --> 00:34:29.710
 engineer years, several million dollars. Who's going to put that up.
 
-645
+646
 00:34:29.711 --> 00:34:34.060
 And then how do you actually turn that into a public platform that's optimized
 
-646
+647
 00:34:34.061 --> 00:34:36.160
 for the benefit of all the individual users and not the creator.
 
-647
+648
 00:34:36.430 --> 00:34:37.300
 It's tough problem.
 
-648
+649
 00:34:37.600 --> 00:34:40.120
 One of the things that I liked about this project that you mentioned where
 
-649
+650
 00:34:40.121 --> 00:34:43.300
 you're synchronizing data between cloud services,
 
-650
+651
 00:34:43.570 --> 00:34:47.680
 is that it does grapple with the reality of here's our initial condition of
 
-651
+652
 00:34:47.710 --> 00:34:50.710
 there are a bunch of proprietary cloud services that do have important data,
 
-652
+653
 00:34:51.100 --> 00:34:53.830
 and it'd be ideal if they had a perfect JSON API,
 
-653
+654
 00:34:53.950 --> 00:34:55.180
 but that's not the reality that we live in.
 
-654
+655
 00:34:55.450 --> 00:34:58.510
 So we need to find a way to help our users get data back and forth between them.
 
-655
+656
 00:34:58.720 --> 00:35:02.560
 I feel like a lot of the conversations in this space that is a space of open
 
-656
+657
 00:35:02.561 --> 00:35:07.420
 systems are of the form we should X where X is design and
 
-657
+658
 00:35:07.421 --> 00:35:11.230
 build and use a perfect open system. That's not going to happen. In fact,
 
-658
+659
 00:35:11.231 --> 00:35:14.530
 it's unreasonable for you to ask other people dedicate their mortal lives to
 
-659
+660
 00:35:14.531 --> 00:35:15.580
 your pet projects, right?
 
-660
+661
 00:35:15.880 --> 00:35:18.790
 You need to find a way to grapple with these dynamics and get out there in
 
-661
+662
 00:35:18.791 --> 00:35:18.791
 reality.
 
-662
+663
 00:35:18.791 --> 00:35:20.920
 <v 0>Yeah, this is a tension,</v>
 
-663
+664
 00:35:20.921 --> 00:35:24.430
 I think a lot about between sort of an incremental approach versus a first
 
-664
+665
 00:35:24.431 --> 00:35:28.270
 principles approach. I think you could frame it for example, the Solid project,
 
-665
+666
 00:35:28.271 --> 00:35:29.650
 which is led by Tim Berners Lee,
 
-666
+667
 00:35:30.010 --> 00:35:33.010
 and is pretty prominent in this space is one attempt where their ideas,
 
-667
+668
 00:35:33.011 --> 00:35:33.400
 you know,
 
-668
+669
 00:35:33.400 --> 00:35:36.910
 we're going to essentially fundamentally rearchitect how web apps are built.
 
-669
+670
 00:35:37.350 --> 00:35:38.700
 We're going to give users these little,
 
-670
+671
 00:35:38.970 --> 00:35:43.050
 they call them pods where the users control their own data and then web
 
-671
+672
 00:35:43.051 --> 00:35:46.560
 applications can connect to your pod to access and edit your data.
 
-672
+673
 00:35:46.830 --> 00:35:49.110
 But the applications themselves don't store the data.
 
-673
+674
 00:35:49.590 --> 00:35:51.630
 And I think that's a lovely vision.
 
-674
+675
 00:35:51.690 --> 00:35:55.830
 I would love to see something like that succeed. But as you're saying, Mark,
 
-675
+676
 00:35:56.310 --> 00:35:59.910
 I think the biggest challenge is how are we possibly going to get from the world
 
-676
+677
 00:35:59.911 --> 00:36:01.560
 we have today to that future?
 
-677
+678
 00:36:01.890 --> 00:36:06.510
 Are we really going to rebuild the web stack from scratch?
 
-678
+679
 00:36:06.930 --> 00:36:11.400
 And is the experience going to be better enough for both developers and users
 
-679
+680
 00:36:11.790 --> 00:36:13.440
 to incentivize such a massive shift?
 
-680
+681
 00:36:13.440 --> 00:36:13.440
 <v 2>Yeah.</v>
 
-681
+682
 00:36:13.440 --> 00:36:16.350
 <v 0>I tend to think that no amount of, you know,</v>
 
-682
+683
 00:36:16.620 --> 00:36:20.400
 legislation or regulation let's say is going to successfully push us to a
 
-683
+684
 00:36:20.401 --> 00:36:23.910
 solution if it's not better for both developers and users.
 
-684
+685
 00:36:23.911 --> 00:36:28.530
 And so I think we need to think about making it incredibly easy and awesome
 
-685
+686
 00:36:28.531 --> 00:36:32.820
 for both of those groups in order to get from where we are today to that
 
-686
+687
 00:36:32.880 --> 00:36:33.750
 beautiful future.
 
-687
+688
 00:36:34.580 --> 00:36:35.660
 <v 2>Yeah and to be clear,</v>
 
-688
+689
 00:36:35.661 --> 00:36:39.620
 I do believe it's possible to get to a future that looks very different from the
 
-689
+690
 00:36:39.621 --> 00:36:41.180
 present a radically different future,
 
-690
+691
 00:36:41.450 --> 00:36:43.970
 but necessarily you are going to get there in incremental steps,
 
-691
+692
 00:36:43.971 --> 00:36:47.240
 which might be incremental steps from the status quo or incremental steps from
 
-692
+693
 00:36:47.630 --> 00:36:47.961
 zilch,
 
-693
+694
 00:36:47.961 --> 00:36:51.020
 basically where you're building up a new system in the context of the current
 
-694
+695
 00:36:51.021 --> 00:36:53.630
 ecosystem. I think both those are viable. I agree.
 
-695
+696
 00:36:53.631 --> 00:36:55.910
 I think what we need here is entrepreneurs in the broadest sense,
 
-696
+697
 00:36:55.911 --> 00:36:57.050
 not just of commercial ventures,
 
-697
+698
 00:36:57.051 --> 00:37:02.030
 but of ideas and nonprofits and politics and all of these things to really
 
-698
+699
 00:37:02.031 --> 00:37:03.380
 work towards the future that they want to see.
 
-699
+700
 00:37:03.380 --> 00:37:07.790
 <v 0>I think another really important thing on the entrepreneurship theme there</v>
 
-700
+701
 00:37:08.180 --> 00:37:10.640
 is being realistic about use cases.
 
-701
+702
 00:37:11.060 --> 00:37:15.050
 I think my favorite startup style thinkers are the people who can really focus
 
-702
+703
 00:37:15.051 --> 00:37:19.280
 on what is this technology actually useful for and how can we focus in on that
 
-703
+704
 00:37:19.281 --> 00:37:20.114
 one killer app?
 
-704
+705
 00:37:20.450 --> 00:37:24.140
 And I'm not sure that we've necessarily found that killer app yet in this space.
 
-705
+706
 00:37:24.530 --> 00:37:27.080
 For me, I think collaborative writing might be the one personally,
 
-706
+707
 00:37:27.081 --> 00:37:29.810
 but I worry that you can make all the tech demos you want,
 
-707
+708
 00:37:30.200 --> 00:37:32.690
 but a lot of things take off in a particular niche.
 
-708
+709
 00:37:33.230 --> 00:37:37.730
 And I'm interested in finding where's the place where people desperately are
 
-709
+710
 00:37:37.731 --> 00:37:41.630
 needing this real-time interoperability to the point that they would actually
 
-710
+711
 00:37:41.810 --> 00:37:43.040
 abandon their familiar tools.
 
-711
+712
 00:37:43.040 --> 00:37:43.544
 <v 2>Yeah.</v>
 
-712
+713
 00:37:43.911 --> 00:37:46.550
 I feel like this actually afflicts quite a few projects in this space where
 
-713
+714
 00:37:46.970 --> 00:37:47.271
 again,
 
-714
+715
 00:37:47.271 --> 00:37:50.390
 they're thinking in terms of generalities and they don't have a specific use
 
-715
+716
 00:37:50.391 --> 00:37:53.030
 case in mind. I actually called this the Mark rule for product management,
 
-716
+717
 00:37:53.031 --> 00:37:56.540
 which is you need to have a single named human being,
 
-717
+718
 00:37:56.541 --> 00:37:58.670
 quite an email who specifically wants your project.
 
-718
+719
 00:37:59.630 --> 00:38:01.520
 And that sounds like a low bar,
 
-719
+720
 00:38:01.550 --> 00:38:04.250
 but in a lot of cases you ask people that and they're like, oh,
 
-720
+721
 00:38:04.251 --> 00:38:07.550
 it's salespeople. Well, do you have a specific one in mind that I can email?
 
-721
+722
 00:38:07.580 --> 00:38:10.490
 Well, not always. Right. So it's a good baseline.
 
-722
+723
 00:38:11.390 --> 00:38:14.660
 <v 0>Yeah. I think often, especially with this kind of customizable software,</v>
 
-723
+724
 00:38:14.990 --> 00:38:19.640
 it's tempting to get into, wouldn't it be cool if conversations that,
 
-724
+725
 00:38:20.150 --> 00:38:21.980
 where it might be nice, but there's no real pain.
 
-725
+726
 00:38:22.460 --> 00:38:25.670
 One use case that I think is really compelling to me is I read a paper recently
 
-726
+727
 00:38:25.671 --> 00:38:29.960
 by some researchers at Northwestern university on accessibility issues and
 
-727
+728
 00:38:29.961 --> 00:38:30.794
 collaborative writing.
 
-728
+729
 00:38:31.160 --> 00:38:35.920
 And they talk about how people with sight impairments have a really hard time
 
-729
+730
 00:38:35.921 --> 00:38:37.540
 using Google docs with our teammates,
 
-730
+731
 00:38:37.900 --> 00:38:41.740
 because there are certain accessibility issues around how that platform works.
 
-731
+732
 00:38:42.190 --> 00:38:46.750
 And what they often end up doing is they'll either convince their team to adopt
 
-732
+733
 00:38:46.751 --> 00:38:49.930
 a different workflow, or they'll just give up and copy paste,
 
-733
+734
 00:38:50.290 --> 00:38:53.530
 text out into a word doc or something edit it there and then paste it back.
 
-734
+735
 00:38:53.980 --> 00:38:57.550
 And it's very, very cumbersome. It's not just a little inconvenience.
 
-735
+736
 00:38:57.551 --> 00:39:00.400
 It really limits their ability to be a true member of their team.
 
-736
+737
 00:39:00.790 --> 00:39:04.300
 And they have to make this incredibly uncomfortable choice where they talk about
 
-737
+738
 00:39:04.690 --> 00:39:08.440
 the social anxiety around trying to convince all of their coworkers to use a
 
-738
+739
 00:39:08.441 --> 00:39:09.274
 different tool,
 
-739
+740
 00:39:09.550 --> 00:39:14.410
 or just internalizing that friction and deciding to try to live
 
-740
+741
 00:39:14.411 --> 00:39:17.740
 with it. And I think that if you imagine a world of greater interoperability,
 
-741
+742
 00:39:18.220 --> 00:39:22.690
 could we have a text editor that is much more optimized for this specific group
 
-742
+743
 00:39:22.691 --> 00:39:26.320
 of people who have very different needs and still allow them to collaborate with
 
-743
+744
 00:39:26.321 --> 00:39:29.530
 their peers more effectively? The more that people's needs differ,
 
-744
+745
 00:39:29.531 --> 00:39:31.180
 especially people with disabilities,
 
-745
+746
 00:39:31.181 --> 00:39:34.690
 I think often have fairly different kinds of needs. And a lot of other people,
 
-746
+747
 00:39:35.080 --> 00:39:36.670
 I think that those are use cases.
 
-747
+748
 00:39:36.671 --> 00:39:40.210
 I'm thinking a lot about in terms of where we really need better inter-
 
-748
+749
 00:39:40.210 --> 00:39:40.810
 operability.
 
-749
+750
 00:39:40.810 --> 00:39:43.180
 <v 2>Yeah it's a great motivating factor.</v>
 
-750
+751
 00:39:43.600 --> 00:39:48.280
 It's easy to think of the what-ifs in terms of cool conveniences and emojis and
 
-751
+752
 00:39:48.281 --> 00:39:50.320
 so on, but let's not forget about that as well.
 
-752
+753
 00:39:50.320 --> 00:39:53.800
 <v 0>I also think as an antidote to cool conveniences,</v>
 
-753
+754
 00:39:54.720 --> 00:39:58.510
 there's sort of a interesting paradoxical way that software customization
 
-754
+755
 00:39:58.900 --> 00:40:01.450
 actually promotes very boring stability.
 
-755
+756
 00:40:02.080 --> 00:40:06.820
 So I think one of the special things about let's say programmers and their text
 
-756
+757
 00:40:06.821 --> 00:40:07.181
 editors,
 
-757
+758
 00:40:07.181 --> 00:40:10.870
 which is a place where we have some of this file based interoperability is that
 
-758
+759
 00:40:10.871 --> 00:40:11.830
 if you talk to programmers,
 
-759
+760
 00:40:12.130 --> 00:40:15.940
 often they've invested like a decade plus in using a particular editor, right.
 
-760
+761
 00:40:16.180 --> 00:40:17.770
 And they've carried it with them from job to job.
 
-761
+762
 00:40:17.800 --> 00:40:19.030
 They've really made it their own.
 
-762
+763
 00:40:19.450 --> 00:40:24.370
 And they have successfully been able to avoid switching tools because
 
-763
+764
 00:40:24.371 --> 00:40:25.240
 of interoperability.
 
-764
+765
 00:40:25.690 --> 00:40:29.560
 It's not this kind of tinkering trying a bunch of new things, mindset.
 
-765
+766
 00:40:29.561 --> 00:40:33.730
 It's exactly the opposite of just getting to invest deeply in one tool and to
 
-766
+767
 00:40:33.731 --> 00:40:34.564
 keep using it.
 
-767
+768
 00:40:34.900 --> 00:40:39.580
 I think that's an underrated benefit of interoperability is just
 
-768
+769
 00:40:40.270 --> 00:40:41.800
 yeah. Being able to make that deep investment.
 
-769
+770
 00:40:41.800 --> 00:40:42.184
 <v 3>The</v>
 
-770
+771
 00:40:43.380 --> 00:40:47.550
 revealed preferences of software engineers is that yeah,
 
-771
+772
 00:40:47.580 --> 00:40:49.830
 very standardized file formats,
 
-772
+773
 00:40:50.010 --> 00:40:54.150
 usually plain text wide variety of source editors,
 
-773
+774
 00:40:54.151 --> 00:40:58.230
 wide variety of different kinds of plugins and linters and things like that.
 
-774
+775
 00:40:58.680 --> 00:41:03.060
 I guess you do have to agree on your version control system that needs to be at
 
-775
+776
 00:41:03.061 --> 00:41:06.720
 least somewhat standardized on your team, terminal,
 
-776
+777
 00:41:06.870 --> 00:41:11.070
 even things like database clients, you know, SQL is pretty standardized.
 
-777
+778
 00:41:11.520 --> 00:41:16.500
 So software engineers seem to prefer software that changes less and
 
-778
+779
 00:41:16.530 --> 00:41:20.460
 has more interoperability. And it does have the problem of,
 
-779
+780
 00:41:20.490 --> 00:41:21.750
 as we've mentioned previously,
 
-780
+781
 00:41:21.751 --> 00:41:26.040
 with email or Twitter as a platform versus a product. Yeah, it is hard.
 
-781
+782
 00:41:26.100 --> 00:41:27.120
 Someone says, you know,
 
-782
+783
 00:41:27.420 --> 00:41:29.760
 programming editors or source code would be really great.
 
-783
+784
 00:41:29.761 --> 00:41:30.990
 If you could drop in an image,
 
-784
+785
 00:41:31.350 --> 00:41:34.640
 I can put it in a little diagram of my architecture or something like that in a
 
-785
+786
 00:41:34.641 --> 00:41:38.240
 comment that would make perfect sense. I think that would be a big improvement,
 
-786
+787
 00:41:38.241 --> 00:41:40.760
 but that would be very hard to do because of the plain text format.
 
-787
+788
 00:41:40.761 --> 00:41:44.210
 We've all been using a very long time and all the tools are built around that,
 
-788
+789
 00:41:44.211 --> 00:41:48.860
 but essentially software engineers prefer that versus something sort of newer
 
-789
+790
 00:41:48.861 --> 00:41:50.330
 and shinier and with more features.
 
-790
+791
 00:41:51.010 --> 00:41:51.731
 <v 2>Yeah. And in fact,</v>
 
-791
+792
 00:41:51.731 --> 00:41:56.500
 it's the ecosystem that is extraordinarily susceptible to customization and
 
-792
+793
 00:41:56.501 --> 00:41:59.500
 extension because all the participants are able and in fact,
 
-793
+794
 00:41:59.501 --> 00:42:02.590
 inclined to do that. So kind of competitively,
 
-794
+795
 00:42:02.800 --> 00:42:04.990
 it's very hard to win without leveraging that.
 
-795
+796
 00:42:04.991 --> 00:42:08.380
 I think a good example of that is the editor wars, which to my mind,
 
-796
+797
 00:42:08.381 --> 00:42:12.370
 are now kind of coming to a close and VS Code has won to a large extent,
 
-797
+798
 00:42:12.371 --> 00:42:16.210
 I think because of the incredible platformization they have with extensions and
 
-798
+799
 00:42:16.270 --> 00:42:17.410
 language servers and so forth.
 
-799
+800
 00:42:17.411 --> 00:42:19.660
 And to be clear there's going to be a bunch of editors. I use a different one,
 
-800
+801
 00:42:20.230 --> 00:42:24.370
 but they've been able to really pull ahead while accelerating the whole
 
-801
+802
 00:42:24.550 --> 00:42:27.790
 ecosystem for developers because they lean so heavily into the open platform
 
-802
+803
 00:42:27.791 --> 00:42:27.791
 angle.
 
-803
+804
 00:42:27.791 --> 00:42:32.230
 <v 0>I also think though that the diversity of text editors can teach us something</v>
 
-804
+805
 00:42:32.231 --> 00:42:36.340
 about how to reconcile this partial compatibility thing we were talking about,
 
-805
+806
 00:42:36.790 --> 00:42:38.260
 because if you think about it, yes,
 
-806
+807
 00:42:38.261 --> 00:42:42.100
 the base format of the code being shared between people can be really stripped
 
-807
+808
 00:42:42.101 --> 00:42:43.120
 down into this text format.
 
-808
+809
 00:42:43.480 --> 00:42:46.540
 But some editors like VS Code do a lot with that format.
 
-809
+810
 00:42:46.541 --> 00:42:50.980
 They'll run fancy analyses on top of it and do syntax highlighting and all these
 
-810
+811
 00:42:50.981 --> 00:42:55.450
 like auto-complete things which are not inherently part of the data exchange
 
-811
+812
 00:42:55.451 --> 00:42:55.840
 format.
 
-812
+813
 00:42:55.840 --> 00:42:59.050
 They're just bells and whistles that each individual editor gets to add on top
 
-813
+814
 00:42:59.051 --> 00:43:01.660
 to that experience. But I'm not forced to opt into that.
 
-814
+815
 00:43:01.661 --> 00:43:02.494
 I can use a stripped-down,
 
-815
+816
 00:43:03.190 --> 00:43:06.250
 I could use Microsoft notepad to edit code if I wanted to. Right.
 
-816
+817
 00:43:06.520 --> 00:43:08.020
 There's nothing stopping me from doing that.
 
-817
+818
 00:43:08.020 --> 00:43:09.670
 <v 3>And that is the standard text editor.</v>
 
-818
+819
 00:43:09.670 --> 00:43:12.460
 <v 0>Yeah. In fact, I think when I was like 12 years old,</v>
 
-819
+820
 00:43:12.670 --> 00:43:15.610
 that's probably when I started using to write code because I didn't know any
 
-820
+821
 00:43:15.611 --> 00:43:15.851
 better.
 
-821
+822
 00:43:15.851 --> 00:43:20.320
 And I think that's an interesting for me lesson to reflect on is can we get more
 
-822
+823
 00:43:20.321 --> 00:43:24.850
 places where there's this shared core and then more functionality built up as
 
-823
+824
 00:43:24.851 --> 00:43:27.100
 optional apps, specific extensions.
 
-824
+825
 00:43:27.100 --> 00:43:31.300
 <v 3>And then we touched briefly on, I guess, financial incentives.</v>
 
-825
+826
 00:43:31.720 --> 00:43:34.720
 And we look at the interoperability problem writ large.
 
-826
+827
 00:43:34.960 --> 00:43:39.550
 Certainly it comes from the world of files kind of classic desktop files.
 
-827
+828
 00:43:39.551 --> 00:43:42.520
 And yeah, there was problems with sort of format, openness,
 
-828
+829
 00:43:42.521 --> 00:43:45.160
 like Word docs files, for example,
 
-829
+830
 00:43:45.490 --> 00:43:48.640
 but ultimately files didn't seem to have a lot of that agency and
 
-830
+831
 00:43:48.641 --> 00:43:49.480
 interoperability.
 
-831
+832
 00:43:49.481 --> 00:43:54.460
 And it's really both mobile and cloud that I think brought us these more closed
 
-832
+833
 00:43:54.461 --> 00:43:58.600
 up hermetically sealed systems, both for their own reasons. I think mobile,
 
-833
+834
 00:43:58.660 --> 00:44:02.890
 it was more around kind of safety and security and comprehensibility to end
 
-834
+835
 00:44:02.891 --> 00:44:05.110
 users, particularly very non-technical users.
 
-835
+836
 00:44:05.530 --> 00:44:09.460
 But on the maybe cloud web app side, particularly B2B software.
 
-836
+837
 00:44:09.670 --> 00:44:14.500
 Now you get into this thing where data is considered to be where the
 
-837
+838
 00:44:14.501 --> 00:44:18.640
 value is. James Chan use this terminology data swamp,
 
-838
+839
 00:44:19.650 --> 00:44:22.390
 and that's kind of like the aggregating a bunch of data together.
 
-839
+840
 00:44:22.391 --> 00:44:24.160
 And that's where the value is.
 
-840
+841
 00:44:24.370 --> 00:44:27.220
 And you even see that in what people expect to pay for software.
 
-841
+842
 00:44:27.221 --> 00:44:29.200
 We run up against that with Muse.
 
-842
+843
 00:44:29.350 --> 00:44:32.040
 We talked to Balint from Craft about that as well,
 
-843
+844
 00:44:32.041 --> 00:44:34.560
 which is people are in the mindset of, oh,
 
-844
+845
 00:44:34.590 --> 00:44:36.330
 if you're going to host my data for me,
 
-845
+846
 00:44:36.510 --> 00:44:37.860
 then you need to run a server or whatever.
 
-846
+847
 00:44:37.861 --> 00:44:41.460
 Then I can justify paying a subscription. But if I'm quote unquote,
 
-847
+848
 00:44:41.490 --> 00:44:43.350
 just buying the software,
 
-848
+849
 00:44:43.710 --> 00:44:46.710
 they feel like software isn't valuable on its own.
 
-849
+850
 00:44:46.950 --> 00:44:50.370
 And of course that's really restrictive for making truly great software.
 
-850
+851
 00:44:50.371 --> 00:44:52.590
 And furthermore, it creates all these incentives around.
 
-851
+852
 00:44:52.591 --> 00:44:54.360
 Of course you want to lock up the data. Of course,
 
-852
+853
 00:44:54.361 --> 00:44:57.270
 something like a two way sync, like you described,
 
-853
+854
 00:44:57.450 --> 00:45:00.000
 that's hurting my business's value.
 
-854
+855
 00:45:00.390 --> 00:45:04.980
 So trying to find a way to create financial incentives
 
-855
+856
 00:45:05.280 --> 00:45:09.930
 and paying for the software and the value that that provides you versus the
 
-856
+857
 00:45:09.931 --> 00:45:12.300
 data, the data swamp. That's a tough one.
 
-857
+858
 00:45:12.300 --> 00:45:13.730
 <v 2>Yeah. It's tough.</v>
 
-858
+859
 00:45:13.731 --> 00:45:17.510
 One angle that I like circling back to our previous podcast on
 
-859
+860
 00:45:17.870 --> 00:45:22.730
 games is so to kind of recap the dynamic there is that there are some
 
-860
+861
 00:45:22.760 --> 00:45:27.500
 ecosystems that are so high powered because of their open
 
-861
+862
 00:45:27.560 --> 00:45:29.930
 platformized scriptable customizable,
 
-862
+863
 00:45:29.931 --> 00:45:34.790
 whatever nature that no amount of proprietary excellence
 
-863
+864
 00:45:34.910 --> 00:45:35.743
 can compete.
 
-864
+865
 00:45:35.930 --> 00:45:39.470
 And I don't think we've quite found or charted that path in the world of
 
-865
+866
 00:45:39.740 --> 00:45:41.900
 creative tools. And you think about, I don't know,
 
-866
+867
 00:45:42.050 --> 00:45:46.940
 Photoshop could an open Photoshop be so much better as such that it displaces
 
-867
+868
 00:45:47.060 --> 00:45:50.750
 Adobe Photoshop. I mean, maybe right. I don't yet see the path for that,
 
-868
+869
 00:45:51.200 --> 00:45:55.820
 but perhaps in the world of multi devices or multi users or other use cases
 
-869
+870
 00:45:56.120 --> 00:45:59.060
 there is. So I think that's one promising angle. There are other angles,
 
-870
+871
 00:45:59.061 --> 00:46:01.130
 but that's me seems perhaps the most interesting.
 
-871
+872
 00:46:01.130 --> 00:46:04.190
 <v 3>That's an interesting one to think of the way that, for example,</v>
 
-872
+873
 00:46:04.191 --> 00:46:08.810
 the web and its open standards and interoperability displaced,
 
-873
+874
 00:46:08.811 --> 00:46:13.400
 and was clearly a huge improvement on the more closed up formats like flash
 
-874
+875
 00:46:13.430 --> 00:46:18.050
 or maybe Java servlets that came before clearly the web was just so
 
-875
+876
 00:46:18.051 --> 00:46:22.550
 much superior. In addition to being open hackable,
 
-876
+877
 00:46:22.760 --> 00:46:26.030
 you can pop up in your DOM inspector and do stuff to any webpage.
 
-877
+878
 00:46:26.390 --> 00:46:30.320
 So what would be an equivalent of that that would make Photoshop or even
 
-878
+879
 00:46:30.321 --> 00:46:33.680
 something, a beloved current piece of software like Sketch or Figma,
 
-879
+880
 00:46:34.010 --> 00:46:37.730
 what would make those things feel like a Java servlet by comparison?
 
-880
+881
 00:46:38.720 --> 00:46:42.770
 <v 0>I think there is a really tricky balance here to strike because it is very</v>
 
-881
+882
 00:46:42.771 --> 00:46:46.790
 valuable to have someone think through an entire unified product experience and
 
-882
+883
 00:46:46.791 --> 00:46:48.500
 make it all fit together in a coherent way.
 
-883
+884
 00:46:48.530 --> 00:46:51.340
 I know this is something you've thought about a lot with when I use Muse,
 
-884
+885
 00:46:51.440 --> 00:46:54.440
 it feels like someone has taken care to design this whole environment.
 
-885
+886
 00:46:54.441 --> 00:46:58.670
 And I don't have to do much work to sort of put together a bunch of pieces and
 
-886
+887
 00:46:59.090 --> 00:46:59.930
 90% of people,
 
-887
+888
 00:46:59.931 --> 00:47:03.830
 most of the time don't want to like assemble their own software from scratch.
 
-888
+889
 00:47:03.831 --> 00:47:07.400
 Right? There's a reason we pay designers to think through these problems for us.
 
-889
+890
 00:47:07.401 --> 00:47:11.270
 And I think that's totally a good thing and designers bring a lot of value in
 
-890
+891
 00:47:11.271 --> 00:47:15.320
 that way. But at the same time, I think that we can think about,
 
-891
+892
 00:47:15.530 --> 00:47:19.670
 rather than giving someone this hermetically sealed box, can we use an analogy,
 
-892
+893
 00:47:19.671 --> 00:47:23.120
 like build a beautiful Lego set for them and hand it to them where if they like
 
-893
+894
 00:47:23.121 --> 00:47:26.120
 it just as this that's fine. And if they want to add one Lego right there,
 
-894
+895
 00:47:26.121 --> 00:47:29.560
 it's not a big deal. They sort of see the composition of how this thing made.
 
-895
+896
 00:47:29.930 --> 00:47:32.590
 They have a little bit of flexibility to tweak it because it's made out of
 
-896
+897
 00:47:32.591 --> 00:47:33.670
 parts. They understand,
 
-897
+898
 00:47:34.210 --> 00:47:38.260
 I think that's a design ethos that sometimes I feel like we're in danger of
 
-898
+899
 00:47:38.650 --> 00:47:40.900
 moving away from there's this great story.
 
-899
+900
 00:47:41.260 --> 00:47:43.060
 And one of my favorite books about end-user programming,
 
-900
+901
 00:47:43.061 --> 00:47:45.790
 which is called changing minds by Andy diSessa,
 
-901
+902
 00:47:46.420 --> 00:47:49.240
 who's sort of a education and computing researcher.
 
-902
+903
 00:47:49.660 --> 00:47:53.800
 And he talks about this nightmare he had where he's riding a bike and he looks
 
-903
+904
 00:47:53.801 --> 00:47:56.830
 down at the gears and they are labeled not with numbers,
 
-904
+905
 00:47:57.070 --> 00:48:01.360
 but with words like this is gravel mode, this is like uphill mode.
 
-905
+906
 00:48:01.990 --> 00:48:04.540
 And he has no idea how to use the thing. You know,
 
-906
+907
 00:48:04.690 --> 00:48:07.660
 if I'm going downhill on gravel, do I use gravel mode or downhill mode?
 
-907
+908
 00:48:08.020 --> 00:48:09.070
 And he talks about how like,
 
-908
+909
 00:48:09.790 --> 00:48:11.740
 because we're used to riding bikes with numbered gears,
 
-909
+910
 00:48:11.741 --> 00:48:12.700
 this sounds sort of ridiculous,
 
-910
+911
 00:48:13.000 --> 00:48:15.940
 but you can imagine the product manager that had that conversation,
 
-911
+912
 00:48:15.941 --> 00:48:18.430
 where they said these numbers make no sense to people.
 
-912
+913
 00:48:18.431 --> 00:48:21.640
 People don't want to like, see 1, 2, 3, 4, they want to understand the function.
 
-913
+914
 00:48:22.000 --> 00:48:25.090
 We need to give them an easier way to understand what this tool is for.
 
-914
+915
 00:48:25.720 --> 00:48:29.350
 But what you're robbing them of is a structural sense of what's going on
 
-915
+916
 00:48:29.351 --> 00:48:31.300
 underneath to provide that functionality.
 
-916
+917
 00:48:31.900 --> 00:48:35.950
 So that the moment you go off the expected use cases for the thing,
 
-917
+918
 00:48:36.280 --> 00:48:39.610
 you have nothing to lean on, you have no coherent understanding of the system.
 
-918
+919
 00:48:39.640 --> 00:48:41.830
 And so everything just falls apart.
 
-919
+920
 00:48:42.130 --> 00:48:46.090
 And what he contends is that people can actually learn sometimes more than I
 
-920
+921
 00:48:46.091 --> 00:48:50.140
 think we give them credit for like, it's not actually that hard to learn a bike.
 
-921
+922
 00:48:50.170 --> 00:48:51.400
 Everyone learns how to ride a bike,
 
-922
+923
 00:48:51.730 --> 00:48:54.550
 even though it takes some practice and you have to feel out the gears to
 
-923
+924
 00:48:54.551 --> 00:48:55.420
 understand how they work.
 
-924
+925
 00:48:55.810 --> 00:48:58.840
 Once you've put in that little bit of effort you have this sort of generalizable
 
-925
+926
 00:48:58.841 --> 00:49:02.710
 understanding of the system that can go a long way and is much more generically
 
-926
+927
 00:49:02.711 --> 00:49:03.544
 applicable.
 
-927
+928
 00:49:03.610 --> 00:49:07.120
 And so I think it'd be nice to see a little bit more of that style reflected in
 
-928
+929
 00:49:07.121 --> 00:49:08.110
 how we build software for people.
 
-929
+930
 00:49:08.110 --> 00:49:09.930
 <v 3>Well said.</v>
 
-930
+931
 00:49:10.020 --> 00:49:14.670
 Yeah I think the design ethos often is kind of polarized towards the
 
-931
+932
 00:49:14.671 --> 00:49:18.120
 edges, which are either making pure consumer stuff. And just,
 
-932
+933
 00:49:18.121 --> 00:49:21.270
 just to be as simple as possible, no choices,
 
-933
+934
 00:49:21.750 --> 00:49:26.280
 no customization just can't have no chance of going off the rails and getting
 
-934
+935
 00:49:26.281 --> 00:49:29.130
 confused. Or we have the full-on,
 
-935
+936
 00:49:29.490 --> 00:49:33.720
 I'm going to build my own PC from parts and put together my own Linux
 
-936
+937
 00:49:33.721 --> 00:49:38.430
 distribution and assemble my Raspberry Pi and put together all my special
 
-937
+938
 00:49:38.431 --> 00:49:42.510
 VS Code plugins. And there's kind of nothing in between. Sometimes.
 
-938
+939
 00:49:43.380 --> 00:49:47.010
 <v 2>This reminds me of an important point about these platforms and ecosystems.</v>
 
-939
+940
 00:49:47.040 --> 00:49:49.440
 If you look at the successful spaces,
 
-940
+941
 00:49:49.441 --> 00:49:53.460
 whether it's software or protocols or hardware.
 
-941
+942
 00:49:53.940 --> 00:49:55.050
 It generally is not--
 
-942
+943
 00:49:55.110 --> 00:50:00.060
 You have some platform and then a bunch of individual users completely
 
-943
+944
 00:50:00.180 --> 00:50:04.290
 customizing their setup. What tends to happen is you have the platform,
 
-944
+945
 00:50:04.620 --> 00:50:09.360
 you have a small number of secondary market providers. If you will,
 
-945
+946
 00:50:09.510 --> 00:50:13.080
 who provide modules, extensions implements, what have you.
 
-946
+947
 00:50:13.470 --> 00:50:15.720
 And a much bigger group that tries by the way,
 
-947
+948
 00:50:15.721 --> 00:50:18.900
 but a lot of that stuff just kind of gets filtered out. Doesn't bump up the top,
 
-948
+949
 00:50:19.200 --> 00:50:23.460
 but if you create an opportunity for people to have a business or some other
 
-949
+950
 00:50:23.461 --> 00:50:26.910
 sense of fulfillment from providing these things to the community,
 
-950
+951
 00:50:26.911 --> 00:50:30.260
 you only need a few of them to really enhance the ecosystem. And yes,
 
-951
+952
 00:50:30.261 --> 00:50:32.630
 you're going to have some users who want to build their whole tractor from
 
-952
+953
 00:50:32.631 --> 00:50:36.380
 scratch or who want to go in and fiddle with the HTML and CSS. That's fine,
 
-953
+954
 00:50:36.680 --> 00:50:41.030
 but often the real meat and potatoes of these ecosystems is the secondary market
 
-954
+955
 00:50:41.090 --> 00:50:43.130
 of service module, extension providers,
 
-955
+956
 00:50:43.880 --> 00:50:48.530
 and the somewhat sad consequences of that as someone who's really into end user
 
-956
+957
 00:50:48.531 --> 00:50:53.240
 programming is that often it's not the end user programming experience that
 
-957
+958
 00:50:53.241 --> 00:50:54.860
 matters the most.
 
-958
+959
 00:50:55.340 --> 00:50:59.990
 If you look at how hard it often is to build a module or extension or an
 
-959
+960
 00:50:59.991 --> 00:51:01.850
 add-on often it's frankly, a huge pain,
 
-960
+961
 00:51:02.360 --> 00:51:06.200
 but people who are doing that as a small business, as a major hobby,
 
-961
+962
 00:51:06.470 --> 00:51:07.730
 they're willing to get over that.
 
-962
+963
 00:51:07.731 --> 00:51:10.520
 And then they can provide the service for all the other users in the ecosystem.
 
-963
+964
 00:51:10.700 --> 00:51:13.430
 So it often ends up being important is distribution,
 
-964
+965
 00:51:13.460 --> 00:51:17.960
 obviously platform access and some ability to monetize or get the
 
-965
+966
 00:51:17.961 --> 00:51:19.370
 equivalent personal fulfillment.
 
-966
+967
 00:51:19.370 --> 00:51:22.990
 <v 0>I'm not sure. I totally agree that it's sad for end user programming.</v>
 
-967
+968
 00:51:22.991 --> 00:51:25.990
 I think you're totally right that there's this collaborative dynamic,
 
-968
+969
 00:51:26.530 --> 00:51:26.981
 but for me,
 
-969
+970
 00:51:26.981 --> 00:51:30.670
 that's sort of just one part of the picture to keep in mind when we're designing
 
-970
+971
 00:51:30.671 --> 00:51:32.260
 tools for this. So like for example,
 
-971
+972
 00:51:32.261 --> 00:51:36.220
 and I think there's a similar dynamic in spreadsheet usage where there's been
 
-972
+973
 00:51:36.221 --> 00:51:37.540
 some great studies by Bonnie Nardi,
 
-973
+974
 00:51:37.690 --> 00:51:40.570
 who's kind of like a hero in the end-user programming community of how
 
-974
+975
 00:51:40.571 --> 00:51:42.550
 spreadsheets are used in offices.
 
-975
+976
 00:51:42.970 --> 00:51:46.270
 And what it turns out being is that there's like someone in the office who's
 
-976
+977
 00:51:46.271 --> 00:51:47.560
 like the spreadsheet person, right?
 
-977
+978
 00:51:47.860 --> 00:51:50.140
 And when you have a really complicated formula, to write,
 
-978
+979
 00:51:50.141 --> 00:51:52.300
 you go to them and they help you and they figure it out.
 
-979
+980
 00:51:52.301 --> 00:51:53.950
 And then you go back to your desk and keep working on it.
 
-980
+981
 00:51:54.190 --> 00:51:57.850
 But the key thing there is that there is a large part of that ecosystem that is
 
-981
+982
 00:51:57.851 --> 00:52:01.450
 available to you even as a novice. And you don't have to like, again,
 
-982
+983
 00:52:01.451 --> 00:52:04.210
 ask someone to ship you a hermetically sealed thing.
 
-983
+984
 00:52:04.211 --> 00:52:07.450
 Maybe you can sort of read the formula they wrote and start to learn a bit.
 
-984
+985
 00:52:07.450 --> 00:52:11.380
 And so I think having fuzzier boundaries of expertise and enabling more
 
-985
+986
 00:52:11.381 --> 00:52:13.870
 collaboration is a thing to strive for.
 
-986
+987
 00:52:13.871 --> 00:52:18.100
 One project I've worked on that sort of embodies this goal a bit is this project
 
-987
+988
 00:52:18.101 --> 00:52:18.934
 called wildcard,
 
-988
+989
 00:52:19.210 --> 00:52:22.270
 which is a toolkit for people to build their own browser extensions without
 
-989
+990
 00:52:22.271 --> 00:52:25.840
 programming. And the rough idea there is like you were saying, mark,
 
-990
+991
 00:52:26.050 --> 00:52:27.520
 it's pretty hard to build a browser extension.
 
-991
+992
 00:52:27.521 --> 00:52:31.360
 Some browser extensions are extremely complicated. And when I install them,
 
-992
+993
 00:52:31.361 --> 00:52:32.680
 I have no idea how they work inside.
 
-993
+994
 00:52:32.980 --> 00:52:37.750
 If I want to tweak the extension or maybe compose two extensions in a new way,
 
-994
+995
 00:52:37.751 --> 00:52:39.520
 that's typically really hard to do.
 
-995
+996
 00:52:40.030 --> 00:52:42.790
 And the thesis of the wildcard project is that yes,
 
-996
+997
 00:52:42.850 --> 00:52:45.370
 some extensions need to be really complicated, like you said,
 
-997
+998
 00:52:45.730 --> 00:52:48.850
 but also there some extensions that I think don't need to be that complicated.
 
-998
+999
 00:52:49.270 --> 00:52:52.510
 I remember using for a while an extension that added a checkbox next to every
 
-999
+1000
 00:52:52.511 --> 00:52:53.830
 transaction on a bank statement.
 
-1000
+1001
 00:52:54.130 --> 00:52:56.590
 So you can just remember whether you'd already written it down somewhere else.
 
-1001
+1002
 00:52:56.950 --> 00:53:00.070
 And this had like thousands of installs on the Chrome extension store. You know,
 
-1002
+1003
 00:53:00.460 --> 00:53:03.040
 that's not as sophisticated thing, but again,
 
-1003
+1004
 00:53:03.070 --> 00:53:06.670
 it's really hard to even build something that simple as a non programmer.
 
-1004
+1005
 00:53:06.671 --> 00:53:10.240
 So the goal of wildcard is can we take that subset of extensions,
 
-1005
+1006
 00:53:10.630 --> 00:53:15.190
 which is not that complicated and make it accessible to normal people to build.
 
-1006
+1007
 00:53:15.670 --> 00:53:18.670
 And actually, as you can tell, you know, I'm sort of a spreadsheets fan.
 
-1007
+1008
 00:53:18.671 --> 00:53:20.620
 And so the paradigm we went with was,
 
-1008
+1009
 00:53:21.040 --> 00:53:24.820
 what if you could edit a website in a spreadsheet is the vision, you know,
 
-1009
+1010
 00:53:24.821 --> 00:53:25.740
 you up a little pain,
 
-1010
+1011
 00:53:25.741 --> 00:53:29.160
 you see some data and a table that's sort of represents what's in the page,
 
-1011
+1012
 00:53:29.161 --> 00:53:30.240
 like on a new site,
 
-1012
+1013
 00:53:30.241 --> 00:53:33.870
 it might be a list of articles with their names and authors and whatever.
 
-1013
+1014
 00:53:34.290 --> 00:53:36.510
 And then as you mess with the spreadsheet,
 
-1014
+1015
 00:53:36.511 --> 00:53:40.890
 whether that's sorting and filtering or adding new columns with little formulas
 
-1015
+1016
 00:53:40.891 --> 00:53:43.800
 in them, all of that flows back into the page and modifies it.
 
-1016
+1017
 00:53:44.550 --> 00:53:47.580
 And the goal there is that if you've used a spreadsheet,
 
-1017
+1018
 00:53:47.581 --> 00:53:49.950
 you can maybe learn your way around this environment.
 
-1018
+1019
 00:53:49.951 --> 00:53:51.810
 You don't need to like open a code editor.
 
-1019
+1020
 00:53:52.080 --> 00:53:54.840
 You're just right there in the website and you can build and share these
 
-1020
+1021
 00:53:54.841 --> 00:53:57.540
 customizations with other people. Now, again,
 
-1021
+1022
 00:53:57.541 --> 00:53:59.850
 it might be the case that 90% of users of this thing,
 
-1022
+1023
 00:53:59.880 --> 00:54:02.610
 eventually we'll just install pre-made things and others made.
 
-1023
+1024
 00:54:03.030 --> 00:54:05.220
 But if they're not written in JavaScript,
 
-1024
+1025
 00:54:05.221 --> 00:54:07.890
 if they're in this sort of more user-friendly paradigm,
 
-1025
+1026
 00:54:07.920 --> 00:54:11.700
 maybe more people will end up popping the hood there and making little tweaks of
 
-1026
+1027
 00:54:11.701 --> 00:54:14.070
 their own. So I think it's this delicate balance there.
 
-1027
+1028
 00:54:14.070 --> 00:54:16.330
 <v 3>Well, before we go,</v>
 
-1028
+1029
 00:54:16.510 --> 00:54:21.490
 one question I think that can come up sometimes is this question of designing
 
-1029
+1030
 00:54:21.491 --> 00:54:22.900
 software for other people.
 
-1030
+1031
 00:54:22.901 --> 00:54:27.100
 And maybe you can imagine that product designers who their whole role in fact is
 
-1031
+1032
 00:54:27.101 --> 00:54:32.020
 doing that and software as this abstract, hard to understand thing,
 
-1032
+1033
 00:54:32.021 --> 00:54:36.190
 you actually need another person with that expertise to design it for you,
 
-1033
+1034
 00:54:36.670 --> 00:54:39.130
 but you could actually swing back the other way as well and say,
 
-1034
+1035
 00:54:39.131 --> 00:54:42.010
 how can anyone else know your deeds? And in fact,
 
-1035
+1036
 00:54:42.011 --> 00:54:45.300
 this is why some of the startup advice is solve your own problem,
 
-1036
+1037
 00:54:45.310 --> 00:54:49.480
 build something for yourself because you know it in an intimate way that no one
 
-1037
+1038
 00:54:49.481 --> 00:54:53.290
 else can, where do you stand on this? How can others design software?
 
-1038
+1039
 00:54:53.760 --> 00:54:57.510
 <v 0>Yeah, this may be a slightly extreme way to put it,</v>
 
-1039
+1040
 00:54:57.511 --> 00:55:01.740
 but I think I'm pretty pessimistic that it's possible to design truly great
 
-1040
+1041
 00:55:01.741 --> 00:55:03.840
 software for someone besides yourself.
 
-1041
+1042
 00:55:04.440 --> 00:55:07.470
 Especially if the person you're designing for is operating in a complex
 
-1042
+1043
 00:55:07.471 --> 00:55:09.060
 environment. Like for example,
 
-1043
+1044
 00:55:09.061 --> 00:55:12.120
 I had experienced designing for teachers and I've never been a teacher in a
 
-1044
+1045
 00:55:12.121 --> 00:55:15.660
 classroom before. And I felt like, no matter how many user interviews I did,
 
-1045
+1046
 00:55:16.140 --> 00:55:19.710
 there was nothing that could possibly replace a decade of teaching experience
 
-1046
+1047
 00:55:19.711 --> 00:55:22.950
 and sort of the depth of understanding there. And I'm sure, you know,
 
-1047
+1048
 00:55:22.951 --> 00:55:25.800
 I could have done better at user interviews or whatever, but that's sort of,
 
-1048
+1049
 00:55:25.860 --> 00:55:29.340
 I think an initial hypothesis, then the question is, what do we take from that?
 
-1049
+1050
 00:55:29.370 --> 00:55:30.180
 Well,
 
-1050
+1051
 00:55:30.180 --> 00:55:33.360
 in some ways that sounds really disappointing because you might say what that
 
-1051
+1052
 00:55:33.361 --> 00:55:35.610
 means is that you're going to end up with a bunch of 22 year olds in San
 
-1052
+1053
 00:55:35.611 --> 00:55:37.080
 Francisco building food delivery apps,
 
-1053
+1054
 00:55:37.110 --> 00:55:39.660
 because those are the people making the software. Right.
 
-1054
+1055
 00:55:39.930 --> 00:55:43.470
 But I think there's kind of a fun way to flip it, which is to say, well,
 
-1055
+1056
 00:55:43.830 --> 00:55:46.230
 maybe that just means we need more people to be able to build software.
 
-1056
+1057
 00:55:46.710 --> 00:55:47.910
 And you might say, well,
 
-1057
+1058
 00:55:48.390 --> 00:55:52.020
 I don't know if let's say teachers can build software if they're interested in
 
-1058
+1059
 00:55:52.021 --> 00:55:55.320
 that. But I think that if we had more democratized tools,
 
-1059
+1060
 00:55:55.321 --> 00:55:57.180
 you can imagine that whatever it is,
 
-1060
+1061
 00:55:57.181 --> 00:56:02.100
 10% of teachers who have an interest in this stuff who have some sensibilities
 
-1061
+1062
 00:56:02.101 --> 00:56:02.934
 around design,
 
-1062
+1063
 00:56:03.330 --> 00:56:06.900
 if we had more tools to help them build their own tools and maybe build tools
 
-1063
+1064
 00:56:06.901 --> 00:56:07.734
 for other teachers,
 
-1064
+1065
 00:56:08.220 --> 00:56:13.050
 I think you could imagine a world where we have much more sort of insightful
 
-1065
+1066
 00:56:13.051 --> 00:56:17.340
 software that draws on the experience of being the user and a larger variety of
 
-1066
+1067
 00:56:17.341 --> 00:56:20.160
 domains. That's not just programmers scratching their own itch.
 
-1067
+1068
 00:56:20.160 --> 00:56:24.880
 <v 3>That almost brings a moral argument to end</v>
 
-1068
+1069
 00:56:25.090 --> 00:56:26.500
 user programming. That it's not just,
 
-1069
+1070
 00:56:26.530 --> 00:56:31.120
 this is something that we as technology people think would be cool or
 
-1070
+1071
 00:56:31.121 --> 00:56:32.620
 fun or exciting,
 
-1071
+1072
 00:56:33.100 --> 00:56:37.780
 but in fact is something needed to bring this really important medium this
 
-1072
+1073
 00:56:37.870 --> 00:56:41.200
 21st century medium of software to the wider world.
 
-1073
+1074
 00:56:41.590 --> 00:56:44.800
 And that's all the different professions that could need it. Young people,
 
-1074
+1075
 00:56:44.801 --> 00:56:48.310
 old people, people in different places and different cultures.
 
-1075
+1076
 00:56:48.580 --> 00:56:51.880
 The only way that everyone will really get the software and the computer
 
-1076
+1077
 00:56:51.881 --> 00:56:56.560
 experiences they deserve is to make programming more accessible,
 
-1077
+1078
 00:56:56.561 --> 00:56:58.210
 not to every single person in the world,
 
-1078
+1079
 00:56:58.211 --> 00:57:02.200
 but to enough that we can represent all of those different people in the
 
-1079
+1080
 00:57:02.201 --> 00:57:03.034
 software world.
 
-1080
+1081
 00:57:03.470 --> 00:57:07.500
 <v 0>Yeah. And I think an important thing there is keeping an open mind about how our</v>
 
-1081
+1082
 00:57:07.501 --> 00:57:09.330
 culture could change. You know,
 
-1082
+1083
 00:57:09.331 --> 00:57:12.210
 people throw around the idea of computational literacy,
 
-1083
+1084
 00:57:12.270 --> 00:57:13.830
 a fair amount and the tools for thought community.
 
-1084
+1085
 00:57:14.340 --> 00:57:18.480
 And I think one of the lessons to learn from literacy is that it took a while to
 
-1085
+1086
 00:57:18.481 --> 00:57:20.250
 get to the point where everyone could read and write.
 
-1086
+1087
 00:57:20.670 --> 00:57:24.240
 And maybe before mass literacy, it would have sounded reasonable to say,
 
-1087
+1088
 00:57:24.270 --> 00:57:27.810
 why does this farmer even need that they don't care about reading and writing?
 
-1088
+1089
 00:57:27.811 --> 00:57:28.740
 It's not important to them,
 
-1089
+1090
 00:57:29.100 --> 00:57:33.330
 but we ended up creating a new society where that was part of how people
 
-1090
+1091
 00:57:33.450 --> 00:57:34.283
 operated.
 
-1091
+1092
 00:57:34.380 --> 00:57:38.640
 And I think that you could make a similar argument for building software where,
 
-1092
+1093
 00:57:38.641 --> 00:57:39.030
 you know,
 
-1093
+1094
 00:57:39.030 --> 00:57:42.900
 just because people genuinely don't think they need to do this today or don't
 
-1094
+1095
 00:57:42.901 --> 00:57:44.070
 care about it, or don't want to,
 
-1095
+1096
 00:57:44.460 --> 00:57:48.330
 that's not a reflection of the way society will always be. I think we can,
 
-1096
+1097
 00:57:48.990 --> 00:57:50.010
 in an optimistic sense,
 
-1097
+1098
 00:57:50.400 --> 00:57:53.010
 imagine sort of a feedback loop where if we change our tools,
 
-1098
+1099
 00:57:53.400 --> 00:57:54.780
 eventually society will catch up.
 
-1099
+1100
 00:57:54.780 --> 00:57:57.720
 <v 3>I think that's the perfect note to wrap it up.</v>
 
-1100
+1101
 00:57:58.560 --> 00:57:59.790
 Thanks everyone for listening.
 
-1101
+1102
 00:57:59.790 --> 00:58:01.680
 If you have feedback write us on Twitter @MuseAppHQ,
 
-1102
+1103
 00:58:03.450 --> 00:58:04.800
 or via email hello@museapp.com. You can
 
-1103
+1104
 00:58:06.511 --> 00:58:10.380
 help us out by leaving a review on Apple Podcasts and Geoffrey.
 
-1104
+1105
 00:58:10.381 --> 00:58:13.980
 Thanks so much for carrying the torch and inspiring us all on end-user
 
-1105
+1106
 00:58:13.981 --> 00:58:16.200
 programming and data interoperability.
 
-1106
+1107
 00:58:16.620 --> 00:58:18.020
 <v 0>Thanks so much. This was a lot of fun.</v>
 
