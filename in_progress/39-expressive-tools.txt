@@ -1,65 +1,86 @@
 Weiwei Xu (00:00:00):
-I really wish there were more ways in which we can let our personality and just the little bits of life that we've experienced ourselves come through online. It seems like nowadays a lot of the larger size that we spend time on, have all taken an approach for good reasons, to in some way, flatten our voices to make everything look the same.
+I really wish there were more ways in which we can let our personality and just the little bits of life that we've experienced ourselves come through online. It seems like nowadays a lot of the larger sites that we spend time on, have all taken an approach, for good reasons, to in some way flatten our voices to make everything look the same.
 
 Adam Wiggins (00:00:27):
-Hello and welcome to Metta muse use as a tool for thought on iPad. But this podcast isn't about music, the product it's about music company and the small team behind it. I'm Adam Wiggins here with my colleague mark McClenaghan Hey, Adam joined today by way, way, shoe of sprout. Hello. And one thing we talk about a lot on this podcast for some reason is cities, by the way, you're in Shanghai right now. And what's the transit situation like how do you get around town?
+Hello and welcome to Metamuse. Muse is a tool for thought on iPad. But this podcast isn't about Muse the product it's about Muse the company and the small team behind it. I'm Adam Wiggins here with my colleague Mark McGranaghan.
+
+Mark McGranaghan (00:00:40):
+Hey, Adam.
+
+Adam Wiggins (00:00:40):
+And joined today by Weiwei Xu of Sprout.
+
+Weiwei Xu (00:00:44):
+Hello.
+
+Adam Wiggins (00:00:44):
+And one thing we talk about a lot on this podcast for some reason is cities. Weiwei you're in Shanghai right now. And what's the transit situation like how do you get around town?
 
 Weiwei Xu (00:00:55):
-Yeah, I live a little bit outside of the downtown area, so it takes about 30 minutes by walking to get to the Metro station and shared bikes are really common over here. So it's super convenient to get around with shared bikes, but I also got my hands onto one of these one wheel electric scooter lately, and I've been a big fan of skateboarding since I was a kid. I've tried all kinds of boards. So I thought it's just super select to try scooting around on one of these electric scooters. And that's what I've been doing lately.
+Yeah, I live a little bit outside of the downtown area, so it takes about 30 minutes by walking to get to the Metro station and shared bikes are really common over here. So it's super convenient to get around with shared bikes, but I also got my hands onto one of these Onewheel electric scooter lately, and I've been a big fan of skateboarding since I was a kid. I've tried all kinds of boards. So I thought it's just super slick to try scooting around on one of these electric scooters. And that's what I've been doing lately.
 
 Adam Wiggins (00:01:34):
-And in practice, do you end up in the bike lane? Do you go on the sidewalks? I feel like one of the challenges with the scooter micro mobility thing is that you sort of don't have a great place to go. You sort of a little slow for the blade claim, but certainly probably too fast for the sidewalk.
+And in practice, do you end up in the bike lane? Do you go on the sidewalks? I feel like one of the challenges with the scooter micro mobility thing is that you sort of don't have a great place to go. You sort of a little slow for the bike lane, but certainly probably too fast for the sidewalk.
 
 Weiwei Xu (00:01:50):
-It's definitely something that everybody's still trying to figure out. Especially here. The policy here is a lot more strict and electric scooters are meant to be a toy, something that you play with in parks and in closed communities rather than on the street. So it's kind of like softly allowed on pedestrian, walkways, and not really on the bike lanes, but bike lanes over here are super protected and they're not right next to cars. Like in a lot of the cities I've been to in America. So either way I feel pretty safe, but whether it's legal or not as kind of a different question
+It's definitely something that everybody's still trying to figure out. Especially here. The policy here is a lot more strict and electric scooters are meant to be a toy, something that you play with in parks and in closed communities rather than on the street. So it's kind of like softly allowed on pedestrian, walkways, and not really on the bike lanes, but bike lanes over here are super protected and they're not right next to cars like in a lot of the cities I've been to in America. So either way I feel pretty safe, but whether it's legal or not is kind of a different question
 
 Adam Wiggins (00:02:30):
-Yeah. Protected by claims or something, I am a big fan of as a person who gets around mainly by bike. Although even there, when you talk about yeah, legal, gray areas and new technologies that sit sort of in between the e-bike thing, which has gotten pretty huge. But then that also seems challenge. Okay, now you can go really fast and with not a lot of effort with this motorized thing that at this point, it's almost like a low powered motorcycle or something like that, but you get to ride in the bike lane. That feels a little weird. Yeah. So technology that sits on these in-between spaces then ends up forcing a change in not only policy, but also just social norms and expectations. Yeah.
+Yeah. Protected bike lanes are something I am a big fan of, as a person who gets around mainly by bike. Although even there, when you talk about yeah, legal gray areas and new technologies that sit sort of in between the e-bike thing, which has gotten pretty huge. But then that also seems a challenge. Okay, now you can go really fast and with not a lot of effort with this motorized thing that at this point is almost like a low powered motorcycle or something like that, but you get to ride in the bike lane. That feels a little weird. Yeah. So technology that sits on these in-between spaces then ends up forcing a change in not only policy, but also just social norms and expectations.
 
-Weiwei Xu (00:03:10):
-I find these in between spaces really fascinating, and that could be in the transportation world. I grew up with a mixed cultural background. And so dwelling in the, in between spaces of that has also been something that I grew up struggling with and have now sort of surrender to in some way. But those in between spaces are something that's really beautiful and also sometimes really confusing.
+Weiwei Xu (00:03:08):
+Yeah. I find these in between spaces really fascinating, and that could be in the transportation world. I grew up with a mixed cultural background. And so dwelling in the, in between spaces of that has also been something that I grew up struggling with and have now sort of surrendered to in some way. But those in between spaces are something that's really beautiful and also sometimes really confusing.
 
 Adam Wiggins (00:03:38):
-That makes sense, but also presents opportunity because you have perspective that no one else has. Right. Yeah. And once you tell us a little bit about your background, you've done some very interesting academic work, as well as all sorts of a failure all over in the kind of tools for thought independent research, next generation computing space.
+That makes sense, but also presents opportunity because you have perspective that no one else has, right?
+
+Weiwei Xu (00:03:42):
+Yeah.
+
+Adam Wiggins (00:03:42):
+And why don't you tell us a little bit about your background? You've done some very interesting academic work, as well as all sorts of a failure all over in the kind of tools for thought, independent research, next generation computing space.
 
 Weiwei Xu (00:03:57):
-I would say that I've been on this journey of learning more about myself, and I'm still trying to figure out who I am and what I'm trying to do, perhaps this is what most people do, but I was lucky enough to study interaction design. That was a fairly new program and the school I attended. And through that process, I was introduced to the history of personal computing and that whole genre, that whole world and being layered into that got me really, really curious about what it took to get us to where we are nowadays. And also, where are we headed? And I started looking for places where they're thinking about the future and thinking about alternative paths that haven't really been explored or illuminated in different ways. And that led to working at, and also spending a lot of time at this research group called dynamic line.
+I would say that I've been on this journey of learning more about myself, and I'm still trying to figure out who I am and what I'm trying to do, perhaps this is what most people do, but I was lucky enough to study interaction design. That was a fairly new program in the school I attended. And through that process, I was introduced to the history of personal computing and that whole genre, that whole world and being lured into that got me really, really curious about what it took to get us to where we are nowadays. And also, where are we headed? And I started looking for places where they're thinking about the future and thinking about alternative paths that haven't really been explored or illuminated in different ways. And that led to working at, and also spending a lot of time at this research group called Dynamicland.
 
 Weiwei Xu (00:04:54):
 And I've also been sort of being in a part of the creative design school environment has also gotten me really interested in the creative process and also this idea of creative expression. So being immersed in a group of designers, creatives, and also researchers has led me to where I am nowadays. And what I'm trying to do nowadays is exploring what ways can we take ideas into people's hands and into reality rather than having them sitting or like brewing in research spaces, which is also really fascinating. But I think I'm just going through this journey of exploring where I am and who I am. And also what's my relationship with the world.
 
 Adam Wiggins (00:05:40):
-Hopefully that's all a journey we're all perpetually on, but it's good. You have the self-awareness of it. Maybe there's an arrogance of youth that sometimes come with young people early in their adult life where they feel they've got it all figured out or they know their path or something. When honestly it's just forever a journey of discovery.
+Hopefully that's all a journey we're all perpetually on, but it's good you have the self-awareness of it. Maybe there's an arrogance of youth that sometimes come with young people early in their adult life where they feel they've got it all figured out or they know their path or something. When honestly it's just forever a journey of discovery.
 
 Weiwei Xu (00:05:56):
-I think whenever I feel
+I think whenever I feel like I've gotten it, or I understand what's going on, life hits me in a hard way. And it's like, nope, you don't have a, you don't know what you're doing. And then you go into this other cycle of like learning more about yourself and understanding that there's just so much more possibilities and so much more unknowns.
 
-Adam Wiggins (00:05:57):
-Like I've gotten it, or I understand what's going on, life hits me in a hard way. And it's like, no, you don't have a, you don't know what you're doing. And then you go into this other cycle of like learning more about yourself and understanding that there's just so much more possibilities and so much more unknowns. Yeah. And I'm pretty sure that's not something at least for a person that has a growth mindset or is forever seeking to learn the lessons. Life has to teach. I'm going through that still in my forties here. I've seen my mom, who's in her seventies also going through that. There's just always more world always has more to teach. And there's more to learn about yourself and about other humans about our society and how to live best in it. So hopefully that never ends. That's a good thing.
+Adam Wiggins (00:06:15):
+Yeah. And I'm pretty sure that's not something at least for a person that has a growth mindset or is forever seeking to learn the lessons life has to teach. I'm going through that still in my forties here. I've seen my mom, who's in her seventies also going through that. There's just always more world always has more to teach. And there's more to learn about yourself and about other humans about our society and how to live best in it. So hopefully that never ends. That's a good thing.
+
+Weiwei Xu (00:06:41):
+Totally.
 
 Adam Wiggins (00:06:41):
-Totally. And you hinted at something we've talked about privately a few times, which is sort of taking ideas from the research space or the big thinking space or the ivory tower space and trying to bring it to a practical reality. And for sure, that's part of why muse exists. You know, mark and I were in this research lab, working on this stuff and saw an opportunity for something that we said, you know, this could be a product people could really use. We could bring these weird HCI ideas and see if we can bring them into well, a regular app in the app store and see if that would work would be possible. And I think we talked about it with, I believe it was a former colleague of yours, Jason Yuan, and the episode he was in great men of amuse episode. If you're interested in design things, I'll link that in the show notes, but he's talked about that as well, which is, yeah, I think he may have also done a stint of dynamic land and he both worked together, make space and the best thinking, big picture thinking and forward thinking comes from places that are a little bit disconnected from commercial realities.
+And you hinted at something we've talked about privately a few times, which is sort of taking ideas from the research space or the big thinking space or the ivory tower space and trying to bring it to a practical reality. And for sure, that's part of why Muse exists. You know, Mark and I were in this research lab, working on this stuff and saw an opportunity for something that we said, you know, this could be a product people could really use. We could bring these weird HCI ideas and see if we can bring them into, well, a regular app in the app store and see if that would work would be possible. And I think we talked about it with, I believe it was a former colleague of yours, Jason Yuan, in the episode he was in. Great Metamuse episode if you're interested in design things, I'll link that in the show notes, but he's talked about that as well, which is, yeah, I think he may have also done a stint at Dynamicland and you both worked together, MakeSpace and the best thinking, big picture thinking and forward thinking comes from places that are a little bit disconnected from commercial realities.
 
 Adam Wiggins (00:07:42):
-You're not about shipping a product. That's going to make a bunch of money tomorrow, but you're thinking longer term, but that in turn can lead to a kind of disconnection from the world and not really bringing what you're making to the world. I know that's something you're thinking about how to best bridge those worlds, which is one of many reasons I wanted to bring you on the podcast.
+You're not about shipping a product. That's going to make a bunch of money tomorrow, but you're thinking longer term, but that in turn can lead to a kind of disconnection from the world and not really bringing what you're making to the world. So I know that's something you're thinking about how to best bridge those worlds, which is one of many reasons I wanted to bring you on the podcast.
 
 Weiwei Xu (00:08:01):
-I think the phrase thinking about it as a really nice way to put it in another way to put it as struggling with this spectrum.
+I think the phrase "thinking about it" is a really nice way to put it. And another way to put it is "struggling with this spectrum."
 
 Adam Wiggins (00:08:11):
-Oh, I think those are two sides of the same coin, genuinely interesting or hard intellectual or emotional challenge. You wrestle with a, you struggle with it, you fight with it. It's not a civilized activity some ways
+Oh, I think those are two sides of the same coin. Genuinely interesting or hard intellectual or emotional challenge. You wrestle with it, you struggle with it, you fight with it. It's not a civilized activity at all, in some ways
 
 Weiwei Xu (00:08:25):
 No, it's not.
 
 Adam Wiggins (00:08:27):
-And tell us a bit about sprout.
+And tell us a bit about Sprout.
 
 Weiwei Xu (00:08:30):
-Yeah. So sprout is a product that came out of MakeSpace and MakeSpace was started with Jason UN AZA Raskin named Maley CU. And it's a project. And also, uh, really us trying to answer the question of how do we collaborate and communicate with each other online and also through computers in a way where we can actually feel more of each other's presence where all kinds of media formats and all kinds of files can co-exist with each other, rather than being confined by different apps and different windows that only support its own unique kind of media files. So in a way, sprout is a canvas based collaboration tool that value and also respect video presence and telepresence. And we spend quite a bit of time thinking about this gradient of synchronous communication, collaboration versus asynchronous communication and collaboration because collaboration doesn't happen on one end of the spectrum. It's continuous. And so how do we create space? How do we communicate and collaborate in a way where it help us grow and learn together?
+Yeah. So sprout is a product that came out of MakeSpace and MakeSpace was started with Jason Yuan, Aza Raskin, and May-Li Khoe. And it's a project and also, uh, really us trying to answer the question of how do we collaborate and communicate with each other online and also through computers in a way where we can actually feel more of each other's presence where all kinds of media formats and all kinds of files can co-exist with each other, rather than being confined by different apps and different windows that only support its own unique kind of media files. So in a way, Sprout is a canvas based collaboration tool that value and also respect video presence and telepresence. And we spend quite a bit of time thinking about this gradient of synchronous communication, collaboration versus asynchronous communication and collaboration because collaboration doesn't happen on one end of the spectrum. It's continuous. And so how do we create space? How do we communicate and collaborate in a way where it help us grow and learn together?
 
 Adam Wiggins (00:09:46):
-One of the things that was striking to me about the initial MakeSpace landing pages, one hand, it did kind of have a look of, I guess, video and specifically, you know, webcam videos of the people's faces who are participating in the meeting, let's call it virtual meeting. That's a very front and center idea. So immediately you think, okay, it's video chat like Google hangout or zoom or FaceTime, but the reality is the main, or if you use the early version, which you've given me a peak at it is this media canvas in many ways that shares some of the same heritage that muse does, which is you can put images, you can draw, you can put text, you can put links. And one of the things you can put is your own real time face. And that's like a useful addition to the meeting, but it's not really the center point.
+One of the things that was striking to me about the initial MakeSpace landing page is, on one hand, it did kind of have a look of, I guess, video and specifically, you know, webcam videos of the people's faces who are participating in the meeting, let's call it virtual meeting. That's a very front and center idea. So immediately you think, okay, it's video chat like Google Hangout or Zoom or FaceTime, but the reality is the main, or if you use the early version, which you've given me a peek at, it is this media canvas in many ways that shares some of the same heritage that Muse does, which is you can put images, you can draw, you can put text, you can put links. And one of the things you can put is your own real time face. And that's like a useful addition to the meeting, but it's not really the center point.
 
 Adam Wiggins (00:10:34):
 It almost inverts the video chat thing. And then, so I'm not sure whether to think of it, maybe coming back to your point of living in those in-between spaces, you could think of it as zoom, but with kind of a working canvas, but it really inverts that because I feel the video chat side of it is just sort of a subset of this larger open canvas. Or you could think of it as open canvas kind of collaborative whiteboard space, a mirror type thing, but it integrates video chat, real-time video and audio chat in a big way. But I think either of those descriptions sort of does disservice to at least what I imagined your vision to be. That is finding a middle space there that takes elements from both of those, but leaves behind many elements of them could potentially be a more interesting or future-facing or next-generation way for us to have online meetings, discussions brainstormings and so on.
