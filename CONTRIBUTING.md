@@ -17,12 +17,12 @@ Hold on to your butts. This is the most helpful but also the most labor intensiv
 4. When you feel comfortable with the first pass you've made, open a pull request. [Helpful article for first-timers](https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork)
 5. Your MR will be reviewed and merged into the main branch.
 
-Once all of the sections of the episode have been done, we'll make sure to copy the completed file to `plaintext/`
+Once all of the sections of the episode have been done, we'll make sure to copy the completed file to `completed/`
 
 
 ### For eariler episodes
 1. Find an issue with the label [up for grabs](https://github.com/ppkn/metamuse-transcripts/labels/up%20for%20grabs) and comment that you want to work on it. I'll remove the label when I see the comment.
-2. Copy the episode file from `originals/` to `plaintext/`.
+2. Copy the episode file from `original/` to `completed/`.
 3. When you feel comfortable with the first pass you've made, open a pull request. [Helpful article for first-timers](https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork)
 4. Your MR will be reviewed and merged into the main branch.
 
