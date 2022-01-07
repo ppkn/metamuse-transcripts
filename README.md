@@ -1,6 +1,6 @@
 # Metamuse Transcripts
 
-:sparkles:**Update (01/2022)** This project is now inactive. 😦. If I gain renewed time/interest, I'll start it back up again.
+:sparkles:**Update (01/2022)** This project is now inactive. 😦. If I gain renewed time/interest, I'll start it back up again.  
 :sparkles:**Update (09/2021):** I'm looking for help! See the [contribution guide](CONTRIBUTING.md) for more info.
 
 This project hosts transcripts for [Metamuse](https://museapp.com/podcast/), a podcast about tools for thought, product design, and how to have good ideas, from the team behind [Muse](https://museapp.com/). You can see an sample hosted at https://ppkn.github.io/metamuse-transcripts/
