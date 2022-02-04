@@ -1,0 +1,537 @@
+Slim Lim:
+There's been very little innovation and research more generally into what is a good interface for inputting equations. So I think most people are probably familiar with Microsoft Word or Excel, have these equation editors where you basically open this palette and there is a preview and there is a button for every possible mathematical symbol or operator you can imagine.
+
+Adam Wiggins:
+Hello and welcome to Metamuse. Muse is a tool for thought on iPad and Mac, but this podcast isn't about Muse the product, it's about Muse the company and the small team behind it. I'm Adam Wiggins here today with my colleague Mark McGranahan.
+
+Mark McGranahan:
+Hey Adam.
+
+Adam Wiggins:
+And joined by our guest Sarah Lim, who goes by Slim.
+
+Slim Lim:
+Hello. Hello.
+
+Adam Wiggins:
+And Slim, you've got various interesting affiliations, including UC Berkeley, Notion, Ink & Switch. But what I'm interested in right now is the lessons you've learned from playing classic video games. Tell me about that.
+
+Slim Lim:
+So this arose, when I was deciding whether to get the 14 inch or 16 inch M1 MacBook Pro and-
+
+Adam Wiggins:
+A critical question of our age, let's be honest.
+
+Slim Lim:
+Exactly. Exactly. I couldn't decide. I posted a request for comments on Twitter. And then I had this realization that when I was six years old playing Oregon Trail 5, a remake of Oregon Trail 2, which is itself a remake of the original, I was in the initial outfitting stage. And you have three choices for your farm wagon. You can get the small farm wagon, the large farm wagon and the Conestoga wagon. I actually don't know if I'm pronouncing that correctly, but let's assume I am. So I just naively chose the Conestoga wagon because as a six year old, I figured that bigger must be better. And being able to store more supplies for your expedition would make it more successful.
+
+Slim Lim:
+I eventually learned that the fact that the wagon is much larger and can store a lot more weight means that it's a lot easier to overload it. Among other things, this requires constantly abandoning supplies to cut weight. It makes the river fording mini game, much more perilous. It's a harder to control the wagon. And yeah, I never chose that wagon again on subsequent playthroughs. And I decided to get the 14 inch laptop.
+
+Adam Wiggins:
+Makes perfect sense to me and, and what a great lesson for a six year old. Trade offs I feel like is one of the most important kind of fundamental concepts to understand as a human in this world. And I think-
+
+Slim Lim:
+Definitely.
+
+Adam Wiggins:
+... many folks struggle with that well into adulthood. At least I feel like I've often been in certainly business conversations where trying to explain trade offs, is met with confusion.
+
+Slim Lim:
+They should just play Oregon Trail.
+
+Adam Wiggins:
+Clearly that's the solution. And tell us a little bit about your background.
+
+Slim Lim:
+Yeah. So I've been interested in basically all permutations really, of user interfaces and programming languages for a really long time. So this includes the very different programming languages as user interfaces and programming languages for user interfaces. And then the combination of the two. So right now I'm doing a PhD in programming languages, interested in more of the theoretical perspective. But in the past I've worked on, I guess end user computing, which is really the broader vision of Notion. I was at Khan Academy for a while on the long term research team.
+
+Adam Wiggins:
+Yeah. And there, I think you worked with Andy Matuschak, who's a good friend of ours and a previous guest on the podcast.
+
+Slim Lim:
+Yes, definitely. That was the first time I worked with Andy in real depth. And I still really enjoy talking to him and occasionally collaborating with him today. So I guess prior to that, I was doing a lot of research at the intersection of HCI, or human computer interaction and programming tools, programming systems, I guess. So one of the big projects that I worked on as an undergrad was focused on inspecting CSS on a webpage, or more generally trying to understand what are the properties of the code that influence how the page looks or visual outcome of interest.
+
+Slim Lim:
+And there, I was really motivated by the fact that you have, these software tools have their own mental model, I guess, or just model of how code works and how different parts of the program interact to produce some output. And then you have the user who has often this entirely different intuitive model of what matters, what's important. So they don't care if this line of code is, or isn't evaluated. They care whether it actually has a visual effect on the output. So trying to reconcile those two paradigms, I think is a recurring theme in a lot of my work.
+
+Adam Wiggins:
+And I remember seeing a little demo maybe of some of the, I don't know if it was a prototype or a full open source tool, but essentially a visualizer that helps you better understand which CSS rules are being applied. Am I remembering that right?
+
+Slim Lim:
+Yeah. So that was both part of the prototype and the eventual implementation in Firefox. But the idea there is, the syntax of CSS really aligns the complexity I think, because syntactically, it looks like you have all of these independent properties, like color, red, font size, 16 pixels. And they seem to be all equally important and at the same level of nesting, I guess. And what that really hides is the fact that there are a lot of dependencies between properties. So a certain property like Z index, the perennial favorite Z index 999999, doesn't take effect unless the element has position relative, for example. And it's not at all apparent if you're writing those two properties, that there is a dependency between them. So I was working on visualizing what those dependencies were.
+
+Slim Lim:
+This actually arose because I wrote to Bert who is one of the co-creators of CSS and was like, hi, I'm interested in building a tool that visualizes these dependencies, where can I find the computer readable list of all such dependencies? And he was like, oh, we don't have one. We have this SVG that tries to map out the dependencies between CSS 2.1 modules. And even there, you can see all these circular dependencies, but we don't have anything like what you're looking for. That to me was totally bananas because it was the basic blocker to most people being able to go from writing really trivial CSS to more complicated layouts. So I was like, well, I guess this thing doesn't exist, so I'd better go invent it.
+
+Adam Wiggins:
+Perfect way to find good research problems. Now more recently, two projects I wanted to make sure we reference because they connect to what we'll talk about today, which is, you recently worked on the equation editor at Notion. And then you worked on a rich text CRDT called Peritext at Ink & Switch. Would love to hear a little bit about those projects.
+
+Slim Lim:
+Yeah, definitely. So I guess the Peritext project, which was the most recent one was collaboration with Geoffrey Litt, Martin Kleppmann and Peter van Hardenberg. And that one was really exciting because we were trying to build a CRDT that could handle rich text formatting. And traditionally you have all of these CRDTs that are designed for fairly bespoke applications, but they're things like a counter data type or a set data type that has certain behavior when you combine two sets. And we're still at the stage of CRDT development, where aside from things like JSON, CRDTs like automerge, we don't really have a one size fits all CRDT framework or solution. You still mostly have to hand design and implement a CRDT for a given application. And it turns out that in the case of something like rich text, it's a lot harder than just saying, oh, you know, we'll store annotations in an array and call it a day, because the semantics for how you want different types of formatting to combine when people split and rejoin sessions and things like that are all very complex.
+
+Slim Lim:
+And it turns out that we have a lot of learned behaviors that arise even from just like design decisions and Microsoft Word, where you expect certain annotations to be able to extend, certain annotations, to not extend things like that. Capturing all of the nuance in that behavior turns out to be really difficult and requires a lot of domain specific thinking. But we think we have an approach that works and I would really encourage everyone to read the essay that we published and try to poke holes in it too. This was like the fifth version of the algorithm, right? So months ago we were like, all right, let's start writing. And then Martin, who has just an incredible talent for these things is like, Hey everyone, I found some issues with the approach and you know, oh no.
+
+Adam Wiggins:
+Uh-oh.
+
+Slim Lim:
+Uh-oh. And we fixed those. We're like, all right, this one's good. Just repeat this like week after week. So I really have to give him a ton of credit for both coming up with a lot of these problems and also figuring out ways to work around it.
+
+Adam Wiggins:
+We talked with Peter a little bit recently, Peter van Hardenberg about the pencils down element of the lab, but also to just research generally, which is there's always more to solve. It's the classic XKCD more research needed is always the end of every paper ever written.
+
+Slim Lim:
+Yes.
+
+Adam Wiggins:
+Which is indeed the pursuit of the unknown, that's part of what makes science and seeking new knowledge exciting and interesting. But at some point you do have to say, we have a new quanta of knowledge and it's worth publishing that. But then I think if it's just straight up wrong or you see major problems that you feel embarrassed by, then maybe you want to invest more.
+
+Slim Lim:
+Right. Exactly. I think in this case it was a distinction between there's always more we can tack on versus, we wanted to get it right. And in particular, the history of both operational transforms or OT and CRDT for rich text, just text in general is such, it's this mind field of, I guess, to use kind of a gruesome visual metaphor, just dead bodies everywhere. You're like, ah, such and such algorithm was published and in such and such time. And it was new hotness for a while. And then we realized, oh, it was actually wrong. And this new paper came out, which proved like four of the algorithms were wrong and so on. And so with correctness being such a important part of any algorithm, of course, but also kind of this white whale in the rich text field, we thought it was important to at least make as a credible effort to, to having a correct algorithm.
+
+Adam Wiggins:
+Yeah. Makes sense. Yeah. I can highly recommend the Peritext essay. One of the things I found interesting about it, maybe just for anyone who's listening, whose head is spinning from all the specialized jargon here. CRDTs are a data structure for doing collaborative software, collaborative documents. And then yeah. Rich text, a Microsoft Word is the canonical example there. You can bold things. You can italic things. You can make things bigger and smaller. But part of what I enjoyed about this paper was actually that I felt even if you have no interest in CRDTs, it has these lovely visualizations, that show the data representation of a sentence, like the quick brown fox. And then if you bold quick, and then later someone else bolds fox, how do those things merge together?
+
+Adam Wiggins:
+But even aside from the merging and the collaborative aspect, which obviously is the research, the novel research here, I felt it gave me a greater understanding of just how rich text editing works under the hood, which I guess I had a vague idea of, but hadn't thought about it so deeply. So highly recommend that paper. Just given the figures. Even if you don't want to read the thousands of word.
+
+Slim Lim:
+I'm glad you liked the figures. They were a real labor of Figma.
+
+Adam Wiggins:
+Perfect. Yeah, they look so.
+
+Slim Lim:
+The one thing I would add is that CRDT's are a technology for collaboration, but the way they differ from operational transforms or OTs is that a CRDT is basically designed to operate in a decentralized setting. So you don't need a persistent network connection to all the parties. You don't need a centralized server. The idea is you can fluidly recover from network partitions by merging all of the data and operations that happen while you are offline. And this turns out to be really important to our vision of how collaborative editing should work, because we think it's really important for people to be able to do things like, not always be editing in the same document at the same time as everyone. Maybe I want to take some space for myself to write in private and then have my changes sync up with everyone else thereafter, maybe I'm self-conscious about other people editing or seeing my work in progress.
+
+Slim Lim:
+But I think that it would be interesting and helpful to look at what the main document looks like and how that's evolving while I'm working in private. And you can have that kind one way visibility with something like a CRDT versus with something like Google Docs, where it's just sort of always online or always not, you're editing in your own personal editor. Conversely, maybe I'm okay with everyone else seeing the work that I'm doing in progress. But I just find it really visually jarring to have all these cursors and different colors jumping around and people inserting text to bumping my paragraphs down the page. I've definitely been there. I'm not particularly precious about people seeing my work in progress, but I just cannot focus on writing when the page is just changing all around me.
+
+Slim Lim:
+So in that situation, maybe I would want to allow other people to see my work in progress so that we don't duplicate effort or something like that. But I just have a focus mode where incoming changes don't disrupt my writing environment and these kinds of fork join one way window micro Git style branching paradigms are really only enabled by a technology like CRDTs, where you have the flexibility to separate and then come back together.
+
+Adam Wiggins:
+Yeah. And I'm incredibly excited by the design research that needs to go into that. Now at this point, I think we're still on the technology level. One way to think of it is Google Docs came along. I don't know, 15, almost 20 years ago now. I can't even remember, let's say 15 years ago. And this novel idea that we could both have a shared document or several people could have a shared document, all see the up-to-date version, and type into it and get a reasonable response or have that be coherent, was an amazing breakthrough at the time, and has since been widely copied, Notion, Figma, many others.
+
+Adam Wiggins:
+But now maybe we can go beyond that, much more granularity. Like you said, maybe borrowing from the developer version control workflows a little bit in a lightweight way, giving a lot more control and flexibility and giving us a lot more choices about how we want to work most effectively. But before we can even get onto those design decisions and how do we present all these different things to the user? What are the different options, we need this like fundamental underlying merge technology, hence the endless fascination that we at the lab, and increasingly the technology industry generally has with CRDTs, because it has the potential to enable all that.
+
+Slim Lim:
+Yeah. When we were working on the Peritext project, Peter was pushing really hard for, don't make this just a technology project. It's a socio-technical endeavor and we need to invest a lot of time in the design component, also just doing user interviews, identifying how people interact with and how people collaborate in the status quo on text. And Geoffrey and I actually did do a bunch of user interviews with people from all kinds of backgrounds. We've talked to people who write plays, people who produce a dramatic podcast, kind of in this style of Night Vale.
+
+Adam Wiggins:
+Love Night Vale.
+
+Slim Lim:
+Yeah. People who are in the writer's room, working together with their collaborators on that. People who write lessons, video lessons for educational platforms. And there was a ton of really interesting insights into user behavior around collaborative text. We ended up just torn because we had this 12 week project and we were like, how should we best spend our time? Clearly this is not just a technical area. And we need to invest a lot in getting the design right, understanding what the design space even looks like since it hasn't really been explored. I really want to avoid, and is a recurring theme in my work. I really want to avoid publishing or shipping something and having it be this very broad, very shallow exploration into all the things that are possible. I think that this kind of work plays an important role.
+
+Slim Lim:
+And there are a lot of people who do this well, just fermenting the space of possibilities, getting these ideas in a lot of people's heads, who can then go on and do really cool things with them. My personal style, I never want to feel like something is half baked, I guess. I would much rather ship this cohesive contribution. Like here is an algorithm for building rich text. We think that this is a technical prerequisite to all of these interesting design choices. But the alternative with a 12 week period, and in fact, you know this, the correctness and revision phase extended way over that.
+
+Slim Lim:
+So thanks a lot to Martin and Geoffrey for leading during that part. But it's just already so hard to get it correct that trying to tack on a really substantive design exploration that does the area justice on top of that, I was just really worried it would stretch too thin. So absolutely lots of room for future work in this particular project. It's very much a challenge in any area where you have simultaneously this rich design space, that's just asking to be explored with tons of prototypes and things like that. And then also to even realize the most simple of those prototypes you require fundamentally new technology.
+
+Adam Wiggins:
+Yeah. I've been down that same path on many research projects as well. And often it's that I'm excited for what the technology will enable, but also that in many cases it's a combination, some kind of peer to peer networking thing, but with that will enable us to provide a certain benefit to the user. And I want to explore both of those things, but then that's too much. And then the whole thing is half baked. Exactly as you said.
+
+Slim Lim:
+Right.
+
+Adam Wiggins:
+I've never found a perfect or even a good way to really manage that trade off. You just kind of pick your battles and hope for the best.
+
+Slim Lim:
+Yeah, definitely.
+
+Adam Wiggins:
+Well, I do want to hear about the equation editor project, but first I feel I should introduce our topic here, which I think folks could probably have gleaned is going to be rich text and rich text editing. And maybe we could just step back a moment, and define that a little bit. I think we know that texts, symbolic representation of language is a pretty key thing, writing the printing press and all that sort of thing. We wrote about that a little bit in our text blocks memo, which I'll link in the show notes. But typically I think computers for a lot of their early time, and even now with something like computer code is typically plain text that's the dot TXT file is almost the native style of text that you have, and then rich text typically layers something on top of that. I don't know, Slim maybe you could better define rich text for us to have a more concrete discussion about it.
+
+Slim Lim:
+Yeah. I think rich text for most people basically evokes things like bold, italic, underline. The ability to augment plain text with annotations that are useful in formatting. Actually I think Notepad to WordPad is the archetypal jump in software. If you're thinking about it from the old Windows perspective. In the past few years, I think we've started to see a real expansion of what rich text can look like. So of course we started out with something like Markdown, which is of course a plain text representation, but it's designed to be able to capture more nuance in plain text and be rendered to something like HTML, which very much supports rich text.
+
+Slim Lim:
+So in Markdown you have not only these kinds of in, in line formatting elements like bold and italic, and hyperlinks as well. You also have support for images, which you could think of as more block level rich text elements, I guess. And I don't think there's a real clear consensus across editors on how block level rich text elements should be displayed. Of course, in between you have to like bulleted lists and those tend to be handled in a fairly standard manner with nested lists and so on, but it quickly becomes like a question of taste almost, which kinds of annotations you support. So in editors like Coda or Notion, you have all these different block types where the block is really the atom of collaboration and editing. And then you can have things those like file embeds or even database views, things like that.
+
+Slim Lim:
+So I think we're at a point now where both block-based editors, I'm using block-based editors in like the text or writing sense, not the structured editors for programming sense. Although, I have other things to say about that. But we're at a point where you're starting to see these block-based editors appear. And I think that there are a lot of really interesting patterns that this permits that the paragraphs via linear sequence of characters, including new lines and white space does not permit, or at least doesn't allow you to build as structured tooling around.
+
+Adam Wiggins:
+I'm trying to think what is actually the core of the difference between a block-based editor, that's a Notion, a Rome, users working on its own block text implementation, and a flow of characters. So that's Microsoft Word, Google Docs, maybe even text editors, I guess it's like paragraphs are separated by these sort of nested elements, or have a parent to the document versus two new lines embedded in the stream of characters. But I don't know, that seems too unsophisticated. Maybe have a better definition for us.
+
+Slim Lim:
+So I actually think about this very similarly to, in the programming languages and editor tools space, there is a distinction between structured editors and regular plain text editors for programs. The idea is that you might have a text based programming language and you can write that perfectly fine in any buffer that allows you to put sequential characters, often ASCII is sufficient for some languages. And then on the other hand, these programs might have a lot of inherent structure. A simple example is with lisps, which are built out of these parenthesized S expressions. Everything is an S expression. You can think about like the structure of the tree formed by, or I guess a forest formed by having like these S expressions with sub elements and stuff like that. And then you can do manipulations directly on the structure in a way that allows you to always have a syntactically correct program, or at least a partial syntactically correct program by doing things like, I'm just going to take this subtree, which is a sub expression and move it somewhere else where there's room for another sub expression.
+
+Slim Lim:
+So I think of block-based editors as capturing a very similar zeitgeist to structured editors for code, because instead of just having this linear buffer of characters that can have formatting or things like that, you can have new lines. You actually have more of a forest structure where you have lots of individual blocks and then you can have blocks that are children of other blocks and so on. And that allows you to do things like move an entire subtree representing an outline to another position in the document without selecting all of the characters, cut them and then pace them somewhere else. So things like reparenting becomes a lot easier. Things like setting the background of an entire subtree becomes easier. Just in general, you have more structure and there's more things you can do with that structure. I guess, is how I would phrase it.
+
+Slim Lim:
+One of my favorite things that you can do with this model in Notion is you can change the type of a block very easily. So let's say I have a bullet list item, and then I hit enter and enter these like subnote or something like that, as children of the initial bullet list item. I can turn the bullet list item into a page. And then all of a sudden it's just a sub page in the document. And the sub bullets that were there before are just like top level bullets in that page. And this is particularly important for my workflow because I care a lot about starting out with something really rough and sketchy and then progressively improving it, or moving up and down the ladder of like fidelity into something more polished. So you might for instance, start off with just a outline list, or even a one dimensional list of to-do blocks when you're trying to do project planning or something.
+
+Slim Lim:
+And then later on, let's say, I want to put these into a task database with support for a kanban view or something like that. I don't actually want to sit there and recreate all of these tasks in Jira. I've been there. I've been the person making all the tasks in Jira after the meeting and then assigning them to people. What the workflow that I think Notion is poised to enable and can certainly do a better job in this regard, but already offers some benefits on is like, can I just highlight all of these blocks because everything is a block, move them into some existing database and have them match the schema. That kind of allowing people to do fast and loose prototyping with very unstructured primitives and then promote them into something more structured in a relational database setting or similar, I think is the sweet spot. Structured editing provides the sweet spot between just completely unstructured text and these very high fidelity, high effort interfaces that allows you to move between them.
+
+Mark McGranahan:
+Yeah. I really like that direction and framing. And if I can extend it a little bit, I think we can also look at a continuum of richness in terms of the content itself. So you have plain text, what you might classically call rich text with links and bold and underline, and then you maybe start to throw a few images in, and then what if you can put in videos. And what if you have a whole table and that table is actually a database query and you can nest the Figma document. In this way, you can see that there's a sort of continuum on the richness of the document. And one reason I think Notion has been so successful. They've been pushing along that continuum while maintaining a sort of foundation of rich text, which is very familiar and the important basic use case for a lot of people.
+
+Mark McGranahan:
+A related idea is that I think we're seeing a lot of the classic document types converge. So if you look at a rich text, like a Microsoft Word and a PowerPoint, and increasingly spreadsheets, those all used to be three distinct Microsoft Office applications. And we're seeing the value of them being in or being the same document. This is actually one of the motivating ideas behind Muse, and lot of the research we've done in the lab. And to connect to something Slim was saying, you want to take your idea continuously through different media and different modalities and different degrees of fidelity, and you don't want to have to jump between different discreet applications to do that. You want to be able to do it on the same canvas. That's by the way, one of the reasons I like canvas, it's not only because it's a free multimedia surface, but also it evokes this idea of like flexibility and potentiality. And I think that's one of the things that's really excited about these mixed media documents.
+
+Adam Wiggins:
+Yeah, now I know if Geoffrey were here, he might jump in and say that one downside to our current application silo world, is that the only way to have this deeply rich text where it's yeah, images, video, a table, a database query, something like that, is to have the uber application, to have the everything app. And certainly Notion has probably gotten pretty far on that, but others kind of, in some ways are forced to do that. Like we have to do some of that in Muse as well. People come in and ask for all these different types here as well. And there's more of an open doc inspired or Unix inspired future that maybe Geoffrey and others, including me, would hope for, which would be more that applications could be these individual data types. And you could put them all together through some kind of more operating system connection. But that is so completely reversed from how all our computing devices work today. It's hard to see how we might get to that.
+
+Mark McGranahan:
+Yeah. I'm certainly sympathetic to that concern. Although I suspect the way out is through. And you get platforms from working killer apps. And so the way we got the whole Unix ecosystem was, they wanted to build a computer for writing and running programs. And then eventually got all those generalized text processing stuff, but it's not like they started and like, oh, I'm going to make a generalized text processing machine. I don't think that was really the way they approached it, and developed a success. So I'm still hopeful we could do this, but I think you got to extract it from something that's already working as an app. But it always helps to have an eye toward that, and I think we've done some of that with Muse.
+
+Slim Lim:
+I was just going to say that it's not me talking about text unless I bring up my favorite piece of software of all time, which is Pandoc. And I think that Pandoc actually is very relevant to this discussion. So for those who aren't as familiar with it, Pandoc brands itself as this Swiss army knife for document formats and it sort of headline contribution is that it allows you to convert between all kinds of documents. For instance, I can take a Word document and convert it to a PDF or documents to something like, I don't know, IPython Notebook, Jupyter Notebook, back and forth across this incredible bipartite graph of formats. But I think that the subtler contribution that Pandoc makes, which is extremely significant, is that Pandoc has this form of Markdown called Pandoc Markdown, that essentially aligns and supersedes all of the different fragments of Markdown that we've seen before.
+
+Slim Lim:
+So the problem with Markdown basically is that [inaudible 00:28:48] specification is sort of ill defined. There are several cases in which the behavior is not super clear. And then on top of that, it's not very expressive. There aren't very many constructs. So things like fenced code blocks, which many people associate very closely with Markdown today, that was only added by GitHub Flavored Markdown, which is certainly widely used among the programming community, but not everyone is on GitHub, of course. And then you have things like table formatting, or even like strike through really. Strike through wasn't defined in the original Markdown specification either. And so you have Markdown, and then you have GitHub Flavored Markdown. CommonMark is sort of this unifying effort, ReMarkdown. All these different, it's the Markdown cinematic universe.
+
+Slim Lim:
+I try to make a joke about this. I had this joke ready for the Markdown cinematic universe when the last Marvel movie came out, but then it didn't get nearly the traction in my timeline as the DUNE did, perhaps understandably. So really I'm just going to have to wait until the next movie comes out. It's a real, real tragedy. No, but like, I guess you have this real pluralism of forms and it becomes very difficult to use Markdown truly as a portable format because the way it renders in one editor or even parses, can very much differ from editor to editor. So Pandoc provides this format that essentially serves as an IR or intermediate representation between all these kinds of documents, using a Markdown superset that somehow magically encapsulates everything.
+
+Adam Wiggins:
+And that includes, not just Markdown, but also like PDFs or Microsoft Word? That seems-
+
+Slim Lim:
+Well, so the way it works is it's this compilation pipeline, I guess, that allows you to go from a Markdown document, it compiles it to PDF using PDF LaTex or something. It outputs LaTex, it outputs HTML, various things. And you can think of it as being this intermediate representation because you start with this like Word document, you can turn that into Markdown and you can go from that Markdown format into any of these output formats. Which turns out to be really powerful, because the main issue with these kinds of conversions is that it's often lossy. There are features that are supported by LaTex, for instance, that aren't supported by the web natively. There are features that are part of Word documents that aren't necessarily supported by HTML and so on and so forth. So Pandoc serves this role of basically saying, okay, what is a intermediate language that can encapsulate all the different implementations of the same concept across different input and output formats?
+
+Slim Lim:
+And what I think is so remarkable about it is that, oftentimes when are using a piece of software and you're like, oh, darn, now I need to support this other thing too. You quickly end up in a situation where you have the snowball and things start to feel tacked on. So you're like, oh man, it's very clear that they just glommed on this additional syntax for this feature. And with Pandoc, everything feels very principled and it's inclusion. And at the same time, whenever I'm using Pandoc and I'm like, darn I really wish there was a construct that I could use to express this particular thing. I look up in the documentation and it's always supported.
+
+Slim Lim:
+So as one of my favorite examples, one of the output formats that Pandoc supports is various slideshow frameworks. So Beamer for people who use LaTex, and reveal.js for people who use HTML and CSS, and these slideshow frameworks basically allow you to replace something like PowerPoint, Keynote, Google Slides with essentially a text based format. I really like doing slideshow in Pandoc Markdown. There are a few reasons for that. The first reason is that it's really useful to be able to reuse some of the same content from my blog post or essay even, in the slideshow. There are some really minor and almost petty, but really significant reasons. Like, I like to have equations or code blocks with syntax highlighting in my slideshow. And there's not really a good solution to putting a syntax highlighted code block in Keynote right now.
+
+Adam Wiggins:
+Last I remembered the gold standard at the Ruby conferences I used to frequent was to take a screenshot of TextMate and paste that in.
+
+Slim Lim:
+Yeah, it's awful. I don't want to see your like Monokai editor with the weird background that contrasts weirdly with the slide background. I just, Ugh. And it doesn't scale on a huge conference display. Anyway, I digress. But the other reason why I really like doing my slideshows in text is actually that there is often a hierarchical structure to my presentations, right? I'll have these main top level sections and then I'll have subsections, and then I'll have sub subsections and all of these manifest in slides. But in the gooey thumbnail view of most of these existing slideshow editors like PowerPoint or Google Slides, it reduces it all to like this linear list. It's like, here are all of your thumbnails in order. And it makes it very hard, as soon as I have like an hour long conference talk, how do I jump to the subsection that I know exists, aside from scroll rolling past 117 thumbnails and trying to find the right one, right?
+
+Slim Lim:
+And moreover, let's say I want to reorder a certain part of the talk because I think it better fits the narrative structure. Now I have to figure out which thumbnails I need to drag to which other place. Or worse, go into the individual slide, select the text from that, move somewhere else. And it's just way, way clunkier actually than reordering some text in a bullet list outline in my editor. And then the other part is that, I was talking about how pan has really great support, expressive support for idioms of different formats. And one thing you often have in slideshows is that I have some element on the screen and then I press the next button again, and then another element will appear. So in Pandoc, you can denote this with just an ellipses basically. So dot, space, dot, space, dot. And then if I have a slide where I have a paragraph and then the dot dot dot dot, and then another paragraph, it will render with just the first paragraph visible. And then I press next. And then the subsequent paragraph comes in.
+
+Slim Lim:
+And that's just a very lightweight way to handle these stepped animations compared to going to the animation pane, and then clicking the element that I want to animate in and so on and so forth. So it started off with me being like, I'll just prototype in this format. But then it ended up supporting columns, it supports all these things that you actually want. And I was like, this is in many ways, a more ergonomic way to handle long technical slideshows. Anyway, I have to show for Pandoc anytime I talk about rich text. I'm contractually obligated to do so.
+
+Adam Wiggins:
+Yeah. It's a great piece of software. I used it here and there. I think I was doing some ASCII doc kind of manuals many years ago and yeah, just in general. It's also worth looking at the homepage, like you mentioned, the plot they have where it shows all the different formats it can convert between, is quite fun. You click on that, you can zoom in.
+
+Slim Lim:
+Yeah. I had this really elaborate plan when I decided to go to Berkeley, that I was going to print out a door size poster of that graph that shows all the formats they convert between and then show up at John MacFarlane's door and ask him to sign it. But then the pandemic interfered with some of those plans.
+
+Adam Wiggins:
+Too bad.
+
+Slim Lim:
+Nonetheless, it remains on my list.
+
+Adam Wiggins:
+Good bucket list item, pretty unique one at that.
+
+Slim Lim:
+Also I found my tweet, or I found the draft of my tweet, which is about Eternals. And I said-
+
+Adam Wiggins:
+Ah.
+
+Slim Lim:
+... directed by Chloe Zhao, the latest entry in the Markdown cinematic universe features an ensemble cast of multi Markdown GitHub Flavored Markdown, PHP Markdown Extra, R Markdown and CommonMark, as they joined forces in battle against mankind's ancient enemy, doc X.
+
+Mark McGranahan:
+Nice.
+
+Adam Wiggins:
+Wow. You would've gotten a like from me.
+
+Mark McGranahan:
+Yeah.
+
+Slim Lim:
+We'll see if it ever sees the light of twitter.com.
+
+Adam Wiggins:
+Well, you briefly mentioned their equations and LaTex, and maybe that's a good chance to talk about the equation project you did for Notion. And part of what I thought was so interesting, or what I think in general is interesting about equations is that they are obviously an extremely important symbol format, but in many ways, extremely different from the pros we've been talking about. So English or other languages, even languages that are right to left or something like that, they all have the same kind of basic flow. And the way that we represent sounds with these little squiggly symbols, even though the symbols themselves, and sounds vary and how put them together into words across languages, that's a common thing. But you go to the mathematical realm, you have symbolic representation, but equations are the whole own beast. And I think one that has gotten a lot less attention from the software and editing world. So tell us about that rabbit hole.
+
+Slim Lim:
+Yeah. So just as context for people. Notion and many other applications actually have long supported block equations, an equation that basically takes up most of the page horizontally. What is much more uncommon in editors is support for inline equations. And so this can be something as simple as saying, you want to type, let X be a variable and X should be formatted or stylized mathematically. Being able to refer to elements of a block level equation in inline text is a prerequisite for being able to do any kind of serious mathematical writing. Yet, because this is kind of this niche area that has historically been the purview of Overleaf and other LaTex editors, it's really not implemented in most editors. So I pushed really hard to add inline equations and inline math to Notion, because I was like, there's a huge opportunity for people to write scientific or mathematical documents that take advantage of all of Notions other features, like being able to embed Figma or embed illustration, things like that. Right?
+
+Slim Lim:
+So it turns out that it's difficult, exactly as you're describing, to do this equation format, there's been very little innovation and research more generally into what is like a good interface for inputting equations. So I think most people are probably familiar with Microsoft Word or Excel, have these equation editors. Or even operating system level sometimes where you basically open this palette and there is a preview and there is a button for every possible mathematical symbol or operator you can imagine. And then for composite symbols, like the fraction bar or an integral or something like that, you find the button for that, you click it. And then you click into the little sub boxes and then you find whatever symbol you want, and you put those there too. So it's a structured editor, but in an unimaginably cumbersome interface. This was what I used to do my lab report in high school, for example.
+
+Slim Lim:
+And then at the other end of the spectrum, you have things like LaTex. LaTex Is basically how everyone in, at least in computer science and mathematics chooses to type set their work, type sets complex mathematics. One of the real selling points of LaTex I think is that it turns out that operator spacing is really important. And there's a big difference between say a dash that's used like a hyphen or a dash character, that's used in text, and a hyphen or a dash character that's used as a minus sign in an equation. The spacing is subtly different. And one of the big things that LaTex does is it basically allows you to declare certain operations in certain contexts as like a math operator versus just a symbol versus just a tagged group of characters. And it correctly handles the spacing depending on what kinds of characters are around the operator in question.
+
+Slim Lim:
+And so LaTex basically produces really nicely mathematics at the cost of this Markdown, which looks like I kind of smashed my keyboard that only had like three characters. It's the exact opposite of the equation editor. Instead of having a button for every imaginable character, you only have three buttons. The buttons are backs slash, open curly brace and closed curly brace. And somehow permuting those characters is supposed to get you any possible mathematical. There's just two ends of the spectrum.
+
+Mark McGranahan:
+Yeah. I used to do my analysis homework in college in Latex. And I remember when I first looked up how you would input and LaTex, these formulas. I'm like, that can't be right. This is not the best way in the world to do this. In fact, that's it, that's the one and only way
+
+Slim Lim:
+It really is. It's terrifying. It's the one and only way. And the wild part is there are people who are super, super good at LaTex. They can like live tech, their lecture notes. I was never nearly that fast, but some people can do it usually with extensive use of macros. Which macros are another selling point of LaTex, because you can define these custom shorthand for operators you use a lot. But anyway. Yeah. So you have LaTex, at the other end of the spectrum, really quite unreadable, oftentimes, it's a write only format. Many times-
+
+Adam Wiggins:
+Regular expressions come to mind-
+
+Slim Lim:
+Yes.
+
+Adam Wiggins:
+On that as well.
+
+Mark McGranahan:
+Yes.
+
+Adam Wiggins:
+Yeah.
+
+Slim Lim:
+It's exactly the same zeitgeist I think. It turns out that figuring out how to have a combination gooey, plain text interface that allows you to be in a rich text editor, like Notion, then drop into an inline equation field to have an inline symbol and then go back into the gooey editor. [inaudible 00:41:46] just very unexplored territory. And it makes sense that lots of people don't prioritize this because many people at Notion rightfully had the question like, oh, is this something we should be working on? But first of all, it turned out that if you actually tallied up like our user requests, inline math was near the top of editor feature based requests. And then more generally it turns out that because this is a prerequisite for many researchers and for students, you can get a lot of people on your platform who rely on it, as a student to take notes and something like that, because there's literally no alternative. And then they are able to stick around and use the platform for all kinds of other things. So this is just kind of a plug that more editors should implement this.
+
+Slim Lim:
+But yeah, I thought that this project was really interesting because in the interaction paradigm, you want to capture a lot of the things that are very fluid about editing regular texts. So for instance, we knew it was important that you should be able to use the arrow keys to move left and right, straight through a token without editing it if you wanted. Or, if you wanted to be able to go into a token and edit it using the arrow keys, you shouldn't have to use the mouse to click. Although, of course you should also be able to use the mouse to click. And when you have this formatted equation, we made the decision that the rendered equation would be represented as this atomic token. So if you were highlighting text to copy and paste and move around, it would be like highlighting a single character. That would just be the whole equation. But of course you could go in and edit the equation any way you wanted in this popup text editing interface.
+
+Slim Lim:
+I think another thing that's a subtle interface challenge here is that, like Mark was saying, there is often a disproportionately large number of characters used to represent the equivalent of one character with a formatted output. And so that's something you don't really take into account. The output is like, X with a hat in San Sarif font. And then there's like 25 characters of markup that goes into that. And you just need to scale the interface appropriately to take that into account. But I think that it's really interesting because it shows the power of combining different input and output formats in the same atom. Right?
+
+Slim Lim:
+So you have a single line of text and you want to have rich text that's formatted and stylized and so on, hyperlinks, and then also equations or whatever, inline rendered output of another input format that you have. I think that, that's really where gooey editors and WYSIWYG editors can shine is being able to combine these like input formats and output formats, in the same line in [CCHU 00:44:25]. Yeah, I guess you can't really do that at all with the terminal or something like that. And I say this as someone who uses like CLI Vim for everything.
+
+Mark McGranahan:
+This is bringing back so many memories. I wish I had Notion with equation support back when I was a math undergrad. It's so nice.
+
+Slim Lim:
+I'm like the Notion math stan guardian. I don't know, something like that. And I'm always keeping track of all the cool things people are doing using equations in Notion. And a lot of people are doing math blogs and Notion, which is really awesome for me to see.
+
+Mark McGranahan:
+Oh.
+
+Slim Lim:
+Also I just feel like there, having tried lots of other things there just really isn't a good alternative short of actually writing LaTex for your blog, which no one really likes. And yeah. I mean, certainly it's the kind of thing that I implemented originally, I was like, I'm going to do this for myself. And then realize that lots of people would be able to benefit from it. It's been really cool to see the reception it gets. The inline math tweets on the Notion Twitter account, overwhelmingly get the most engagement and interaction.
+
+Slim Lim:
+And initially the marketing team was shocked. They thought this would be the super niche feature, but no, it turns out that people love math and they might not be the most vocal proponents, or they're used to no one caring about math type setting, things like that. For a while, I think it was the case that when I did find an editor that had support for equations of some kind, to me, it was overwhelmingly obvious that the people who implemented it did not regularly use equations for writing. I think you can often tell that with different features. So I think that having that kind of, representation is not quite the right word, but being able to see a feature that was designed by someone who really cares about using it themselves is really cool for people who are interested in type setting, students, researchers, people who are interested in type setting more mathematical text.
+
+Mark McGranahan:
+Yeah. And I think it's really important, like you were saying that it's mixed media because you're combining the equations, the inline equation and the block equation, by the way in the world class forum, which is LaTex based, with a world class rich text editor, with text and images and stuff. It's really nice. I do think there's still one frontier here, especially for math, which is the fully gradual process from you're taking handwritten notes and you're working out a problem and you're drawing school wiggly diagrams all the way up through your finished homework. I remember when I was a math undergrad, I would basically have to do the homework twice. You'd do it once on paper. Nobody could read that including myself, so you had to do it in LaTex again.
+
+Mark McGranahan:
+And I always wish there was a way to do it incrementally. You sort of changed equation by equation and diagram by diagram into the final product. And I know there has been some research on the turning equations into LaTex formulas with machine learning. I don't know if they can do handwriting, but perhaps someday we'll get new support for equations and you can go all the way to the end.
+
+Slim Lim:
+Yeah. Like you, I share exactly the same frustration that you have to essentially do lots of things twice. And the relative position of everything is ambiguous. And LaTex is what allows you to do things like have subscripts of subscripts, which would be really inscrutable in most people's handwriting, including my own. And subscripts of subscripts along with superscripts and things like that. There are just so many ambiguous details. And it turns out, in my experience with anything that tries to automate the transition is that I always end up going through and really rewriting all of the details to be structured in a readable way.
+
+Slim Lim:
+You have this other problem, which back in the days of WYSIWYG web editors, like Dream Weaver and Microsoft Front Page and things like that, you would often end up with this problem where you try to do any edit in the WYSIWYG side. And then you look at the generated HTML and it's ridiculous. There's just like 16 nested empty span tags. And no one would ever be able to maintain that. And my worry is basically that when you automatically create markup for something that has a very complex graphical representation, it's really one way. Maybe it will help you produce a compiled output, but it doesn't actually help you go back in and edit and tweak the representation later. Or it's just so inscrutable if you do, that it's also a regex type situation.
+
+Slim Lim:
+I think we really need to get to some kind of good intermediate representation that allows you to flexibly go both ways. And that goes back to something that I think Adam and I were chatting about earlier, which is that a lot of people gripe and complain that LaTex is the best we have and, I'm one of them, but it really is the case that LaTex was just this monumental effort by really a few people. And amount of effort that would be considered really impressive if I were to try to do the same thing, but better today.
+
+Slim Lim:
+And not a lot of people just have spare time to do this all in one text formatting, packaging, document representation project, even though it would have huge impact on the way people write and publish these kinds of documents. And so in many ways we're sort of just bottle necked on the fact that it's hard to do incremental improvements to this particular area. We really depend on these software monoliths to keep us afloat.
+
+Adam Wiggins:
+I'm not nearly as mathy as either of you, but I can't help but make the comparison on these equation editing to, what you mentioned earlier with structured editors in programming, where, whether there's lightweight help from your text editor, things like code folding, syntax highlighting and auto complete, or full structured editing. Some of the visual programming stuff we talked about with Maggie Appleton, like scratch, for example, or these flow-based systems that are fully graphical and you sort of can't have it in a bad state. And I can't help but to think there might be some direction like that, that is not necessarily the right only inscrutable LaTex, but is not the Microsoft Word one button literally for every symbol you might ever want. It does seem like there might be some other path. And yeah, I agree, it's a monumental effort. But mathematics is so important and foundational and so much of human endeavor that certainly seems like one worth investing in, although perhaps hard to reap a profit from. And that makes it harder to put concentrated capital behind it.
+
+Slim Lim:
+Yeah. I think that there's definitely very clear demand for, I think something exactly like what you're describing, which is somewhere in between the two extremes. And it is really relevant because ACM, which is the Association for Computing Machinery, the academic and professional body, really for computer science, they are currently undergoing this fiasco, maybe. I probably shouldn't go on the record as calling it a fiasco. The ACM is currently undergoing this initiative called TAPS, which is the ACM publishing system where they're attempting to revise the template by which all computer science research is published and disseminated. And the idea behind this is that right now a computer science research is published to these PDFs. Initially they were all two column PDFs, now I think there's some one column PDFs. They want to output HTML as the archival format for various reasons, including that it offers much better reading experience on different screen widths, so phones or tablets, which are increasingly how people are reading papers, not just printed out.
+
+Slim Lim:
+And they are much more accessible than PDFs. PDFs are just really quite inaccessible, especially to screen readers and other assistive technologies that are trying to parse out all the different math or whatever arbitrary formatting you've decided to use. The upshot of this, I guess, is that there are currently a group of very smart people who are trying to figure out how in the world we're going to get people to start writing all of their papers and outputting them in a different format, in a world where everyone is already used to preparing their publications and preprints in LaTex. And turns out that even if you solve the problem of what the inputs intact should be, rendering math in the browser is an extremely unsolved problem.
+
+Adam Wiggins:
+Hmm.
+
+Mark McGranahan:
+Yeah. Isn't the state of the art that it generates PNG and sticks it in the web a page?
+
+Slim Lim:
+Not exactly, but almost.
+
+Mark McGranahan:
+Okay.
+
+Slim Lim:
+So math ML, which is in XML dialect or mathematical markup language, was this effort to build HTML/XML styles syntax for type setting mathematics. Naturally, it is only implemented in Firefox. So that's really unfortunate. So in terms of the state of the art, there are basically two libraries that you can use to type set mathematics. There's MathJax, and KaTex. MathJax supports basically all valid LaTex, including different environments and equations and things like that. The problem is that MathJax is very slow. So if you ever go on MathOverflow or another related stack exchange and see all of these answers with weird gaps, and then as you watch, before you the page starts to load all of the rendered equations, bumping everything down one level at a time, that's MathJax in action.
+
+Slim Lim:
+And oftentimes it is doing what you're describing, where it is outputting an SVB or a PNG or something like that. And it's just reflowing the page with every equation. So then you have KaTex, which was a library developed at Khan Academy where they realized that MathJax's performance was basically just not satisfactory for their exercises and things like that. So KaTex supports a much more limited subset of all of LaTex syntax, but it does it all using CSS basically. And it doesn't reflow the page for every equation. It's basically instant surrender.
+
+Slim Lim:
+So KaTex is what we use at Notion. It's also what's used in like Facebook messenger, which supports equations if you ever tried that.
+
+Adam Wiggins:
+No.
+
+Slim Lim:
+And many other what websites. And basically it means that your options, if you want to render math are only target Firefox, use a limited subset of math that's supported by KaTex and consign yourself to extremely slow dozens of reflow, full expressive power render to inline PNGs. And so that's just not a great situation to be in. And we haven't even gotten to the question of how people write math. So I would say that people underestimate how open this problem space is.
+
+Mark McGranahan:
+Yeah, man.
+
+Slim Lim:
+Just take a moment of silence to recognize-
+
+Adam Wiggins:
+Yeah, exactly.
+
+Slim Lim:
+... gravity of the situation.
+
+Mark McGranahan:
+Just as an aside. I don't know if you want to put this in the episode, but now I'm curious. It sounds like both of those are interpreted in the sense that the equations are rendered at load time. Instead of being compiled down to some HTL and CSS that you can render without JavaScript. Basically, do you need JavaScript to render these pages?
+
+Slim Lim:
+Yeah, basically. I should say you also need JavaScript, unless you're doing the pre-compiled to math ML and then hope that people are using Firefox.
+
+Mark McGranahan:
+Man. I feel like there's no way that, that stuff loads in 10 years. But we'll see.
+
+Slim Lim:
+I actually had this exact argument, again, I don't know if you want put this in the episode. I had this exact argument with Jonathan Aldrich, who's on the TAPS committee, when we were talking about this. And I think the point was not so much that you can guarantee that the artifact loads exactly the same way in 10 years, but that the representation is rich enough that one could feasibly build software that renders it the same way in 10 years. So it's more about the fidelity of the underlying representation where a team of, I guess, digital archeologists could recover the work that we were doing.
+
+Mark McGranahan:
+Yeah.
+
+Slim Lim:
+And not so much like, we trust in the vendors to keep everything stable, which is obviously never going to happen. The only reason PDFs are stable is because how many trillions of dollars of IP depend on being able to load the PDF the same way as it was written 30 years ago.
+
+Mark McGranahan:
+Yeah. Interesting.
+
+Adam Wiggins:
+Nice.
+
+Slim Lim:
+Going back to this idea earlier that Mark mentioned of the spectrum of plain text, rich text, WYSIWYG editors. One recurring theme for me is thinking about decoupling this spectrum into like, what is the format? And then what are the editors and tools that we can use to interact with this format. So are they structured, unstructured, et cetera. I want to call out [Bear 00:56:08], which is a NATO application for Mac OS and iOS. That does a really great job with this. Which is that, Bear is basically something in between a WYSIWYG and a plain text editor, in that you're always editing Markdown documents. And indeed when you have something that's bold, you can see the asterisks around it, that delimits that character. But all of these standard, control B, control U, editor shortcuts work as you would expect. And more importantly, you can see the formatting applied in real time so that when you do star, star, hello, star, star, hello, suddenly becomes bold face in this gooey.
+
+Slim Lim:
+And so in many ways it combines the fluidity and the real time preview of a rich text editor or previewer with the flexibility of ultimately just writing plain text characters. And I think this is a really unexplored area. I don't just mean something like open VS code or VIM and type characters, and then see different formatting labels attached to the results. I mean, a native application that's really designed for end use or end users, that doesn't fully obscure the input syntax, but does real time rendering in place. It's not even in Monospace font, right? It makes it feel much more like this is actually the output that you're targeting, and not just an input step that needs to be pre-processed. I think that there is a lot of room for applications that are in between and in that same space as, where it doesn't entirely obscure what you are writing, but it does give you a lot of the benefits of previewing things and having a gooey application outside of the terminal in terms of capturing the richness of the possible results.
+
+Mark McGranahan:
+Yeah. I like the Bear approach a lot. Now, are there particular domains or types of documents that you think would be susceptible to this approach, or just for rich text specifically?
+
+Slim Lim:
+So I was making a list of all of the different traditionally graphical outputs that have corresponding plain text representations. And a lot of them, I was thinking about, for example, in engraving sheet music, right? Traditionally you would use a desktop program like Finale or Sibelius. Nowadays you have options, like MuseScore and Flat, which are more web-based editors, but you see the staff and you click notes in the staff, corresponding to where you want the note. And you use the quarter note or the eighth note cursor to pick the duration and so on. And then at the other end of the spectrum, you have LilyPond, which is kind of like LaTex, I guess, for engraving sheet music. Where you type a very [LaTex'esq 00:58:44] syntax and outcomes beautifully type set sheet music. For me, this is a little bit too GNU edgy, just because when I think of composing music, I'm very much thinking about what the staff looks like, just to be able to visualize chords and counterpoints and things like that.
+
+Slim Lim:
+But I think the upshot is that you could very easily have something in between where you have a text based or non-binary representation of a piece of music or a composition, and then you can edit it either using the text editor or using the structured editor of an existing WYSIWYG, gooey like composition software, or notation software rather. And edit the same representation both ways. And then likewise, you have for diagram generation, this is an area that's been a real pain point for me historically, because you can basically do something really low fidelity, like sketching on paper. But then if you don't want to take a picture and upload it to whatever document, right? All of the options are very high fidelity, like there's OmniGraffle and Whimsical and Figma, which is even more involved where you get all of these nice things, like lots of styles and forced directed layout and so on and so forth. But it's like quite cumbersome to input a diagram that you sketched in all of 30 seconds into OmniGraffle in its full glory.
+
+Slim Lim:
+And then you have, on the plain text end of the spectrum, there's software like Graphviz, TikZ for LaTex, things I really like are Mermaid, which is a Markdown type syntax for quickly generating diagrams. There's Svgbob, which is incredible. It basically lets you turn ASCII art into formatted SVG. Though, as a brief aside, I don't actually know what problem this is solving, aside from being incredibly cool. Because at least for me, I consider myself someone who's fairly artistic, and it takes at least as much effort to figure out how to make a really nice ASCII art thought bubble as it does to figure out how to actually do the SVG. I've always really wanted something that basically allows you to edit it either as text, which allows you to prototype really quickly, make a fast flow chart or something like that.
+
+Slim Lim:
+And something, I've always really wanted an intermediate representation for diagrams where you can edit it either on the text end, using something like Mermaid to do really fast prototyping for a flow chart or something like that. And then if I wanted to have more precision and control, I could also pull it into software like OmniGraffle or Figma and make fine grain tweaks, get my nice force directed layout or ControlWare individual nodes, where if I finer grain control over positioning, things like that. I guess I think there are lots of different areas outside of just traditional documents that are ripe for an editor or a representation that learns some things from the plain text approach, and some things from the WYSIWYG approach. I think that we are-
+
+Mark McGranahan:
+Yeah.
+
+Slim Lim:
+Yeah. We're getting close to being able to explore those, but I would love to see more work in this area.
+
+Mark McGranahan:
+Yeah. This is very interesting. One challenge here I think is with plain text and rich text, the structure of the text and structure of the final output are going to be pretty close. And so that makes it most feasible to have the thing where you're seeing both the world's superimposed with the double asterisks on both sides and the bold text, for example. With something like a diagram, if you were to represent a diagram in just LaTex input, it would be a complete mess. Basically no resemblance to the final output and just be a string of really opaque characters. And then it would compile out to a nice graph, but it's kind of hard to go back and forth because of that. One way to combine these two worlds would be to invoke the command palette metaphor that we see emerging so often.
+
+Mark McGranahan:
+And so you can imagine, okay, you're editing a score or you're editing a graph. And instead of having a thousand buttons around the edge of your screen, like you do with these typical applications, the only interface is, you can click on stuff and then you can type stuff in the command palette. So you click where you want to add a note and you say like, B quarter, BQ and it puts in the B chord note, and so on. And similarly with graphs, you could click on a node and you could invoke little commands with your text editor or perhaps edit the little node locally represented as a little text box. That's kind of a way to bridge this issue of a pure text representation would have no obvious correspondence to a Dd or 3D image, but if you have some way to get more local nodes, it could work well.
+
+Slim Lim:
+Yeah, definitely.
+
+Adam Wiggins:
+And the thing that brings to mind for me is, our oft sighted favorite tool for thought, which is the spreadsheet, where you do have this. It's a very, very simple version of that, this 2D layout. But in fact, you do click on cells and type in symbolic there. So you are mixing a visual spatial layout, a very lightweight one with-
+
+Mark McGranahan:
+There you go.
+
+Adam Wiggins:
+... Some symbolic representation.
+
+Mark McGranahan:
+Spreadsheet remains undefeated.
+
+Slim Lim:
+One thing that I find really interesting about spreadsheets, that's I think often very unexplored is that, many applications like Airtable, Notion is also very much guilty of this. You can capture the power of the spreadsheet as a relational database or what happens if we impose better onto the different columns and things like that. But there's a separate, totally untapped, underexplored area of spreadsheets, which is that it's basically this canvas, right?
+
+Mark McGranahan:
+Yeah.
+
+Slim Lim:
+Spreadsheets capture everything that people liked about table based layouts in HTML, with none of the stigma associated with it. And so you can create these really complex interface that basically just do data manipulation and things like that. And put things, be like, okay, I'm going to copy this data and bring it over closer to where I'm working now, so I can reference it more easily. It's basically just this grid. Right? And that's totally unstructured. It doesn't correspond to any kind of relational format, but it's also a really powerful computation paradigm.
+
+Mark McGranahan:
+Yeah, totally. I think people really love to be able to click somewhere and put stuff there. And a lot of spreadsheet use is just that, they just want to click there and put text or put a color, and there's no formulas at all. And by the way, this goes back to our idea of convergence of the office document types. I see people using Figma for this a lot. They're not designers, they're not designing interface. They want to click and put pictures on a 2D canvas, and they want to click and put text there. And you could see a sort of continuation of this world where these things continue to merge as the software gets more sophisticated.
+
+Slim Lim:
+Yeah. And then on the subject of diagrams real quickly, I remembered that I want to mention Sketch-n-Sketch, which is this project by Brian Hempel, Justin Lubin, Ravi Chugh, at University of Chicago from a couple years ago. And the idea there is you have direct manipulation programming for SVG. So in the same, you have this editor and then on the left side, you might see the code that outputs a certain SVG on the right side, you see the SVG itself and you should be able to do things like directly go in with the mouse, click an anchor point and drag it somewhere. Or do other kinds of transformations that people are used to when SVG editing. And it should obviously be reflected in the output, but also change the code that goes into it. And then you can make changes to the code and it will modify the output.
+
+Slim Lim:
+I think this is one of the most successful examples I've seen of an editor that actually manages to keep this bidirectional linkage working. And when you make manual edits with the direct manipulation edits with the cursor, it doesn't totally botch your code. When you make changes with the code, it doesn't lose all of your edits with the visual side. I think it would be great to see more things like this for more structured areas like diagramming or things like that.
+
+Mark McGranahan:
+So many research projects to do.
+
+Slim Lim:
+Yes.
+
+Adam Wiggins:
+Yep.
+
+Slim Lim:
+Lost to do.
+
+Adam Wiggins:
+Slim, I see a recurring theme in how you think about all of this, whether it's equations, pros, rich texts, musical score, or diagrams, is this intermediate format concept. And maybe like a straw-man or an outside view might come at this thinking, well, being able to see something like a Markdown is sort of exposing plumbing that nerdy programmer types might like, but the reason we invented, what you see is what you get, word processors, whatever 40 years ago or whatever it was, was to potentially liberate us from that.
+
+Adam Wiggins:
+But I see that you see the future as not one where those go away. We want to expose that, there's some value to that separately from a fully visual, a hundred percent mapping, the rendered output and the way you edit it, looking precisely the same. So I think that eliminates somewhat, what I would imagine, how you would answer the question I was going to ask you about the future. But with that in mind, I'll basically say, yeah, if you look forward, say five or 10 years to what advances either have happened or that you hope to see happen in terms of how rich text works on our computing devices, what does that look like?
+
+Slim Lim:
+Yeah, I think it's exactly like you were describing. We originally had this idea that you would be able to get a WYSIWYG editor or something like Microsoft Word, and totally decouple yourself from this underlying representation. I think that works up until the point where you have lots of different output formats or different ways of viewing the document that people would like to use. And as soon as you are in a world where even something like, let's say, I want to have two different views in a gooey application, all of a sudden it becomes much more beneficial to have some kind of intermediate format so that you don't have to do like N times M different renderers and parsers and compilation pipelines for all of these internal things.
+
+Adam Wiggins:
+So as a simple example of that, earlier you mentioned the reading academic papers on different sized screens, a phone versus a desktop-
+
+Slim Lim:
+Right.
+
+Adam Wiggins:
+... versus a printout, that even just the basic reflow of the text, simple as that seems to a narrower or wider screen actually is pretty complicated. And there was an approach of designing for several different screen sizes. But now we know that, that's not very future proof.
+
+Slim Lim:
+Right.
+
+Adam Wiggins:
+And doesn't fit the way we want. And so as soon as you have anything that's even slightly dynamic, even something as simple as text reflowing, that's the place where you think, an intermediate format is necessary.
+
+Slim Lim:
+Yeah, exactly. It's not tractable to design a phone version of the website for every possible phone, and then a tablet version for all the tablets, and then a desktop version, but also a projector version, things like that. So the layout and the appearance is driven by the content itself. And I think that there's an idea of that for outputting a paper. If you're thinking about outputting another artifact, like a diagram or something, I think there are situations where it's really useful to be able to do standard direct manipulation diagram editing. And then also situations where it's really useful to be able to select all of the text that corresponds to a certain subgraph and just move it somewhere else. And allowing people the flexibility of choosing between those different edit options, depending on what task they're trying to perform, what problem they're trying to solve, is a really big area of opportunity.
+
+Slim Lim:
+So I think we're still at a stage where with all of these different new editors, like Coda or Notion, or even Bear, Craft, editors are still very much borrowing from each other a lot. And periodically striking out in the direction of, here's a new kind of block or a new kind of cell or type of text that you can have. And I think that while we're still in the stage of churning feature churn around what are the editing primitives that people care about? What things go in a document? It's going to be hard to develop any kind of unifying framework or IR for these documents to work together. I'm hopeful that once we reach a scenario where there's a little more stasis and maybe more overlap in the capabilities and interests of different editors, you could have this intermediate platform that extends from things like Rome to Notion or Notion to Airtable or something like that, for the components that make sense to go into those other platforms. And then you could actually really flexibly move your data around between these areas.
+
+Slim Lim:
+And likewise, within applications, maybe you want to be able to start off with something really low fidelity and gradually get something higher fidelity. It would be really nice to have a slider almost that allows you to move up and down the ladder of abstraction. But failing that, an intermediate tool that you can plug in and be like, okay, I want to take this bullet list of to-do items and upgrade it into a database for things, or something like that. Something that's more plug and play that also handles structured data in the same way we have a tool like Pandoc for text. That's what I'm really excited to see, because I really think of rich text as slowly expanding to include all the things you might want to have in a document, which might include embedded views of other databases or things like that.
+
+Slim Lim:
+So just having a more expansive interpretation of rich text that is less constraining with respect to the kinds of artifacts that you can produce, allows you to combine more things together, has a notion of structure that enables these kinds of really powerful edits. Like reparenting an entire subtree while also allowing you to do things like, select a linear region of text and copy it somewhere else. I think that's kind of the direction we're moving in, where we combine a lot of flexibility of plain text editors that we've seen to-date with some of the power of having more structure.
+
+Mark McGranahan:
+It's a pretty exciting future.
+
+Slim Lim:
+Yeah. Let's hope we get there.
+
+Adam Wiggins:
+Well, let's wrap it there.
+
+Adam Wiggins:
+Thanks everyone for listening. If you have feedback, write us on Twitter @MuseAPPHQ. You can reach us on email, hello@museapp.com. Can also leave us a review on Apple Podcast. And Slim, your drive and passion for all things text, and in fact expanding, my mind has been expanded on what even we would think of text as being and what these intermediate formats can do for us in the future. So I'm really excited that you're on the forefront of this and pushing forward our tools.
+
+Slim Lim:
+Yeah, thanks so much for having me. This was great to talk about.
+
