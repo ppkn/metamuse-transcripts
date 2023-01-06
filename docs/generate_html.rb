@@ -1,7 +1,4 @@
 #!/usr/bin/env ruby
-# require "active_support"
-# require "active_support/core_ext/string"
-
 def generate_html(line, f)
   line.gsub!("\n", " ")
   speaker_timestamp, paragraph = line.split(" - ", 2)
