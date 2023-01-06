@@ -1,5 +1,6 @@
 # Metamuse Transcripts
 
+:sparkles:**Update (01/2023)** I'm working on this project again, but things are going to be a little messy while I get a new process set up.  
 :sparkles:**Update (01/2022)** This project is now inactive. 😦. If I gain renewed time/interest, I'll start it back up again.  
 :sparkles:**Update (09/2021):** I'm looking for help! See the [contribution guide](CONTRIBUTING.md) for more info.
 

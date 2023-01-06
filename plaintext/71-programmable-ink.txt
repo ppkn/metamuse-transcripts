@@ -1,0 +1,1589 @@
+James Lindenbaum (00:00:00) - One of the luxuries of industrial research
+is that you're not bound to the traditional rigor and neutrality
+required of academic research or just science in general. We're allowed
+to have an opinion. We had a number of people who are reviewing the
+essay comment. What's with the feelings? Take this feeling section out.
+It's not defensible. And I felt like it needed to be addressed because
+to me that's the most important part.
+
+Adam Wiggins (00:00:24) - Hello and welcome to Metamuse. Muse is a tool
+for deep work on iPad and Mac. This podcast isn't about Muse the
+product. It's about the small team and the big ideas behind it. I'm Adam
+Wiggins joined by our guests today, James Lindenbaum.
+
+James Lindenbaum (00:00:45) - Hey there.
+
+Adam Wiggins (00:00:46) - And Szymon Kaliski.
+
+Szymon Kaliski (00:00:48) - Hello.
+
+Adam Wiggins (00:00:49) - Both from Ink and Switch. And James, you and I
+have been colleagues and friends for a pretty long time now. So I happen
+to know that similar to Muse team member Yulia, you are a huge cocktail
+nerd. Any experiments in that area these days?
+
+James Lindenbaum (00:01:04) - Oh, there's always ongoing experiments.
+Yeah.
+
+James Lindenbaum (00:01:06) - I recently decided to move to kegging
+cocktails. When you have a bunch of guests coming over, I often will
+batch up a cocktail so it's faster to serve. And you can also be really
+persnickety about, you know, micro adjustments to amounts and things
+like that, and really dial in the recipe. And I decided to move to
+kegging the cocktails on low pressure nitrogen so they could be cold and
+pre-diluted and ready to drink. It's basically front loading the work so
+that I don't have to do much.
+
+James Lindenbaum (00:01:32) - I can actually hang out with my guests,
+but there's always interesting things you learn when you start changing
+things around like that.
+
+Adam Wiggins (00:01:40) - I do feel like the cocktail preparation is
+part of the experience of being a host or something like that. I guess
+if you have a lot of people there and then you're doing nothing but
+being heads down in your bar, then that's not really being a very good
+host. But there also is something to the prep ritual, I guess.
+
+James Lindenbaum (00:01:59) - Well, as you well know, I'm a bit of a
+perfectionist. I enjoy having the time to really like try to perfect a
+cocktail, really dial it in,
+
+Szymon Kaliski (00:02:07) -
+
+James Lindenbaum (00:02:07) - And one of the ones I made recently, I
+stole from this really awesome bar in San Francisco called Kona Street
+Market. And it's this drink called the Banana Stand. It's an Arrested
+Development reference.
+
+Adam Wiggins (00:02:18) - That's the first thing that popped into my
+mind. Always money in the Banana Stand.
+
+James Lindenbaum (00:02:21) - Always money. Yep. And it really blew my
+mind when I had it. And then I talked to the guys there about it. And
+then I've been just like gradually trying to recreate it on my own and
+get it dialed in. And I think we're there. I think we're close enough to
+perfection. Certainly close enough that you would have made me ship it
+at this point.
+
+Adam Wiggins (00:02:37) - That's a little inside joke there for the
+listeners. James and I have a long time. Let's call it productive
+tension, usually productive of I like to ship stuff and he likes to make
+it perfect. And hopefully somewhere in the middle of that is sort of an
+ideal place to be. And we'd love to hear a little bit about both your
+backgrounds. Maybe, Shimon, you can start us out.
+
+Szymon Kaliski (00:02:57) - Yeah, sure. So for the last two years or so,
+I've been principal investigator at In and Building, bespoke layouting
+engine for European Space Agency or some kind of interface for exploring
+machine learning for molecular synthesis. And before that, my background
+was in actually creative coding. I was doing work on museum art pieces,
+doing interactive art, data visualization, stuff like that. What I do
+also, other than work, I make a little bit of experimental music and
+various computer projects for fun.
+
+Adam Wiggins (00:03:40) - I feel that the music experiments that you do
+and performances sometimes, right, also bleeds into your creative
+coding, artistic interfaces a little bit. And I think I personally take
+a lot of inspiration from the prosumer world of like audio gear and the
+interfaces there that are sort of designed to create art, but also
+intended to be pragmatic, right? You're doing a performance or something
+like that in those knobs. You got to be able to grip it in the right way
+or whatever.
+
+Adam Wiggins (00:04:07) - So I feel like you often bring your music
+world, electronic music world stuff in your work in Ink and Switch.
+
+James Lindenbaum (00:04:14) - And I always enjoy that personally, but
+I'm also a person with a little bit of an electronic music background.
+
+Adam Wiggins (00:04:19) - So maybe that's why it appeals to me.
+
+Szymon Kaliski (00:04:21) - Yeah, the word there is definitely a little
+bit different and interesting. So I know if there are any UI designers
+listening to this, I encourage you to just browse Pinterest for music
+stuff. There is a lot of interesting differences there.
+
+Adam Wiggins (00:04:34) - And James, you and I have worked together for
+a very long time, including perhaps most notably in co-founding Heroku.
+And we also created the Ink and Switch research lab together with some
+of the great folks. But maybe you can fill in a little more of the story
+there.
+
+James Lindenbaum (00:04:48) - Sure. Yeah. Well, I have always been, as I
+like to say, constitutionally unemployable. So I started a number of
+things over the years. But yeah, most notably was probably Heroku with
+you and our other co-founder, Orion.
+
+James Lindenbaum (00:05:02) - After that, I found that there were a lot
+of people coming to me, founders of developer-facing companies who
+wanted help. And I ended up advising and sitting on boards and whatnot,
+eventually starting what is now a venture capital firm called Heavybit,
+which specializes in developer-facing infrastructure kind of stuff. And
+so I'm still there. I spend a lot of time there, though I've kind of
+worked my way from being a founding full-time partner there to being
+more part-time.
+
+James Lindenbaum (00:05:29) - And then you and I co-founded the Lab in
+Switch, which is where I spend, I'd say, more of my time these days. I'd
+like to spend all of my time there, but there's so many things to do.
+
+Adam Wiggins (00:05:39) - Well, let's be honest, when it comes to paying
+the bills, investing in developer tools companies is probably a better
+gig than weird research.
+
+James Lindenbaum (00:05:47) - Yeah, I mean, the path to money is more
+clear. That's certainly true. It's still enjoyable, though. There's so
+much innovation happening on that front. It's still intellectually
+interesting, and there's a lot of fun stuff happening there. But it
+certainly feels a lot closer in than the weird stuff we're doing at the
+Lab.
+
+Adam Wiggins (00:06:04) - And you both recently published an essay on
+your latest research project called InkBase. Of course, I'll link that
+in the show notes. But can you give us an overview for folks who haven't
+read the essay yet?
+
+James Lindenbaum (00:06:14) - Sure, yeah. So in the Lab, we have a
+research track that is all about programmable ink. Sort of a combination
+of doing stuff on tablets, thinking about digital ink, and thinking
+about end-user programming. And this project, InkBase, was basically the
+fifth, depending on how you count, the fifth project in that track of
+eight that we are now, we're currently working on project number eight
+in that track.
+
+James Lindenbaum (00:06:40) - And we're publishing this essay a little
+bit out of order because we wanted to take the time in this one to sort
+of lay a little bit more of the groundwork, sort of define what the
+problem is, what we're trying to do. So we spent a little bit more time
+writing it than some of the write-ups of projects that came
+subsequently, like Crosscut and Untangle. But yeah, we're happy to have
+this out there and have people start to grok what it is that we're doing
+here with this weird programmable ink stuff.
+
+Adam Wiggins (00:07:05) - Yeah, so this whole track of end-user
+programming is certainly one that, I mean, that concept is something
+that even fed into Heroku. It's something that was a kind of founding
+idea that we knew we wanted to bring into the lab. The three of us
+worked on an essay titled End-User Programming that kind of touched on a
+history of that field and some light experiments, some of the first work
+you had done with the lab, Shimon.
+
+Adam Wiggins (00:07:26) - But part of what I like about this ink-based
+project specifically is this is taking the idea of sketches and trying
+to kind of take what do we like about spreadsheets and the rough
+computation that you can do there, kind of on the fly interacting with
+the document in a way to take advantage of the dynamic medium but not
+something that's writing an app per se. Certainly has much in common
+with, for example, Potluck. We had Max and Jeffrey on just recently, but
+they were very focused on, okay, classic plain text and these searches,
+et cetera.
+
+Adam Wiggins (00:07:58) - And I feel like this is almost a complete
+other take on that. Tablet stylus, sketching, kind of very loose and
+informal, but informal and programming are not things that we normally
+think of as being combinable.
+
+Adam Wiggins (00:08:13) - And indeed it is that for me at least
+observing this kind of track of research from the outside in this
+specific project, it is that tension between the formality of
+programming and the systems thinking and so forth that we want from our
+computational tools and the looseness, sketchiness, I'm just figuring it
+out, I'm not sure yet, messiness that is part of thinking tools, tools
+for thought.
+
+Adam Wiggins (00:08:37) - So I think it's a very evocative idea to start
+with and then the resulting project itself, which you can see some
+videos of in the essay also is only further teases that.
+
+James Lindenbaum (00:08:49) - Yeah, that's one of the reasons we like
+working with digital ink. I mean, there's a number of reasons, but one
+of them is that it sort of forces you into this sort of sketching,
+informal, loose, fast and loose kind of mindset. And it just underscores
+how not fast and loose most of our programming capabilities are. And so
+it kind of forces us to think about, you know, what are the right
+affordances? How can we design a system that would let you stay in that
+sort of frame of mind, but still get some of the benefits of a dynamic
+medium?
+
+James Lindenbaum (00:09:19) - The sort of weird analogy that was sort of
+the prompt for the ink based project was, you know, we look at
+spreadsheets and I personally am a huge fan of spreadsheets as I think
+many of us are. And I think about the analogy, you know, if you think
+about spreadsheets as we have them today, as they compare to their
+analog predecessors, you know, a giant pad of paper and a slide rule or
+a calculator. It's not just that modern spreadsheets let you do what you
+would have done with the analog version a little bit faster.
+
+James Lindenbaum (00:09:46) - It's that they actually let you have
+thoughts you wouldn't have had using the old version because you can see
+this dynamic model and you can get intuitive understanding of how it
+works. You can play what if scenarios. It sparks new ideas.
+
+James Lindenbaum (00:09:59) - And so we think, okay, you've got the
+traditional sort of actual spreadsheet, you know, the paper analog
+version that is to modern spreadsheets as sketching in a notebook is to
+question mark.
+
+James Lindenbaum (00:10:10) - Right.
+
+James Lindenbaum (00:10:10) - Like what is the thing that goes in that
+box?
+
+James Lindenbaum (00:10:13) - And I don't feel like we know what it is
+or have really seen it. And so ink base was sort of a little bit of a
+study or an experiment around that prompt.
+
+James Lindenbaum (00:10:21) - Like what would that thing look like?
+
+James Lindenbaum (00:10:22) - What would it feel like? What would it be
+like to be able to work in that spreadsheet like way, but with ink?
+
+Adam Wiggins (00:10:28) - Now, I think a question that might be in the
+audience's mind is how this prompt that you just described relates to
+visual programming, which visual programming is something where, yeah,
+maybe it's more accessible to the average person or requires less
+programmer brain, less symbolic manipulation. Do you see it as related
+to that world of things or is it its own beast?
+
+Szymon Kaliski (00:10:51) - So I have a little rant.
+
+Adam Wiggins (00:10:53) - I figured you did.
+
+James Lindenbaum (00:10:54) - Yeah, that might be too early.
+
+Szymon Kaliski (00:10:56) - I'm podcasting for a rant, but I don't think
+a lot of these projects that people mentioned as visual programming are
+really visual in the sense that we talk about or we think about things
+like, like not to taxonomize the whole field, but there's things like
+projectional editors, maybe Scratch comes to mind where you have blocks
+of code that just snap together, or maybe things like MaxMSP for
+musicians, which is basically nodes and wires interface. So these kinds
+of interfaces still require thinking in this very like abstract,
+symbolic way.
+
+Szymon Kaliski (00:11:29) - You just manipulate the code, not in a text
+buffer, but on a screen, like moving it around in two dimensions. What
+we think about in this thread is more about visual programming as a way
+of working with like actual embodied objects that you can see on the
+screen and interact with. So you're not thinking symbolically, but
+concretely about the domain, the problem at hand, and this is kind of
+the thread we've been following. So in a sense, both are visual.
+
+Szymon Kaliski (00:11:54) - You could argue that coding a text box is
+also visual, but the meaning of visual is kind of different the way we
+think about this and the way these sorts of projects think about it.
+
+James Lindenbaum (00:12:05) - Right.
+
+Adam Wiggins (00:12:06) - So whether those nodes and wires kind of
+visual programming languages or something like Scratch, which I think is
+a great product for kids to learn to program, it is really about sort of
+taking a conventional program and making it not text, not pure text, but
+something that's a little more gooey, point and clickable. There's a lot
+of value to that, and there's many domains where that makes sense, but
+that does seem like almost a different realm from I have the sketch and
+I want to bring it to life using the dynamic medium of computation.
+
+James Lindenbaum (00:12:36) - Yeah, there's a really important
+distinction between programming with ink versus programmable ink, right?
+
+James Lindenbaum (00:12:44) - So, you know, what we're not trying to do
+is help you write programs with the use of ink.
+
+James Lindenbaum (00:12:50) - What we're trying to do is just use ink
+for the properties that ink has, digital ink, but also allow it to be
+dynamic in the ways that you would expect from the dynamic digital
+medium.
+
+James Lindenbaum (00:13:01) - And so the programming is not the end.
+
+James Lindenbaum (00:13:04) - It's the means to have ink that does more
+interesting things than just sit statically on the page.
+
+James Lindenbaum (00:13:09) - A lot of times we have these amazing
+devices and we have this pen and all this computational power in the
+iPad, let's say. But a lot of the iPad apps that make use of that
+basically just let you paint pixels on the screen with the pen.
+
+James Lindenbaum (00:13:23) - And it's just there could be so much more
+there.
+
+James Lindenbaum (00:13:25) - And that's a big part of what we're
+thinking about with digital ink in general at the lab. And then with the
+programmability in particular, you know, what if that ink could respond
+the way that a spreadsheet does reactively to other things on the
+canvas? Or what is the nature of digital ink even at all? I think that's
+a question that we're still kind of asking ourselves and doing studies
+around, you know, what if it worked more like string that you could pull
+around the page?
+
+James Lindenbaum (00:13:48) - Or what if it worked more like paper
+clips, right?
+
+James Lindenbaum (00:13:51) - Like a little wire thing where you drew
+it, but then it wants to retain its shape. So when you pull on it or
+bend on it, it tries to retain some of its shape.
+
+James Lindenbaum (00:13:58) - So it preserves a little bit more of the
+intention or the movements of the person who made that mark.
+
+James Lindenbaum (00:14:04) - Right? A fun prompt that I like is
+thinking about digital ink as a byproduct of someone moving their hands.
+It's more of the moving of their hands that's interesting and the ink is
+a byproduct. If you think about it that way, then you start thinking
+about totally different kinds of affordances and ways to treat ink.
+
+James Lindenbaum (00:14:19) - So there's a whole realm there that we're
+kind of thinking about that sort of intersects in this Venn diagram with
+sort of end user programming and dynamic behavior.
+
+Adam Wiggins (00:14:28) - I think you already teed up our topic there,
+which obviously is programmable ink. And I always like to start with
+definitions. I think we've gotten into it a little bit, but you've
+mentioned digital ink. And I assume here maybe the first thing that
+comes to mind there is I scribble on an iPad or potentially another
+tablet in stylus. And yeah, some ink-like marks appear on my screen and
+that's it. Is that basically what you mean by digital ink or is there
+more nuance to it than that? Yeah.
+
+James Lindenbaum (00:14:56) - I mean, I think that working out that
+definition is sort of part of the work that we're doing that I expect to
+take a while.
+
+James Lindenbaum (00:15:02) - So I don't have a crisp answer on that.
+
+James Lindenbaum (00:15:05) - When I say digital ink, yes, I'm mostly
+thinking of the things that appear on the screen when you move a pen or
+stylus around on an iPad or a remarkable or some kind of device like
+that. But I think there is this interesting question of aside from those
+pixels, what is it really that's there?
+
+James Lindenbaum (00:15:22) - What is ink in general and certainly what
+is the digital version?
+
+James Lindenbaum (00:15:25) - I think those are really interesting
+questions.
+
+Adam Wiggins (00:15:29) - And then how would you define programmable
+ink?
+
+James Lindenbaum (00:15:33) - Well, you know, again, I think we're maybe
+taking a very shallow stab at it with this Inkbase essay. But, you know,
+when we think about programmable objects or dynamic objects, we often
+think about objects that they have some behavior. They respond in some
+way or they change in some way or they're able to be changed by some
+part of the system.
+
+James Lindenbaum (00:15:54) - And so that's mostly what we're thinking
+about when we think about programmable ink or dynamic ink is just
+something that is aware of its environment and can be manipulated either
+by itself or by something else on the canvas or in that environment or
+even by the user. I mean, a lot of ink that you make in these tablet
+programs are it's sort of dead ink. It's difficult then to pick that ink
+up and move it around.
+
+James Lindenbaum (00:16:16) - You know, some allow you to have
+selections or drag some things. But even basic things like scaling or
+deforming ink in a way that's smart, like a classic example is you draw
+an arrow from one thing to another in your notebook and then you want to
+move one of those items around.
+
+James Lindenbaum (00:16:32) - Well, the arrow doesn't follow. You then
+have to manually move the arrow yourself and reposition it and rotate it
+and scale it. And when you scale that arrow, it scales proportionally,
+sort of naively, and it no longer looks like an arrow. Right. Or it no
+longer points in the right direction or the arrowhead isn't facing the
+right way or whatever.
+
+James Lindenbaum (00:16:49) - And so that's a very difficult problem to
+solve from a sort of computer science perspective. From just like a
+human doing stuff on a screen perspective, it seems crazy that that
+doesn't work correctly. And so we try to look for places where there is
+that strong sort of dichotomy where it seems like we've just gotten used
+to something being a certain way, but it actually seems kind of terrible
+from just a human experience perspective, especially when you get in the
+context of tools for thought, where I think the tools have to be used.
+
+James Lindenbaum (00:17:19) - The tools have a really huge impact on the
+thoughts that we have and the work that we do and the output of that
+work.
+
+James Lindenbaum (00:17:24) - And so these small differences or small
+bits of friction or small biases that the tools create actually are
+really important.
+
+Szymon Kaliski (00:17:30) - I think it's hard not to mention McLuhan at
+this point, right? Like first we make the tools and then they make us. I
+think we really believe in this feedback loop of how the things you use
+impact what you can do. And this is like a hope of being better at
+sketching, being able to sketch dynamic models.
+
+Adam Wiggins (00:17:48) - Yeah, maybe one way to think about the, it's
+called the current implementation of digital link, of which Muse counts
+in with us. But I think it's something we've thought about a bit more
+than others, probably because I think it's pretty clear if you're
+procreate, you're a pure art tool and it's just like you want nice
+brushes so you can create a beautiful picture.
+
+Adam Wiggins (00:18:08) - And maybe if you're a diagramming tool, it's
+really clear that it's important that your arrows and boxes connect to
+vertices on the thing and you don't want to just like draw a rough
+circle around something or underline something.
+
+Adam Wiggins (00:18:20) - But one of my favorite small examples that I
+certainly hope will implement at some point is the idea if you highlight
+something with a highlighter and then you go in and like type in that
+text, does the highlight kind of stretch out the way that it would if
+you had selected the text and, you know, right click, select highlight,
+something like that. And that does get into the realm of, okay, how much
+do you want it to like automagically detect what you're doing and make
+inferences about it.
+
+Adam Wiggins (00:18:44) - But if we do think of the today's digital link
+as mostly being just a direct transliteration of like drawing a
+sketchbook before, now I've got an iPad or a Markable or an Android
+tablet and that more or less looks like a sketchbook and I can load an
+app that gives me a blank page that probably looks like a sketchbook and
+I can draw things. And yeah, maybe I have a few more tools for
+manipulating. I can erase, I can undo, I can select and move things, I
+can duplicate. That's nice. But it's a pretty direct thing.
+
+Adam Wiggins (00:19:10) - Maybe in the same way that the first word
+processors were essentially just, hey, what if we had a typewriter on
+this computer thing? And it was only later on that we started to get
+into much richer things like say hypertext where you could never, yeah,
+that concept doesn't make sense in a typed document. But once you're in
+the virtual realm and the dynamic medium of the computer, now you can do
+more. But you start with that transliteration and then over time you
+figure out how it can grow into something that goes beyond its kind of
+analog roots.
+
+James Lindenbaum (00:19:39) - Yeah, I mean, I think there's a lot of
+shared roots obviously between Muse and this track of work.
+
+James Lindenbaum (00:19:45) - They have kind of shared roots
+philosophically in some of the ideas at the lab and I think one of those
+big areas is when we talk about tools for thought, I think there are a
+lot of questions around what is thought work?
+
+James Lindenbaum (00:19:56) - What is thinking? What is thought work?
+What is the product of thought work?
+
+James Lindenbaum (00:19:59) - A lot of our current tools today don't
+really respect the work product of ThoughtWork. Just a basic example
+that I'm always ranting on is browser tabs. One thing that a lot of
+people spend a lot of time doing these days in the course of ThoughtWork
+or KnowledgeWork is basically curating their own sort of research path,
+right? Whether you're researching a new toaster to buy or doing real
+serious academic research or whatever, a lot of times it starts in a
+browser and you click a bunch of links and open a zillion tabs.
+
+James Lindenbaum (00:20:26) - Then you go through those tabs and you
+decide, you know, each of these tabs is it interesting or not? Is it
+relevant or not? You close some, you leave some open. Maybe you open
+some additional tabs from links that you see in there and that is
+actually work that you're doing. Then you end up with this sort of
+browser window full of tabs or multiple windows full of tabs and that's
+your work product. You just spent a bunch of time and used your brain to
+produce that work product.
+
+James Lindenbaum (00:20:47) - You may want to come back to that or do
+something with it or pause or whatever, but most of our tooling, with
+the exception of some interesting newer experiments, most of our tooling
+does not respect the placement of those windows or the locations of
+those tabs or the fact that they're open or not as your actual work
+product. So it's treated as ephemeral. It gets lost. It's very difficult
+to manage.
+
+James Lindenbaum (00:21:07) - When we make notes in a notebook, most
+sort of personal note-taking apps treat your notes as like this very
+important sacred thing that they shouldn't lose. But to me, they have
+the same value, the same amount of work has gone into them as these
+browser tabs that are open, for example. And so I think when we start
+thinking about what is thought work, what is work product, we start to
+get into these questions of what would tools look like that are more
+respectful of these different stages of thinking.
+
+James Lindenbaum (00:21:32) - And to me, rumination, I always thought
+was an interesting word that was used around a lot of the muse idea.
+There's this point where you've piled all your stuff, at least for me, I
+think, but there's a point where I've kind of gathered all my stuff,
+laid it all out on the floor, and I just want to stare at it for a while
+and just move it around with my hands. And that's a really important
+step that most people can relate to, but it's not really supported
+directly as a first-class thing by most tools that are available today
+digitally.
+
+James Lindenbaum (00:22:01) - And I think similarly, sketching, not the
+art version of sketching like you might do with Procreate, but sketching
+as in thinking with your hand, sketching by putting marks on a page,
+whether it's words or drawings or doodles or whatever, that is also, in
+my opinion, a very under supported activity that is a really critical
+activity. And the earlier you are in the process of having an idea, the
+more fragile that idea is and the more sensitive to your tooling those
+ideas are.
+
+James Lindenbaum (00:22:29) - So imagine trying to do that thinking type
+of sketching in a tool like Adobe Illustrator. It's basically impossible
+because the interface is designed for this high precision, high fidelity
+outcome. And so you just want to stick a box in the corner and keep
+going. But in order to make that box, you've got to select the right
+tool. You've got to decide which kind of box. You've got to decide what
+kind of corner radius you want. Does it have a drop shadow?
+
+James Lindenbaum (00:22:53) - By the time you're done with all of that,
+you've lost, at least for me, maybe this is ADD brain, but I've
+completely lost the idea by then. Ideas are like these little wisps that
+you're trying to capture quickly before they dissipate. And so the
+nature of that tooling is really important.
+
+Szymon Kaliski (00:23:09) - Yeah, I'd like maybe to add two things to
+this, both kind of tangential. Like one thing that we started talking
+about, or maybe being able to vocalize lately at the lab is this idea of
+the same way we have like napkin math or back of the envelope, like
+mathematics, just figuring out orders of magnitude of something or
+whatever. And interesting parallel is back of the envelope computation,
+like how do you make these little interactive things with the same
+approach of like roughly just hand waving at the thing.
+
+Szymon Kaliski (00:23:36) - And another idea, a bookmark maybe here is,
+I lost it. See, you're just proving my point.
+
+Adam Wiggins (00:23:45) - Well, actually, one thing I'd love to hear
+from you, Shimon, is, you know, there's been a number of projects in
+this track. I think Inkbase is certainly a very notable one, but you
+have become pretty accomplished. Obviously, you were instrumental in
+creating the tool, but you also are probably the most accomplished user
+of these various research tools, the prototypes in the world. And
+indeed, you've given some good talks, including recently at Strange Loop
+where you kind of give live demos or maybe their videos, I'm not sure.
+
+Adam Wiggins (00:24:14) - But in any case, it shows your depthness with
+these different tools.
+
+James Lindenbaum (00:24:17) - So I guess I have to just ask, like, what
+does it feel like?
+
+Adam Wiggins (00:24:20) - What does it feel like to have Programmable
+Link, at least in this early stage?
+
+Szymon Kaliski (00:24:26) - The phenomenology of tool use. It's kind of
+maybe hard to describe, right? It definitely feels distinctively
+different to how you approach doing things on your computer. So like,
+for example, like one thing that comes to mind is an idea we played
+around with Crosscut, like a different paper in the same thread, where
+we basically create like a little drum machine.
+
+Szymon Kaliski (00:24:47) - So by connecting a couple of dynamic objects
+together, we have one that moves left to right, we connect the line that
+stays vertical, a box that finds things inside that box, and that
+controls a drum rhythm.
+
+Szymon Kaliski (00:24:57) - So working this way is completely different
+to how I would create my own drum machine if I wanted to, which I did a
+couple of times, which often means I have to turn on my MaxMSP or Python
+or whatever, figure out what is the correct MIDI signal to send
+somewhere, basically switch to this logical thinking, oh, I will have 16
+steps so there's an array that I need to care about now, and this array
+has values in it and whatever, and start thinking about very
+symbolically what I'm trying to solve versus kind of the tinkering,
+pre-college-like approach of the other things we're doing.
+
+Szymon Kaliski (00:25:31) - And there's a lot of parallels like that to
+me where I have a very strong maybe programmer brain, because I've been
+doing it for a while, where the way you approach solving problems in
+these tools is totally different. We explicitly try not to have these
+things that feel wrong in programming.
+
+Szymon Kaliski (00:25:48) - One example that often comes to my mind is
+this spooky action at a distance where you say, oh, there's this
+database over there, it has an abstract ID, I'm going to grab that
+entity, unbound it, whatever, grab a property from it, and so on, where
+in Inkbase you say, oh, this thing to the left, make it red. And that
+feels very concrete, you can see the results of your actions
+immediately, and you also think this very humane, spatial way, where
+something to the left is much more obvious than an ID with UI ID that
+has 64 characters or whatever.
+
+Szymon Kaliski (00:26:19) - This is a different way you use your brain
+and think about things, and that really left a strong impression on me.
+
+Adam Wiggins (00:26:27) - I think that is somewhat how research works.
+If you were starting with a really burning pain point to solve in the
+kind of classic sense, you'd really be starting a commercial product.
+Whereas research, I think, at least for me, is driven by a sense of how
+things can be different. You see the capabilities of the computational
+medium, particularly maybe emerging new technologies like tablet, low
+stylus latency, this is one example that I think was an inspiration for
+us.
+
+Adam Wiggins (00:26:55) - And you think about how you would like
+computers and our computing tools to be, and you see what the potential
+is with either the way technology is today or the way it's evolving, and
+you can kind of extrapolate out and think of some end state. You're not
+really starting with a specific use case. You're starting with a vision
+of how things could be. So necessarily use cases do get a little bit
+kind of backed in there. To me, that seems natural.
+
+James Lindenbaum (00:27:21) - I also think we often have, at least for
+me, I have a lot of use cases that I want to have a tool like this for,
+but you need to have a pretty full-fledged version of this tool in order
+to actually carry out that use case and experience it. And we're quite a
+long ways from being there, I think. And so with some of these projects,
+we're trying to see how one of these use cases could be implemented. In
+some of them, it's really more about the feeling of the tool. And
+Inkbase is one of those projects.
+
+James Lindenbaum (00:27:48) - We explicitly said with Inkbase, okay,
+we're going to kick the can down the road on what is the right
+programming model and what is the right interface for doing this
+programming and all that. And we just want to get to a place where we
+have dynamic ink that we have programmed that's on the screen that we
+can interact with, just so we can get a little glimpse, a little
+vignette of that and see what it feels like. And I found the results to
+be very compelling. But again, these feelings are very subtle and
+nuanced.
+
+James Lindenbaum (00:28:15) - And I think important for when you put
+them in context of the way that the tools you use bias the results, I
+think the nuanced differences and feelings of tools are really
+important, but they're also kind of hard to describe. And we're kind of
+grasping at that in this essay. One of the things we've started to talk
+about in the lab when we think about the design of different tools is
+sort of the quote unquote natural grain of the tool. And we give a
+little definition in this essay.
+
+James Lindenbaum (00:28:41) - We think about how tools, most tools,
+physical hand tools, as well as digital tools have some sort of natural
+grain, a way or set of ways that the tool can be used that are easy,
+fluid, efficient, sort of encourages you to use the tool that way. And
+then there are ways to use tools that are against that grain. And not
+that you can't use them for those things, but they just don't work super
+well. Think, you know, using a machete as a screwdriver instead of as a
+machete or think using Microsoft Excel to do artwork. You can absolutely
+do that.
+
+James Lindenbaum (00:29:14) - It's just kind of against the grain of the
+tool. And so a lot of times we ask what kinds of use, what kinds of
+feelings do we want to be with the grain? Like what direction do we want
+this grain to go? And for example, with sketching and sketchy ideas and
+early thoughts, we want the grain to be very much encouraging you to
+keep thinking and not get distracted with high fidelity thoughts. You
+know, is this thing pointing to the other thing? Is my square, you know,
+a perfect enough square, whatever.
+
+James Lindenbaum (00:29:41) - Another thing in that bucket in terms of
+trying to develop a sense of what things feel like we've started to talk
+about. I think this is one of Shimon's originally is working with the
+material. Sort of a phrase we talk about, which sort of evokes this more
+physical thing you might experience like.
+
+James Lindenbaum (00:29:58) - Like in art, if you're working with, let's
+say clay or some medium charcoal, it has a very specific kind of feel
+and certain things that it wants you to do and certain things that are
+difficult to do. And just having your hands on those materials kind of
+shape the outcome. You kind of just let the material in some ways guide
+where you're going. And I think that we found that this ink base has a
+little bit more of that working with the material feeling, which is what
+we were going for, where you're actually.
+
+James Lindenbaum (00:30:25) - It's sort of like we talk a lot in the
+sort of end user programming world about direct manipulation. You know,
+where you're working on something directly versus indirectly from some
+program on the side or whatever. This is sort of a flavor of that, but
+even more direct where you're not only directly touching the thing that
+you're trying to manipulate, but you're actually being influenced by how
+it feels.
+
+James Lindenbaum (00:30:44) - And ink, I think, is one of those things
+where when you interact with it, the way you move it around, the way you
+create it, you're having something change color or change shape while
+you're drawing on it. And not after you finish your stroke, but live
+while you're doing it as a very specific working with the material kind
+of feel. And it's hard to put my finger on exactly what that means, or
+it's hard for me to describe exactly how your results would be different
+with that feeling versus another, but it is quite distinct.
+
+James Lindenbaum (00:31:10) - And it's something that I personally am
+drawn to and it's something that I like about the real world that I feel
+is missing in a lot of our digital tools. And so I think part of this is
+a quest to obtain some of that in the digital realm.
+
+Szymon Kaliski (00:31:24) - I support your quest.
+
+Adam Wiggins (00:31:26) - The feelings, or obviously you use that word a
+lot, how does it feel or what feeling does it create or what things does
+it encourage in that direction? You had an interesting aside in the
+essay titled Research and Feelings, which I'll just read the first
+sentence of here. It says, perhaps controversially at the lab, we
+believe seeing what it actually feels like to play with an imagined
+system is itself a valuable research result. And goes on to talk a bit
+more about that.
+
+Adam Wiggins (00:31:52) - And actually, I think that is an interesting,
+I don't know, meta learning or something like that, insight, contrarian
+insight of the lab and something we were able to do because we're
+somewhat unique, not quite academic, not quite industry position. And I
+think it was Martin Klepp and I feel like was the first one that called
+out when he first started working with us, which is he said, basically
+the fact that we are not constrained by the conventional definition of
+rigor.
+
+Adam Wiggins (00:32:18) - Which is, okay, we user tested this with 10
+people and with this p-value of whatever, they were able to complete the
+task in two seconds less. Which is a very good reason science focuses on
+those kinds of very concrete, measurable, rigorous findings. But I think
+that misses something huge in the computing tool space.
+
+James Lindenbaum (00:32:40) - I do think that's a really interesting
+aspect of what we do at the lab in the lab is engaged in what we call
+industrial research, which, you know, has been talked about a bit before
+on this podcast. And to me, one of the luxuries of industrial research
+is that you're not bound to the traditional sort of rigor and neutrality
+required of basic or academic research or just science in general. And
+we're allowed to have an opinion. We're allowed to chase intuitions.
+
+James Lindenbaum (00:33:11) - And I, in fact, put that into the essay as
+sort of a defense or an explanation because we had a number of people
+who are reviewing the essay for me comment on, you know, what's the
+feelings like take this feeling section out. It's not defensible. And I
+felt like it needed to be addressed, but I wasn't going to cut it
+because to me, it's that's the most important part. So I kind of wanted
+to add a little side note defending having a research result that says
+something about feelings.
+
+James Lindenbaum (00:33:42) - But, you know, I do think that that's a
+schism that we often see where in sort of academic circles, oftentimes
+it's about novelty. And if an idea has been described before, then
+working on it further is not interesting. It's an interesting result.
+And we disagree with that. We think actually taking some idea for how
+something might feel different or work differently and actually building
+it and seeing if that is, in fact, true is actually valuable. And
+sometimes we do that and we are compelled by the result and it directs
+further research.
+
+James Lindenbaum (00:34:16) - And sometimes it's a disaster and that's
+surprising. It doesn't work. We learn things about why it doesn't work.
+And sometimes the results are sort of meh. You know, we have these great
+expectations about how this thing could feel different and then we make
+the thing and then it's like, kind of a hassle and it's really not that
+much better. And I think all that's really interesting fodder for
+understanding the nature of this problem and where we're headed.
+
+James Lindenbaum (00:34:40) - I also think conversely on the sort of
+more pragmatic sort of startup engineering product oriented side of the
+spectrum, people build things all the time, but they often don't stop to
+think for long enough about, you know, why they're building them or what
+the nature of those things are or what the most important And what the
+most important aspects of those things should be.
+
+James Lindenbaum (00:34:57) - You know, it's sort of in the quest for
+ever closer hewing to user research, doing what users are asking for,
+you kind of start to get away from these first principle kind of based
+approaches. So at the lab, we're trying to strike this balance between
+this sort of overly pragmatic staring at your feet, just doing the next
+step kind of thing, and this overly impractical sort of ivory tower
+pontificating without actually seeing what the results are.
+
+James Lindenbaum (00:35:22) - We're trying to be somewhere in the middle
+and I think our research hopefully reflects that and I think our talking
+about feelings is sort of part of that quest.
+
+Szymon Kaliski (00:35:31) - So if I can expand on this just a little
+bit, maybe from a different perspective, I think in why we're on the
+metal and I think maybe a common critique of HCI as a field is that
+you'll get what you measure kind of. So if your focus is on making
+things that are measurable, there's a bunch of research that you just
+won't do because you can't really measure it.
+
+James Lindenbaum (00:35:49) - I think that's why a lot of people think
+that's a problem with focusing on measuring mouse click speed or how
+quickly you can get to a task done or whatever, which prohibits this
+very exploratory programming system kind of style of research, which is
+very hard to measure because what do you even measure and against what
+else, which has its own problem.
+
+Szymon Kaliski (00:36:11) - Second thing that comes to mind is we keep
+research logs as we work at the lab, again on the meta level, and a lot
+of things in these projects start with this specific approach just feels
+correct or feels right. For example, one of the recent ones in the
+projects we're on right now were about measuring angles of things and
+someone made this example of just making a little thing that you snap to
+the angle and that turns into a number and that just felt good.
+
+Szymon Kaliski (00:36:37) - That's why we're pursuing this further and I
+think this following feelings at some level is kind of correct, leads to
+very interesting places, places that academia would go to basically
+because again, how do you measure that?
+
+James Lindenbaum (00:36:49) - Yeah, I mean, maybe back to this sort of
+the right tool for the job idea. Most of the things that we're trying to
+do with these tools are certainly things that you can do with other
+tools, right? You can make a sketch a number of ways. You can think a
+number of ways. You can do calculations a number of ways. It's more
+about sort of having the right context, having the right tool, bringing
+the tool to the problem rather than the problem to the tool, those kinds
+of things. Maybe a concrete example.
+
+James Lindenbaum (00:37:14) - Just yesterday, I was trying to get the
+square footage of a small space and I made a sketch of the shape of the
+space and then I went around with my little laser measure and measured
+the length of all the walls. And I did this as a sketch because it's
+very difficult to walk around a room with a computer and then put those
+numbers in and describe which wall those numbers are associated with.
+It's much easier to just write those numbers on a sketch of the shape of
+the room.
+
+James Lindenbaum (00:37:42) - And it doesn't feel right to sit down and
+open up a graphics program and try to make a perfect version of that
+room before measuring it. It really feels like a thing that wants to be
+a sketch on a napkin or whatever. However, once you have done that, I
+then need to break that shape up into a bunch of squares and calculate
+the area. And that starts to feel like a spreadsheet problem because
+once I do that, I often when you measure things in the real world, they
+often don't entirely add up.
+
+James Lindenbaum (00:38:10) - You know, the two segments of the wall on
+the left side don't add up to exactly the wall on the right side. You
+kind of need to figure out if you made a serious measuring error or if
+it's just, you know, the world isn't perfect. And so you need to do this
+math, but then you need to check the math against the other side and you
+may need to make some adjustments. It feels very spreadsheet like and
+that you want the machine to sort of help you check your math versus
+pulling out a calculator and doing these things like 30 times.
+
+James Lindenbaum (00:38:34) - And so now I'm suddenly sitting here with
+this thing that should be a sketch with some numbers on it. One need to
+do a little bit of math, which I want the sort of power of the digital
+medium for. But my options are basically I have to set the sketch down
+and look at it while I open up a spreadsheet and do it in a spreadsheet
+sort of disembodied from the sketch where I can't associate this set of
+numbers being multiplied with this area on the diagram.
+
+James Lindenbaum (00:38:57) - Or I've got to do it with a calculator and
+I don't get the power of the spreadsheet and it's hard to check my math.
+This isn't an important problem. It's not like a thing I can't solve.
+It's not a thing that people don't solve every single day. You can open
+up SketchUp and you can put all the numbers in there and it'll tell you
+the area, for example. But it just doesn't feel like the right tool for
+this job.
+
+James Lindenbaum (00:39:15) - It feels like you should be able to sketch
+this thing out on your iPad, walking around with it, and then do that
+math and draw the boxes on there yourself and then do the multiplication
+and see what it adds up to. And maybe jiggle the drawing a little bit
+when you realize that they don't add up. And I think having tools like
+that, it's hard to imagine exactly what we would do with those things.
+But I find personally that I have little use cases like that every day
+that I would reach for this tool if I had it.
+
+James Lindenbaum (00:39:45) - And then you start thinking about situated
+software and the way spreadsheets... One of the things I think is
+interesting about spreadsheets is that often a piece of software evolves
+out of that process. So you do that once and then you throw it away. It
+gets lost in your Google Drive or whatever. But then you go to do it
+again.
+
+James Lindenbaum (00:40:00) - And perhaps you want to rework some of
+that logic. An example from my life is batching cocktails, which we
+talked about a bit earlier. You know, often when you want to scale up a
+cocktail, certain things don't scale linearly and you start doing a
+bunch of math and you need to convert units and it's easier to weigh
+things than measure volumes when you're doing large amounts and blah,
+blah, blah.
+
+James Lindenbaum (00:40:18) - So you end up building a little
+spreadsheet to do this thing and you throw it away after you make your
+cocktail, but then maybe you got to do this again a week later and it
+saves you time to open that thing up and duplicate it and then adjust it
+for a different cocktail. And then after you've done that two or three
+times, you might start to say, you know what? This seems to be a thing I
+keep doing over and over again.
+
+James Lindenbaum (00:40:37) - Why don't I invest a little bit of time
+cleaning the spreadsheet up, making it a little bit clearer, making it
+more, you know, sort of input output driven so I can just paste in the
+ingredients and have everything turn out the right way. Maybe I'm going
+to invest in adding a table that does unit conversions from ounces to,
+you know, milliliters to weights or whatever. And you eventually end up
+with this little piece of situated software. And this is a true story
+from my life.
+
+James Lindenbaum (00:40:59) - I have this thing and then a friend sees
+it and then they're like, oh man, I have the same problem all the time.
+Will you send me your spreadsheet so I can start using it? And now we've
+basically made a piece of software. And I think that's a really
+important sort of flow that this is something we call gradual enrichment
+in the lab for lack of a better name.
+
+James Lindenbaum (00:41:15) - We're still grasping at what the right
+name is for this, but this idea that you start out loose and sketchy
+like you would on a napkin and you end up with a piece of software and
+at no point did you sit down to write a piece of software. You just keep
+incrementally adding little bits of behavior over time. And only as the
+payoff is obvious, you're only investing little bits at a time when
+you're going to get an immediate sort of payoff for that investment.
+
+James Lindenbaum (00:41:34) - And we would like to see that same gradual
+scale up with sketching, staying right in place where you make that
+sketch, like having to stop and change tools to throw away the sketch,
+move to your laptop, open up illustrator or whatever. That feels very
+discontinuous. And I would really like to be able to just do this
+continuous thing. I think the reason this happens in spreadsheets is
+that you're doing the whole thing in the spreadsheet in the same place
+the whole time with the same tooling.
+
+James Lindenbaum (00:41:58) - And I think you need the same ability to
+start with a sketch, stay in that sketch app, stay on that device
+indefinitely, come back to it in the future, keep adding little bits
+until you eventually have what is effectively a piece of software that
+started as a sketch, but all stayed in that one place. And I think, you
+know, for me, that's the grand vision that we're trying to get to
+eventually and figuring out what that looks like in each of these steps.
+It's sort of the aggregate of the research, right?
+
+James Lindenbaum (00:42:22) - You know, they look at the first step, the
+middle step, the end steps, some of the end steps of this are a little
+bit more clear. How do you add complex behavior to a big complicated
+thing already in an app? We know what that looks like. What we don't
+know is what does it look like at the beginning? You know, we know you
+start with a blank canvas, you break some marks on there, and then fast
+forward a year, you've got a piece of software running in this canvas
+app. What's the dot dot dot in the middle?
+
+James Lindenbaum (00:42:47) - And I think that's sort of a set of
+questions that we're working on in this track.
+
+Adam Wiggins (00:42:52) - That very beginning moment with software
+creation, there's a lot of ceremony, right? It isn't let me first make
+the sketch and add a computation, for example. And I would say Potluck,
+another project I referenced there earlier, has some of this coming at
+it from a text angle, but you're sort of starting with data that you
+collected or something you've written down in some format, and then
+you're adding bits of computation to that.
+
+Adam Wiggins (00:43:16) - And the programming world is really built
+around a complete opposite flow, which is I am writing a program now,
+and I begin with, I'll say Rails new. I'm sure the kids these days have
+something sexier, but whatever it is, you're creating the new project in
+the IDE and you're initializing it and you're setting up your unit tests
+or your models and setting up your database schema.
+
+Adam Wiggins (00:43:39) - And it's actually quite a while and quite a
+lot of super abstract programery things before you get to the point of
+your specific data and your specific problem that you're going to work
+on. And of course, I think is part of the reason we reference
+spreadsheets so often when talking about a user programming is this
+really is one of the few cases of successful commercial software or
+successful kind of end user application where you really don't start
+with, I'm going to write a program. You start with, I'm going to enter
+my data.
+
+Adam Wiggins (00:44:09) - I'm going to type in a couple of numbers and
+then you can add computation to that.
+
+Szymon Kaliski (00:44:15) - It's interesting that you mentioned potluck
+and not to put words in Jeffrey's mouth. There's been some interesting
+cross pollination from this project and InGBase. So historically InGBase
+predates potluck and from a couple of conversations I had with Jeffrey,
+some of the ideas around like spatial matches and thinking about
+probably in a way where you find things on the canvas in a text document
+and enhance them with additional dynamic behavior.
+
+Szymon Kaliski (00:44:37) - It's interesting to see the parallels
+between these two projects, what I'm trying to articulate maybe, and how
+the same ideas in the lab keep like appearing in different places.
+
+James Lindenbaum (00:44:47) - Yeah, potluck is a really interesting
+project and certainly all these projects have influenced each other
+quite a bit. I think one of the most interesting things about potluck is
+this related problem that
+
+James Lindenbaum (00:44:59) - You don't have structured data when you're
+starting to do something in one of these tools, whether it's something
+like Inkbase or something like Potluck, which is based on plain text.
+Whether you've got a bunch of ink marks or a bunch of plain text, the
+goal with Potluck was to take something that you would otherwise, the
+way you would normally do something like tracking your recipes or
+tracking your workouts or whatever in a plain text file where there's no
+fixed format and you can kind of enter them however you want.
+
+James Lindenbaum (00:45:24) - And maybe you're not 100% consistent about
+the way you enter those things and you stick little notes in there, use
+different units, don't leave the units off some days because you know
+what they are. That's not very acceptable to a program the way we
+normally do programming, but you don't want to have to clean all those
+things up and normalize them, standardize them in order to be able to do
+something with them.
+
+James Lindenbaum (00:45:43) - And same with there's this analog in
+Inkbase where you want to do something like, I don't know, you want to
+attach something to the left side of an object. But if you have like a
+squiggly mark that you made with the pen, what is the left side?
+
+Adam Wiggins (00:45:55) - Right?
+
+James Lindenbaum (00:45:56) - You want to align things or snap them
+together, but you know, the bounding box and the actual shape of the
+rectangle that you drew are completely different. It didn't even close
+the rectangle. It's not even a closed polygon. It's, you know,
+non-orthogonal. It's probably not even a quadrilateral, whatever. So
+it's a very similar problem where you need to be able to work with
+semi-structured data or data that's sort of evolving slowly from being
+totally unstructured towards being totally structured. Maybe it never
+gets to totally structured.
+
+James Lindenbaum (00:46:22) - And, you know, I think the spreadsheet is
+another example of this where often you start out just throwing numbers
+in boxes all over the place and it's kind of a mess. And maybe
+eventually you kind of clean things up into columns and you make sure
+they're all the same type or formatted the same way or whatever. But
+spreadsheets are very tolerant of this semi-structuredness. You know, if
+you sum a column of numbers in a spreadsheet and one of them is text, it
+doesn't break. It doesn't just break. The whole thing explodes, gives
+you a bunch of errors.
+
+James Lindenbaum (00:46:48) - Generally, it just coerces that text into
+a number or it ignores that. It has some default behavior where it still
+allows you to get an answer. And maybe it shows you that there's this
+weird thing happening and you need to go fix it or whatever. But it's
+very tolerant of this sort of looseness and the semi-structuredness.
+
+James Lindenbaum (00:47:03) - And I think that's one of the interesting
+things explored in potluck is how do you do computations on a thing
+where some of your ingredients are structured as ingredients and some of
+them aren't or some of them have units and some of them don't. And I
+think there's a very significant parallel to what we're doing in
+Inkbase. And I think the sort of querying is one of the solutions that
+we're both grasping at in Inkbase.
+
+James Lindenbaum (00:47:23) - You're doing spatial queries, you know,
+find this thing to my left, find this thing inside of my bounding box,
+find this thing that's overlapping with me. And in potluck, you're doing
+a text query, you know, find this thing that looks like this, that has
+these letters or whatever. And then you can do something and build on
+the results of that query.
+
+Adam Wiggins (00:47:40) - And importantly, in both systems, it's a live
+query. So this isn't run a query, look at the results, then iterate. I
+think you hinted at this earlier, Shimon, talking about as you're
+drawing and as your dynamic behavior is being applied, so something like
+turn this checkbox green when I check it, it happens as you're going.
+And if there's a problem with the dynamic behavior or if there was a
+problem with your check that it didn't land inside the box or something
+like that, you will really see that right away. It's not an iteration
+process.
+
+Adam Wiggins (00:48:12) - It's just a completely live process.
+
+Szymon Kaliski (00:48:15) - Yes. Interestingly, this also opens up a
+different way of solving problems, right? You could fix your program so
+it catches the checkmark a little bit off the side or whatever, or you
+could just wiggle it and move it into the checkbox because it will turn
+green as quickly as it matches or finds the solution or whatever. This
+way of basically seeing responses from the machine as you interact with
+it promotes this different way of solving problems. You don't always
+have to think in this very program-ary way.
+
+Szymon Kaliski (00:48:43) - You can think of this very loose, sketchy,
+vibe-y way where I'm just going to wiggle some things until the machine
+does what I wanted to do.
+
+James Lindenbaum (00:48:52) - Yeah, we have a little saying on that
+team. Just jiggle it a little bit. It's sort of like the old fix the TV
+reception by banging on the side. It's sort of like, just jiggle it a
+little bit. But it's a really interesting interaction because you do a
+query. Let's say you're trying to recognize a shape and it doesn't
+recognize that shape. You could try to rewrite the recognizer, but you
+could also just like jiggle that line segment a little bit so the path
+looks a little bit more like what it's looking for.
+
+James Lindenbaum (00:49:14) - And now, bam, it gets recognized and the
+thing starts happening. And this does lead into a way of solving
+problems. We were just the other day talking about this little geometry
+problem. It stems from a real-world use case where you've got a
+countersunk hole and you're trying to figure out what angle the hole is
+at so you can order the right screws with the right angled screw head.
+And it's similar to my example of the area of a floor plan.
+
+James Lindenbaum (00:49:36) - You sort of draw the thing and take a
+couple of measurements, but then you need to do some trigonometry to
+figure out what the angles are. And you've now got this sort of
+semi-structured information where you've got a sketch, which is not to
+scale, and you've got some numbers, which are correct. And you've got to
+do a calculation. And there's this question of different ways to solve
+that problem. One is to just do some math on the side next to this
+drawing, but another is to actually attach the drawing to the wall.
+
+James Lindenbaum (00:49:59) - The functions that take, let's say, the
+angle, read out the angle of a sketch of a shape, attach those to your
+sketch and then manipulate the sketch until the lines are to scale.
+Basically drag the lines around until the computer says that they are
+the lengths that you measured and then you will know that the angle is
+correct. It's a very different approach, but it feels very natural if
+you're working with pen in hand and you're just working in this sketchy
+way and you can just jiggle this around.
+
+James Lindenbaum (00:50:28) - Or there's also examples that Shimon
+demonstrated from the Untangle project where it's looking for matches
+against things and sometimes it doesn't catch one and you just kind of
+jiggle the model a little bit until it does and then you move on. And
+it's just a very interesting way of working.
+
+Szymon Kaliski (00:50:44) - So this is maybe an interesting throwback to
+when we started talking about feelings, which is a lot of these
+interesting ways of using these things are second order. Basically you
+have tool working in some way, you start interacting with it and you
+realize that this is the way to do something in it, which is not a fault
+I would have one step back without working with the material, working
+with the concrete thing that fits a certain way.
+
+Adam Wiggins (00:51:09) - And wasn't there also a concept in another
+project in the same research track around the bidirectional connection,
+that is to say in the sketch example there of like you have a number and
+you have a line and you want to make the number and the line the same
+size. And typically in programs you have a one way flow. I write the
+HTML and that gets rendered by the browser. I can't scribble on the
+screen in my browser and have that get reflected back in the HTML code
+to take one example.
+
+Adam Wiggins (00:51:38) - And there's I think a world of bidirectional
+linking research that I think you folks did some with and some of the
+prior arguments for Inkbase as well includes apparatus, now there's
+cuddle, which I think was a good example of this of trying to make it so
+that you have this two ways to represent something, the line and the
+number, for example, and that you can change either one and they each
+update each other.
+
+James Lindenbaum (00:52:03) - Yeah, I think it's a really interesting
+way to work and it feels very natural things that only flow one
+direction feel a little bit strange. Sometimes you know you imagine you
+draw this little sketch of let's say a triangle and you write some
+numbers from your real world measurements on there. You then tell the
+system this line segment is you know 27 units long. Well, what happens
+right?
+
+James Lindenbaum (00:52:26) - Are you asking the system to make that
+line 27 units long or you asking to just leave it alone, but think of it
+as 27 units long and then what happens to the other lines on the page?
+Are you rescaling the drawing based on that line or are you mixing
+structured and unstructured data? You know, in spreadsheets,
+spreadsheets obviously are very one directional in their flow. Things
+get very confusing if you try to, you know, some numbers and then change
+what the sum result is and have that back propagate into the column.
+
+James Lindenbaum (00:52:52) - But it also can be very powerful and the
+number of people have made by directional spreadsheets, which are quite
+interesting to play with, but in this case where you're associating sort
+of some free hand work with some numbers or something else structured.
+It feels very much like they should stay in sync and you should be able
+to edit either place. It feels very strange not to be able to change
+your drawing that you've made or not being able to change the number
+that you've associated with it.
+
+James Lindenbaum (00:53:15) - So it feels almost necessary for it to be
+bi-directional in order to not feel like you're constrained arbitrarily
+by the tool. But then you get into these interesting questions of, you
+know, you're creating error in the system when you change one of those
+things and what do you do with it? Do you push it? You back propagate it
+to the other side? What does it mean to change a drawing to match some
+numbers that you put in there?
+
+James Lindenbaum (00:53:37) - And I think those are really interesting
+questions and even just exploring the affordances, you know, what kinds
+of UI elements do you want to have on the screen for doing that sort of
+thing is a really interesting question and a sort of focus of work for
+us.
+
+Szymon Kaliski (00:53:51) - Yeah, and to add to that, this way of
+thinking is maybe very foreign to software developers, like discovering
+these techniques or reading about them, like definitely felt very alien
+at first to me. It definitely feels interesting and more correct to work
+in this medium where you have two representations for a thing to be able
+to manipulate each one of them.
+
+Szymon Kaliski (00:54:09) - The problem is, of course, in the details
+and this leads to some very strange artifacts, a lot of technical
+problems or things like doing a lot of calculations on these values, not
+everything is clearly solvable backwards in a way that feels natural.
+And then you start thinking about how do I adjust my calculations so the
+system does the thing that I want it to do and at that point you're lost
+doing the abstract symbolic thing again that we want to avoid. So
+there's a lot of dials that we need to turn in proper ways for the
+system to make sense.
+
+James Lindenbaum (00:54:40) - One of our early projects in this track
+was called Rectiverse and it was a relaxation based constraint solver.
+And you put things on the canvas and then you specify these constraints,
+I want this thing to be next to this thing, I want these things to be
+the same width or whatever, and then you could interact with the model
+live and the constraint solver would try to maintain those constraints.
+
+James Lindenbaum (00:54:59) - And it often felt in the beginning like
+the classic tale where there's a genie in a bottle and you get three
+wishes and every time you wish for something you technically get the
+thing you wished for, but like everything else goes wrong. It sort of
+felt like that where it would be like oh yeah they're definitely the
+same length but it did it by making the width of one of them negative or
+you just took it off the canvas, made it a massive x value that took it
+off of the canvas or whatever.
+
+James Lindenbaum (00:55:25) - And so it's like technically yes you
+solved the problem but that is not what you want and so then you have to
+be able to add more constraints relatively easily and quickly to sort of
+coax the machine into where you want it to end up, sort of like giving
+hints to the query planner in SQL or something like that.
+
+James Lindenbaum (00:55:39) - And that's also an interesting way of
+working and it can sometimes feel like the right tool for certain kinds
+of problems but if you end up having to specify 47 constraints just to
+like keep two things next to each other it starts to not feel productive
+or ergonomic. So there are a lot of different approaches to how you
+specify computation.
+
+James Lindenbaum (00:55:59) - That was a constraint based system, ink
+base, we intentionally sort of punted on thinking about that problem and
+so we just implemented a LISP interpreter inside the iOS app which is
+clearly not an ergonomic thing to do but it was pragmatic for us and so
+it was a very specific implementation of dynamic functionality.
+
+James Lindenbaum (00:56:18) - But it uses sort of a data flow like
+things sort of like in a spreadsheet where it's declarative and reactive
+and then crosscut was an attempt at sort of going far afield on how else
+you might specify the programming model and it was sort of this wires
+and boxes way to. Sort of connect value between different elements on
+the screen and this idea of meta ink versus ink and specifying sort of
+dynamism with meta ink and then the regular ink was sort of concrete
+ink.
+
+James Lindenbaum (00:56:43) - And then untangle another project in this
+track was a totally different way of looking at it using SAT solvers to
+basically specify a set of conditions that needed to be met and then let
+the system figure out whatever permutations it can come up with that
+will meet those constraints. And sort of one of our conclusions from
+looking at all these different things when we started out on this track
+we were hoping to find the one true way you know the one correct way to
+do computation that makes sense in this environment and we ended up.
+
+James Lindenbaum (00:57:12) - You know discovering perhaps
+unsurprisingly is that there is no one best way and there are a lot of
+different ways and some of them are better suited to some problems than
+others and so we sort of concluded that you're going to need to be able
+to approach any problem any use case you have.
+
+James Lindenbaum (00:57:28) - With different kinds of computational
+strategies or engines or whatever mental models and so now what we're
+really working on is a nice substrate in which you can combine different
+kinds of computational modeling and bring in the one that makes sense
+you know you have a use case. You have in your mind an easiest way to
+solve that problem with tools that you know you need to be able to just
+bring that tool in and do it and have those tools be able to
+interoperate and so that's a big part of what we're working on now.
+
+Adam Wiggins (00:57:57) - And I'll link the essays to the projects you
+mentioned which have been published you mentioned some either things we
+haven't published yet or in some cases we may never have an essay for
+sadly we don't manage to get to an essay for every project we ever do
+since often writing the essay is at least as much work as doing the
+project itself.
+
+James Lindenbaum (00:58:17) - That's right ink base cross cut and
+untangle there are all essays for rectiverse is a very old one for which
+there isn't and I don't make any hard promises but I'm pretty sure we
+will have a solid essay for the current project we're working on.
+
+Adam Wiggins (00:58:30) - Excellent yeah because I do feel that
+certainly for Muse you know if you look at the progression of research
+papers which included one that I had written as a medium post wasn't
+even really a research paper just talking about kind of the tablet as a
+form factor the capstone project.
+
+Adam Wiggins (00:58:47) - Eventually we have the Muse paper and you can
+see these threads that start to come together and they're rougher and
+rawr not say that there's one output as you point out there's these
+different tracks which may all be fruitful and cross pollinate with each
+other and so forth. But in some cases it's not the single essay but
+indeed the progression of them for those that have the patience to read
+multiple five plus thousand word essays on a particular topic.
+
+James Lindenbaum (00:59:14) - It's a lot of words I think the length of
+the essay is inversely proportional to our understanding of the problem
+so hopefully they'll get shorter as we get smarter.
+
+Adam Wiggins (00:59:25) - Another thing that I do think makes ink base
+and a few of the other projects in the track that you both have worked
+on stand out relative to some of the other examples we've given here is
+the embrace of the tablet form factor and of course we talked about
+digital ink earlier I'm curious how you both see the tablet as being
+important.
+
+Adam Wiggins (00:59:44) - Or not to this kind of realm of research or is
+it that it really is about the digital ink and so you could kind of do
+that with like I don't know Wacom tablet connected to your computer
+that's probably fine or is there something really to that form factor
+that is very sketchy.
+
+Szymon Kaliski (01:00:08) - So I can start maybe with the meta level,
+which is one of my favorite quotes from Monolink is, and I won't like,
+won't give it word for word, but what he says is to be really creative,
+you need a lot of constraints. And he often chooses like one synthesizer
+to make a new song or whatever. And in here, like the tablet is a very
+hard constraint. Like it has a lot of interesting properties. It's like
+a page size. It's very human scale. You have the stylus and fingers as
+an input mechanism. All of that is like a double-edged sword, right?
+
+Szymon Kaliski (01:00:38) - Like you're so disconnected from what we
+learned about keyboards and mouse and pointers and whatever that you
+have to kind of invent everything from scratch a little bit. And that is
+both like very good, I think, for research, right? Because it opens up
+this new way of thinking about a specific field, but also very hard
+because at the same time, we're trying to figure out both what this and
+also how to do things on it.
+
+James Lindenbaum (01:01:03) - Yeah, to me, the jury is sort of still out
+on the tablet form factor, but there are some compelling aspects of it.
+I mean, we have a whole series of weird hypotheses at the lab about form
+factors and in HCI specifically, I do think that for me, I'm really
+fascinated with hands. I think human hands are really interesting. They
+have an incredibly high number of degrees of freedom and we have large
+portions of our brain sort of devoted to using them without interfering
+with our thinking.
+
+James Lindenbaum (01:01:32) - And so, you know, outside of our sort of
+visual cortex, I think our hands are sort of the highest bandwidth
+connection between our minds and the world. And right now, we don't, in
+my opinion, make particularly good use of the size of that channel when
+we're just sort of like, you know, tapping on a keyboard or pointing at
+something on a pane of glass. And so getting at more of that richness of
+interaction with our hands is really interesting to me. I think holding
+a pen is in some ways an improvement.
+
+James Lindenbaum (01:02:04) - It doesn't obviously open up that entire
+channel, but I think holding tools in your hand and doing things with
+them is a higher bandwidth modality. And we've done some experiments
+with having multiple kinds of tools that you can use to interact with
+the tablet at the same time, you know, multiple pens, straight edges,
+knobs, you know, whatever. There's a whole sort of tangent on that, but
+I do think having pen in hand and working is an interesting and
+compelling way to work.
+
+James Lindenbaum (01:02:30) - I also think some of the things that were
+exciting to me about the origins of Muse in the lab, for example, you
+know, I've always loved the idea of being able to use both hands at the
+same time. It has always seemed strange to me that most of the touch
+interfaces and even the APIs for those interfaces are not really
+designed for using more than one hand at the same time or using a hand
+while using a pen, which is a very natural thing to do. We do all the
+time in the real world.
+
+James Lindenbaum (01:02:55) - And so a lot of our early lab experiments
+in that track were around just seeing if we could do that even with the
+existing hardware and software. And it turned out the answer was yes,
+and it was really compelling to have that feeling of using both hands,
+it felt very freeing, just turns out to be quite a pain in the butt to
+do. It's sort of against the grain of the APIs, as you guys well know at
+Muse. And I think you've done a lot of hard work to retain some of the
+aspects of that.
+
+James Lindenbaum (01:03:21) - And then I think there are aspects of it
+that are only viable in a research setting because they're not reliable
+or Apple doesn't want you doing them that way or whatever. And I think
+that's really interesting. And so that's to me, one of the reasons the
+tablet is interesting is that it's a way to have the pen in hand. I do
+think it's critical that you have the visual feedback, right? As you
+move the pen along the screen, something is happening on the screen at
+the location where the pen is.
+
+James Lindenbaum (01:03:43) - We've experimented with Wacom tablets and
+other kinds of stylus-based input tools where your hand is doing
+something somewhere and where you're looking at somewhere else. And it
+completely breaks the high bandwidth interface between your brain and
+the real world, I think does not really tolerate that very well. And so
+I think that's one of the reasons we like tablets. Another is the
+portability. I have this pet theory that a drafting table is sort of the
+ultimate correct form factor for a personal thinking station.
+
+James Lindenbaum (01:04:12) - Part of that really has to do with the
+ergonomics of the human body and the length of the forearm. You want
+something that's sort of the forearm radius size. But the portability of
+the tablet, I think, is really important. I think that, as you guys
+agree with it, Muse, thinking and creativity requires sort of moving
+around a lot of times, going somewhere, walking around, sitting at a
+coffee shop or taking the device to the place where the problem is.
+
+James Lindenbaum (01:04:36) - You know, walking around the room taking
+the measurements, which is just not possible with other kinds of form
+factors. And I think, you know, the phone or the really mini tablet is
+maybe not big enough to really be able to hold and have enough screen
+space, enough canvas to make marks. So the tablet kind of ends up being
+in this interesting intersection. But most people that I know who are
+sort of accomplished makers, when I talk to them about tablets, they all
+basically say, yes, I have one. It's in a drawer somewhere.
+
+James Lindenbaum (01:05:04) - I go through, you know, phases of using it
+and not using it. And I think that's really interesting that we have
+this incredibly powerful device with this, you know, stylus that seems
+to have so much potential, at least on paper. But then people often
+don't really find meaningful uses for them. And there are people who do
+their whole life on the tablet, but when I look at their workflows, it
+seems a bit strained. Like you have to be quite dedicated to really do
+everything on a tablet, I think.
+
+James Lindenbaum (01:05:31) - And so one of our sort of prompts at the
+lab is sort of hypotheses is maybe this tablet is really great and we
+just don't have the right software for it yet. The UI, the UX, the
+mental model for working with it just isn't quite right yet. And that's
+why we spend a lot of time with them at the lab.
+
+Adam Wiggins (01:05:49) - Well, this is all very exciting research. And
+with each subsequent essay, we fill in more of the picture. Where do you
+both see maybe the medium to longer term future here, which includes
+maybe something practical like when can I get a usable production app to
+do the floor plan sketch problem you previously described there, James?
+But maybe also just more broadly, what is the long term direction? What
+do you hope to get out of this? What can we hope to see in the future?
+
+James Lindenbaum (01:06:17) - I think it's a really interesting
+question. You know, people often ask us, when can I get a version of
+this to use for myself? And we in the lab, in fact, would like to have
+versions of some of these things to use on a daily basis. Most of them
+are sort of prototype research experiments that are not very well suited
+to real use. I think we are working in the direction of things that
+might actually be able to be maintained and start to accrete features
+and be usable.
+
+James Lindenbaum (01:06:45) - One of the other luxuries of the lab is
+that we don't have to think too hard about, is this a thing that can
+make money? Is this an app that people will buy? Is there a market? How
+much will people pay? We get to not think about that at all. We do care
+about whether we're solving what we think is a real problem or whether
+there's a real context of use. You know, we care very much about that.
+
+James Lindenbaum (01:07:04) - So I think our primary motivation is to
+understand the nature of the problem so that we can work towards some
+various solutions, which might eventually result in products or
+software. Or, you know, maybe if we talk enough about the nature of the
+solution, lots of people will make software. And that's fine too. I
+think with this specific track where we're headed is the current project
+we're doing now, which is sort of code named Habitat.
+
+James Lindenbaum (01:07:30) - It's the first one where we have spent a
+bunch of time investing in the underlying infrastructure and sort of the
+substrate for the app. You know, normally every time we do one of these
+projects in this track, we sort of start from scratch from first
+principles. What's the right set of technology stack? What's the right
+architecture? What are the right things to use to build this? And that's
+important to not be arbitrarily constrained by your technology stack.
+
+James Lindenbaum (01:07:56) - But now that we've sort of converged over
+time on sort of one stack that we think is correct or the best, we've
+started to be willing to invest in building sort of a shell of an app
+that we can then use for multiple projects. So we're now investing in
+building a thing that we hope will be reusable.
+
+James Lindenbaum (01:08:13) - And that is sort of the first step towards
+being able to actually build on top of previous projects with future
+projects and be able to actually start to create features that stick
+around and also invest in some basic things we don't always have time
+for during research projects like, you know, persistence working
+correctly, apps not crashing all the time, fighting against the constant
+bit rot of, you know, Apple's API changes, etc. So as you guys are much
+more intimately familiar with that muse. So I think we are headed in
+that direction.
+
+James Lindenbaum (01:08:46) - But I think we're still sort of in the
+early days of understanding what is it that this thing is for and
+therefore one of the most important features that we need to build. But
+we're headed in the direction of dog fooding some apps for ourselves
+inside the lab. And then hopefully if we can get to a place where that
+works, we can sort of expand the use outside of the lab.
+
+James Lindenbaum (01:09:07) - But yeah, that's kind of where we are now
+is just sort of thinking about interchangeability of these different
+programming models and starting to invest in nicer and nicer ink
+engines, for example, which is a thing we often punt on as well.
+
+James Lindenbaum (01:09:20) - So we can spend some time on performance
+optimization, that sort of thing, all in the name of being able to get a
+true sense of what it feels like to use one of these tools.
+
+Adam Wiggins (01:09:31) - Maybe to close on the feelings subject again,
+since that seems to be a theme here. I think the question of you make a
+prototype, you know, we usually timebox things to some pretty small
+amount of time. And when you're, as you said, starting very blank slate,
+and then you're getting to a usable thing in a month, two months. It's
+not a lot of time. And you always have this question of if the feeling
+is meh or it's not quite clicking or it's not quite able to show that it
+could fulfill the vision that maybe you had for it in the beginning.
+
+Adam Wiggins (01:10:02) - Is the problem that it needs a little more
+effort to be better? Because indeed, even the greatest painting in the
+world, you know, you look at that very early line sketch that sometimes
+you can see under an x-ray on the canvas or something. No one would be
+moved by that. No one except the original artist understands what that
+means. And you have to get it to a certain level of fidelity or a
+certain level of completeness before it makes sense.
+
+Adam Wiggins (01:10:28) - And when we're trying to kind of do this real
+time iteration of we have an idea for a thing that we think could work
+and indeed feel a particular way. The thing we made doesn't feel that
+way. Is it that we just need to do a little more in this direction? Or
+is it the direction is wrong and it's just a constant judgment call? I
+feel part of the way we've hacked that is just the time boxes where we
+say, well, we're going to try this direction for this period of time
+where a period of time is weeks or months, but not a long period of
+time.
+
+Adam Wiggins (01:10:56) - And then we'll go back and kind of start anew.
+
+Szymon Kaliski (01:11:01) - Yeah, I think one of the things that maybe
+is obvious in retrospect that we discovered with the approach of very
+aggressive time boxing is that starting anew to get to a specific point
+where the thing starts to look like something takes a lot of effort and
+time. And I think this is one of the things we're trying to solve with
+this project.
+
+Szymon Kaliski (01:11:20) - Can we move that effort outside of the
+project so you start with a position where you already have some
+reactive ink on the page and can start building in that medium versus
+coming up with the whole stack of functionality just to get to a point
+where you actually start your research project and it's like three weeks
+left of the three months that we have.
+
+James Lindenbaum (01:11:40) - Yeah, I mean, I think there's sort of a
+question of are we on the right track, right? We're on the right track.
+And if so, then if only had a couple extra features, if only it was a
+little more performant, if only whatever, it would be great. I mean, I
+think there's no way to know. I do think it's sort of a follow your
+intuitions, follow your nose kind of thing.
+
+James Lindenbaum (01:11:57) - But I do think one of the signals that I
+look for is at the end of a project and especially this sort of
+interstitial time between when a project ends and we're sort of wrapping
+up the essay and when folks are thinking about the next project. You
+know, sometimes we finish a project and it's sort of like we sum it at a
+big mountain and everyone's like, well, I'm glad we did that. Definitely
+don't want to do that again. Let's maybe go over in this other direction
+and other times people are like, man, that was so great. I'm really sad
+to stop working.
+
+James Lindenbaum (01:12:26) - Just all these things. It feels right at
+my fingertips, just out of reach. These things that I wanted to add that
+would make it better. And there's a lot of sort of momentum and desire
+to keep going. And I think that sort of indicates whether something was
+an interesting but weird sidetrack versus maybe on the main path. And I
+think we've increasingly been starting to feel like we're more on the
+main path in that we have a lot of folks who have worked in these
+various tracks who are just their excitement seems to be going up.
+
+James Lindenbaum (01:12:54) - And their desire to keep working on it
+seems to be going up and our desire to do projects that are sort of
+follow ons to the previous project versus let's break new ground, go in
+a different direction. There seems to be more convergence happening.
+And, you know, that doesn't necessarily indicate we're on the right
+track, but it certainly feels that way. And I think we're going to focus
+a little bit more on going further down this path that we're on rather
+than finding new paths, which is sometimes a mode that we're in. So,
+yeah, we'll see what happens.
+
+James Lindenbaum (01:13:23) - Stay tuned.
