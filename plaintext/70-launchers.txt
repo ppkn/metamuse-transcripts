@@ -1,0 +1,1415 @@
+Thomas Paul Mann (00:00:00) - We can do the basics that Spotlight can
+do, but also much better. We invested a lot in the speed to make it
+faster to launch. We invested in file search, to search files in a more
+predictable way. And then when you have those basics and there's the
+question, what else can you bring to this so you can start navigating
+and controlling and compute it in a new way?
+
+Adam Wiggins (00:00:20) - Hello and welcome to Metamuse. Muse is a tool
+for deep work on iPad and Mac. But this podcast isn't about Muse the
+product, it's about the small team and the big ideas behind it. I'm Adam
+Wiggins here with my colleague, Mark McGranaghan.
+
+Mark McGranaghan (00:00:39) - Hey Adam.
+
+Adam Wiggins (00:00:40) - I'm joined today by Thomas Paul Mann of
+Raycast. Hey there.
+
+Thomas Paul Mann (00:00:44) - Happy to be here.
+
+Adam Wiggins (00:00:46) - And Thomas, I understand you have some travel
+coming up for you and your team.
+
+Thomas Paul Mann (00:00:50) - Yeah, that's correct. So yeah, we at
+Raycast are a fully distributed company, but once a year we get together
+with the whole team. And it's going to happen soon. So next week we're
+going to go all to Greece, having a good time there. And we're really
+excited. It's the second time we do it. The first one we did was a huge
+success. It was especially the moment when the pandemic came a little
+bit to an end as well. So it was really good for everybody getting
+there. It just makes a huge difference as a remote company seeing each
+other in person.
+
+Adam Wiggins (00:01:19) - Yeah, that's been sort of a secret weapon for
+us, or maybe not so secret, which is those in-person summits fill quite
+a lot of what you do get out of being in an office together and gets
+coupled with getting to go to nice destinations and so forth.
+
+Thomas Paul Mann (00:01:33) - It's also cool because last year we had a
+few people joining us before they actually worked at Raycast, which was
+the perfect onboarding for those kinds of people. Because yeah, in a
+remote company, you usually don't see everybody always in person, but
+it's made a huge difference for them.
+
+Adam Wiggins (00:01:50) - And tell us a little about Raycast.
+
+Thomas Paul Mann (00:01:52) - Sure, yeah. So for the ones who don't know
+about Raycast, we often describe it as a general productivity tool,
+mostly targeted towards developers, but also designers and other people
+who really work on a computer use it. For Mac users, the easiest to
+describe it is actually a spotlight on steroids. So everybody works on a
+Mac, no spotlight. The basics are to launch an app, search files, do a
+few calculations. But with Raycast, we put another level on top of that.
+
+Thomas Paul Mann (00:02:19) - So we're connecting to third party apps
+like GitHub, Linear, Figma, and have like a public store where people
+can build extensions for that other people can experience. So you can
+think of it a little bit like an app store. So people can build
+something, share it with others. Others can immediately install it. So
+it makes your work more productive, faster to do. It's all driven by
+keyboard shortcuts. It came out of an idea from me and my co-founder.
+
+Thomas Paul Mann (00:02:45) - We're like hugely obsessed with
+productivity and we're a little bit frustrated that nowadays on a
+computer, oftentimes there's a lot of friction in the small and little
+tasks that pile up. And we thought we can do better and basically build
+a Raycast that has this layer on top of all the other apps that you can
+use them in a frictionless way. And so far, it seems to be working very
+well. A lot of people enjoy that, building extensions with us together.
+We have a huge community behind us that's helping us building those
+experiences.
+
+Thomas Paul Mann (00:03:15) - And sometimes they're ranging also to more
+fun things like a GIF search that you can put in a pull request, a nice
+GIF, and those kinds of things.
+
+Adam Wiggins (00:03:24) - And we'd love to hear a little about your
+background, what brought you to this venture.
+
+Thomas Paul Mann (00:03:28) - Yeah, so I'm a software engineer and my
+career started in mobile development. So I worked in iOS and Android.
+For me, the passion there was I could build something that I could
+immediately experience. And that basically, since then, I enjoy doing,
+like building something that I can experience and share with others.
+Before Raycast, I worked at Facebook on a desktop application, also on
+the Mac, which was called Spark AR. What I often describe as a Photoshop
+for augmented reality. So for the ones who don't know it, it looks a
+little bit like Photoshop.
+
+Thomas Paul Mann (00:04:02) - You have a viewport in the middle. You can
+track in 3D objects and then you can, for example, attach it to your
+nose and it sticks to your nose with the augmented reality efforts that
+were there. What was really interesting there, it was also community
+driven. So it was a tool to create something and then you can share it
+with others on Instagram and Facebook and they can use those effects.
+And this community aspect is really something that I fell in love with.
+
+Thomas Paul Mann (00:04:24) - Because if you build a tool that other
+people can produce something with, it's really interesting to see what
+they're going to produce on the web. And so with Raycast, early on, what
+we did there is we wanted to make our workflows faster, right? So we
+built the stuff for us. And then after a while, we realized there were
+so many things out there, tools that we maybe never heard of, that like
+a platform where people can build extensions for and share it with
+others is actually the way to go.
+
+Thomas Paul Mann (00:04:50) - So now we have an API. People who are
+familiar with React can use the API very seamlessly. And then they can
+get into creative ways, building those extensions and share it with
+others.
+
+Thomas Paul Mann (00:05:02) - So now you have pretty much for every
+service you know of, you can find one of those extensions, can install
+it immediately, and can basically gain little productivity boosts
+throughout the day, which then oftentimes cut away entire friction
+points by interacting with slower tools. And that's what brought us
+initially to Raycast, right? We wanted to make little things faster that
+then have this compound effect that you just enjoy your work more. And
+that to this day is still our mission, which we operating onto every
+day.
+
+Adam Wiggins (00:05:34) - And we'll link the Raycast store in the show
+notes. I can certainly see the connection between the Spark AR and you
+know, that's a creative tool, certainly you're helping other people
+create things. And then the joy one gets from seeing someone make
+something with a tool you have created, that does seem to be a common
+theme across people that are drawn to building tools as opposed to sort
+of end user experiences. I'd be curious to hear a little bit about the
+technical stack. So it is a native Mac app.
+
+Adam Wiggins (00:06:02) - But I noticed when I just briefly poked at
+trying to build an extension for Raycast that the hello world is very
+much like a react component feels very web technology ish. How do you do
+that? Is it ultimately kind of all a pretty fancy electron app? Or is it
+just the extensions are kind of like using web technologies, but you use
+classic native development for the core app?
+
+Thomas Paul Mann (00:06:24) - Yeah. So it's actually a question which we
+get asked quite often. So the app itself is 100% native. It's written in
+Swift and doesn't involve any HTML or CSS. So everything is rendered
+through Apple's app kit. Actually we don't use Swift UI yet. So that was
+an early decision because we felt like we're building this app which
+sits on top of the system and we want to make it really part of the
+system with the look and feel, but also what you can integrate it with.
+So early on we thought like, hey, is Swift just the way to go?
+
+Thomas Paul Mann (00:06:56) - Also we worked on iOS and Mac OS before,
+so we knew the tech stack really good, which helped us initially to just
+bootstrap the app really, really quickly. But then when it comes to
+building an extension platform, you have a different problem to solve
+for it. So they actually want to extract the system away and rather want
+to make it accessible to as many developers as possible. And we went
+there a little bit on a journey to really figure out how we should build
+those extensions, and especially the API for the extensions.
+
+Thomas Paul Mann (00:07:25) - So initially we started with more of a
+version where you have basically finding a JSON schema that you give the
+app and that the app renders basically what you describe in this JSON
+file. But then this brought a lot of issues when you want to build
+something more complex, like think about networking requests and then
+depending networking requests, maybe some optimistic updates to make it
+snappy. So what we then saw is like, okay, there are already really good
+UI frameworks out there and React is one of the most known ones.
+
+Thomas Paul Mann (00:07:55) - So why not using React to build
+extensions? And what we did is basically you can almost describe it as a
+lightweight React native. So what we do is you literally write React,
+but instead of rendering HTML, we're actually rendering Swift
+components. So we're exposing components like a list and a form, and
+then you can use those elements to build your extension. And then we
+just render that with our native engine in the application.
+
+Thomas Paul Mann (00:08:24) - And it has two benefits, like one, every
+developer who knows React can immediately write a Raycos extension
+without learning anything new. And two, we keep it very consistent
+across extensions because we expose these high level components like a
+list, and then the list has list items with a leading icon and a title
+and a subtitle. So all of the extensions look and feel very similar,
+which was very important to us. But we also have basically the
+flexibility of React where you can write something really, really
+complex.
+
+Thomas Paul Mann (00:08:54) - So you see now extensions like GitLab is a
+good one. It integrates with everything from GitLab and is nowadays
+quite complex. It involves OAuth and optimistic updates, caching, and
+makes it really, really fast. So it's a nice abstraction away. And it's
+funny now when you have built those things initially natively and now
+look at our extensions API, you actually can build those things
+oftentimes much faster with the extensions API now than what we have
+done initially natively.
+
+Adam Wiggins (00:09:25) - That's a pretty clever way to slice it because
+for sure something like a quick launcher of this sort, first of all,
+needs to be really fast. And second, absolutely has to be integrated to
+the operating system in a way I think that would be hard with one of
+these web technology shims. On the other hand, extensions are something
+that are pretty naturally, using some variation of web technologies fits
+naturally with that one because I think so many developers know it.
+
+Adam Wiggins (00:09:51) - And then maybe there's other benefits as well
+in terms of, I don't know what, sandboxing or something like that. But
+yeah, you're using each technology for the thing that it best suits for
+and then sort of bridge that gap through your system.
+
+Thomas Paul Mann (00:10:03) - Yeah, exactly.
+
+Thomas Paul Mann (00:10:04) - I think it also is just a nice separation
+of concerns, right? So you have natively where you can make this pixel
+perfect UI components, and then you expose a very high level API that
+extension developers can use.
+
+Thomas Paul Mann (00:10:18) - We're working at the moment on the file
+picker, for example.
+
+Thomas Paul Mann (00:10:21) - It's entirely built natively because,
+well, you need to interact with the operating system to pick files,
+right? You need to open the finder and so on.
+
+Thomas Paul Mann (00:10:29) - And then on the UI side or on the
+extension side, you can just make it a lot easier, but just say, I want
+to pick this file or this directory and show me hidden files as well if
+you want to.
+
+Thomas Paul Mann (00:10:39) - So you're abstracting a lot of stuff away
+that an extension developer just doesn't need to care about anymore.
+
+Mark McGranaghan (00:10:47) - Yeah, I was so interested when I saw the
+extensions angle on Raycast because it connects to this idea that we've
+been thinking about for years in the lab, and it's still a background
+for us in Muse. So like end user programming, extensibility, and so on.
+Yeah, and the holy grail that I've been after is how do you get the very
+high performance of a low-level language, like C or Objective-C, with
+the security of something like a high-level language and the end user
+approachability of something like JavaScript and React.
+
+Mark McGranaghan (00:11:20) - And I think fortunately, in your case,
+it's constrained enough that the performance, for example, of extensions
+isn't as big of a deal in the sense that it's like you're doing wild
+computations in the extension itself. So that's kind of a degree of
+freedom that you have. But the end game that I've long imagined is being
+able to write extensions that are no compromises and that can eventually
+be promoted all the way up into the app and even the system so that you
+don't have the extension world and the app world and the OS world.
+
+Mark McGranaghan (00:11:48) - It's more like a continuum where you move
+back and forth according to your degree of certainty and trust. So I'm
+always interested to find out how people are tackling this problem
+because as much as I want that thing, that thing doesn't exist. It's an
+open research problem determined if it even can be made. So I'm always
+curious to see how people are tackling it.
+
+Thomas Paul Mann (00:12:06) - Yeah, it's a super tough problem, right?
+
+Thomas Paul Mann (00:12:08) - You want to have flexibility, but on the
+same side, you want to constrain a little bit that it fits still in the
+system. So one thing which we did initially when we built the first
+extensions, we just built them natively to figure out essentially what
+we need to build and to understand the UI and the UX of something.
+
+Thomas Paul Mann (00:12:27) - And then we quickly came up with a
+paradigm.
+
+Thomas Paul Mann (00:12:28) - It's like, okay, everything you do in Ray
+causes launching a command and that command is basically a standalone
+thing that can operate on its own.
+
+Thomas Paul Mann (00:12:37) - And then this is basically the constrain
+you're giving to a developer. Hey, as soon as this thing is launched,
+you can do what you want to do, but you need to launch it, right? It
+cannot run just randomly that at certain constraints.
+
+Thomas Paul Mann (00:12:49) - And then when we then came to basically
+the extension world, that was really nicely applicable because we then
+can say, okay, you build commands.
+
+Thomas Paul Mann (00:12:57) - They get executed when you launch them,
+run within Raycast. And then we had enough of this primitives like lists
+and forms that we can expose that they can use. They're very high
+performance and they look and feel like the system. So it plures this
+line of like what is actually part of Raycast versus what is an
+extension to it.
+
+Thomas Paul Mann (00:13:16) - Like a lot of people nowadays don't longer
+know that, right? Initially there was what we had like core extensions
+and then some third party ones. But nowadays it's like just a blurred
+line because all of them look and behave very similarly.
+
+Thomas Paul Mann (00:13:29) - And one missing ingredient that I haven't
+mentioned before is like we also have all of the extensions open source
+and review them. So to submit an extension that goes into the store, you
+essentially open a pull request with your extension.
+
+Thomas Paul Mann (00:13:42) - So that helps us to also keep the UX and
+the UI and all the behaviors very similar across extensions.
+
+Thomas Paul Mann (00:13:48) - Because I think that's especially for
+Raycast, which is a tool that you use basically by muscle memory at some
+point. It's very important that the things behave very, very similar.
+And then from the performance aspect of things.
+
+Thomas Paul Mann (00:14:01) - So one thing which we did is we run Node
+as our JavaScript runtime.
+
+Thomas Paul Mann (00:14:06) - So with Node it's actually very performant
+for the little operations we do. You have also the benefit if it becomes
+performance an issue, you could get native modules going as well to
+integrate them to get performance out of it. And then React is also for
+the sizes of extensions we built fast enough to produce the UI. And then
+we are not constrained on rendering the UI because that again we do
+natively.
+
+Thomas Paul Mann (00:14:32) - And then one thing which I think is very
+interesting when you integrate something into your main app, you want to
+make sure there is a certain boundary between main app and extensions.
+
+Thomas Paul Mann (00:14:41) - So if an extension crashes, the app should
+stay alive. So what we do is we run all of that extension code out of
+process. So it has a separate process. So if there is something corrupt
+going on in the extension that doesn't block the main app, it stays
+responsive, can go back. And I think that's just a good user experience,
+right, because we all know as developers there are going to be bugs,
+unpredictable things, network request fails.
+
+Thomas Paul Mann (00:15:06) - You maybe don't handle it properly.
+
+Thomas Paul Mann (00:15:07) - So you want to make sure that the app
+itself behaves correctly, especially with an app like Raycost which I
+use hundreds of times a day. You can't really afford that this thing is
+going to crash when there is something wrong by a third-party developer.
+
+Mark McGranaghan (00:15:19) - do a whole podcast on this area. I think
+we sometimes called it on the show the platform problem. How do you
+navigate the performance, security, sandboxing, isolation, consistency,
+developer experience? I also suspect that, Adam, you want to talk about
+the space overall.
+
+Adam Wiggins (00:15:40) - Indeed, as you were talking there, Thomas, I
+was flashing back to our platforms episode with Joe Webkin where we
+talked about maybe not some of the OS-level stuff you're referencing
+there, Mark, but definitely some kind of store slash plugin directory
+and a review process. As well as the constraints that are created for
+the extension developers. You mentioned, for example, these lists and an
+icon next to an entry is kind of a standard thing to get back as a
+result of one of your extensions. And that's potentially desirable.
+
+Adam Wiggins (00:16:10) - When Joe talked about building a Slack app, he
+said, this is really nice. We don't need to do much design because
+there's so many constraints. Like it's just an icon and some text. It's
+only kind of so many ways to do it and in a way that is nice because you
+have fewer decisions to make and you can just focus on getting the thing
+built.
+
+Thomas Paul Mann (00:16:27) - Yeah, I think what's also interesting with
+constraints comes creativity. I mean, that's a common phrase that you
+probably hear a lot in those tools that allow people to create
+something. But it's actually really true. Like, yes, we provide just
+lists.
+
+Thomas Paul Mann (00:16:43) - But then if you look around with lists,
+you can actually build a lot of stuff, right?
+
+Thomas Paul Mann (00:16:47) - And then with forms, you can do a lot of
+data input. And then we have things like crits, which you can do a
+little bit more visual style, like showing images. But you will be
+surprised what people come up with.
+
+Thomas Paul Mann (00:17:00) - Like one thing which I remember is just we
+can render markdown and we have this detail view where you can render
+markdown.
+
+Thomas Paul Mann (00:17:06) - And somebody just came up with playing
+Snake and just rendering markdown.
+
+Thomas Paul Mann (00:17:11) - So it's obviously a huge constraint if you
+just have markdown. But developers are creative, right? And so you can
+build an entire game with just markdown rendering.
+
+Thomas Paul Mann (00:17:21) - So it's always inspiring.
+
+Thomas Paul Mann (00:17:22) - And that's what I mentioned initially with
+communities. You have certain ideas what you can build with it, right?
+When you decide an API, you think like, oh, there are certain use cases
+and you maybe prototype. But then when you put it out, the minute you
+put it out, people interpret it differently and come up with something
+new. And that's super exciting about it and see other use cases that you
+haven't thought of before.
+
+Thomas Paul Mann (00:17:45) - And I think that's always the interesting
+bit with pretty much every platform that is built out there. It was
+initially with the iOS app store as well.
+
+Thomas Paul Mann (00:17:52) - There were fun apps initially and people
+figured out what are good apps.
+
+Thomas Paul Mann (00:17:56) - And then it shaped this whole ecosystem,
+which we now know they slip in.
+
+Thomas Paul Mann (00:18:01) - But I bet at the beginning, there wasn't
+really a plan where this leads. And it's this iterative process, you put
+it out and see what works, what doesn't work, and iterate on it. And a
+lot of people are involved in this process by sometimes not even knowing
+about it, right?
+
+Thomas Paul Mann (00:18:16) - Because they're just building for the
+platform and coming up with something that pushes the boundaries.
+
+Adam Wiggins (00:18:23) - So our topic today is launchers and a closely
+related element, which is command palettes. Now, for me, launchers is
+usually the term I use or the category to describe. You mentioned
+Spotlight earlier there, Thomas, that's the macOS built in. There's a
+similar one for iOS and iPadOS. If you swipe down on your home screen on
+your phone or your tablet, you get a kind of search bar slash launcher
+thing. There's quite a long history of this stuff. One of my first
+introductions to it was actually the KDE Linux desktop system.
+
+Adam Wiggins (00:18:56) - And I think somewhere in, I don't know what it
+was, like 2002-ish, they introduced a feature. I think it's called
+KRunner, but essentially you would press a hotkey, Alt-F2, and you'd get
+this little mini command line where you could just run a program or do
+some very basic things. But it was an absolute revelation because before
+there was always this tradeoff of you're in the terminal, the command
+line's great for a lot of things, but of course it also is can't do many
+things from the GUI world.
+
+Adam Wiggins (00:19:21) - Or then you're in the GUI world and
+everything's about clicking on menus or the occasional hotkey. So that
+was my introduction to it, but I feel like there's a pretty rich history
+of this and I'd love to hear. You probably are one of the most
+knowledgeable people on it, so I'd love to hear you walk through that a
+little bit.
+
+Thomas Paul Mann (00:19:38) - Yeah, I mean, we're working in this space,
+right, and looked in a lot of those things. And as I say, it has a long
+history. I think actually I would almost take a step back and like you
+touched on the terminal, right?
+
+Thomas Paul Mann (00:19:49) - I think that's kind of where all of this
+sparked. And it was the first interaction we had with computers where
+you can just interact with it by text input.
+
+Thomas Paul Mann (00:19:59) - And I think that's where we're at right
+now.
+
+Thomas Paul Mann (00:20:00) - This is for the launchers and command
+palettes that you mentioned. It's still the thing today, right? You
+navigate this without a mouse by text input and keyboard shortcuts. I
+think the true roots come from the terminal and also what I mentioned in
+Raycast, you run commands which you have in a terminal and we also have
+arguments for those commands that you can give it arguments that do
+different things. And when I look back into the history, I mean, after
+the terminal, the GUI came, right?
+
+Thomas Paul Mann (00:20:28) - We made functionality available with
+elements you can click, which obviously made it a lot more
+user-friendly, but it also came with a little bit of a downside. What
+you have there is you just have limited real estate, right? So you have
+buttons and you can only place that many buttons on a screen. And I
+think that at some point you run into the limitations of that and there
+are these cluttered UIs. I think one of them is quite known for its
+Photoshop, which has just a ton of menus, which you're losing yourself
+and there are tutorials how to use it.
+
+Thomas Paul Mann (00:21:01) - But I think it just came out of the need
+is like software growth and functionality and you're adding one more,
+but the display stays the same, right? The real estate you have to put
+those things stay the same. And it comes at some point very cluttered.
+
+Adam Wiggins (00:21:14) - A metaphor I used to use when explaining to
+people why I used a terminal. This was, I don't know, decades ago. And I
+think folks once, for example, Windows came along and made GUIs pretty
+mainstream and they would see me using this computer. What they saw it
+as a more archaic way. And I would usually describe it as, okay, well,
+menus are like going into a restaurant and ordering from a menu where
+you're pointing to pictures on the menu. But like exactly, you can't
+have a lot of nuance in that.
+
+Adam Wiggins (00:21:42) - You could point to this picture or that
+picture, but that's kind of it. Whereas if you want to have a more
+in-depth conversation with the chef about all the fine flavors that are
+in it and how you're going to tweak it and that sort of thing, like then
+you need the power of full language. And that's to me what a command
+line is more like having a conversation with the computer.
+
+Thomas Paul Mann (00:22:03) - Yeah, I think that describes it actually
+very nicely because it's oftentimes even a back and forth, right? Where
+you give the computer one command, it gives you back an answer. You use
+this answer to pipe into a different command and do something with it.
+And this is just very hard to replicate in GUI, right? If not even
+impossible. But I think in GUI, at some point people realized there is
+too much and they tried to put in a search for those functionality. And
+one of the first ones that I remember was in Mac, the help menu.
+
+Thomas Paul Mann (00:22:35) - So if you click on help, you have this
+search field, you can put something in and you search all the menus that
+you have there, and then you can click that. That was actually quite
+nice to use the software you have there. So it made it more accessible,
+you can find those things. But it was a rather hidden feature, right? It
+was behind the help button. And usually you don't like to click help,
+right? It feels like you can't use the software, you need to press the
+help button. So it's really not what you want to click that often.
+
+Adam Wiggins (00:23:02) - Yeah, I use the help macOS search as a quick
+launcher all the time for functions I don't use all that often. Maybe
+like spell check and sublime text. The way I invoke it is I click help,
+and I type SPE. And then I click, you know, basically the first result.
+And probably there's a similar thing with yes, so my video editing
+software where there's just so many functions in it. And yeah, I guess
+that one thing, there is some key command I could memorize, but I just
+don't use it quite enough. But I know it's search for and it's very
+quick to type it in.
+
+Adam Wiggins (00:23:32) - So I just do that.
+
+Thomas Paul Mann (00:23:34) - Yeah, and it's quick enough, right? And
+the other thing is like what the help menu I think struggles with is
+it's just constrained to one application at a time. So you couldn't use
+it in your video editor to search something completely unrelated to the
+video editor and do an action outside of it like launching a link or
+another app, right? So it wasn't possible back then. But then other apps
+also picked up this behavior. I think one of the first ones that I know
+that had kind of like a built-in command palette was for me, sublime.
+
+Thomas Paul Mann (00:24:05) - I think initially that was just the file
+search, but it was extremely efficient. It just popped up the keyboard
+shortcut, you search for it. And that's how I learned navigating around
+files. I lost then basically the sidebar. It wasn't really relevant for
+me anymore, right? It was really just the opening it up, search for the
+file, continue where you want to program, and then again opening it. And
+then they added also functionality in a similar menu. It had a different
+keyboard shortcut, but you can then search the actions that you can do.
+
+Thomas Paul Mann (00:24:35) - This were just menu items, I think
+initially, and then even more functionality which wasn't available in
+the menu item. And I think a big difference there was it was just front
+and center. You press this one keyboard shortcut and you know you can do
+everything with it. So for me that was the point when I almost.
+
+Thomas Paul Mann (00:24:53) - I stopped using keyboard shortcuts that
+heavily because I knew there was a lot of functionality in there that I
+don't use that regularly, but I know how to find it and it's reliable.
+And I think that's, for me, was one of the first experiences where I
+felt like this is a really good user interface. It still has a very
+clean UI. It's not distracting, but you have this full power available
+via the keyboard without touching a mouse or navigating around in the
+menu, which is quite cumbersome.
+
+Mark McGranaghan (00:25:22) - Yeah, I actually find it helpful to think
+of all of these UI inputs holistically as follows. So imagine you have a
+huge grid and the rows in the grid are all the operations you can do in
+your app. It's like jump to file, increase text size, indent here,
+collapse code block. And the columns are the different ways to send
+inputs to the UI. So you have the menus, you have keyboard shortcuts,
+you have maybe the command bar, maybe you have Siri, and you have the
+help menu. And I think the best systems have a few properties.
+
+Mark McGranaghan (00:25:57) - One is they actually use all those inputs.
+They're systematically connected. The example of the help menu was a
+good one where you go to the help menu and it literally shines a light
+on the menu where the command is. And likewise, in the best systems, all
+of the operations are available in as many of the columns as possible.
+And ideally, the user has agency over managing those mappings so they
+can change the key binding and that might be reflected in the menu. You
+know, a little gray icon that shows what the shortcut key is next to it
+changes as well.
+
+Thomas Paul Mann (00:26:32) - Yeah, I think that's interesting to
+basically expose the functionality in different ways. What's interesting
+about that one is also you target different users, right? So I think not
+everybody wants to use a command palette. It's on the one hand a simple
+system, but it might also be more for advanced users that really rely on
+a keyboard all day. But you can expose the core functionality as a very
+good as UI, right? It's still very useful to have those buttons because
+they also tell a story of what is an important action you want to do at
+the moment.
+
+Thomas Paul Mann (00:27:05) - It can highlight something like you have
+on Zoom calls the leave button is red or the end button, right? So it
+says to you like, hey, there is a button if you press that one, it's
+red, so be careful about that. But it teaches the user certain
+interactions that are in the context very important. But then as you
+mentioned, there is like probably too many of those actions that you can
+take at any given moment that then the other more utilitarian things
+like a menu and a command palette can shine to give you access to those
+actions.
+
+Mark McGranaghan (00:27:34) - Yeah.
+
+Thomas Paul Mann (00:27:34) - In a more concise way. Yeah, they're much
+more discoverable and approachable.
+
+Mark McGranaghan (00:27:39) - Yeah, and in fact, a key benefit of often
+it's the menu and the command palette is a complete enumeration of the
+options. One of the most annoying things for me about software is when I
+can't discover the full set of things that are possible, it's like
+hidden and there's no way to enumerate them. But typically, if you open
+up a command palette and then don't type anything, you can just press
+down arrow a bunch and find out all the cool and obscure stuff you have
+to do.
+
+Thomas Paul Mann (00:28:03) - Yeah, definitely. It's a good way to
+explore the functionality of applications, especially like the more
+hidden ones, as you mentioned, that are maybe further down.
+
+Mark McGranaghan (00:28:11) - And while we're talking about the
+properties of these systems in general, I just want to make two kind of
+theoretical comments. One is we call them different things like
+launchers and command bars. I think there's a bit of a dichotomy in
+here. So there's what I would call launchers, which is like you type an
+app name and it launches the app. There's search, which is you type like
+plain text and it finds documents that have that text in them, there's
+like lookup where you know the name of your document and you type that
+and it opens a document for you.
+
+Mark McGranaghan (00:28:36) - There's commands like calc and you get a
+calculator. And then there's hybrid systems that do a mix of all of
+these. And I don't think any of those are better or worse. I just think
+it's useful to understand there's quite a spectrum that often it's
+pretty useful to just combine them all into one thing as Raycast does.
+The other point I wanted to make, and you knew this was coming, was the
+importance of speed and performance in these systems.
+
+Mark McGranaghan (00:28:56) - And it's subtle because it's not just that
+the system responds quickly to input, although they usually do, and
+that's often a benefit of these things. It's that you often don't need
+any branches at all. So if I want to increase text size by going through
+a menu, I have to look at my screen, find the place I want to go, move
+the mouse there, visually confirm that I'm over the menu, click,
+confirm. Move the mouse down, visually confirm.
+
+Mark McGranaghan (00:29:23) - Each of those visual confirmations is a
+branch, and any time you're round-tripping through your whole sensory
+system and making a conscious decision to click or not click, you're
+kind of already hosed. It's already hundreds of milliseconds. Whereas,
+let's take another example. If I want to open the Sublime app, I just
+hit Command-Space-SUB-Enter. And I don't need to look at my keyboard, I
+don't need to think, I don't need to check any branches. I can do that
+all basically in one string, and a little bit later, the app will pop
+up.
+
+Mark McGranaghan (00:29:47) - That's a huge benefit of these systems and
+other keyboard input systems in general.
+
+Thomas Paul Mann (00:29:52) - Yeah, I totally agree. Speed is like a
+fundamental thing to this. And it's not only speed, it's also the
+predictability. Because you describe you type in sub for sublime, hit
+enter, right? At some point this becomes just muscle memory. So you
+don't really think about it anymore. You know you need to go to sublime,
+you do the sequence that you described, command space, sub, enter, and
+then you're there. So the system also needs to be predictable in a way.
+And that's also sometimes a challenge, right? Being fast and predictable
+sometimes conflicts.
+
+Thomas Paul Mann (00:30:23) - You can't do many things in parallel
+because then it becomes unpredictable what finishes first or you need to
+sequence it somehow. So there's a huge technical implications there. And
+then also what's very interesting with that you can optimize as well.
+Because it becomes a very fundamental part on how you navigate your
+computer and you do a lot of interactions through it. So it becomes
+smarter as you type in there. So if you type sub all the time, it
+recognizes that maybe even earlier.
+
+Thomas Paul Mann (00:30:51) - If you just type su it already upranked
+because it knows, well, you're going to type sublime and make sure that
+you hit that even faster. And that's also an interesting angle which you
+can't really have with the UI that you described in the menu where you
+need to do the steps yourself. And it's just a lot slower than what a
+system is capable of doing.
+
+Adam Wiggins (00:31:12) - Predictability is a huge one for me. And this
+is a place where unfortunately the default system ones for me fall a
+little short. Spotlight on macOS, for example, I use the file lookup
+aspect quite often. Mark, you talked about the launching applications,
+looking up files, searching. And for me, those first two are the most
+important. But yeah, Spotlight will kind of maybe like it updates its
+cache sort of lazily, which is fine.
+
+Adam Wiggins (00:31:38) - But what happens is you type something in, you
+think you see the result, you hit enter, and then it changes the moment
+before your finger comes down, which is to me, it's just a no go.
+Similarly, on the phone and on the iPad, I do use the home screen search
+quite a bit, often for launching applications, but sometimes for looking
+up documents. And if you tune it to turn off a bunch of junk, mainly the
+Siri suggestions that basically go out to the web. But that just takes
+time, especially if your network connection is not ideal.
+
+Adam Wiggins (00:32:07) - And so you tend to get this thing where it
+just changes underneath your finger. And to me, that's just a total no
+go.
+
+Mark McGranaghan (00:32:13) - Yeah, I feel like I've seen this on my
+Windows machine, which I don't use very often, but occasionally I'm on
+it. And it's like, you open up that whatever it is now, when I was a
+kid, it was a start menu, whatever that is now. And it like starts
+searching for news stories. And like it's looking at online help
+articles. It's like, I'm looking for todo.txt on my computer, calm down.
+
+Thomas Paul Mann (00:32:31) - Yeah, that's one thing which we
+deliberately did in Reikor. So if you open that, it's very predictable.
+We basically make sure that it's a fast algorithm that matches all your
+entries. But it doesn't do async operations like going to the network,
+trying to fetch something, which just ruins the predictability. Or it
+makes it just a lot slower. So there is a lot of engineering work went
+into the initial version, and we did recently an iteration on top of
+that to make basically that as fast and predictable as possible.
+
+Thomas Paul Mann (00:33:02) - And then functionality that needs to go to
+the network, for example, to search your linear issues, they're on a
+separate command. So you launch this command, and then you're in the
+command, and then they can perform an async operation. But even there,
+we basically build it in a way that there is always cache available,
+that it is fast by default. And if you need additional data, it's
+getting updated in the background. But yeah, I think this is sometimes
+undervalued.
+
+Thomas Paul Mann (00:33:31) - Making something predictable and keeping
+it predictably fast is sometimes tricky, but it's hugely important for
+such user interfaces.
+
+Mark McGranaghan (00:33:40) - Yeah, and now that I'm thinking about it
+more, I'm realizing that the moment you stray from totally
+deterministic, predictable, user-controlled search, basically an
+algorithm for that that's totally within the user's control, it just
+becomes overwhelmingly tempting for the platform to do nefarious stuff.
+The example I'm thinking of is Twitter, where Twitter, every few days,
+will try to opt you into their algorithmic timeline.
+
+Mark McGranaghan (00:34:05) - But you can go in there and say, no, just
+show me the tweets of the people that I've explicitly followed in the
+order that they posted them. And the reason I do that, a lot of times
+Twitter has interesting suggestions, but they can't help themselves but
+suggest clickbait. And I feel like you get the same dynamic whenever you
+have algorithmic lists. And so this is a little bastion of user control
+that I'm trying to maintain in my computing environments, both Twitter
+and the launchers.
+
+Thomas Paul Mann (00:34:28) - Yeah, it's interesting. One thing we did,
+we made it configurable how sensitive you want to have to search,
+because search is very personal. People search for things differently.
+There's obviously a huge overlap, but certain groups search differently.
+So we had initially just searching by prefixes, and we switched recently
+to Fuzzy Search, where you basically can search for letters that are not
+directly followed by each other. And that opens up just a lot more
+search results. So you need to rank them differently and cut them
+differently off.
+
+Thomas Paul Mann (00:34:59) - So what we did is we basically added a
+preference. And we're very not keen on preferences because we feel like
+we should ship really good defaults. And then here and there you maybe
+need a few preferences. This was one of the ones which we went for
+because we tested everything with our team, and we've already realized
+there are different styles of searching for it. So we went for a
+preference and made it a nice slider, which you basically can configure
+the sensitivity of how you want to have those metrics appear in the root
+search in Raycost.
+
+Adam Wiggins (00:35:29) - And we had started a little bit on the history
+of this stuff. And the discussion of Fuzzy Search also reminds me of the
+first time I saw that, which was in TextMate. I think it was the
+Command-T as kind of a different way to quickly pull up files. And it
+felt like an amalgamation of search and the command line, which maybe is
+in the same realm as all the stuff we're talking about here. And we
+started to talk about the history a little bit.
+
+Adam Wiggins (00:35:54) - I'd be curious to hear where you think this
+stuff went mainstream, Thomas, because clearly, yeah, this is built into
+macOS, iPad, iOS. Whether or not you like the system default or not,
+it's acknowledged by the platform maker that this is something that
+should be available to everyone. Windows indeed has it also.
+
+Adam Wiggins (00:36:12) - Again, I don't know if Start Menu is the right
+term for it in these days, but I know when you use a Windows computer
+these days, you hit the Windows key and your cursor focuses on a field
+that is pretty simple, but still like kind of one of these launchers. So
+clearly all the platforms have said this is a core feature. But that
+wasn't always that way. They were third-party apps at the beginning.
+
+Adam Wiggins (00:36:32) - And it's interesting also in the case of
+Raycast, you're kind of coming full circle and saying, well, actually we
+could do a lot better than what the core operating system is.
+
+Thomas Paul Mann (00:36:41) - Yeah, definitely. I think in the early
+2000s, it was the time when you look back where a bunch of those
+third-party launchers appeared. And Mark touched base on launchers that
+are basically things to launch other applications. But I think also one
+critical thing for launchers is that they're, hey, globally on your
+system. So they don't live in an app, they're an app themselves, which
+basically sits on top of everything else. And the first ones were, I
+think, Launchpoint, Quicksilver, both of them.
+
+Adam Wiggins (00:37:10) - I have great memories of Quicksilver, yeah.
+
+Thomas Paul Mann (00:37:12) - Yeah, Quicksilver got a lot of love back
+in the days. And yeah, basically they started, I think, with launching
+applications, but then also thinking a step further, what is it, what
+else do you have? Files were big in the early 2000s, right? And you need
+to do something with those files, you may be opening in specific tools,
+you maybe want to send it via an email. So there were more of this, I
+think, verb-noun input, like you find something and then you do
+something with it. Initially, on the Mac at least, this was located on
+the top right.
+
+Thomas Paul Mann (00:37:47) - I think that also the spotlight position
+that was initially there on the top right, where you had this little
+search symbol, the magnifier glass, you clicked on it and there was a
+search field popping up. So it was highly inspired from the help menu
+that we chatted before, but it was just globally, right? So you clicked
+on it, you could search an app and then you launch the app or you can
+search for files and it launched the file. And that was the very early
+days of this.
+
+Thomas Paul Mann (00:38:12) - And then later in the 2000s, this became
+more of a redesign when Spotlight became, I think, very mainstream was
+when they did in Yosemite the redesign to make it a front and center
+bar. That when you have the hotkey, command space, it pops up and then
+you have this one big search field, you input something and then it
+finds results and you can execute on that. I think that was, for me, the
+tipping point when it became really mainstream because it was a really
+big feature in Mac. That was basically how you launch your apps, how you
+find your files.
+
+Thomas Paul Mann (00:38:45) - It was a core part of the system by then.
+And then a few years later, also this became basically part of iOS and
+basically having the same experience as you described, Adam, to search
+apps and launch that as well.
+
+Mark McGranaghan (00:38:58) - Yeah, this history overview is quite the
+trip down memory lane because this is where you start your computing
+when you sit down. It's sort of like a series of pictures of all the
+living rooms of all the houses you've ever lived in. It's pretty wild.
+
+Thomas Paul Mann (00:39:09) - Yeah, good memories also for old operating
+systems to see how those evolve over time.
+
+Adam Wiggins (00:39:16) - It is always vaguely shocking to see
+screenshots of even relatively recent past, you know, 10 years ago, Mac
+OS or really any operating system, certainly a phone screen, which of
+course will be massively lower resolution than what we have today. And
+therefore tiny when rendered one-to-one and yeah, you know, technology
+moves fast, both in the sense of what computers can do, but also the
+fashion of it, I think the stylistic elements or something that are
+constantly evolving for good or for ill.
+
+Thomas Paul Mann (00:39:48) - Yeah, definitely. And I think after then
+Spotlight became this main thing and other third-party apps built like
+similar feature sets out. I think that's the tipping point that I...
+
+Thomas Paul Mann (00:40:51) - So let's see
+
+Adam Wiggins (00:41:53) - you have a URL bar in browsers and people know
+you go there to type in the website you want to visit. At some point
+Chrome merged that with search. So right there, that almost, Mark,
+covers two of the three you were talking about. You've got search and
+the sort of look up by name, that kind of the web version of that.
+
+Adam Wiggins (00:42:11) - And then arc ticket a step further, which is
+now when you press that same keyboard shortcut that you would normally
+press to make a new tab or to activate the URL bar, that's command T or
+command L, you get something that is indeed can be used as a search or
+URL entry, but basically is a command pallet quick launcher. So I
+thought that was quite a nice evolution or it feels like this gradual
+enhancement of what was originally just a place you typed in a web
+address.
+
+Thomas Paul Mann (00:42:38) - Yeah, that's true, yeah. I think even with
+just what you mentioned with Chrome is interesting, right? Initially you
+just type in an address, then it became search for history. Then it
+became just search without a suggestions. It's just a nice evolution of
+what seems to be a simple text input, connects to be quite powerful and
+saving again a bunch of clicks or network navigations that you need to
+do if you don't have that.
+
+Adam Wiggins (00:43:04) - And how do you think about the fact that given
+that this is a built-in platform feature essentially everywhere now, and
+you're building presumably what is a better version of that. I mean, I'm
+a Raycast user, so I can definitely say it is better than the built-in
+spotlight, but do you see that as like a challenging, I don't know,
+marketing problem or sales problem to pitch the value prop of we'll
+install this extra app. Does what you already have, but more or
+something?
+
+Thomas Paul Mann (00:43:31) - Yeah, it's definitely a problem we're
+thinking about. I mean, one thing, Adam, that you mentioned before is
+people are sometimes frustrated with the build-ins due to like the
+non-predictable results. So oftentimes people come with those
+frustrations to us. One thing that we always say is like, you will only
+have one of those global launchers or command pallets installed, right?
+Because you have this one keyboard shortcut that you remember, and then
+you're gonna use that.
+
+Thomas Paul Mann (00:43:59) - So at some point there is a situation
+where you go from the built-in spotlight one to Raycast and hopefully
+replace it with the keyboard shortcut that you had before to keep your
+muscle memory. And so one of the things that we did very early on is
+basically said, hey, there is this moment when you switch. So what we
+need to make sure is that we can do the basics that Spotlight can do,
+but also much better. So that's where we invested a lot in the speed to
+make it faster to launch those things.
+
+Thomas Paul Mann (00:44:28) - We invested in file search, just search
+files in a more predictable way. And then when you have those basics,
+and there's the question, what else can you bring to this, right? And
+that's when we decided on the platform aspect, because then you can
+integrate with pretty much anything else that is on your computer. So
+you can start really navigating and controlling your computer in a new
+way. And that goes often that far that.
+
+Thomas Paul Mann (00:44:53) - People use third-party services like Jira
+exclusively in Raycost because the daily operations they have is, oh, I
+need to create issues or I need to see what is assigned to me. And then
+when I see my assigned issues in Raycost, you also can modify that and
+update your status. There is nowadays a really full flexibility and
+functionality in there that is not longer just like searching and
+launching. We'd rather think about what is actually the workflow you
+want to do. For example, I want to create a bug report. I'm right in my
+editor.
+
+Thomas Paul Mann (00:45:26) - But I don't want to jump to the browser,
+navigate to Jira, open the link, open the create issue form. I would
+rather just press my global hotkey for Raycost, search for the command,
+type in what I want to have for the bug report, create it, continue
+where I left off. So we're really on the path of like covering full
+workflows instead of like just finding and opening because we believe
+it's obviously some part of it, but it's much better when you can close
+the loop entirely.
+
+Thomas Paul Mann (00:45:54) - And that's what we kind of said with
+Raycost, that it really removes the friction that you usually have in a
+bunch of other things as well.
+
+Adam Wiggins (00:46:03) - Also, Kurz, to me, you've gone a little bit
+full circle in terms of being a platform provider. So if you started
+your career as building mobile apps, that meant you were dealing with
+the often frustrating process of going through app review. So now you're
+in the position of reviewing people's extensions. And I think the way I
+understand it is you can run your own local extensions as much as you
+want. That doesn't need to go through a review.
+
+Adam Wiggins (00:46:28) - But if you want to put it in your store to
+make it really easy to share with other people, now you have to review
+that pull request, right?
+
+Thomas Paul Mann (00:46:35) - Yes, that's correct. So you can start
+developing and use the extensions happily yourself. But then when we
+share it, we want to make sure that other people have a really good
+experience. And the motivation from that actually came from a different
+angle that Mark mentioned. We want to blur the lines, what is built in
+and what is third party contributed to Raycost. And for that, we really
+want to make sure that every extension is as high quality as possible
+and follow certain guidelines to make this seamless experience.
+
+Thomas Paul Mann (00:47:07) - So the only way we really thought about it
+is one, we need to have a good API that restricts so much that you can't
+really break too much out of the system. But you also need to have a
+little bit of a review to make sure that the UI pattern are followed
+properly. So that led us to making reviews, which on iOS and went
+through Apple reviews can be sometimes a little bit frustrating,
+especially if you work on something which pushes the boundaries here and
+there a little bit. So what we decided to do is being very transparent
+about that.
+
+Thomas Paul Mann (00:47:40) - So we thought about a lot how we do
+reviews and we work with developers directly, right? It's not that
+there's like some marketing department in between. We work really
+directly with developers together. So when we think about development,
+there is one review process that all of us know and it's the pull
+request review process, right? We do that every day in our companies. So
+we thought like, why not do the same? So for our platform, we decided
+having one big repository where all the extensions are in.
+
+Thomas Paul Mann (00:48:10) - And if you want to put an extension to the
+store, you just open a pull request with the extension. And then as soon
+as it's merged, it's getting pushed in our store and then other people
+can install it right from Raycost. So that's, I think, a really good
+transparency because on the pull request, we discuss with the hours or
+hey, how about you do this, give a few hints here, help them with maybe
+making the code here and there a little bit better. And then it gets
+merged. And so far, we haven't had any pushback here because it is so
+transparent.
+
+Thomas Paul Mann (00:48:39) - I think that makes it just a no-brainer
+for a developer, right? You just open a pull request. There are not
+really questions asked. There is one downside to it that we experience
+nowadays. Like we have, I think, more than 600 extensions by now in the
+repository. But this becomes quite a big repository. So the
+collaboration is a little bit harder. But on the flip side, if you now
+build a new extension, we have 600 other extensions to look at how you
+do something.
+
+Thomas Paul Mann (00:49:05) - So it's a huge source of inspiration and a
+huge source of templates, essentially, because a lot of the commands are
+similar. So you can copy other things or you can also contribute to it,
+right? That's also very often happening right now where people use an
+extension and think, hey, actually, I would like to have this
+functionality. And then they can just go to the source code, modify it,
+spin our pull request, and then the author can look over it, and then we
+can merge it together.
+
+Adam Wiggins (00:49:32) - I like that a lot. And maybe it also works
+well because the scale you're at or the fact that you are sort of, these
+are largely kind of developer or developer-ish people, certainly power
+users who have some level of programming capability, solving their own
+problems and wanting to share that with others. So maybe it doesn't
+quite have the huge scale problem the iOS app store does.
+
+Adam Wiggins (00:49:55) - Now, have you been in a position where you've
+needed to, I don't know, reject something or reject isn't quite the
+right word, I guess, say we're not ready to accept this because you're
+not complying with these things are maybe almost more subjective. You
+could say obviously flat out like it breaks or it's abusive or tries to
+do something nefarious with the system. I think that's an obvious case.
+
+Adam Wiggins (00:50:16) - But if it's something that's a little bit more
+of a judgment call, this doesn't quite comply with our UI. And as you
+said, someone thinks, well, yeah, but I'm pushing boundaries in an
+interesting way, essentially you disagree and it becomes contentious.
+Has that happened yet? And if so, have you found a good way to sort it
+out?
+
+Thomas Paul Mann (00:50:30) - Thankfully not that often. We had a few
+situations where there were a few discussions, but then you usually find
+a way to compromise on a few angles from all sides. And then we push
+this thing through. Also, oftentimes you're very proactive and just help
+people, hey, this is how you could do it. Here are examples. Maybe
+sometimes we even push to the same branch and help them modifying it in
+the right direction because that's also sometimes we're aware of that
+people oftentimes build those extensions in their free time.
+
+Thomas Paul Mann (00:51:01) - And we want to also make sure to respect
+that. But so far we've been lucky. We didn't have that many outliers
+there. And I think it's interesting when you work with developers
+together, it's obviously a specific audience. They know their handcraft
+very well, but they also usually in our community are very friendly and
+very collaborative. And at the end of the day, everybody wants to build
+something which purposes other people as well.
+
+Thomas Paul Mann (00:51:26) - And I think now that we have this big
+amount of extensions, it probably became a little bit easier for us
+because there are so many examples that you can just follow. So it
+became more of like, hey, there is a standard you should follow. And if
+you're a Raycast user, you see basically what is a good extension UI. So
+you experience it yourself. So when you then build it, you're just
+following the same patterns. Initially we had to form that, right? The
+first step we had to form it ourselves, and then we had it to bring to
+the community.
+
+Thomas Paul Mann (00:51:57) - And then nowadays I think that's easier
+because we're just having more people in the community helping with that
+as well. And having also people who build the third or fourth extension
+and I just now already know what is a good extension. And we also wrote
+a little bit of guidelines around that. And well, documentation is
+sometimes not that everybody reads it right as we all know, but at least
+we have a reference to point people towards. And then when they read it
+once, they know it for the next time.
+
+Adam Wiggins (00:52:25) - Yeah, I can see how the element of let's
+collaborate on making this extension you've made fit into our ecosystem
+in a way that meets our standards or will be good for everybody, that
+that will feel quite different from the distant reviewer who only has 10
+seconds to look at your thing and issues some kind of judgment that
+often is even hard to understand what they're complaining about and
+gestures vaguely at a rule from this long set of guidelines that you
+feel like maybe doesn't even apply.
+
+Adam Wiggins (00:52:57) - And again, that's partially a scale thing, but
+I do think that's certainly very powerful being able to come back and
+suggest a modification in the branch of like, well, actually, you know,
+you can do it this way. And it's like, we're building it together, even
+though, you know, they're basically doing most of the work, but you're
+working together to make this thing.
+
+Thomas Paul Mann (00:53:14) - Yeah, we're relying there basically on
+open source, right? And because it's also open source, I think also
+people want to be presented that well and also this way collaborative. I
+think that's also benefit of that. And just the transparency with those
+modes are just much higher and nicer for everybody who is involved.
+
+Adam Wiggins (00:53:36) - So as we've mapped out this transition over
+the history of computing, right, going from the terminal command line,
+which itself I think was a step forward from the punch cards, the very
+long feedback loop and the terminal is something that evolves into
+something that feels like having a conversation with the computer, going
+to the GUI, which obviously has its pros and cons, and then perhaps some
+of the merging of those two together in launchers and command palettes
+and so forth.
+
+Adam Wiggins (00:54:03) - Something that certainly comes to mind for me
+is audio interfaces, which are maybe less of a hot thing right at this
+moment than they were a couple years ago. But I do feel like Siri and
+Amazon's Alexa are something that could potentially fit into this story,
+right? We talked about how terminal is like having a conversation with a
+computer. Well, these voice interfaces are actually having a
+conversation with the computer. How do you see those as fitting into the
+story?
+
+Adam Wiggins (00:54:29) - Or is that different because natural language
+is just fundamentally kind of a different branch in the user interface
+history of computing?
+
+Thomas Paul Mann (00:54:38) - Yeah, I think as you mentioned, they
+became quite prominent over the last couple of years on various devices,
+right, there were the standalone devices like the Amazon Echo, but then
+you also have things like Siri built into iOS initially, and nowadays
+also on the Mac. There's a certainly new way to interact with your
+computer via voice, which is interesting, but it's also I think very
+challenging. I think they come from a similar pattern, especially when
+we look back to the terminal, right? As you say, you really have a
+conversation.
+
+Thomas Paul Mann (00:55:10) - There might be a little bit more forgiving
+in a way that you don't need to specify directly a command. You can
+rather talk about prompts or intents like, oh, I want to buy something
+or tell me something about this. That is, I think, a big step forward to
+make it more forgiving. The hard part about it is that all I see is the
+feedback loop that you have. So you say something, but you don't really
+know exactly what you're getting back.
+
+Thomas Paul Mann (00:55:36) - And it's very hard to learn that where
+you're then falling back properly into certain patterns and try to
+figure out how you really need to communicate with the computer that
+they understand you, which I think is the tricky bit, which almost
+reminds me also a bit of the terminal where you also need to figure out
+how to talk to this computer because there is not that much help. We now
+have things like auto-completion there, but it's still like a little bit
+bumpy to use at the terminal. I think similar is on an audio.
+
+Thomas Paul Mann (00:56:05) - Whereas when I compare it to launches and
+command palettes, you have a really quick feedback loop because you
+enter something, you get suggestions that you're essentially filtering
+down to what you're looking for, and then you execute that. So it's very
+predictable, as you mentioned before, but it's also very intuitive.
+Whereas the audio is much more abstract and you don't really have a good
+grasp on what the computer can do for you. How does I recognize what
+you're saying, which I think is the main downside of it.
+
+Thomas Paul Mann (00:56:36) - On the flip side, there are huge use cases
+for it. I think things in the car where you basically have your hands
+and your concentration on something else. I think the input mechanism of
+voice is just super interesting for those kinds of things. But I find it
+hard to believe that this is how we're going to work professionally with
+computers because it's so different to what we're used to. But I might
+be a little bit old school here.
+
+Mark McGranaghan (00:57:02) - Yeah, this is a very interesting prompt.
+So I'll be honest that I was not and I'm not a fan of the original black
+box audio interfaces, so Siri and Amazon Echo. And it was for two
+reasons. One is they were totally black boxed and cloud connected and it
+felt like you were just putting an always on microphone in your home,
+which was always extremely suspicious to me. But also they were black
+box in the sense of you kind of didn't know what they could do or what
+they were thinking.
+
+Mark McGranaghan (00:57:28) - But now I'm thinking back to our big grid
+and it would be amazing if we made audio just one more column like
+keyboard shortcuts and command palettes. And if you had the same level
+of agency and visibility. So imagine if you opened up your launcher app
+and you started saying things and started narrowing down the commands
+and highlighting more brightly those that sounded closer to what you
+were actually talking about.
+
+Mark McGranaghan (00:57:53) - That would be a great way to get feedback
+and to be able to understand the full palette of options, if you will,
+for the command interface. And going back to our discussion about
+performance, it's interesting to think a little bit theoretically about
+the speed, if you will, of these different input methods. So typing is
+quite fast because it's very precise as well as having a high number of
+hits per second. Each cue hit is probably a couple of bytes, but you can
+do a lot in quick succession.
+
+Mark McGranaghan (00:58:20) - And voice, if you think about where it
+might be most useful, is probably cases where you have a relatively high
+number of bits to input and you can have a relatively high degree of
+confidence that you're going to get the right answer. Because as you
+were alluding to before, the feedback and follow up is a bit of a mess
+on voice. I had this in the car sometimes where I'm like, give me
+directions to the gas station. It's like calling mom. What now? What are
+you talking about?
+
+Mark McGranaghan (00:58:47) - But if you have a relatively long input
+and you have a high degree of confidence that it's going to get the
+right answer, then voice is a pretty good input. As well as there are
+just cases where for whatever reason you don't want to be using your
+hands, like you're in the car or you're doing something else with your
+hands or you're out walking. So I think it could be interesting. The
+avenue that seems most promising to me is integrating it as a
+complementary mechanism versus a wholly different vertical silo.
+
+Adam Wiggins (00:59:12) - I certainly love multimodal interfaces and the
+idea of using hands but voice, but also keyboard touch screens and
+putting all of those together rather than just picking one or the other,
+picking the thing that's right for the moment, whether it's because of
+discoverability, whether it's because of performance. Yes, I can
+certainly speak to needing to, wishing to operate a computing device
+when I barely even have one hand free, which is often the case when
+you've got a young child. So there's a lot of value there.
+
+Adam Wiggins (00:59:43) - But it's funny, Thomas, because I think the
+way you described it, I was originally thinking, okay, sort of naturally
+voice naturally does slot in a bit with more like being like a command
+line because it is a language, literal conversation with the computer as
+opposed
+
+Adam Wiggins (01:00:04) - Okay. Well, earlier you said the key things
+about these launchers and command pallets is that they're predictable
+and they're fast, and those are the two things that voice are not. And
+some of that is probably weaknesses in our current ability of voice
+recognition that will get better with time, but some of it is
+fundamental to the format, right? You speak more slowly than you type,
+at least for a power user.
+
+Adam Wiggins (01:00:26) - And the feedback mechanism, it can vary, you
+know, maybe if you have something on screen, you can get some degree of
+live feedback, but of course, especially if it's something that is not a
+screen oriented thing and you need to wait for the computer to talk back
+to you. That's a very slow feedback loop. And then certainly the
+predictability of it probably at a minimum because we tend to lean
+towards natural language in those. We're not using a direct example of a
+command line, right?
+
+Adam Wiggins (01:00:53) - If I was actually speaking Unix commands or
+something of that nature, you know, would that be more precise or more
+predictable? I'm not sure.
+
+Mark McGranaghan (01:01:01) - Well, now I'm thinking of really leaning
+into this. So in the same way that you can set a keyboard shortcut, what
+if you could set a voice shortcut for stuff that you use all the time?
+You know, for example, something I would love to have is a timer. And
+what if I just said T five minutes and I could say that when I say T,
+that means set a timer versus like Siri, yes, Mark, Siri set a timer for
+five minutes. I'm not going to do that.
+
+Mark McGranaghan (01:01:23) - I'm also wondering now, and this ties back
+to our platform conversation a little bit, it might just as of in the
+last few weeks become viable to do this outside of the big behemoths
+like Microsoft and Google and Apple because of these open source voice
+recognition algorithms. So I think it would be a very interesting test
+of the extensions platform. Because can you run those programs within
+it? And the answer is probably no, not right now, but it'd be an
+interesting test case.
+
+Thomas Paul Mann (01:01:51) - That would be indeed interesting. I like
+the idea of the shortcuts, right? Because I think one of the problems
+that also Adam touched based on is like voice is just fundamentally
+slower. And when we talk about productivity, we want to make everything
+as fast as possible. But like what Mark mentioned with the T five
+minutes, like interpreting that as a timer, that's I think an
+interesting twist to it, right? Where you tweak it to your personal
+needs because you oftentimes don't need it to be very general, right?
+
+Thomas Paul Mann (01:02:21) - You have a few specific use cases that you
+know about. I sometimes turn my lights off in the evening and use voice
+commands for that. It's a low friction task. You don't really care if
+they turn off immediately or like a few seconds later. Similar with the
+timer, you probably also don't care much about it. You just want to have
+the timer to cook your pasta or whatever. I think those are really good
+use cases for it where it doesn't really matter the performance. That is
+I think conflicting with the work environment where performance really
+matters.
+
+Thomas Paul Mann (01:02:52) - Which is why we still use the keyboard,
+every professional user, right? Types as fast as they can to put in
+input into the computer.
+
+Mark McGranaghan (01:03:01) - Yeah, and this is also where I think it's
+fruitful to try to be pretty precise and scientific about speed. Because
+there's speed in like bits of information per second. In which case I
+think voice is actually quite fast. I think it's faster than typing.
+Don't quote me on that. We have to type it out and say it out. But I
+think it is. But there's also a higher startup time for voice, kind of
+higher overhead. And then there's the sort of loss factor that you get
+from the reduced precision of voice.
+
+Mark McGranaghan (01:03:26) - But again, that suggests ways in which you
+can use and mitigate these different technologies. You could introduce
+voice short codes and you can target areas that have low loss from
+reduced accuracy. I think just kind of going in there with a little bit
+of precision is going to be helpful.
+
+Adam Wiggins (01:03:41) - Yeah, you could even imagine shaping the voice
+commands around what the computer can understand more precisely. There's
+a whole, I'll pull in my interest in dog training here, which is the
+ability for, even though dogs have very good hearing. Their ability to
+make out things in the frequency range that humans use to speak is
+actually not very good. And so it's much easier to speak to them in a
+way they can understand if you use single syllable words that have
+really kind of sharp consonants.
+
+Adam Wiggins (01:04:10) - So this is why it's good to name your dog
+something like Spot or Spark versus something like Tobias. I don't know.
+Because that really sharp single syllable is more likely. And yeah,
+maybe there's a version like that, not unlike the Unix commands of your
+that would sort of cut out, you know, unnecessary vowels just to make
+sure they could get down to three or four letters.
+
+Adam Wiggins (01:04:33) - Maybe there's a version of this that we get
+some kind of voice shorthand for speaking to our computer that's more
+efficient, more comprehensible to the computer, easier to recognize,
+easier to disambiguate in a noisy setting or from different speakers.
+But that we learn to adapt our speech a little bit to add this new kind
+of input to our repertoire of ways we can interface to our devices.
+
+Thomas Paul Mann (01:04:57) - Yeah.
+
+Mark McGranaghan (01:04:58) - And this is a bit of an aside, but this
+also reminds me of some noodling we had done in the lab around
+probabilistic interfaces. And so the context there was touch. And touch,
+like voice, is not precise. You know, you've got these big fat fingers
+that cover like a thousand pixels. You know, you've got oil on your
+hands and the cats walking across your screen. It's a mess.
+
+Mark McGranaghan (01:05:18) - But our intuition was that you could use
+the domain that you're in to more reasonably interpret touch input. So,
+for example, if you get touch input that's like right where the person
+usually puts their non-writing hand, there's a higher probability that
+it's palm and it should be rejected. And if there's a finger that goes
+down right next to the OK button, there's a higher probability that's a
+real press.
+
+Mark McGranaghan (01:05:41) - And we were thinking, is there a way to
+incorporate this all probabilistically so you don't need to have these
+super deterministic yes-no answers until the very end of the pipeline?
+That is, when you're spitting out an application action and not when
+you're spitting out an X, Y coordinate on the screen. And I could
+imagine something similar with voice, where they know that this user,
+the overwhelming thing that they use Alexa for is setting a timer.
+
+Mark McGranaghan (01:06:03) - So when you hear anything that sounds like
+T or timer or time or set or clock, there's like a 99% chance that the
+timer is just called that. And I find the intuition that if you consider
+the problem holistically like that, these messier inputs could become
+actually quite useful and precise.
+
+Thomas Paul Mann (01:06:18) - I think an interesting angle to that is
+just the channel awareness of context that you're in. I think the timing
+during the day when you execute those commands might matter. If you're
+on a computer, what you use at the moment, they have different
+functionality. I think all of those things are not used in the most
+efficient way yet. There are things like serious suggestions, which try
+to be smart and it sometimes work, it doesn't work. I think a huge
+problem with that is accuracy.
+
+Thomas Paul Mann (01:06:48) - If those things are too often false,
+you're losing trust in them and you no longer rely on them, which is
+unfortunate. But I think context awareness can basically speed things
+up, right? Because a computer can make certain predictions that you're
+very most likely doing this. when you say something that's similar to
+the timer, it's probably going to be timer because you said it 100 times
+before.
+
+Mark McGranaghan (01:07:12) - Yeah. And by the way, the thing with these
+probabilistic systems is the hard part is getting the label data. The
+statistics to spit out an answer, giving label data and input is quite
+elementary. palette and the menu and the help, they're always going to
+like set timer, whatever it is, or increase font size or open file to do
+dot txt. And then they can use that as sort of labeled inputs into the
+probability calculator to determine what are you likely to be saying.
+
+Mark McGranaghan (01:07:42) - Whereas if you're Alexa or Siri or
+starting from scratch, it's kind of hard to assume anything. Maybe they
+know that people ask for music or timers a lot, but what can you really
+assume whereas you have all this labeled data from your unified table of
+operations for your app or your OS or whatever. It's quite good for
+bootstrapping.
+
+Adam Wiggins (01:07:58) - Well, Thomas, I don't know how soon we're
+going to get Raycast on the phone responding to probabilistic voice
+inputs. So perhaps more nearer term, what kind of things are on your
+roadmap? What's your team working on at the moment?
+
+Thomas Paul Mann (01:08:10) - Yeah, definitely. So yeah, we're a little
+bit more grounded, I think, in the here and the yet, what we work on. We
+have a very active community that basically sends us suggestions,
+feature requests, bucket boards, day in and day out. And we read all of
+them, enter all of them, and basically those things form very often our
+roadmap. So we're working on a lot of the features that throughout the
+year people popped up and want to address them throughout the rest of
+the year. And then starting with bigger efforts, like the So it's next
+year.
+
+Thomas Paul Mann (01:08:40) - I think that's an interesting thing when
+you have this community of very loyal users, they want to push the
+system with them. And we are very happy about that and trying to make as
+much as possible happen with the small team that we are.
+
+Adam Wiggins (01:08:55) - Yeah, like being able to spend some time on
+kind of directly addressing the most common feedback, just give the
+people what they want kind of thing. But also you also need some periods
+of time where you can focus on bigger things that maybe people wouldn't
+have known to ask for because they reflect your long-term vision or
+things you see, opportunities you see as the creator of the product that
+is thinking about at night and day more than any user or customer ever
+could. So I think it's healthy on a team to have some time devoted to
+each.
+
+Thomas Paul Mann (01:09:29) - Yeah, definitely. You want to strike a
+good balance there. I think it's one thing which is unique when you work
+with those developers together. They give you a lot of input and we
+really value that. And the least we can do is basically coming back as
+quick as possible with answers to this. Sometimes that is we're not
+going to do that, then we're also honest about it, but then we try to
+build as much as possible into the tool because at the end of the day,
+we're building the tool for other people, not only us.
+
+Thomas Paul Mann (01:09:58) - And then we get what we listen to and try
+to formulate our own opinions afterwards.
+
+Adam Wiggins (01:10:05) - Well, let's wrap it there. Thanks everyone for
+listening. If you have feedback, write us on Twitter at MuseAppHQ or via
+email, hello at MuseApp.com. And Thomas, thank you for continuing to
+push forward the world of launchers and command lines and doing things
+with keyboards here in 2022, because I feel like even though that may be
+something that have been part of computers from the beginning, I don't
+think we've taken that all the way to its termination.
+
+Thomas Paul Mann (01:10:36) - Thanks for having me. It was really fun
+being here and we're not going to stop working on the next world of
+keyboard navigation.
