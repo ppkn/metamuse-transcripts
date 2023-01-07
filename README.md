@@ -19,3 +19,7 @@ TL;DR there is an open issue to correct the auto-generated transcript for each e
 
 Detailed info for contributing can be found [here](CONTRIBUTING.md)
 
+## License
+[Reduct](https://reduct.video/) has very generously donated their resources to make the machine translation happen. Show them some love by attributing them if you use this in a project for something outside of personal use.
+
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
