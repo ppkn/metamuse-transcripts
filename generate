@@ -1,0 +1,11 @@
+#!/bin/bash
+docx_matches=(~/Downloads/$1\-*.docx)
+docx_name=`basename ${docx_matches[0]} .docx`
+
+pandoc -o plaintext/$docx_name.txt -t plain ${docx_matches[0]}
+
+json_matches=(~/Downloads/$1\-*.json)
+jq "del(.segments[].speaker_id, .segments[].tx_id, .segments[].media_id)" ${json_matches[0]} > audiotext/$docx_name.json
+
+cd docs
+./generate_html.rb ../plaintext/$docx_name.txt
