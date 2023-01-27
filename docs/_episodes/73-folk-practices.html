@@ -1,0 +1,799 @@
+---
+number: 73
+title: Folk practices
+layout: default
+---
+<h1>{{ page.title }}</h1>
+<a href="{{ site.baseurl }}/" class="back">Back</a>
+<div class="speaker-timestamp">Omar Rizwan (00:00:00)</div>
+<p>There are a lot of other projects that have very similar models to this Dynamicland database, but it definitely pushed me to think a lot more in terms of having state exposed by default, ambiently, and the value of being able to make little quick debugging tools that can piggyback on this global state. That was a super influential model on the way I think about programming and the way I think about debugging, this idea of being able to make really lightweight tools or jigs to help myself as I work.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:00:26)</div>
+<p>Hello and welcome to Metamuse. Muse is a tool for deep work on iPad and Mac. This podcast isn't about Muse, the product. It's about the small team and the big ideas behind it. I'm Adam Wiggins, here with my colleague, Mark McGranaghan.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:00:45)</div>
+<p>Hey, Adam.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:00:46)</div>
+<p>And we're joined today by Omar Rizwan.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:00:49)</div>
+<p>Hi.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:00:49)</div>
+<p>And Omar, I understand you have a collection of MetroCards.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:00:56)</div>
+<p>Yeah, I mean, I was just looking at this shelf above my desk, and it turns out I have this giant, basically the only thing on the shelf is this giant plastic pencil case that looks like a giant MetroCard. And so I think a lot of people do this, but I've just started this habit of just filling it every time I get a MetroCard or TransitCard from wherever I go. So now there's like, I don't know, there's a lot of cards in here. It's pretty full.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:01:20)</div>
+<p>So let's see, what must you have? It's certainly a Bay Area TransitCard, maybe, I don't know, an OysterCard from London or what, you know, does this reflect kind of like a travelogue of your places you've been?</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:01:31)</div>
+<p>Yeah, in a way. It's kind of a nice, I guess we can connect it to one of the themes, which is that there's like kind of an object for each place. There's an octopus card from Hong Kong. There's a card from Paris. It's sort of like instead of entries written down in a book, it's like I have these like little cards that I can kind of pull out and look at.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:01:50)</div>
+<p>Nice. And then it's sort of like, I like the idea of keeping it around because it implies you're going to be back. Right. That you're a globetrotting person of the world and you never know when you're going to need to whip out your Hong Kong TransitCard.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:02:05)</div>
+<p>I think there's also something like comical about the like very large MetroCard, like very large version of anything. It's like, you know, a prank we used to do in like middle school is if people left their laptop unattended, we would just go and make the mouse pointer really big and like not do anything else.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:02:25)</div>
+<p>And you are a independent researcher with a very diverse set of interests, lots of things that overlap with the niche interests that Mark and I and I think a lot of listeners have, including end user computing and embodied computing, file systems, vintage computing and so forth. But why don't you give us a little bit of a summary of some of the stuff you've worked on over the years and where your interests in the computing world lie.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:02:51)</div>
+<p>Yeah, I mean, so my background is mostly, you know, in programming. You know, I learned to program very early and I sort of got interested in like new ways to interact with computers. Like when I was a teenager, there was all this stuff on like building your own multi-touch table. And then I kind of got involved with Brett Victor's work at Dynamicland, but also did a bunch of other different projects kind of in that space.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:03:13)</div>
+<p>And just in general, I've always been interested in like different ways to interact with computing, both like future looking and also historical, like what are their operating systems that people have done? What are other interfaces that people have done? And so that's my background.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:03:29)</div>
+<p>And I feel like just looking down your portfolio the right way to describe your list of projects, your research provocations, perhaps they're quite varied, but they seem to have, in many cases, a sense of less of a like, here's a, I don't know, a library you're going to use or an application you're going to use and more of almost like an art project element of like, let me make you think a little bit here. For example, one kind of near the top, at least at the moment, is hijack your feed.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:03:56)</div>
+<p>And if I'm not mistaken, this was one you did together with Jason Yuan, is that right? Yeah. Who we've had on the podcast before as well. And yeah, I feel like that's as much asking questions about social media feeds and the place they fill in our life and how we can like take a little more control of our computing world.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:04:15)</div>
+<p>But then you've got, for example, tab FS, which mounts the open tabs in your browsers as files and lets you basically do the kinds of shell programmatic things that you can do with normal files, but with sort of your web browsing kind of history or current open topics. So I'm not sure how much, I mean, maybe, I don't know, tab FS is in quote unquote production and you have people using it for serious things.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:04:39)</div>
+<p>But as I look down this list, I feel like they're more of a, yeah, again, this just kind of like art project to make you think and question assumptions about the status quo and computing. Is that a correct conclusion to draw?</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:04:52)</div>
+<p>Yeah, I think that is a lot of them. And that's also, I think, a lot of what I do on Twitter or in my writing or whatever is sort of try to.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:05:00)</div>
+<p>Provoke people or come up with these really striking images. And I think, like, I'm often very skeptical when people sort of try to articulate this, like, philosophy of, like, what computing should be or, you know, explicit tenets of these are the things we want. I'm much more on the side of, like, we should have a few very striking, like, concrete examples of, like, things you might want to do or, like, interactions that are possible. And then those will kind of drive people in a certain direction.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:05:28)</div>
+<p>I think the project of yours, that was the first one I ever came across was Screenotate, which is essentially, it seems to combine a couple of your interests here, including provenance and OCR, but essentially is a screenshotting tool that makes it very easy to grab the text out. Now, I'm not sure how much the latest changes in macOS and iOS, where there's some of that built into the OS. Well, maybe we're even inspired by what you did there. But that is, well, it's a product. You can download it, you can pay for it.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:05:57)</div>
+<p>Presumably, you've been maintaining it for a while. So it's not pure research in the sense of...</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:06:01)</div>
+<p>Yeah. And I use it also, you know, all the time.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:06:03)</div>
+<p>Yeah. That's key. Yeah.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:06:04)</div>
+<p>Like, I've probably taken 30 or I've probably taken, like, 40,000 screenshots in it. So...</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:06:09)</div>
+<p>Wow. Yeah.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:06:12)</div>
+<p>And I think there is, with a lot of the projects you've mentioned, there's also this theme. And this gets this idea of folk practices a little bit. There's this theme of, like, this is very vague, but, like, connecting different universes in unexpected ways. Like, this idea of, like, there's your browser and your file system, and you jam them together. Or there's this, like, social media interface. And there's this idea of tasks or productivity, and you jam those together.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:06:35)</div>
+<p>Or even the dynamic land stuff, I think, has a little bit of this, like, there's the objects in your computer, and there's the objects in the real world. You kind of try to combine those in some way where you can use operations that you are familiar with on one and apply them to the other. And I think that also something that connects really well with people, because you're sort of familiar with both sides. And so you kind of immediately see the combination of them, and you're like, oh, this is really cool or really interesting.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:07:01)</div>
+<p>Or, like, I can quickly imagine how it would apply to my life in some useful way.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:07:06)</div>
+<p>So you have the anchor points of the two things that you're familiar with, and the novelty or the provocation or the picture of what could be comes from thinking about how those two would combine.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:07:19)</div>
+<p>Yeah.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:07:20)</div>
+<p>So our topic today is folk practices. And this is a term Marc and I use quite a bit here on the podcast and even on our team as we talk about ways to look what people do naturally with existing tools or existing features in a product that we or others are building, and then sort of extract from that what they're trying to do. And in many cases, you can even shape a product or a set of features or an operating system to embrace those practices.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:07:49)</div>
+<p>And I think Screen Notate, the project we just mentioned, is one good example of that, because the idea that, like, people sometimes complain, screenshot's full of text, this is so annoying, why not have the core text, so you're spending way more data to represent it, you can't reflow it or do other things you can do with the text. And to some extent, folk practices, I think, is a saying like, look, screenshots of text are really here to stay.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:08:14)</div>
+<p>Yeah.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:08:14)</div>
+<p>And there's a bunch of reasons why that might be. But just empirically, this is a thing people do, and they do a lot. And so maybe we should learn from that and find out how to kind of roll with it. Like if you can't beat them, join them, kind of thing, rather than kind of, you know, basically complain that you're not doing it right.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:08:32)</div>
+<p>Right. Or at the very least, you might not join them, but at least you should look at it and be like, okay, why do people do this, rather than lecturing people about, you know, you should do this other thing instead.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:08:43)</div>
+<p>We were at a conference together recently, and you did a little demo to the group, and this is called ScreenMatcher. Can you tell us about that one? Yeah.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:08:53)</div>
+<p>So this is a project that I've been working on a little bit this year. And basically the idea is it's this daemon, it's this app that sort of runs in the background of your Mac continuously, and it's constantly watching your screen, so like the screen on your computer. And so this ScreenMatcher, you can teach it to look for patterns on your screen. It's like you're taking a screenshot, like you drag out a region of your screen, and then you kind of feed that to ScreenMatcher, and it'll look for whatever you took a screenshot of from then on.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:09:20)</div>
+<p>So the example I usually give is like, you know, in the corner of every window on your Mac, there's these traffic lights to like close, minimize, and maximize. And so you can teach ScreenMatcher to look for that pattern. It'll find it wherever it sees it, and then you can draw on top of it. So effectively what that means is you can add like a fourth or fifth button to every window on your computer. But you know, there's a lot of other things you can do once you have this kind of continuous screen matching mechanic.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:09:44)</div>
+<p>Like you can kind of just like add buttons or draw or scribble on anything on your machine and have these like automatic behaviors. So the other example I usually give is like with the ScreenMatcher, you can build like an alarm clock without traditional programming, because what you do is you'd be like, okay, I want to wake up at 7am tomorrow.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:10:00)</div>
+<p>So you'd set the clock of your computer into the future. You'd be like, pretend it's 7 a.m. tomorrow. And then you tell ScreenMatcher, hey, when you see this pattern in the top right corner of the screen, when you see it say 7 a.m., I want you to play a sound and wake me up. So there's this idea of like you can extend the functionality of your computer in a very natural way. And there's this idea that you can do things that you might normally take like programming or scripting or whatever just by pointing at your screen.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:10:25)</div>
+<p>It reminds me a bit, especially that example you gave there of an if this, then that or a Zapier or something like that, which do have this element of automation without real programming. But those really rely on APIs. So you need to have an API integration that that means that the vendor or the creator of whatever the thing is, in this case, would be the clock or the operating system or whatever, needs to supply an API that you can consume through some probably fairly complicated procedure.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:10:53)</div>
+<p>And I feel like a hypothesis or a concept that's embedded in this project and maybe some of your others is to sort of say, well, look, it's nice to have APIs on things, but realistically, the output from computers is pixels on a screen. So if we want to give some kind of end user programming capability, basic automation, rather than trying to browbeat program creators into creating an API, just sort of give up and maybe give up isn't the right way to put it, embrace that folk practice or embrace that reality that that GUI interface exists.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:11:29)</div>
+<p>And by the way, computer vision is really good now, and so something like recognizing the widgets in the corner of your window or a clock value is actually relatively straightforward. So therefore, maybe that should or could be the sort of an everyday API. Yeah, I think that's right that there's this instead of this closed world of whatever is available via API, you have this open world, much like when you take a screenshot, you know, you can take a screenshot not just of things that are selectable text, but of anything on your screen.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:11:58)</div>
+<p>Similarly here, you know, you can automate based on anything on your screen, not just things that happen to be an API. But I think there's also kind of like an interaction argument for this, which is that even if you have all the APIs available, from the end user point of view, it's like, okay, I want to do this automation, I guess I have to like read the like dictionary of APIs and like figure out what the right APIs are. Or if they're even available, I have to figure out like what kind of input and output they take.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:12:23)</div>
+<p>And that has always felt to me like very disconnected from the actual experience of using the computer. Like, you know, if I want to make an alarm clock, why can't I like point at the actual clock on my screen, instead of figuring out that there's a clock API that's like based on the same source as the clock on the screen? Like, it feels like you should be able to point at the actual things that you're already familiar with, instead of having some like API dictionary that's completely separate that feels like this like skeleton of the app.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:12:50)</div>
+<p>Yeah, I really like it. And Omar, so is the idea with ScreenMatcher that you can both sort of scrape the screen for input, but then also do, I guess we call output of typing things and clicking things, moving the mouse around?</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:13:04)</div>
+<p>I think so. You know, the current prototype, basically what you can do is you can just add buttons. So you like can search for a pattern, then you can be like, every time you see this pattern, I want you to draw these extra scribbles next to it. And then when I click one of these scribbles, I want you to run a bash command.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:13:16)</div>
+<p>I see, I see.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:13:17)</div>
+<p>But I think it's very easy to imagine being able to have other responses to seeing things on the screen, whether that's like playing a sound.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:13:24)</div>
+<p>Yeah.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:13:25)</div>
+<p>I mean, someone proposed to me that you should have all the effects happen by drawing stuff on the screen and then ScreenMatcher would like match those things and do the effect directly. I don't know if that makes sense, but it has like a very nice like kind of aesthetic elegance to it.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:13:40)</div>
+<p>Yeah. I also kind of like the baseline of anything that you can do as a human, whether that's things you can see or inputs you can do with the keyboard or the mouse, you can script.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:13:50)</div>
+<p>Yeah.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:13:51)</div>
+<p>That seems like a reasonable invariant.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:13:53)</div>
+<p>Yeah.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:13:53)</div>
+<p>And the story sets a floor on automation. So no matter how hard the programmers try to deny you the ability to have agency over your own environment, you can't take away my eyes and my hands.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:14:04)</div>
+<p>Right.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:14:04)</div>
+<p>And therefore, if I can control those things, you know, basically I have scriptability of them. Right.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:14:09)</div>
+<p>Right. You could imagine if you wanted something that could deal with keyboard shortcuts, like let's say every time I hit like control nine, I want the computer to send an email or something. You can imagine a plugin that actually maps your keyboard into like a larger like screen space. So you have your actual screen, but you can actually have a bigger virtual screen and you like map your keyboard into it. And there's like a virtual keyboard on the virtual screen that lights up when you hit keys.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:14:33)</div>
+<p>And so you can sort of imagine mapping any sensor or actuator if you go the other way into screen space. And that would kind of make this like an entire programming system in a sense, because you would be able to address any kind of IO, which again, I don't know if that's useful, but it's kind of like a cute idea. And I think this is like an interesting programming model and it is in some ways a lot clearer than traditional programming, because like if it goes wrong, you're like, okay, it didn't match the right things. Like that's why it didn't work.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:14:57)</div>
+<p>Well, almost by definition, everything is what you are seeing.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:15:01)</div>
+<p>Right.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:15:01)</div>
+<p>Computer is also seeing. And then what you are responding to that with by drawing something else or playing a sound or something like that.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:15:09)</div>
+<p>Right.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:15:10)</div>
+<p>I mean, that is one of the things that makes programming so incredibly difficult. It's obviously very abstract, but the connection between this set of symbols and the thing that's actually going to happen as a result of it is so disconnected.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:15:22)</div>
+<p>Right.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:15:22)</div>
+<p>And that's what makes kind of professional programming, professional software engineering, particularly really complex systems. You just have to model so much of what the computer is doing in your mind. That's almost the hard part of it as opposed to just expressing concepts and symbols, for example.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:15:37)</div>
+<p>Right. And here, I think you sort of by default get this ambient awareness of what the computer is doing. Which I think is something that's also true of dynamic land to some extent. I mean, I think that's something that's true of a lot of interesting programming systems is like you don't have to go in and inspect what the computer is doing because your program didn't work. You just like look at the screen and you're like, oh, that's why that didn't work.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:15:56)</div>
+<p>Even though it may be a little wasteful from a sort of traditional programming point of view to be running all this state through the screen.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:16:03)</div>
+<p>Mark, your earlier point about they can't take away your eyes and your hands reminded me of another dimension of folk practice, which is what's usually referred to as the analog hole. When you're talking about DRM, digital rights management, where, okay, we're going to give you this music. You can download this music and listen to it, but you can't copy it, for example. But in the end, you can always basically just like take a recording device and hold it up to the speaker.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:16:27)</div>
+<p>And that's the analog hole that no matter what you do with the computer and screenshots are, I think, an even more pervasive and useful version of that. Actually happened to me just the other day. I think someone sent me a PDF. It was a financial document. I can't remember what. But I needed to copy paste something small out of it. And I don't know, the PDF viewer said something like, oh, you have to have the master password to unlock the whatever to copy paste. And I'm like, cool, man.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:16:53)</div>
+<p>And then took a screenshot and immediately used the OCR to just like copy paste it out. Right. There's a version of this in the Kindle app and whatever. And they're just working so hard at it. But like in the end, it's like I'm looking at the words on my screen in a really worst case scenario. I could just manually type them out if I wanted to. Right. And so it feels like a lack of acknowledgement of the reality of I'm looking at it and part of what my computer can do is manipulate images.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:17:20)</div>
+<p>So how in the world are you really going to stop me or anyone else? It feels like a weird denial of reality. Now talking about the debugging visibility that you might get from, for example, an onscreen keyboard or just the fact that all of these things are flowing in the, let's say, the concept that's suggested by this project. That you sort of see everything and that visibility is going to make it more approachable and more comprehensible to sort of non-professional software engineers, let's say.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:17:50)</div>
+<p>I noticed one of the notes or prompts you put into our little shared notes document here was whether visual programming was overrated. I feel like those are related. The appeal of visual programming is if you can see everything, it becomes more approachable and more comprehensible. But it seems like you have some feelings on that subject.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:18:09)</div>
+<p>You know, I think there is a notion of visual programming, which is like you put together blocks on the screen or like boxes and wires. And I think this, like, especially blocks, I think that doesn't really have that much to do with the kind of visual programming that's suggested by the screen matcher. Because in the screen matcher, the visual things are actually the data. You know, you're like, these are the patterns that the system is matching and then these are the things I want you to produce.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:18:33)</div>
+<p>Whereas in block-based visual programming, the visual elements are like actually like if statements and for loops and stuff like that. It's actually like not normal programming, but I think they're actually fairly different in the model of what is visual. And I think it's a very easy thing to fall into that, like, there's a lot of people who don't like normal programming with a text editor and a compiler and whatever. But that doesn't mean that they all have the same conception of what programming should be.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:18:59)</div>
+<p>Like, I think there are actually many different ideas that are not necessarily compatible. And I think visual programming is maybe too broad, at least it's maybe too broad a category to be useful. And we should like talk more specifically about what kind of visual representation you want for programs. And I think the other criticisms of visual programming that I think about a lot are, one, it's just like really annoying to manipulate visual elements on your screen with a mouse compared to manipulating text with a keyboard.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:19:31)</div>
+<p>Like you have this sort of bottleneck of like, oh, I have to drag things one at a time. I have to select things from a toolbox. I think this is part of the appeal of the dynamic lens stuff is it's much, much easier to manipulate things on a table than it is to manipulate individual items on your screen. That might be better on an iPad or a multi-touch display. I think there's like a lot of interesting work that somebody could do there. But I think that is actually a very serious problem.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:19:53)</div>
+<p>And I still don't see it talked about enough that it's just like the ergonomics of visual programming are not that great compared to the ergonomics.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:19:59) -</div>
+<p></p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:20:02) -</div>
+<p></p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:21:43) -</div>
+<p></p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:21:44)</div>
+<p>like, oh, I wish I could print off like a graph, this graph of the state of my program. And there are people on Twitter who do this regularly and have a good practice. But like, is that visual programming? I mean, it's not like normal, you know, text programming with like string print off, but it's also not block based programming. Like it's somewhere in the middle.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:22:15)</div>
+<p>And I think there are a lot of things that are in that space of like, you can't do it on a traditional, you know, stack where you're running in a terminal and run your compiler, running your program. But it's also not like you threw all that stuff out and you have this sort of you're dragging and dropping workflow.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:22:32)</div>
+<p>Wolf and Yulia to the engineers on our team recently were debugging a pretty complex, essentially there's an in-memory graph structure that's used and things were getting complicated once we added linked cards within the app and they ended up dumping it out, I think to JSON. And then there's a tool on the, say it's called Mermaid, maybe that does a nice diagram visualization.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:22:52)</div>
+<p>Right.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:22:53)</div>
+<p>And it was actually like fun to look at. It was really interesting. Especially when you watch some of the debugging, it's like picking through these like monospace font logs and scrolling through the IDE. But these visualizations were compelling and easier to understand maybe for someone who is not someone deep in the problem space like they were. So yeah, there's a lot to be said for that.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:23:13)</div>
+<p>I will point listeners to the classic Metamuse episode with Maggie Appleton, where we talked about visual programming and she makes this exact point that that is a label that is very broad. It covers a lot of things. There's some good taxonomies. But her basic concept for it, an argument for visual programming is a thing to explore more is you start not from, hey, how do we make the whole program out of, I don't know, boxes and arrows, but you start from how do we just make more visual parts of programs we already have today?</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:23:41)</div>
+<p>Things like the DOM Inspector in the browser is one possible example. And you could imagine those as we get better and better at visualizing both running programs and at rest programs and code paths and get branches and whatever else that there's an accumulation of making a more accessible programming environment because it's more visible and more tangible and can be interpreted in different ways other than just reading the code. It's sort of mentally running it in your head. And that for her is kind of the argument for visual programming.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:24:14)</div>
+<p>This is making me wonder if there's powerful primitives we could add to help with leveraging the visual channel for debugging. So it seems obvious, but actually having the standard of a single stream of monospace font logs is huge. We can't take that for granted. Yeah. But we would be totally down in the water if we didn't have that as programmers. Right. But you can also imagine some other really simple basic printers that could help a lot.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:24:40)</div>
+<p>So one would be in the browser environment, you get this thing where if you log like JSON or a JavaScript object, it sort of gives you a nice rendering of it where it automatically expands or contracts when you click it and then kind of...</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:25:52)</div>
+<p>would also say, and I think this gets at the point you're making also, that I think another probably unheralded issue with this whole space of visual programming, visual debugging, is just it's just like very, very hard engineering. It's like you have to reinvent a lot of stuff that you get for free if you're using normal text, if you want to do visual stuff. You have to invent your own editors, you have to invent your own consoles, you have to come up with interactions that work, you have to make sure they compose correctly. It's like quite hard.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:26:20)</div>
+<p>Yeah, and it feels like there could be a little bit of an easier layer there. One example I'll give is I've often wanted to have terminal output that was in the, what's it called, end curses style. That means that instead of each line coming one after the other and scrolling, it sort of replaces the screen as if you're using a command line program. But oh my goodness, that's a whole ordeal in a lot of languages. Like you're looking at these weird libraries and you're emitting these crazy control characters and it's a whole mess.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:26:44)</div>
+<p>It feels like it could be a lot easier.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:26:46)</div>
+<p>Yeah, and I think about that, I thought about that specific example before too where I think the nature of terminal output where you're like logging one line at a time, it's like if you have a program like a game engine or like a web browser or something that's live, that's interactive, and you're console logging, like you just end up with this flood of console logs, right?</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:27:06)</div>
+<p>Like a lot of the time the logging model you actually want is to see this live view of whatever the variables in the system are and then they just like update immediately rather than this sort of log that just like will spill out because you're running at 30 frames per second or 60 frames per second or whatever. And I think the terminal makes it really hard, like you have to do a lot of extra work to get to that point just because the model is not really compatible with interactive programs.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:27:27)</div>
+<p>One term we've touched on here a couple of times and I think is known to the audience of the podcast here is end user programming, but Omar would be very curious to hear what does that mean to you or what's interesting about that space. So I think the audience here has heard Mark and I and hard take on it, but I'm guessing you have a different perspective.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:27:46)</div>
+<p>Yeah, it's funny because I was kind of asking this question on Twitter a few months ago that there's something I think a lot of people are very attracted to about the idea of end user programming. Like it's almost this like charismatic concept of like, oh if only end users could program their computers. I mean I think in a sense everything end users do on the computer is end user programming. Like programming is sort of an artificial concept, right?</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:28:09)</div>
+<p>Like if you're using Microsoft Word or Microsoft Excel or PowerPoint, like these are all kind of like subsets of programming in a sense. And so it's one way to think about it is it's just a question of like giving even more agency to the computer user than they have right now. I mean I think part of my thoughts about this come from this dynamic land context where I think like end user programming was very deeply built into the system. Like the idea is if you showed up at a dynamic land a lot of the way in which you use the system is by programming it.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:28:42)</div>
+<p>And so you know if you had a community of people built around a dynamic land they would all know how to program in the same way that we all know how to read and write. Some of that comes from the technical architecture of the system but I think some of it would also just come from the social expectations.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:28:54)</div>
+<p>Like it's not particularly easy to learn how to read or write but we do it because it's useful to operate in the society that we live in and I think part of the premise of dynamic land was that you would kind of construct a context in which that was true for programming.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:29:07)</div>
+<p>Maybe it would be worth taking a sidebar here to talk about dynamic land for a minute. I know that's a topic of interest to a lot of our audience. I know you were there for a while. I think it was pretty formative experience in your career to date. Maybe you could briefly just tell us for those that don't know what is that and what did you do there and what were the kind of core concepts?</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:29:25)</div>
+<p>Sure so this was or is research lab started by Brett Victor in Oakland, California. Basically the idea of dynamic land was to build this physical computer where like there was literally a room or an office that was the dynamic land lab and you would show up and you would have these pieces of paper and each piece of paper was basically a computer program. And the idea is you would have a computer where you interact with the computer by manipulating real objects.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:30:00)</div>
+<p>So, you have this completely different mode of interacting with computer. And I think importantly, this is a programmable computer.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:30:11)</div>
+<p>So not only do you use the computer by moving real objects around, by manipulating objects, by pointing objects at each other, you also program the computer in this way. So you could actually do almost everything you wanted to.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:30:23)</div>
+<p>You could build software systems without needing to bring your laptop, without needing to bring your smartphone. So it's this completely kind of self-contained end-to-end system in which you could do computational work.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:30:34)</div>
+<p>And notably, I think everybody in the room is kind of in the same computer. If you do have a, I don't know, a hackathon and everyone brings their laptop, they have their own discrete systems. So I guess we're all connected to the internet or you could connect to a shared server or something like that. But here, if the room is the computer and we're all in it, moving the elements of that computational environment around, we're all participating in the same computing environment.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:31:01)</div>
+<p>Do I understand that correctly?</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:31:02)</div>
+<p>That's right. So basically, well, number one, there's the physical element of like, you could see what other people are doing and kind of like go over their shoulder or work with them in that way. But there's also, if you and I were around the table programming, each programming our things, there'd be shared memory between our programs. So we could kind of insert things or respond to things in the same sort of room scale database.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:31:22)</div>
+<p>And what were some of your either contributions on that project or maybe takeaways, especially now if you're onto other things, like what were some of the core ideas that you carried with you?</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:31:33)</div>
+<p>Yeah, I mean, I think this idea of programmability is very, very important.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:31:37)</div>
+<p>And I think that's something that's missing in a lot of other physical computing work, whether it's AR VR or also projection mapped or a lot of that kind of stuff, I think is from more of a traditional HCI or game development or whatever perspective. In some ways, the dynamic land system was less advanced in any particular respect, like less advanced in computer vision, less advanced programming layers.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:32:00)</div>
+<p>But combined, it was a novel system because you could program it and because it was a platform on which you could do lots of different physical computing stuff. So I think the programmability is very important. I think that the sort of dynamic database architecture was really interesting and hasn't been written about that much. It actually has a lot of close relatives in, I think, a lot of what people are trying to do now with state management on the web or with distributed systems.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:32:27)</div>
+<p>There are a lot of other projects that I think have very similar models to this dynamic land database. But it definitely pushed me to think a lot more in terms of having state exposed by default ambiently kind of like in the screen matcher and the value of being able to make like little quick debugging tools that can piggyback on this global state. So if you're writing a program in dynamic and it's an idiomatic program, you would not use like variables and functions. You would kind of run everything through this database.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:32:57)</div>
+<p>And so other programs could also respond to the state of your program just by querying the database and everything would react live. So that was like a super influential model on the way I think about programming and the way I think about debugging, this idea of being able to make really lightweight tools or jigs to help myself as I were.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:33:15)</div>
+<p>And this idea of the value of like ambient state by default.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:33:19)</div>
+<p>Jigs and visual ambient state, both of those concepts where I could see the thread into something like screen matcher, even though that's on the screen, because one takeaway you could have from the, I think it's what we usually talk about is embodied computing, physical objects you're interacting with, the physical world you're getting away from the glowing rectangles that fundamentally are the core part of the computing experience that we all know and mostly love.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:33:45)</div>
+<p>And instead replacing that with something that's more physical and in the world and humane, as Brad Victor puts it in one of his talks. But maybe for you, the takeaway was less the embodied computing and more some of those things like ambient visualization of state or programmability, or you also have interest in the embodied computing, I think in some of your RFID work. So I don't know, maybe you're just sort of following those threads in different projects.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:34:11)</div>
+<p>Yeah, so the RFID work, we're just getting underway, but we're excited about that. I mean, I think there are a lot of directions. Like I think this is a huge open space. And that was also one of the takeaways is that there's just a lot to do. And there are a lot of problems with the dynamic land system. And there are a lot of areas where I think we were technically constrained, where I think there's a lot of interesting things to do. And so I think the RFID stuff is kind of getting at that in some ways.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:34:36)</div>
+<p>Yeah, and that reminds me of something that I thought was really important about dynamic land, and this relates to the end user programming discussion. When people talk about end user programming, they usually focus on how you program. Here's the IDE, here's the programming language, here's how you debug. What people care a lot more about is what you're programming. And everyone cares about their physical environment. So that alone almost immediately makes dynamic land a huge win.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:35:01)</div>
+<p>And I remember I walked into the room and just had this sudden urge to start programming stuff. And I go, well, when this door opens and I want, when this light turns on, I want to do this and that. It was a very natural urge. And by the way, one of the emerging end user programming use cases like the smart home, the automated home, again, it's because people care about certain things.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:35:21)</div>
+<p>And if you look at the history of successful end user programming environments, Unix, spreadsheets, SQL, MySpace, game scripting, A, these are all environments that people have absolutely fanatical interest about. That's basically the center of their lives or one of the most important things in their lives. And B, it is an enormous pain to program these. You think about SQL, for example, like you're going to send a single string to your production database that who knows what it does and it's going to give you back a result.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:35:49)</div>
+<p>Or like spreadsheets where entire pillars of the financial economy are contained in like a 500 character formula in a single cell. Highly questionable programming language design. But people get through it because they really care about the data.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:36:04)</div>
+<p>Yeah.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:36:05)</div>
+<p>I mean, this is one of the lessons.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:36:06)</div>
+<p>And if you talk to Maggie, this is one of the lessons in the Bonnie Nardi book where she does like ethnography of end user programming is it's like, yeah, Excel just has these formulas which are just like this. It's literally a text-based syntax that you type in. People will learn it because they want to learn it.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:36:23)</div>
+<p>And so this is also maybe another sense in which the visual programming is not quite, at least it's not like the only thing you need.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:36:29)</div>
+<p>Where it's like, yeah, you can make it as easy as you want, but people are willing to learn even if it's really hard in the same way people are willing to learn to rewrite or whatever. Like if there's value in it, I think people will be willing to learn it even if it's not pedagogically the best thing ever.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:36:42)</div>
+<p>This does to my mind imply a sort of lesson to aspiring end user programming environment designers, which you got to start with the environment, I think. It's so tempting to start with, I want to design a new end user programming language or IDE. It's just, it's really hard to get traction beyond like the educational and academic use case. You can't just do something or create something that people want to program. Like, okay, here's an example, Minecraft.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:37:07)</div>
+<p>The way you program Minecraft is like you place these little blocks around in 3D space, then you make your character walk around and poke them. Like what? But it's one of the most important programming languages in the world right now because people love that stuff, right? So you got to create an environment that people care about.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:37:21)</div>
+<p>Another one I like to point to as an end user programming success is Flash because it did start from this kind of animator use case. You start from these animations and then you kind of use the dynamic medium of computing and you go from static animations into something that become sort of games or full programs. Omar, I noticed you had some thoughts on software as a cultural thing, perhaps connected to that programming environment.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:37:47)</div>
+<p>Yeah.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:37:48)</div>
+<p>Well, first I think something that's interesting about Flash and about Excel is this idea that it's a useful system even if you don't get into the programming part.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:37:57)</div>
+<p>You know, like in Excel you can just write a list and that's a useful thing. Like you don't have to write formulas to feel like you're being effective with Excel.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:38:04)</div>
+<p>And in fact, if you do want to write formulas, it's a relatively, you can just do that in one cell. It's a relatively quick ramp up and the same is true of Flash, right?</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:38:10)</div>
+<p>Like you can just use it as a drawing app and then you can be like, okay, maybe I want to animate a little bit.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:38:15)</div>
+<p>So I think that is like an interesting common element between those.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:38:18)</div>
+<p>But yeah, I mean, I was thinking about this.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:38:20)</div>
+<p>You know, I'm sure you all remember when the iPhone came out and it didn't support Flash. There was this whole sort of like Steve Jobs wrote the letter about how Flash is terrible for battery and you can do everything in it on HTML5 anyway and so we're not going to support it.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:38:38)</div>
+<p>And of course, I think, you know, what is it 12 years later? It's just like that was completely false. Like people don't do in HTML5 the stuff they were doing in Flash.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:38:46)</div>
+<p>And in fact, there was an entire sort of Flash cultural ecosystem of like Newgrounds and Miniclip and all these other places and people making Flash games and like being inspired by the Flash games other people have made that was completely destroyed. Like it just does not exist anymore, kind of partly as a result of that. And so I was reading about this and some people were like, well, how can we make a new Flash?</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:39:06)</div>
+<p>Like we can make an animation IDE. And I think I see the appeal of that, but I also think even if you made exactly the same IDE and it did exactly the same things without that sort of culture community ecosystem of people playing Flash games that they like and being like, I want to make a game like that.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:39:23)</div>
+<p>I think it's hard to replicate the same thing.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:39:26)</div>
+<p>Like I think the IDE and the technology is only part of it.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:39:30)</div>
+<p>I don't know if you all know Max Kraminski on Twitter. They had a good comment that I think you see this in a lot of programming systems or even just like creative systems.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:39:40)</div>
+<p>People I think they were talking about Twine games.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:39:43)</div>
+<p>Like Twine is this sort of like interactive fiction creation tool.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:39:47)</div>
+<p>And they were like, you know, my students are not that excited about it.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:39:49)</div>
+<p>And then I show them some Twine games and then they get more excited about it because people want to feel like they're participating in this conversation with other people who have been working in the same medium as them.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:39:58)</div>
+<p>They want to feel like there's like a canon.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:40:03)</div>
+<p>And so I think, you know, when you're thinking about making programming tools or creative tools, that's a really important thing to think about is like, you know, if somebody looks at this, are they able to participate in some like medium or conversation or canon of things that are already out there?</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:40:19)</div>
+<p>Do you think that that's something you can design for in creating a tool? Or is culture something that emerges kind of not quite serendipitously, but at some point in the future? And what people want to do? And to your point about the, you could make a Flash-style animation authoring environment for the web or that outputs to quote unquote HTML5. Probably people have, but something about the way the world is now, probably you wouldn't get that same kernel that then develops into that Flash game culture that was so influential.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:40:56)</div>
+<p>I mean, I think you can fail to do it. Like, I think a lot of HTML5 stuff has this property where, you know, like you can output stuff, but it's just a webpage like any other webpage. Like it's sort of not constrained enough to constitute a medium in a way. Like, I think you probably want something that has a more distinctive aesthetic. And then that kind of creates a distinct medium where people can look at examples in that medium.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:41:21)</div>
+<p>Yeah, I think something that supercharges this social propagation is being able to take some discrete artifact and share it with a friend or they can copy it or fork it. So the classic example is a spreadsheet. And critically, when you copy a spreadsheet, you get both the output and the source code. And I think early web pages had this property where back then, when I was a kid, the HTML was... JavaScript and CSS was readable. So you could copy the source and paste it and then edit it yourself.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:41:49)</div>
+<p>But then to your point about these newer programs, it's like this minified compiled, you're basically hopeless. So you can see the output, like that's cool. You have no agency to copy and fork it yourself.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:41:58)</div>
+<p>Right. Or I mean, with iPhone apps is another example. It's like, yeah, you can't copy an iPhone. You could make an iPhone app, but it's a huge process. And like, compared to, you know, making a web page back in the day where you just like make a HTML file and you put it online somewhere. It's very easy to see yourself as a peer of the other people who are making stuff.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:42:19)</div>
+<p>I'm going to reiterate this, because I think it's so important. If you look at the successful end user programming environments, they all propagate this way. We gave the example of spreadsheets. The way SQL works in practice, it's not like someone reads the SQL manual and then sits down at their company database and types out a query. It's Mark has a query and he shares the query and then Adam varies the query.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:42:40)</div>
+<p>Right.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:42:40)</div>
+<p>And then Henry varies the query from that. It's like this tree of life of SQL queries propagated socially.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:42:46)</div>
+<p>Yeah. And that almost tells you that it's something that's genuinely useful and that's immediately useful. Whereas it's like, I feel like one of the problems with traditional programming is you have to learn how to program. Like you have to go and like take a class or like work through a book or whatever. Whereas with spreadsheets or SQL or whatever, you know, you can just copy and modify and like you'll have something that works. And it's like a few lines.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:43:07)</div>
+<p>Something I was thinking about with this screen matcher thing that I think is interesting in this general area is this idea of like trying to unlock like latent demand. So there was a system called buttons in the early nineties. There's like paper about a, it's sort of like, I think of it as a predecessor to the screen matcher work where they basically added this capability to this OS where you could stick buttons on the screen and make them do things. And that was the only extension capability. Like it was not like a plugin system.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:43:35)</div>
+<p>It was like, we just added this to the screen matcher. It was like, we just added this concept of buttons. Maybe you could like record things into them or whatever. But it's really interesting reading the reports of how that affected end users thinking. Because now once you have this concept of buttons, you can be like, oh, I wish there was a button to do this. Like you can, I wish there was a button to do that. Like because before you didn't have any way to articulate the fact that you wanted to automate something.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:43:58)</div>
+<p>But now that you have this like actually fairly weak concept, there's sort of all this demand for like, oh, I wish my computer could do this. I wish my computer do that. That you can now talk about in terms of buttons. And so I think that's one of the hopes for the screen matcher stuff is that, you know, having this automation capability brings out some kind of latent demand for things that people might already have been thinking about in an undirected way. But now there's like a sort of means or a concrete way to talk about it.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:44:24)</div>
+<p>Yeah, as we think about the input and output of computers and that our ability to automate things, which exactly as you said earlier is just an extension of our agency, our general ability to control computers. And so we want to enhance that for people hopefully rather than reducing it or having it stay the same. And so, you know, here we're talking about the IO of pixels. I know another one that you think about here is FFI is an underrated kind of problem area. Can you tell us about that?</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:44:52)</div>
+<p>Yeah, I mean, I think partly it comes out of the sort of frustration with like, if you get a programming language, whether it's Ruby or Haskell or JavaScript or whatever, it's usually really easy to take in text and output text.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:45:08)</div>
+<p>And so I think in practice, you know, at... that are not available in whatever programming language you're working in. And so I think in practice, you know, at least I personally am like, oh, I can't use like most programming languages because I actually like want to do things that are not just like computing things and taking in text and putting out text.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:45:42)</div>
+<p>Computing Fibonacci numbers.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:45:44)</div>
+<p>Yeah.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:45:46)</div>
+<p>I've been in the position a number of times through my life where I either encourage people to learn a program because I think they'll find it interesting that they will have the right kind of mind for it, maybe because career potential for them. So I've seen folks go through this over the years.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:45:59)</div>
+<p>I actually think there was kind of a golden age, at least web wise in the era of PHP, HTML and FTP, where there was this very simple mapping from files they would save out of a text editor and those mapped pretty one to one to URLs and the concept of query parameters would come in and you could start to sprinkle in dynamism through the little PHP tags. Right. So someone of mine went through a just kind of an intro, wasn't even a boot camp, it was more just kind of like a little intro to programming course.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:46:28)</div>
+<p>And I was really curious what they were going to show them. And it turned out they did Python at the console, which means, of course, that they're teaching these folks how to like boot up the, you know, these are like most people not using Windows. They're loading a DOS console and installing Python to run Python programs so they can use, you know, essentially printf and get from the console. And this actually is a totally foreign interface because most of the folks taking this class have never done that kind of terminal input output.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:46:57)</div>
+<p>Right.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:46:58)</div>
+<p>But it's just such a good fundamental way to get started, exactly to your point of take some text in, do something with it, and then spit it back out compared to what you would actually want to do is let me make an app on my phone or let me make a web page or, yeah, let me like take an image and like, you know, turn it into a cat meme. But that stuff is just like a wild tool chain of dependencies and moving parts and who wants to even get into that?</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:47:25)</div>
+<p>That's just not the place to start. Right.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:47:26)</div>
+<p>Even though those are the things you would actually want to do as a person that's dabbling in programming.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:47:32)</div>
+<p>Right. Like there's this weird tension between like, okay, what's good pedagogy? What's simpler? And like, what is the actual well-motivated thing? And then, I mean, this is very similar to our discussion earlier where it's like the things that are well-motivated are the things that you're already seeing around you. Like I go to web pages all the time. I use apps on my phone.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:47:48)</div>
+<p>But those things are so complicated that you kind of end up having to learn by doing these things that you've never seen before and like not having any sense of why this is interesting or important.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:47:59)</div>
+<p>Yeah, it's probably unreasonable to hope for, but certainly a feature I would dream of is something where the average person with their phone would have the option to, I don't know, long press an app on their home screen. And one of the options down at the bottom is like, make a copy of this and edit its functionality.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:48:14)</div>
+<p>Right. Right. And I think those are important at a cultural level to like communicate to people that this is the thing you can do.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:48:21)</div>
+<p>Yeah, this connects to a very long-running theme on the podcast around the systems problem. And I usually describe that problem as something like you want to be able to write a program in an end-user accessible language that has full capabilities into the system and that is also fast and secure. But because of the way that we structured our systems to date, we've kind of boxed ourselves out of that.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:48:47)</div>
+<p>And indeed, if you want to write in an appropriately high-level and safe language, there's almost no way to avoid reduced capabilities and high latency and inability to be promoted up into the proper application or even proper OS level.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:49:05)</div>
+<p>So I've long advocated that a very important research project that we or someone else should undertake is trying to squash all these layers down so you would have a programming environment that has direct access to all the critical I.O. So visual, sound, keyboard, mouse, pen, it all comes in in a very direct and clean way. So, for example, the touch screen should not give you just X, Y coordinates. It should be a full heat map of the pressure sensor at every point on the touch screen.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:49:36)</div>
+<p>But it just comes in as a simple two-dimensional range, your programming language. So it's not some weird API that you need to go through. And likewise with graphics, oh my goodness, graphics. I don't know if you all have tried to do graphics programming from scratch these days. It used to be they had a pixel buffer and you would put an RGB value into a pixel buffer and it would show up on your screen. Now you've got to instantiate the driver and initiate the shader compiler and compiler and give it the vectors and start the pipe. It's incredible.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:50:03)</div>
+<p>Yeah, I tried this and then I gave up because I spent like three days straight trying to install Vulkan. If you look at the Vulkan example to draw a triangle, it's literally like 3,000 lines of C code.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:50:15)</div>
+<p>It's absolutely wild. I had a professor in college who, his doctoral thesis was about this concept he called Exokernel. And he wrote a paper called Exterminate All Operating System Abstractions, which you might want to check out if you haven't seen it, which is basically the title communicates the message of the paper, which is that like operating system should like- That sounds up my alley. Yeah.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:50:36)</div>
+<p>It needs to like multiplex, like the different programs can use the same resources, but it shouldn't like turn your disk into files or turn your touchpad into XY coordinates. It should just like give you access to the underlying buffer and like do the minimum needed to multiplex that. And then if programs want a higher level interface, they can just like link that in.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:50:52)</div>
+<p>Like that should be the program's responsibility and not the operating systems.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:50:55)</div>
+<p>Yeah.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:50:56)</div>
+<p>I think it's partly because of the kind of projects I'm interested in. You know, a lot of my projects are about pushing some system to the limit of its capability, like the web browser or the operating system, even the dynamic line stuff, it's like, you know, we had to talk to web cameras and we had to talk to projectors, you know, and like a lot of that stuff, if you want to do it well, you have to go to a pretty low system level.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:51:17)</div>
+<p>You want to like get these buffers and not have to copy them, all this other stuff.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:51:21)</div>
+<p>And so I think from that experience, my default these days is usually like, well, I guess if I'm in a browser, I'm going to write in JavaScript. And if I'm on like the desktop, if I'm in Unix, I'm going to write in C because then I know I have all the capabilities. Whereas if I write in anything else, it's like, okay, I have this third party like bindings and maybe they're not up to date, or maybe they don't expose the right things. Like it's just a mess. The only guarantee you get is if you like write in these super low level languages.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:51:46)</div>
+<p>Yeah. Now it's also the case that if you write in one of these lower level languages currently, you might have an intractable amount of work to get up to the full capability and richness of an app. So, for example, if you wanted to write like an iPhone app on equivalent hardware up from C, it would be an enormous undertaking.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:52:03)</div>
+<p>That to me points to a really fundamental issue here, which is that a lot of programming language, I don't want to call it design, but like programming language bringing into existence and programming environment bringing into existence is an economic problem and not a technical design problem. The amount of resources you need to actually build out one of these new programming environments is enormous. You know, I don't know, maybe it's a billion dollars, maybe it's 10 billion dollars, maybe it's 100 million. You know, it's a lot of zeros, right?</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:52:28)</div>
+<p>And so the only way that you can realistically get there is to have some multi-step strategy. And I feel like not enough people are kind of considering that. Because like I wish, you know, we had this ideal programming environment where you could do X, Y, and Z, but you got to have some way to start. And by the way, I think a lot of it goes through like toys, games, fun stuff, you know, playing around with your home programming environment.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:52:51)</div>
+<p>That's kind of a way to get some initial bootstrapping and resources, which is why I keep advocating for doing experiments in that direction. We could probably do a whole podcast about economic thinking at some point, but I just wanted to mention that I think you've got to consider this resources and incentives and motivations angle.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:53:07)</div>
+<p>Yeah, probably you all have seen, you know, there's the whole famous essay about Unix, Worse is Better. But I think one of the interesting arguments, I don't think it's quite an argument against it, but it's pretty close, is, you know, the reason Unix succeeded was not because worse is better, it's because AT&T gave it out for free to universities. And that meant that everybody learned it in their university. And then it was kind of like the model operating system that you would base your computer around.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:53:31)</div>
+<p>I'm thinking of the meme, first-time founders think about products, second-time founders think about distribution, and in this case, Unix had the distribution.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:53:39)</div>
+<p>And that is kind of like a weird artifact of like 1950s, like US antitrust. Like it doesn't really, I mean, I don't know if there's really a lesson there, but like, yeah, I think like thinking too much about the technical construction is maybe a mistake compared to thinking about the economics.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:53:54)</div>
+<p>Yeah. And this reminds me, I recently saw someone asking on Twitter, why don't more programming languages have this nice property? And I think the property was there's a small number of primitives orthogonally applied to many problems, which— Oh, I saw this.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:54:09)</div>
+<p>I think that was Patrick DeBroy, maybe, yeah.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:54:12)</div>
+<p>Okay, nice. Yeah, we'll link the tweet in the show notes. And by the way, it's a thing that I've advocated for many times on the podcast, it's very nice. But the correct observation was that this basically never appears in practical industrial programming languages. And my thought on that was that, well, unfortunately, as we've discussed on this podcast, the success of programming language is not determined by their design quality. It's primarily a matter of what they're programming against and the economic resources behind it.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:54:39)</div>
+<p>So why did JavaScript succeed? Has basically nothing to do with the programming language design and everything to do with it was the scripting language for the browser, which is incredibly important.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:54:47)</div>
+<p>Right.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:54:47)</div>
+<p>You could have basically done anything there, I think, and it would have been enormously successful.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:54:50)</div>
+<p>Right.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:54:51)</div>
+<p>And so the reason why we don't have these nice properties in programming languages is because they're very hard. You have to constantly fight against entropy and accidentally bad designs and give it enough time, you know, basically no one can do it. And so you just have these high-entropy programming language designs out there, basically by accident, I would argue.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:55:07)</div>
+<p>Yeah, I remember making this joke a few years ago that, you know, imagine if we all sat down around a table and we're like racking our brains, we were like, why has Objective-C been so successful in the market? Like, what did they do in it that made people want to adopt it so much? And it's like, obviously, it's because of the iPhone. And it's like really nothing to do with the programming language design other than like what made Apple willing to adopt it. Right.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:55:28)</div>
+<p>And there I would say that the programming kind of stack for the Apple world, especially now with Swift and Xcode and certainly all the APIs and stuff that's there, is one of the better ones that capture some of the qualities of using kind of a, in this case, it's a native language that's sort of fast and you're not going through some abstraction layer to get to the capabilities of the platform.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:55:53)</div>
+<p>But at the same time, Apple provides just a huge number of APIs that are relatively high level for doing all the various things you might want to do, both hardware-wise, but just sort of capabilities of the system. But yeah, you want to talk about economic incentives. Well, okay, it's that the App Store and Apple's cut of that and the huge success of apps on this platform just means that there is great incentive to, or there's a lot of money to sort of make it be successful.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:56:21)</div>
+<p>And also kind of coincidentally, Apple really cares about design and craft and put a lot of effort into making it pretty good as programming environments go. But it could have been that you had this incredibly successful platform. They needed to make a programming environment for it, and it was not a company that cared about that stuff. And then you would end up with something that's just much more random. So it's sort of not a well-designed programming language in a way.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:56:46)</div>
+<p>It's not a sort of like a fitness trait in any particular way other than for, I don't know, programming language, you know, design nerds.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:56:56)</div>
+<p>Yeah, I mean, I think the Apple stack is, I mean, most of my background was in web programming. I've done a little bit of stuff on the Apple platforms, you know, with the screenshot stuff and with other things, partly just because that's what you have to do.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:57:08)</div>
+<p>Like, you know, if you want to be taking monitoring your screen or seeing what's underneath the screenshot, you know, you better be writing in Objective-C. You don't really have a choice, or Swift.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:57:17)</div>
+<p>But I think if you have a web programming background and you haven't looked at the Apple stuff, I would definitely recommend it because it is like a very, just from a cultural point of view, it is like just a very different ecosystem.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:57:28)</div>
+<p>It's like actually designed in a way where, you know, there's one company that built the ID, that built the language, that built the APIs, and they can kind of unilaterally make changes.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:57:36)</div>
+<p>I don't think it's all good, but it's like, it's different and it's interesting.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:57:40)</div>
+<p>Omar, I'm looking at our shared notion doc and you've written Wiggly computer. What does that mean?</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:57:46)</div>
+<p>Yeah, it's a good question. I feel like I'm trying to figure that out too. But like a lot of things on the computer are like these buttons and toolbars and commands that you run. And they're very much like you hit a button. It's this very discreet way of interacting with the computer.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:58:02)</div>
+<p>And so I think there's a question of how can we make computer systems that are Wiggly, where instead of these discreet actions, you kind of continuously move things, like the motion that you do as a human where you're like dragging something around or pointing out something or like wiggling something to highlight it, like how can that motion be carried through into the computer and into the application?</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:58:24)</div>
+<p>And like, what are interactions that work like that instead of interactions that work like you're tapping or clicking something or hitting a key on your keyboard?</p>
+
+<div class="speaker-timestamp">Omar Rizwan (00:58:31)</div>
+<p>I don't have like a super well thought out philosophy of this, but I do think that that's whenever I encounter things like that, it feels really nice. And I think there's actually a lot of power there in terms of like, you can simplify in your computer system by not having a lot of options and buttons and functions and just sort of trying to carry through human movement.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:58:53)</div>
+<p>I'm reminded, Mark, of your probabilistic gesture input system where the system is sort of simultaneously guessing which gestures you're starting and assigning probabilities, which there is some amount of in touch systems. So some of that's built into iPad and what have you where it's sort of a particular finger down could resolve into a pinch or a drag or something, something else. And it doesn't quite decide which one it's going to be until you're a little ways in.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:59:19)</div>
+<p>But I think you had a version of this which goes even beyond like a simple heuristic of, okay, it's two things until that second finger comes down within 100 milliseconds and instead is much more of a fuzzy guess that eventually resolves and maybe even post hoc rewrites, which you're seeing visually to match what it now has decided you have done.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:59:39)</div>
+<p>Yeah, I think there's a lot to that. And by the way, it would interact very well with this visualization of programming state idea that we've been talking about. You can imagine some little corners up in the top of your screen that appear and get brighter and dim, you know, that has like a two finger gesture or that double click gesture according to what you're doing. And also, by the way, these could be parameterized and end user adjustable.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (01:00:00)</div>
+<p>My belief is that basically any user-impacting parameter in the code should be user-adjustable on a slider. So two that already are typically are font size and key repeat speed. So when you hold down a key on your keyboard, it eventually starts repeating. And the delay until the repeat and the repeat rate is in good environments, it's configurable. In the best environments, you can hold down a key and then drag the slider back and forth and see how fast it's going.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (01:00:25)</div>
+<p>That's cool.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (01:00:26)</div>
+<p>Until you get it right. And I think that's how all UI should work. At least at the developer level. Something that we often try to do with Muse is we have a debug menu and there's some parameter like, you know, ink curve delineation variable or whatever. And instead of hard-coding that into the code and asking a developer, oh, you know, I think the curve is too curvy, can you make it less curvy? That should just be a slider. Maybe there's a detent, which we think is the current correct value or the default value.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (01:00:53)</div>
+<p>But then you could be drawing with one hand and sliding around this variable with the other. And immediately seeing how it reacts.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (01:01:00)</div>
+<p>Yeah, I really like that probabilistic gesture. I was actually thinking about something similar too. Because right now, basically, there's a gesture recognition layer and then there's the actual programs that respond to the gestures. But if you had a sort of end-to-end program that could do the gesture recognition and then generate a probability distribution and then run the program on the entire probability distribution, and then you wouldn't have to resolve anything the program does until you're done with the gesture.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (01:01:24)</div>
+<p>I don't know if it would be useful or anything, but I think it would be cool to see. You sort of see these overlays of different universes and then they kind of fade in and out as you move your finger. I mean, I thought about this a little bit in the dynamic line stuff of like, well, a lot of recognition systems are probabilistic. Like you're not totally sure what you're seeing. So maybe you can kind of have this superposition of different things you recognize and what the effects of those are, and then you wouldn't have to resolve them until the end.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (01:01:47)</div>
+<p>Legally. Now, one thing we mentioned earlier, but haven't talked about much is your project tabfs. And this is something where you essentially use a FUSE file system to mount the open tabs in your browser as folders that you can then browse through and do programmatic operations on them. Now, that's interesting because that ties a little bit back to that we talked about the Unix kind of everything or the Unix philosophy and kind of text as input output pipes. But of course, another piece of the universe philosophy is everything is a file.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (01:02:18)</div>
+<p>And yet we do live in this world that is more kind of increasingly with mobile platforms, files or just kind of mobile and cloud basically means files are on their way out. How do you think about files and particularly in the context of this tabfs project? Do you think of that as something where you want more of your system to be controllable through files? Or do you see that, I don't know, files are more of a retro computing thing in the same category as a Game Boy emulator?</p>
+
+<div class="speaker-timestamp">Omar Rizwan (01:02:47)</div>
+<p>Yeah, that's a good question. It feels somewhere in the middle to me. Like, I don't have like a deep attachment to files as like the interface of the future or anything. But I do think that there is at least like files are objects and like you have operations that you can do to them. Like you can copy them, you can move them around, you can cat them, you can look at them in Finder, you can look at them in Emacs, you know, you can grep them, you can watch them and do things when they change.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (01:03:13)</div>
+<p>I think with the web, without that, there's nothing like that on the web. Like you kind of have to build everything from scratch. And so mapping things into files is a step up from what we have now, even though I'm not like 100% committed to files as an interface.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (01:03:26)</div>
+<p>Yeah, for me, that agency that you get from these very, I guess, uniform operations, which is you can always move it, you can always delete it, and you can always duplicate it. And duplication is nice for backups. I'm a big fan of, I think we talked a little bit earlier about the iteration process, whether it's Git branch or something that's more like a, you know, copy paste to kind of like riff on a few different variations of an idea or thing that you're working on.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (01:03:55)</div>
+<p>Duplicate has that capability where I can say, okay, I want to try something out, but I want to be able to return to my current state. And I just know in the old school world of files, you know, I close the word processor, I copy my file doc to my file to doc or my file experiment doc. I open that file and I know I can do stuff to it and I know it won't touch the other one.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (01:04:20)</div>
+<p>And that's something that's often missing in cloud services, for example, where it's like, okay, I want to do this big operation to like reorganize my email or something like that, but I'm not sure if it's going to get messed up. So can I just snapshot the current state? But like, no, there's no concept of that.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (01:04:36)</div>
+<p>That's a good point.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (01:04:37)</div>
+<p>It's some database somewhere, I guess some DBA who's not me and works for a company that I've never met could potentially do that, but it's just not within my control as a user.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (01:04:46)</div>
+<p>Right. Like there's no like Omar.gmail file that I can like duplicate.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (01:04:50)</div>
+<p>Yeah.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (01:04:50)</div>
+<p>Yeah, and this is sadly actually one of the dying folk practices. So especially in games, they used to save the state of the game often as a SQLite database. And then often the game files was compiled code plus images. So there were two ways you can like basically go in and poke at your game. One is you can look at the SQLite save file and read it or even write to it. So you can like find the row that's like your sword and like increase attack by 1000 or whatever. So you could also go in and edit the images.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (01:05:23)</div>
+<p>So people would do all kinds of stuff like, for example, if you had trees in your game and it was</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (01:05:27)</div>
+<p>Christmas time, you could turn it into a Christmas tree so that you would be in this Christmas wonderland for your game. All kinds of stuff that people used to do when you could go in there and poke at your files.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (01:05:35)</div>
+<p>Yeah, and it's like even if you have a cloud service and it has a little pseudo file system and you can do things like that, you don't necessarily know that you can do things like that. Whereas not everybody knows how to use the file system, but if you know how to use the file system, your knowledge will generalize to anything, any application that uses the file system. So there's an element of like are the operations available, but there's also an element of do users know about the operations, which I think is also important.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (01:06:02)</div>
+<p>Yeah, I think the simple mental model of files, which on one hand I think files and file management is one of the things that confuse, let's say, non-power users, but basically average people with computers. I think that and like Windows and the difference between like minimizing a window versus like closing an application, these kinds of distinctions.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (01:06:25)</div>
+<p>And so I think that was a reason why both mobile and cloud essentially getting rid of the idea of closing an application or managing files or worrying about your hard drive or backing up your hard drive, that stuff was just tough for non kind of power users or computer professionals.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (01:06:42)</div>
+<p>But for someone who did go a layer deeper and understood the basic mental model, it was very simple and easy to understand that it didn't matter if it was a Photoshop file or a spreadsheet or a text file or whatever, the duplicating, moving, renaming, deleting is kind of always the same. And once you grasp that simple set of operations, it feels very empowering.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (01:07:07)</div>
+<p>Yeah.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (01:07:09)</div>
+<p>Well, maybe as a place to end, I'd love to hear what projects are on the horizon for you. Where are your interests drifting to next?</p>
+
+<div class="speaker-timestamp">Omar Rizwan (01:07:17)</div>
+<p>Yeah, I mean, there's a bunch of different stuff I feel like I have queued up at the moment. There's the screen matcher work. I mean, I think with a lot of these projects, it's like more of a question of like getting it to the point where we can at least publish something and like get people excited about it. Because I think there is like a huge, even with Tab FS, you know, there's a lot more that could be done on top of that, I think. And I have a lot of things written there that this would be cool to do, that would be cool to do.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (01:07:41)</div>
+<p>But yeah, so like getting some of those things released, you know, looking at some of the physical computing stuff, RFID stuff, but, you know, I'm always on the lookout for interesting projects to do also.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (01:07:54)</div>
+<p>It does beg the question is what for you is finished in the sense of one, ready for release, and then two, the degree to which these are things you're going to maintain or extend or improve over time versus, you know, when I think of a pure research, you know, like an ink and switch piece, we rarely build on kind of the prototype because the point was to publish about it, have the discussion, but then a future project, even that's going to research on the same kind of area, you might start from scratch or you just might start in a different place.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (01:08:27)</div>
+<p>The goal is not working software to maintain over time.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (01:08:30)</div>
+<p>Yeah, I mean, I think it varies and it also varies with the project. You know, the screen is working software and I use it regularly. I mean, I think often the way I put the goal is like, I would like to get it to the point where I think that people reading it will understand the point that I'm trying to make.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (01:08:46)</div>
+<p>And I think, you know, that implies a certain level of polish, that implies a certain level of interesting examples or demos that may imply people should be able to download it and try it, but it doesn't necessarily imply that it needs to be a fully working product or that I'll maintain it.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (01:09:01)</div>
+<p>Well, and certainly that would also say that the storytelling or explanation or demo, whatever it is, is equally important, if not more so than the software itself.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (01:09:13)</div>
+<p>I sometimes make a joke that I write a lot of these projects as an excuse to write the readme for the project, which is basically like an essay.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (01:09:22)</div>
+<p>That makes sense. And in some cases, I guess it depends on exactly how much is conveyed through the project, through a simple video, through installing it yourself, through a screenshot, how much longer description is needed. But we had Jeffrey Lidd and Max Schoenig on recently talking about their InconSwitch project. They basically said, you know, we spent longer, I think, on the writing and the trying to understand what we learned from doing this weird thing.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (01:09:50)</div>
+<p>And then of course writing itself is a whole other giant production process, making something comprehensible and deciding on the terminology and all that sort of thing.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (01:10:00)</div>
+<p>Yeah. Well, Omar, your projects have definitely had a big impact on me. You've gotten some very interesting messages across, and I think that's the case for a lot of people who follow your work. So I'm really looking forward to what you come up with next.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (01:10:10)</div>
+<p>Well, let's wrap it there. Thanks, everyone, for listening. If you have feedback, write us on Twitter, @MuseAppHQ, or via email, hello@museapp.com. And Omar, thanks for challenging us and inspiring us with your combinations of unexpected things.</p>
+
+<div class="speaker-timestamp">Omar Rizwan (01:10:29)</div>
+<p>Thanks for having me on. Thanks, Mark. Thanks, Adam. </p>
+
