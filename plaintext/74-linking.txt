@@ -1,0 +1,1113 @@
+Mark McGranaghan (00:00:00) - It's very common that you want three
+views. You want a view which is temporal. What is the team working on
+this week? You want a view that's personal. What is Mark thinking about
+right now? What does he want to have at hand? And then there's a view
+which is subject-based. What is the design of our sync system? And what
+link cards allow you to do is to have any given thing appear in each of
+those. [
+
+Adam Wiggins (00:00:27) - "The Last of Us"] Hello and welcome to
+Metamuse.
+
+Adam Wiggins (00:00:29) - Muse is a tool for deep work on iPad and Mac.
+But this podcast isn't about Muse the product. It's about the small team
+and the big ideas behind it. I'm Adam Wiggins, here with my colleague
+Mark McGranaghan.
+
+Mark McGranaghan (00:00:41) - Hey, Adam.
+
+Adam Wiggins (00:00:42) - So a little bit of news from the Muse product
+side. We recently released a feature called Linked Cards to everyone and
+been quite surprised and happy with how useful these have proven to be.
+It was in beta through the backstage pass with our pro members for a few
+months, but it just seems so valuable to everyone. We were really happy
+to launch it broadly. And that's especially true within the Muse for
+Teams context. So we'll talk about that. We'll talk about the feature
+and our approach, and we'll talk about some of these use cases that
+we've seen.
+
+Adam Wiggins (00:01:12) - But of course, we have to start with something
+philosophical and historical to set the context. So our topic today is
+linking. So what comes to mind for you, Mark, when you hear that word?
+
+Mark McGranaghan (00:01:26) - That's quite a rich set of precedents
+there. Perhaps the very first thing one thinks of is web links.
+Although, as we'll discuss, I don't think that's actually the closest
+case of prior art. Also comes to mind things like citations, but really
+dialing into linked cards, things like file system sim links, wiki
+backlinks, the knowledge graphs that you see in emerging knowledge
+management tools, things like that.
+
+Adam Wiggins (00:01:51) - To me, it's an interesting topic because it is
+such a simple idea. It almost seems too simple. It's just one place or
+work or piece of information is referencing another place or work or
+piece of information. But I think there is something very powerful
+emerges from that.
+
+Adam Wiggins (00:02:07) - I would say a lot of the current sort of tools
+for thought, excitement or revolution, if you want to call it that, in
+the productivity software space is largely built on the foundation of
+linking as a core idea, as well as the web, obviously hypertext and
+hyperlinks, even though there's much more to the web than just the link
+that actually is a very foundational piece. And so it's quite surprising
+what emerges from that. Yeah, you mentioned citations, be fun maybe to
+talk about that a little bit more towards the end.
+
+Adam Wiggins (00:02:38) - But I think that was sort of the original
+thing is, I don't know, a thousand years ago, someone is writing a book
+and they want to reference another book, or I don't know, maybe it's not
+even a book, maybe it's a scroll and you just name it, right? You say
+the item titled this, maybe you give the author and when it was written
+as a way to kind of hopefully unambiguously refer to this thing.
+
+Adam Wiggins (00:02:59) - And that implies that there's this greater
+canon of human knowledge, which indeed at some point we started to have
+a, if not unified, perhaps today you can say it's a fairly unified sort
+of sphere of books and videos and newspaper articles and all that sort
+of thing. But yeah, you go back in history and just the simple idea of
+referencing another work that is not the one that you're currently
+reading implies the larger sphere. And indeed then you start to build
+this network and these connections and this implication of shared
+knowledge.
+
+Adam Wiggins (00:03:36) - So again, this one simple idea, just this
+simple reference of naming another thing from that comes this sort of
+giant hive mind of all human knowledge.
+
+Mark McGranaghan (00:03:46) - Yeah, and I think it's really important
+because as we've said many times on the podcast, knowledge is built up
+in this web. It's not a linear process. It's this very messy, organic,
+incremental growth of knowledge that happens over time. And so things
+like citations help reify that.
+
+Adam Wiggins (00:04:07) - And another piece of prior art that's more on
+the technical side is file systems. I think this was probably my first
+exposure to thinking about links as a first-class item. So in Unix, you
+have what's called the symlink or symbolic link. There's also hard
+links, but we don't necessarily need to get into those. On Windows, you
+have something that are called shortcuts, which I think a lot of people
+are familiar with just because there's a little kind of icon that
+indicates this isn't the original item. This is a pointer to that item.
+
+Adam Wiggins (00:04:34) - And you often get that on your desktop, for
+example. The application doesn't live on your desktop. You just have a,
+well, a shortcut to it there for convenience. And Mac also has something
+called aliases, although of course it's also Unix under the hood so you
+can use some links. But regardless, this idea of linking things together
+where a file lives in one place in the hierarchical file system or on
+your hard drive, but you can reference it from another.
+
+Adam Wiggins (00:04:58) - That was my first real exposure to both the
+power of it, but also sometimes can be confusing, or you can tie
+yourself in knots with circular references or whatever.
+
+Mark McGranaghan (00:05:07) - I think file systems are interesting
+because they illustrate—there's actually several very different types of
+things that can be happening here, so let me enumerate them quickly. You
+can have a duplicate to make a copy of a file. You can potentially
+recognize that those copies are the same object by content addressing.
+You can have a transparent pointer. This would be like a SimLink or an
+alias, where the second object is of a different type. It has a little
+arrow thing.
+
+Mark McGranaghan (00:05:36) - It's not a regular icon, but when you, for
+example, double-click on it, it opens the underlying pointed-to object.
+So it's mostly but not entirely behaving like the original thing. And
+then you can have something that behaves exactly like the original
+thing. If you have the Recents tab in your Finder, for example, the
+items there are the same thing as when you go to the original location
+in your file system. It's kind of a different view. So when we talk
+about linking, we're often referring to one or more of these things.
+
+Mark McGranaghan (00:06:02) - I think it's useful to remember that
+there's several quite different types of objects in play. And maybe one
+more that we could add is the actual file system path. This would be
+comparable to the HTTPS URL on the web. Some people call that a link.
+Some people would say the actual underlying hyperlink thing where you
+click is the link. These are all different objects and they have
+different properties.
+
+Adam Wiggins (00:06:22) - Yeah, I would call the path, what I would
+think of the generic term for that is the address. And within a single
+computer system, you usually have this unified way to reference a file,
+which is the path. Actually, I would argue citations are probably a
+place where, you know, there's all these standards, right? You use the
+Chicago Manual of Style or the, this or that. Basically how you do a
+citation is actually there's a lot of specific formats. And if you mess
+it up, you get in trouble, especially if you're trying to do a
+scientific work.
+
+Adam Wiggins (00:06:51) - But coming to the web, one of the things that
+is so miraculous there is this totally unified address format. So
+there's links and links have appeared in a lot of different computer
+software, but maybe what makes the worldwide web and HTML work so well
+is that you have the URL, the uniform resource locator. And that that
+single address is unique in the world, or at least in the internet,
+which is, you know, our digital world.
+
+Adam Wiggins (00:07:18) - And that now that that is deployed so
+universally, both in desktop browser software, but also in APIs and so
+on, that if you just have that one string and you don't need to
+understand how it works or how to break the pieces apart, or even
+certainly how the packets are routed, you just know that your web
+request is going to go to where you need it to, which is again, quite a
+miraculous, not just technical achievement or design achievement, but
+really kind of human coordination achievement that we've managed to
+deploy that. to deploy that so widely?
+
+Adam Wiggins (00:07:48) - And probably as long as we're talking about
+the history here worth just giving a quick nod to, you know, links and
+well, the term hyperlink was coined by Ted Nelson, who's quite good at
+these rather bombastic terms. Transclusion is another one of his that we
+use with some frequency, but then also, for example, Doug Engelbart's
+NLS included a version of linking hypercard. A lot of that is about how
+cards link together. And so there's the web, I think rolls together or
+is the best manifestation of all of those ideas.
+
+Adam Wiggins (00:08:18) - But the history of it in computing goes back
+to really to almost the beginning. Now, another invention from the
+1990s, sort of piggybacking on the web is the Wiki, right? And I think
+Ward Cunningham was the inventor of the first of these. And it certainly
+builds on that foundation of the web.
+
+Adam Wiggins (00:08:37) - But one thing it brought that's unique is what
+I usually call the double bracket notations, the idea that you can put
+in brackets a keyword, very human readable keyword, that is a link to
+someplace else in not the entire internet, it's not a complete, globally
+addressable address, but it more makes that keyword into something we're
+saying there's a reference for this in this system in this Wiki. And one
+of the interesting things about that, certainly there's the
+accessibility that it's very easy to use.
+
+Adam Wiggins (00:09:06) - But I think one of the fallouts of that, or
+one of the implications is that you can link something that doesn't
+exist yet, which is an interesting idea, right? And I've certainly used
+this in team Wikis, for example, where there's a project page I know I
+need to write, because we're talking about doing this project, but I
+haven't done it yet. But I want to reference that I can put that in
+brackets. And sometimes that link shows up in a different color or
+something like that.
+
+Adam Wiggins (00:09:28) - Wikipedia has a version of this as well, where
+you basically can link something that's not there, you click on it, and
+then it tells you this isn't here yet. Would you like to add some
+content, but it's a nice way to stub something out.
+
+Mark McGranaghan (00:09:39) - And there's another very important
+behavior difference. So if we go back to the example of the file system,
+if you want to refer to a file several times, the first operation is
+very different. You got to create the file and write the contents. And
+then subsequent operations create a different type of object, a SimLink
+or an alias or something. So there's this huge discontinuity.
+
+Mark McGranaghan (00:10:00) - Typically, on a file system, it's not as
+native to go the other direction to get the so-called backlinks. And one
+of those backlinks, you're basically missing it because there's nothing
+pointing back to the place where you did the original operation from.
+Whereas on a wiki, for example, when you make a double bracket, that's
+the same the first time, the second time, the third time you do it. And
+furthermore, when you go to the backlink page for whatever was in double
+brackets, those backlinks are all symmetric, I believe.
+
+Mark McGranaghan (00:10:27) - There's not special treatment for the
+first double bracket that you happen to have made mentioning some noun
+that is the current title of the page. Those properties are subtle, but
+as we discuss the muse approach to link cards, I think that will become
+important.
+
+Adam Wiggins (00:10:41) - Yeah, I think backlinks were present for a
+long time in things like Wikipedia and other places, but I really think
+the modern linking-backlinking trend really came with what are now
+usually called knowledge graphs. So Roam kicked that whole thing off.
+Notion had always had linking, but they added backlinks, I think
+somewhat in reaction to the overnight success of Roam. Then you have all
+these kind of Roam-descended products like Obsidian, LogSeq, even
+classic kind of text editor note tools like iA Writer are getting into
+that now.
+
+Adam Wiggins (00:11:12) - And I think what you referenced there with the
+backlink and links being symmetric, I think that's why they call them
+the knowledge graph is this idea that the nodes are the notes, and those
+nodes might be something about a person or a thing or a concept or an
+event or a meeting or whatever, but the edges, those links in the graph
+represent relationships and actually seeing those relationships and
+again, treating them as symmetric, as you said.
+
+Adam Wiggins (00:11:38) - Of course, it gives you these cool
+visualizations where you see all the time you've invested in your notes
+and how they all fit together. Or if you look at more like a larger
+scale Wiki like Wikipedia, you can see the relationship, the clustering
+of different knowledge, but sometimes the relationship between things is
+as important as the things themselves.
+
+Mark McGranaghan (00:11:59) - Yeah, and I have to be honest, I've been
+surprised by how taken folks are with linking and backlinking and
+explicit knowledge graphs. I certainly think that they're useful in
+their own ways, but there's something about them that people get really
+excited about.
+
+Adam Wiggins (00:12:15) - Indeed. Well, I certainly think of this trend
+scene community around tools for thought in the last three, four years.
+Obviously, I'm very happy. I'm sometimes surprised as well. I certainly
+find it very powerful. I'm also glad people get excited about it. And in
+general, I think that's part of what's been great about this tools for
+thought scene or community or just trend that we've had in the last few
+years, which is people getting excited about productivity software and
+excited about their knowledge tools.
+
+Adam Wiggins (00:12:46) - Now, sometimes I do think it gets a little bit
+narrowly focused on linking and backlinking knowledge graphs and lots of
+different variations on that. But I think that was a really good
+starting place. It's a good example of showing how just managing our
+information in different ways can unlock new possibilities for
+individuals, for groups, for humanity as a whole. And obviously,
+computing, the dynamic medium of computing has so much untapped
+potential there really just at the beginning of it.
+
+Adam Wiggins (00:13:15) - So I certainly hope that the excitement over
+knowledge graphs is just a door opener to a wider world of tools for
+thought, productivity, and in general, just continuing to explore what's
+possible in the world of knowledge and information systems. Well, I
+guess that naturally brings us to the Muse approach and this linked
+cards feature.
+
+Adam Wiggins (00:13:36) - It came up a lot in the very early days of our
+product because we were part of the tools for thought scene from the
+beginning and people naturally think of the linking, backlinking,
+knowledge graph stuff that that's kind of like a foundational feature.
+And obviously, we were more focused on the visual and spatial elements,
+the freeform sketching, bringing together your research materials to
+ruminate upon. But we always knew, hey, yeah, linking is super useful
+for all the reasons we just described.
+
+Adam Wiggins (00:14:01) - And we always knew we would want to bring it
+to the product at some point, but we wouldn't necessarily it wouldn't be
+right to just straight up copy the double bracket notation or something
+like that. I mean, maybe that could fit in, but we wanted something that
+would be more in tune with how we do things, the visual and spatial
+approach. And that's what brought us to linked cards.
+
+Mark McGranaghan (00:14:22) - Yeah, and Muse, we think there's a lot of
+value to each piece of content having a place. And for a long time, we
+said that a piece of content should have exactly one place. But we found
+that to be a little bit too limiting, because often you would have a
+board, for example, that you wanted to be able to access that made sense
+in the context of, say, your daily work and the context of a longer term
+project. And that presented a conundrum. What do you do in Muse to be
+able to access, say, that board from both locations?
+
+Mark McGranaghan (00:14:53) - Now one thing you could do is the file
+system type approach where you have some canonical board in one place,
+and you have a second class pointer board in another case. But that felt
+unsatisfying to us. We didn't want this two-tier system and this notion
+of a pointer board versus a regular board. So this is where we come to
+linked cards. And the idea with linked cards is that it's a set of
+cards, two or more, that point to the same content symmetrically.
+
+Mark McGranaghan (00:15:19) - I think actually back some years ago now,
+we had this notion of portals or mirrors, which I think are not as
+suitable for a public product. But I think describe the notion of the
+sort of two views from two different locations into the same underlying
+content. So you can access the content from either place A or B, but
+when you zoom in, for example, you're at the same place. And there's
+also a sort of back-linking type mechanism where you can, from any of
+these linked card instances, say, where else is this card present?
+
+Mark McGranaghan (00:15:53) - And you can seamlessly navigate to those
+other locations to move across different contexts. And then to close the
+loop here, if for some reason you were to delete one instance of two of
+these linked cards, you gracefully go back to the base case of a simple
+piece of content that's in exactly one location.
+
+Adam Wiggins (00:16:13) - Yeah, you mentioned the concept of location
+quite a bit there, and I think that ends up being key to it. This is
+something that's different compared to, for example, a notes tool that
+does not have the spatial component. The spatial component is so core to
+Muse and what Muse is offering you as a thinking tool. Where something
+is located that's in a little pile with some things over here versus
+this other pile over here might be really important for your thinking
+process or how you're making sense of a set of materials.
+
+Adam Wiggins (00:16:43) - So naturally then, where something lives, if
+it's going to live in two places or more than two places, you need to
+have some concept of that. And key to this ends up being this little
+icon that basically goes in the upper left corner that lets you see all
+the places that it is and then really importantly switch between them
+quickly. So you can use this kind of a portal to essentially teleport to
+this other location in your larger knowledge sphere.
+
+Adam Wiggins (00:17:12) - And this proves to be a really helpful and
+useful concept that preserves the spatialness and preserves that sense
+of place that we think is so important, but kind of breaks the
+one-to-one relationship and gets you a lot more of the ability to build
+a more complex knowledge graph.
+
+Mark McGranaghan (00:17:29) - Yeah, and by the way, there's a pretty
+slick animation that happens when you change locations like this that I
+think really nicely reflects what we're trying to get after, which is
+when it works correctly. It's hard to get it to work correctly in all
+the cases because of the literal dimensionality of the canvas and the
+objects, but the content that is linked in multiple locations sort of
+stays in the same place and the background around it shifts.
+
+Mark McGranaghan (00:17:51) - So you are appearing in this new location,
+but you're still anchored by this content that was meant to appear in
+multiple locations. I think that's pretty slick.
+
+Adam Wiggins (00:17:59) - Yeah, that was a really clever creation by
+Leonard and Iulia because so much of how you are oriented is based
+around this navigation in and out of boards and panning around them. And
+so we were worried, or even in the early prototypes, I think when you
+saw you could just jump, it's disorienting. So this transition animation
+serves more than the purpose of just being fun to look at or something
+like that, but actually helps you keep that sense of being oriented.
+
+Mark McGranaghan (00:18:30) - And now that I think about it, I'm
+actually not sure how common it is to have this backlink style
+navigation available without going into the object in question. Do you
+know what I mean? So like on a wiki, you can click on a link and then
+click on backlinks and from there get to a sibling page. But I don't
+know how common it is to be able to go directly to a sibling page from
+the, say, link.
+
+Adam Wiggins (00:18:54) - Because, yeah, typically you're viewing the
+board sort of from the outside. You're seeing its thumbnail essentially,
+and then you're deciding to go to this other place where it is located.
+
+Mark McGranaghan (00:19:03) - Yeah.
+
+Adam Wiggins (00:19:03) - Yeah, that's true. This is why we needed to do
+our own take on this is that when you're in that spatial setting, it's
+just a different thing than when you're in lists of documents that
+aren't organized or you just don't have a visual metaphor for it that
+works in that same way. Well, speaking of that animation in general, the
+transition of being able to quickly jump between locations, this was
+actually quite a technical challenge to implement.
+
+Adam Wiggins (00:19:29) - So I thought it might be fun if we could get
+our colleague Julia on the phone here briefly and see if she could tell
+us a little bit about how that worked.
+
+Julia Roggatz (00:19:41) - Hello.
+
+Adam Wiggins (00:19:41) - Hey, Julia. Congratulations on shipping linked
+cards.
+
+Julia Roggatz (00:19:47) - Oh, thanks. Yeah, it's been a long time
+coming. I guess it's been sitting there in the backstage pass for a
+while, but it's nice that we can finally give it to the whole world. And
+yeah, it looks like users are pretty excited about it.
+
+Adam Wiggins (00:19:59) - Yeah, well, I feel like a.
+
+Adam Wiggins (00:20:00) - was one of our smoother betas in the sense
+that we actually went pretty quickly from, I think it was in the
+backstage pass for, I don't know, three, four months, something like
+that. But it basically worked really great from the start. We needed to
+make a couple small tweaks, but nothing too dramatic. And yeah, people
+were finding it really useful. So it just sort of made sense to bring it
+into production. But Marc and I were just talking about the location
+switching and the transition animation as well as the challenges there.
+
+Adam Wiggins (00:20:28) - And I seem to remember in that first
+implementation, there was a lot of technical challenges. I was hoping
+you could give us a little insight into that.
+
+Julia Roggatz (00:20:35) - Yeah, there's quite a few. I mean, I guess we
+could start with the transition since we were just talking about that,
+but there's actually quite a bit to uncover. So let's see if we get to
+all of that. But yeah, one of the things that made this a bit
+challenging to implement is that of course, us being news, we had kind
+of high stakes for the UX and how we wanted it to feel.
+
+Julia Roggatz (00:20:57) - And Leonard, our designer, had initially
+prototyped something where you could just super quickly hit a button and
+cycle through all of the different places where this link card existed.
+That ended up not being quite feasible, but we still wanted to make it
+pretty fast so that you can just go and select a different location and
+you're basically there quite instantly. But yeah, depending on how large
+these boards are that these cards live in, rendering a big board can
+actually take quite a bit of time.
+
+Julia Roggatz (00:21:26) - And there's some tricks that we do when you
+transition from one board to the next kind of just in a normal zoom in
+that makes that feel instantaneous, even though it's actually not quite
+instantaneous. So for every board that you have, we store a snapshot.
+They're basically PNGs that render your entire board content into an
+image. And those are actually what you see in the little cards that
+represent your boards.
+
+Julia Roggatz (00:21:52) - And when you zoom in, we actually load a
+higher resolution version of that image kind of seamlessly as the
+transition happens so that when the transition finishes and you zoomed
+in for the first, depending on how big the board is, half a second to
+maybe a second or two, you're actually still looking at the image of the
+board. And then as everything gets loaded in the background, we switch
+out that image for the actual board view where you can interact with the
+cards and everything.
+
+Julia Roggatz (00:22:24) - So this usually happens behind the scenes and
+ideally the user never actually notices it. So for these transitions for
+the linked cards, we basically had to do a similar trick. So when you
+first select from the dropdown menu on the Mac, or I think on the iPad,
+it's a context menu as well, tapping on this button. When you first
+select a different location, we actually immediately load in the high
+resolution snapshot of that board and we transform it to match exactly
+the position of the card in the board that you came from.
+
+Julia Roggatz (00:22:59) - So the idea is basically the card stays in
+the same place and then the content around it just changes. And yeah, to
+do that really fast, we have to load in the JPEG, put the card on top of
+that image. Then in the background, we actually load the entire board
+hierarchy and the real views. And then once that's done, we remove the
+image and you're actually in that board and you can start interacting
+with the content.
+
+Adam Wiggins (00:23:25) - And it feels very quick to me, but certainly
+your brain needs a moment to process the new scene that you're looking
+at before you're going to go do anything to it. And so that sort of like
+is part of the stage magic there is use that moment of the human is
+reorienting themselves to the new location to do the work of rendering
+the interactive view.
+
+Julia Roggatz (00:23:49) - Yeah. And most of the time it works actually
+quite nicely. Of course, since the card in the new location that you're
+going to might actually be in a completely different position. Let's say
+you come from a board where the card is on the very top left, kind of
+the first thing that you see in the board. And then you go to a board
+where it's all the way at the bottom right, like maybe several screen
+widths away.
+
+Julia Roggatz (00:24:13) - Then there's also the thing that we sometimes
+see where it kind of jumps a little bit because in the destination board
+is actually so close to the edge that you can't scroll it into the place
+where the card was in the previous view. Maybe that's getting a little
+bit too much into the details.
+
+Adam Wiggins (00:24:30) - And I also remember really well we were in the
+midst of implementing this that a lot of other operations in the
+application that seemed unrelated to linked cards got really slow as a
+result once we had this in our internal test flight builds. And it just
+so happened we were at our team summit last August when we were working
+on this. And I remember you and Adam Wolf furiously drawing complex
+graphs and talking through the problem on the kitchen table in the house
+we were staying in. Can you tell me about what that was?
+
+Mark McGranaghan (00:25:00) - all about? Yeah.
+
+Julia Roggatz (00:25:02) - So this was kind of a surprising turn that
+the whole thing took. We initially thought seems like a pretty
+straightforward feature. You just basically create a new card that
+points to the same document. And then we display this little kind of
+link icon in the top left corner of the card to indicate that this is a
+linked card. So there's other cards that represent the same document.
+And the initial implementation of all of this was actually really fast,
+like kind of done in a few days. And then we noticed the app got really
+slow.
+
+Julia Roggatz (00:25:32) - And it wasn't initially clear why that was,
+but as we looked into it further, it actually turned out that the kind
+of database queries that had to happen to actually determine whether a
+card is a linked card or not a linked card ended up being extremely
+expensive. So the first thing that needs to happen is that we check for
+a given document how many cards actually point to this document. So
+that's kind of one database query. That's relatively simple. And if we
+have more than one card, you would think, okay, surely this is a linked
+card.
+
+Julia Roggatz (00:26:05) - So we should show this little icon. But it's
+actually not enough to just look at the number of cards that point to
+this document because some of these cards might actually not be in your
+corpus at all. They might be unreachable from the home board. And this
+is because when you delete something from your corpus, let's say you
+delete a board that has a bunch of sub content, we don't actually go in
+and prune every single sub board and every single document that is
+contained in the sub tree that is that board.
+
+Julia Roggatz (00:26:36) - We just set the board that you deleted to
+delete it. And it disappears from your view hierarchy. And as far as the
+app is concerned, you can't actually navigate to it anymore from
+anywhere. But there might be somewhere in there a board or a card that
+points to that same board that you have also linked somewhere else. And
+that card is technically not deleted. It just happens to not be
+reachable from the home board. So we actually also for each card that
+points to this board, we need to determine is this actually in the
+user's graph?
+
+Julia Roggatz (00:27:10) - Is this card something that is in quotation
+mark deleted so the user can't actually reach it from their home board
+or is it actually in the corpus and we should include it in the list of
+linked cards for this particular document. And that actually ended up
+being an extremely expensive operation because you kind of have to tee
+up multiple queries to find the parent board of the parent board of the
+parent board. And if you eventually end up at the root of the corpus,
+then yes, this card is reachable.
+
+Julia Roggatz (00:27:40) - But doing this kind of on every render just
+because you want to display a board with a couple of cards in it and
+determine whether or not they should get a little icon in the corner
+just ended up really slowing down the app, just kind of rendering a
+pretty basic board structure started becoming very slow and affecting
+all kinds of parts in the app.
+
+Julia Roggatz (00:27:59) - So what we ended up doing was something that
+we had thought about on and off anyway because it was kind of a data
+structure that would help us in all kinds of different scenarios in
+working on the app and kind of working with the user's content. We ended
+up creating a graph structure that actually maps out the user's content
+in a very easily queryable way. So in this case, we're only storing the
+IDs of all the documents and their relationships to each other. If a
+card displays a board, that's basically one node of the graph.
+
+Julia Roggatz (00:28:40) - And then we build out the graph this way. And
+every time something changes, every time you add a card or delete a card
+or you move a card around, we update that graph immediately. So then
+every time we want to render something, we don't need to do all of these
+database queries again. We just need to go to this graph and say, give
+me all the cards that point to this document or give me all the parents
+of this card. And from there on, it then got very fast.
+
+Julia Roggatz (00:29:07) - Now, of course, you have kind of an
+additional data structure kind of model around the user's data that you
+constantly have to maintain. So that, of course, leaves new surface area
+for bugs or kind of forgetting to update this as the code grows. But
+it's so far had been really helpful and has made the app a lot faster in
+that regard again.
+
+Mark McGranaghan (00:29:27) - Yeah. And this is all in memory, right?
+
+Julia Roggatz (00:29:29) - Yes, exactly. This gets built once when you
+launch the app and then just continuously update it.
+
+Mark McGranaghan (00:29:35) - Yeah. And we have a similar thing on the
+server. And it's definitely true that it's a little bit troublesome to
+get all the details right of maintaining basically a second view over
+all the data. But at least it's just in memory. So you get to blow it
+away each time the app starts. It makes it much more forgiving in my
+experience versus something on disk, which is a whole other level of
+ordeal.
+
+Julia Roggatz (00:29:55) - Yeah, that's true.
+
+Mark McGranaghan (00:29:57) - And I think that's always a trade off with
+database or persistence.
+
+Adam Wiggins (00:30:01) - layers is that the more indexes you have that
+slice the data in different ways you want to view it, the faster it will
+be. But now all those indexes have to be maintained, and if they get
+messed up, you need to regenerate them or something like that. And
+that's the fine art of data persistence.
+
+Julia Roggatz (00:30:17) - Yeah, exactly.
+
+Adam Wiggins (00:30:19) - As Marc and I were talking about earlier, one
+thing that introducing linked cards to Muse did was to break this strict
+one-to-one, cards are only in one place, everything is a very direct
+hierarchy. And that changed things in the user interface, certainly, for
+example, that you can navigate into a board from several different
+locations. And that comes up, I think, in both the individual user, just
+when you pinch out, you expect to go back to the board you were on
+originally.
+
+Adam Wiggins (00:30:49) - But it also comes up even in our multiplayer
+world in terms of where we're going to show an avatar floating over a
+board relative to the path they took to get into it. Curious to know
+what kinds of challenges there's been in adapting all of that.
+
+Julia Roggatz (00:31:04) - Yeah, this is something that we kind of
+noticed in hindsight when certain things in the app that used to be
+really easy, like navigate to a particular document based on its ID, now
+suddenly had kind of unclear implications because that document isn't
+just in one place anymore. So if, for example, I have a deep link that
+points to a specific document and I open Muse, clicking on the deep
+link, where do I actually go? Like, of course, I go to the document, but
+what's the context?
+
+Julia Roggatz (00:31:37) - Is it the link card on my home board or is it
+the one that's five levels deeply nested in one of the sub boards or is
+it one that's linked from somewhere else? So we can't actually describe
+a position in your corpus anymore just by a particular document or board
+ID. This also became evident when something that seems really trivial,
+like you close the app and then you open it up again and we have to
+launch it fresh. And ideally bring you to the place that you've left off
+because that's probably where you want to continue working.
+
+Julia Roggatz (00:32:13) - Previously, we just basically always stored
+the ID of the board where the user was last on. And when the app
+launched, we opened that board and built the view hierarchy underneath
+it. So all of the parent boards all the way up to the root board
+underneath and that was it. So now we actually have to store the entire
+navigation stack, including every card, basically kind of leaving
+breadcrumbs of where the user went to end up on the board that they're
+currently viewing.
+
+Julia Roggatz (00:32:42) - And this all gets serialized to disk when the
+app quits so that when you launch the app again, we can look at these
+breadcrumbs and retrace the steps to exactly where the user had come
+from. And we're going to have to do that probably with all kinds of
+things like deep links or like sharing URLs for go to this board. Well,
+which one do you mean? Do you mean the one on the home board or the one
+five levels deep down below?
+
+Julia Roggatz (00:33:04) - So we're going to have to start encoding
+these path information into all kinds of things, including, I think,
+like you said, the presence of avatars in a board. Like if you're in
+this board, you're technically in five different locations, but we don't
+want to show you avatar in all of these different locations. We want to
+show exactly the path you took to get to that board.
+
+Adam Wiggins (00:33:26) - Do I remember anything about detecting cycles,
+like sort of putting a linked card inside itself and dealing with that
+as being part of the initial technical challenge as well?
+
+Julia Roggatz (00:33:37) - Yeah, so detecting cycles actually has always
+been a big challenge for Muse and linked cards actually was a big relief
+for that because now, instead of having to be really careful to prevent
+cycles, we can kind of allow them and embrace them. So in the pre-linked
+cards world, there were a few weird edge cases. For example, when you
+had two windows of Muse open, so like split screen on the iPad or two
+actual windows on the Mac. And let's say you have board ABC, where A is
+your root board and B is the board in between, and then C is deeply
+nested.
+
+Julia Roggatz (00:34:12) - And you have board A in the one window and
+have board B open in the other window. And then you pick up board B, the
+card for board B in the window of board A, and then drag it into the
+other window and drop it into board B. Then you just drop B into B. So
+now B is contained in itself and you've effectively detached it from the
+view hierarchy. This is now also something that we can nicely detect
+with the corpus graph. And previously we had to really make sure to
+prevent these accidental operations.
+
+Julia Roggatz (00:34:45) - So basically disallow you from dropping the
+card there because that could very easily lead to not technically data
+loss, but data loss in the sense of you can't get to that content
+anymore. And we didn't have any UI of kind of surfacing these detached
+cycles. So now when you do this, instead of disallowing the operation,
+it'll just drop a linked card of itself into B and keep card B in A, but
+then also put a linked card of B into B. And so now you have an endless
+loop of B in B and you could try it out.
+
+Julia Roggatz (00:35:18) - I think you could basically go indefinitely
+navigate and probably at some point the app will crash because you have
+put hundreds of view controllers onto the navigation stack. I'm not
+actually sure what happens, but it does work well for quite some time.
+And I guess technically if you're 10 levels deep into B and you're still
+on B when you then quit and relaunch the app, we should also build the
+stack 10 levels deep. Although I guess in this case, the card is
+actually the same.
+
+Julia Roggatz (00:35:46) - So I'm not quite sure how that would work,
+but yeah, there's definitely lots of fun little edge cases like this.
+
+Adam Wiggins (00:35:52) - And I think almost always if someone does one
+of those things you described, it's an error essentially, or they're
+just doing it to see what happens. So it's not so much that we need to
+make it make perfect sense, but more that just we need to not have the
+app crash or screw up your data or get you into a state that you can't
+get out of.
+
+Julia Roggatz (00:36:12) - Yeah, exactly.
+
+Adam Wiggins (00:36:14) - Well, my head's spinning a little bit with all
+the complexities here. I'm glad I get to just be a user and not need to
+load all of that into my brain. So thanks for taking us through it and
+we'll let you get back to your Xcode.
+
+Julia Roggatz (00:36:26) - Yeah, my pleasure. Have a good one. Bye bye.
+
+Adam Wiggins (00:36:29) - Bye. Phew, I actually didn't fully know what
+was there. I had a sense of it because we actually have one of our
+earliest boards that we have in our Muse for Teams shared workspace is
+one of the kind of scribblings that Wolf and Yulia did together when
+they were thinking through this whole, what she was calling the corpus
+graph, this kind of relationship index. So I had a sense there was
+something there, but I didn't know quite how deep that rabbit hole went.
+Now another area to talk about is the design considerations that went
+into this.
+
+Adam Wiggins (00:37:01) - I think Yulia mentioned some of those in the
+sense of what happens when you do particular edge cases in the sense of
+the user's mental model about this. I think you also mentioned briefly
+in passing the idea of having cards which were more of a reference, more
+like that file system shortcut, was one of our first prototypes. So if I
+remember correctly, they implemented prototypes of what we ended up
+with, which is this kind of each card is a mirror of each other.
+
+Adam Wiggins (00:37:27) - And essentially any change you make to one
+happens to the other and there is no kind of source or original. But
+they had also mocked up something where there was a link card that was
+very similar to our web links, which of course are a reference, not a
+mirror, but that had a little richer of a preview. And we basically
+tried that out and that actually felt pretty good. We liked that in a
+lot of ways, but somehow I think the mirror felt just more of the kind
+of embodied or physical or spatial style that fits with Muse.
+
+Adam Wiggins (00:37:58) - And actually that fed into the name of it as
+well. When I was chatting with Leonard about this, he mentioned or he
+pointed out that we call them linked cards, linked ending with an ed,
+not link cards, right? Link cards, which we have for web links, for
+example, or you can put deep links to other iOS apps. It's really clear
+that that thing is not in Muse. It's someplace else. This is a reference
+that will take you there. We'll open it in a browser, that sort of
+thing.
+
+Adam Wiggins (00:38:24) - But the idea with the linked cards, which are
+usually boards, but can also be a PDF or a video or something else, they
+really are like the same thing and they are linked together and the
+content will always stay the same.
+
+Mark McGranaghan (00:38:38) - Yeah, and if you think about it in first
+principles, I think it makes sense that we ended up here because when
+you're dealing with external content, you don't really have a choice. It
+has to be a link without an ed object because it's not something that
+you control. But when it's internal, why not? You have full control over
+this, including the magical ability to make it appear in multiple
+locations.
+
+Adam Wiggins (00:38:59) - Another design consideration here is what you
+do with things that are untitled. So this is something we consider a key
+feature. It was part of the Muse white paper that we published from the
+research lab a few years back, which is the ability to create something
+and not have to give it a name. Which I'm a fan of generally. I don't
+necessarily want to have to name a project before I've decided what's
+going to go into it.
+
+Adam Wiggins (00:39:20) - But usually, of course, you end up with
+something that's called untitled and then you end up with untitled
+parentheses two, three, four, and so forth. That's a really common thing
+you see in, I don't know, classic word processors or whatever. But in
+Muse, you can put all kinds of items. In fact, most of your items don't
+have names necessarily. You may only title a board or an image or
+something later once you kind of know what it is, what it's about. But
+of course, what that also means, the location switcher is showing you a
+text representation.
+
+Adam Wiggins (00:39:48) - So then we need to show you basically this is
+an untitled board in the case or an untitled card of some kind. I think
+that's not fully solved. I think Leonard is still kind of chewing on
+that a little.
+
+Adam Wiggins (00:40:00) - bit and the best way to manage that. But
+certainly as we get into more and more things that are not pure spatial
+and visual, things like search, for example, that's going to come up
+more and more. So I think this untitled boards design or untitled cards
+design challenge, that's a key feature of the app. We want to keep that.
+That's desirable. But at the same time, how do we handle that in a more
+of a text or list kind of setting like this?
+
+Mark McGranaghan (00:40:26) - Yeah, we'll continue to noodle on that. I
+think in practice, it hasn't been too bad because the places that you
+tend to put linked cards are relatively important and therefore tend to
+have titles. That's just been my experience. So more often than not, you
+have a suitable title in place. But yeah, I agree that as we get into
+more non spatial content types, as I've been calling them, it's going to
+become more important.
+
+Adam Wiggins (00:40:47) - Yeah, well, maybe that brings us nicely to
+just talking about linked cards in practice, the use cases we've seen
+from users and customers, as well as what we've experienced ourselves on
+the team. And definitely going into it, we didn't necessarily know what
+all the use cases would be or what the best use cases would be, which is
+sort of a funny thing. I think you even raised the flag on this a little
+bit, which is you want to have a lot of clarity usually about what your
+use cases are before developing a feature.
+
+Adam Wiggins (00:41:15) - And we had a list of them, but it was sort of
+more driven by where we started the podcast, which was linking is just
+really useful. And probably if we add it, things will emerge that we
+wouldn't have even predicted necessarily. And I think that's kind of how
+it panned out. Many and most of the use cases that we had in mind
+initially did come to light.
+
+Adam Wiggins (00:41:36) - But basically immediately once we released
+this in beta and then we had some lively discussion on our Discord and
+the betas channel where folks were trying this out and sharing what they
+were using it for. And we were almost immediately surprised by some of
+the interesting stuff that folks were doing with it. So maybe we could
+start with how we are using it personally or on the team. How have you
+found linked cards that fit into your use workflow or have they?
+
+Mark McGranaghan (00:42:01) - Yeah, for me a little bit. So in both my
+personal corpus and on the team's corpus, I've seen us use them for what
+I might call workflow purposes, where you have a board, it's usually a
+board, that you find that you want to access from a few different
+contexts. It might be, for example, you have a technical design for
+something that you want on the one hand in the context of your larger
+technical board and also in the context of your weekly planning. That
+sort of thing I find happens pretty frequently.
+
+Mark McGranaghan (00:42:33) - And I do similar stuff like that for
+personal projects where I want it on some maybe more temporal board
+versus more subject matter board. And it's helpful to see the thing in
+both places. I also use it a little bit as a sort of bookmark feature
+where there's some topic that you know is referenced in a few different
+places in your corpus and you can create a board for that notion and
+then make a linked instance of that board in those handful of other
+places.
+
+Mark McGranaghan (00:42:59) - And you have a sort of bookmark access
+portal network, you know, underground tunnels to your different boards.
+Now, what I don't use it for is the really high cardinality, super
+dense, reified web that you sometimes see with knowledge graph tools
+where each page has 10 links and you're trying to form this really
+explicit graph of concepts.
+
+Mark McGranaghan (00:43:23) - I've argued that, I mean, I think there's
+something to that, but the in fact network of concepts is so massively
+dense, it's like the branching factor is thousands or more that I think
+you're kind of fooling yourself if you think you're going to fully reify
+that in the tool. There's still some uses to it, but in my mind, best
+stuff happens in my head. And where I find myself using the links is
+more for workflow purposes where I know I'm going to want to traverse
+these networks of boards in non-hierarchical ways.
+
+Adam Wiggins (00:43:52) - Yeah, well, I was surprised how useful it
+turned out to be. I guess I didn't feel quite the burning desire for it,
+but again, we heard this just so often from users and customers and a
+few folks on our team also were really, really driven about it. And of
+course, this reflects a very flexible and general purpose tool like
+Muse. People use it in lots of different ways. Everyone has their own
+approach. Not everyone uses every feature and so forth. But I was
+surprised how much I did find myself using it.
+
+Adam Wiggins (00:44:18) - Certainly a good bit in my personal Muse, but
+where I've really been surprised about how useful it is, is the team
+setting. And I guess I shouldn't be so surprised from this because using
+something like Notion or even Google Docs back in the day when we used
+more of our internal memos and project documentation. Yeah, it's just
+really, really useful. You're going to build up this network collection
+of projects and concepts and processes and so forth, and it's just very
+good to be able to reference them to each other.
+
+Adam Wiggins (00:44:50) - A really simple version of that that comes up
+basically every week in our planning is we're having a discussion about,
+okay, these three people are working on this task this week. They're
+doing this and this and this, and by the way, they had previously had a
+whole design sketching section and talked through exactly what they're
+going to do next. Here's the board for that. And so kind of in the call,
+what will happen is someone will go and grab a linked card for that and
+drop it in the planning document right alongside.
+
+Adam Wiggins (00:45:19) - There's the explicit list of tasks and
+assignments of what we're doing for the week, but here's the reference
+to. And as these projects get more complex, particularly as our team is
+growing and so forth, sometimes it's you have three.
+
+Adam Wiggins (00:45:31) - So, we've got a couple of lines of tasks for
+the team that just described what they're doing for the week, but then
+you double click or you pinch to navigate into that sub board, and you
+see this huge world of things, whether it's technical or design or
+whatever it is. And you either get a glimpse of it, or maybe you think,
+okay, I'm going to sort of make a note to go review this later because I
+think it touches on my work.
+
+Adam Wiggins (00:45:51) - Or maybe you just go, oh man, I'm glad those
+people are working on that and not me because it's a whole huge world
+and I'm not going to load the context into my brain. But just that
+ability to just drop that reference there and very casually, I think
+it's just a really nice way to offer the depth if you want it, but you
+don't necessarily need to go into it right there in the meeting.
+
+Mark McGranaghan (00:46:10) - Right. Another way to describe this might
+be different views into the same data. So, I think it's very common that
+you want three views. You want a view which is temporal. What is the
+team working on this week? You want a view that's personal. What is Marc
+thinking about right now? What does he want to have at hand? And then
+there's a view which is subject-based. What is the design of our sync
+system? And what link cards might do is to have any given thing, board,
+say, appear in each of those.
+
+Mark McGranaghan (00:46:39) - And really importantly for me, as you
+alluded to this, it's all symmetric because often the way this stuff
+happens in practice is someone is off noodling in their own world on how
+to do graph indexing for link cards Azealia was describing. And it would
+really be a shame if you either disallowed or made it look weird if that
+was to get promoted into the weekly work and then into the sort of
+canonical subject matter board for sync or the client, what have you.
+But with link cards, these things get promoted and they're really peers
+among each other.
+
+Mark McGranaghan (00:47:13) - So it's very natural for stuff to flow in
+organically versus you can imagine a world where there are second-class
+links and then the subject board, for example, is this weird mix of
+boards versus second-class link boards. It'd just be kind of weird.
+Whereas here you get this very nice minor link icon to indicate that
+this board appears in other places, but otherwise it's all symmetrical.
+
+Adam Wiggins (00:47:34) - Another thing I've noticed is that the number
+of links or the number of other locations, I guess, number of linked
+cards that is in that dropdown serves as a sort of measure of
+importance. So as one example here, you wrote a description of the
+roadmap essentially for multiplayer, our multiplayer features in terms
+of technical capabilities we needed to build as well as some of the
+user-facing stuff. And you wrote that pretty early in our process and
+that's been an important reference point for a lot of project planning
+and design work and so on.
+
+Adam Wiggins (00:48:08) - And so now there's a pretty good list of stuff
+there and almost an interesting parallel there with, I think, citation
+count in scientific papers where you can measure the influence of a
+paper by how often it's cited. There's something similar for boards. Our
+most important boards tend to get referenced a lot. And notably, I don't
+think you necessarily know ahead of time which are going to turn out to
+be that.
+
+Adam Wiggins (00:48:30) - And maybe that's to your point about the
+canonical location, which is something might start in a board that I
+call Adam's Weird Ideas in November. And it turns out that one of them
+is useful or interesting enough that it keeps coming up and gets
+referenced a lot. And the fact that it started life there isn't
+important for its longer influence that it's going to have on what our
+team is up to.
+
+Mark McGranaghan (00:48:56) - And speaking of personal workspaces and
+then promoting content into team spaces, I think the elegant transition
+from single instance to multiple linked instances is going to work
+really well. So right now in our views for teams, basically everything
+is visible to everyone. Each of us has our own little workspace that's
+carved out and some of it has little pseudo screens over it so people
+don't annoy us too much or look in before stuff is ready.
+
+Mark McGranaghan (00:49:23) - But ultimately, if you, Adam, have
+something in your personal workspace, and then a link to it from the
+team's weekly planning board, for example, that backlink is going to
+appear to everyone in the current views for teams space. But you can
+imagine a world where the backlink calculation is done per user. So in a
+world of more granular sharing that we'll have in the future, it could
+be that when you do that promotion, and you go to the weekly team
+planning board, you see the backlink to your personal space. But when I
+go, I don't see that backlink.
+
+Mark McGranaghan (00:49:56) - And in fact, it might just look like a
+regular board to me because that's the only place it appears for me. And
+then perhaps if I want to link it from my scratch board, then I see the
+two instances of it's on the weekly planning board and it's on my
+personal space. So that's, I think, an important example of how the
+linkedness is a property that emerges of how many times a given document
+is visible to you. And right now that's all the same because we're all
+sharing the same team space, but eventually it'll be more granular.
+
+Adam Wiggins (00:50:22) - Right now you've got your personal muse where
+it is by definition only visible to you. And then you've got team
+workspaces, which in our current beta are essentially everyone on the
+team can see everything.
+
+Adam Wiggins (00:50:34) - But in the future world, we have in mind is
+one of much more granular sharing, as you said, the ability to share
+individual boards, as well as even within a team space, having a private
+office, private workspace where you can get stuff ready, even though it
+is intended to be in that bucket of here's something I'm doing for work
+or for this particular team or project. It may be something that has
+some kind of a privacy screen over it, but you can relatively seamlessly
+move it into the shared space when you are ready to work.
+
+Adam Wiggins (00:51:05) - So yeah, it definitely opens up or fits really
+cleanly into that paradigm. Well, maybe as a place to end, we're going
+to reference Ted Nelson again. I mentioned earlier, he invented the term
+for hyperlinks, but he also invented this term transclusion and the Muse
+take on transclusion so far is that you can grab what we call an excerpt
+from a PDF or an image, or even a frame from a video and have a source
+link and indeed a little portal that takes you back to that place. But
+in some ways linked cards have some of the same transclusion quality to
+them.
+
+Adam Wiggins (00:51:43) - And indeed, I think something we would like to
+see in the future is essentially a called a linked section or a linked
+portion of a board or other card. And actually at that point, then you
+start to see it as a sort of transclusion, right? A portal to that
+source, something you can potentially not only see, but potentially
+change, you can obviously navigate into it. And the fact that it is this
+one specific subset, I think is also part of the potential usefulness.
+
+Adam Wiggins (00:52:13) - Now, what the interface for that would look
+like, I think would be quite a design challenge, but I think the value
+of that would be fairly obvious and hopefully would make Ted Nelson
+proud.
+
+Mark McGranaghan (00:52:24) - Yeah, I think that would be very powerful.
+I've definitely found myself wanting something like that and have
+received several support requests looking for that kind of capability.
+And just reasoning by analogy, this is super useful on the web. You have
+vanilla URL links and then you have so-called anchor links where you
+have the URL, the pound sign, and then some anchor tag, which typically
+corresponds to some heading or some other section of the web page.
+
+Mark McGranaghan (00:52:49) - And when you click on that link, it takes
+you to the web page and scrolls right to the point and sometimes with
+JavaScript you can even make it highlight that particular thing that you
+scrolled right to. Super valuable. And importantly, with web links, the
+former is sort of a special instance of the latter. It's like you're
+basically linking to the whole thing. And I kind of wonder if we can
+make that same thing work in MUSE where instead of having separate
+linked card and excerpt slash transclusion features, there's sort of a
+continuum.
+
+Mark McGranaghan (00:53:16) - So you can think of a linked card as if
+you have underlying content, you make an excerpt, but the excerpt is
+like the whole thing. The window is the size of the entire document. And
+there's another thing you can do, which is make an excerpt where the
+window is smaller than the entire document. But you can see how those
+are on a continuum and then things like the backlinking, for example,
+would be unified. I don't know if that's going to work out. We need to
+think about it more, but I think that'd be pretty powerful if we can get
+it to work.
+
+Mark McGranaghan (00:53:40) - I also think both linked cards and
+excerpts could be relevant for maybe you call them computed views or
+derived views. The example that I constantly go to is search. So there's
+one way to do search, which is like search is a totally separate thing
+with a totally separate interface, just kind of its own world. And then
+you click on links and it brings you back into the main app. The vision
+that I have for search is more like there's some content type that
+you're programmatically computing.
+
+Mark McGranaghan (00:54:04) - So in the current MUSE, you can imagine
+you type some search terms and it computes a board that has a bunch of
+linked boards on it, which correspond to your search results, which
+would be a little bit weird. But you can imagine if MUSE eventually has
+a non-spatial content type, basically a set type, which is more
+comparable to a Mac Finder.
+
+Mark McGranaghan (00:54:21) - And there, when you do a search, you
+compute a set of results in order to set maybe a list and you present
+that in the same way that if you wanted to make a manual list, it would
+be very comparable to how the set is built. And then furthermore, you
+can imagine if you're searching for text, for example, and it's
+searching within PDFs, it actually computes an excerpt object so that
+you can see where in the PDFs that result is popping up.
+
+Mark McGranaghan (00:54:46) - And then when you click on the excerpt, in
+the same way that you animate a manually created excerpt, it goes to the
+PDF source. So I think these are pretty cool building blocks for
+eventual computed types like search results.
+
+Adam Wiggins (00:54:59) - Yeah, I know something I always find myself
+wanting with search generally, Google does a version of this, but I'm
+also thinking of Unix text search tools like grep has a command line
+option to essentially give yourself a couple lines of context around the
+search term, maybe log search tools like Splunk. And when they don't
+have that, you're struggling to see, okay, like I found the error I
+searched for, but I really want to know what happened in the few lines
+before it.
+
+Adam Wiggins (00:55:24) - That context is really important, but
+sometimes there's not even a way to get to that. So the idea of the
+excerpt where you can easily see the context or even go completely to
+the source is something that's generally very powerful in computing.
+Well, then maybe I'll just encourage our listeners.
+
+Adam Wiggins (00:55:43) - If you haven't given linked cards a try yet to
+go check that out at Muse, you can basically use the right click context
+menu on your Mac or the dot dot dot context menu on the iPad and make
+yourself a little linked card and fool around and see if you like the
+metaphor we landed on there and tell us if you have any feedback. And we
+can wrap it there. Thanks everyone for listening. Join us on Discord to
+discuss the episode with me, Mark and our community. I'll put the link
+in the show notes. You can also follow us on Twitter at MuseAppHQ.
+
+Adam Wiggins (00:56:18) - And Mark, I think the first 50 or so years of
+linking and computing have been pretty good. I'm looking forward to
+seeing what the future holds.
+
+Mark McGranaghan (00:56:27) - Great items.

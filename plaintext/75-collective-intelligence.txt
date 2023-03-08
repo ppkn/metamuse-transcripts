@@ -1,0 +1,1168 @@
+Conor White-Sullivan (00:00:00) - Often when you ask an expert who's
+accumulated a large amount of experiential data around a problem area,
+they're fabricating an answer. They actually have way more information
+than they could possibly convert into verbal symbolic language. And the
+inability to articulate something doesn't mean that there isn't
+knowledge there. Taste is real and experience is real. And you can have
+a lot of knowledge that can be extremely difficult to articulate.
+
+Adam Wiggins (00:00:26) - Hello and welcome to Metamuse. Muse is a tool
+for deep work on iPad and Mac. But this podcast isn't about Muse the
+product. It's about the small team and the big ideas behind it. I'm Adam
+Wiggins here with my colleague Mark Granigan. Hey Adam. And joined today
+by our guest, Connor White Sullivan of Roam Research.
+
+Conor White-Sullivan (00:00:49) - Thanks for having me on.
+
+Adam Wiggins (00:00:50) - And Connor, I happen to know you have a dog
+companion. There's a Husky, right?
+
+Conor White-Sullivan (00:00:54) - He is. One thing I like about them is
+that they're not bred to be obedient dogs because he didn't want
+somebody who was an inexperienced sled driver to drive the whole team
+out onto thin ice, so the dogs sort of take light suggestion, which is
+one of the reasons they're particularly hard for first time owners.
+
+Adam Wiggins (00:01:13) - I feel like they take light suggestion also is
+a good training for being a manager of software engineers and designers.
+
+Conor White-Sullivan (00:01:20) - Or maybe a parent too. But yeah.
+
+Adam Wiggins (00:01:22) - Yes, a parent of a toddler. Absolutely. And I
+think our audience probably knows who you are and knows about Roam
+because you're definitely a notable figure in the tools for thought
+scene that we consider ourselves part of. But for those that aren't
+familiar, maybe you could give us a brief introduction.
+
+Conor White-Sullivan (00:01:39) - How would you introduce Roam?
+
+Adam Wiggins (00:01:42) - I consider it having created not only the kind
+of modern phenomenon of tools for thought, which obviously that concept
+extends well back in time, indeed, Mark and I did a whole podcast on it.
+But in terms of popularizing it in kind of the last few years, it's
+really, I think, opened the aperture for a lot of tools, including us
+and others to say there's more to productivity software than, I don't
+know, email and note taking and calendars. And that's what I think of as
+the collective kind of tools for thought scene.
+
+Adam Wiggins (00:02:11) - And then, yeah, the specifics of the product.
+I think it really is all about the value of linking thoughts together
+and bringing things that I think of as being part of obviously the
+Internet, part of things that have been in our knowledge tools in
+different ways over the years, but putting them together into this kind
+of notes and personal memory and personal thinking space in just a new
+way that really struck a chord with people, indeed, to the point that I
+think it's been widely copied now.
+
+Adam Wiggins (00:02:37) - And I would say you basically invented or at
+least pioneered a whole new category of software, which is quite a
+special thing to do in one's career, I would say.
+
+Conor White-Sullivan (00:02:47) - The thing that is interesting to me is
+that part of my frustration in the last few years is that none of the
+folks who have supposedly copied us have copied the things that I think
+are actually important or are even indicative of the direction of why I
+built Roam or what we're aiming for. I think of writing as a tool for
+thinking. We've talked about this in past discussions, just one on one.
+I don't have a great extended working memory.
+
+Conor White-Sullivan (00:03:14) - I've worked with people who are
+actually geniuses, who are able to visualize complex systems in their
+head, who are able to recall any piece of information they need, but I
+have a hard time just laying out all the steps of the problem and trying
+to think through all the variables that are there and just trying to
+keep my head straight, especially around things like software design,
+let alone systems design or building a team or any kind of complex
+decision.
+
+Conor White-Sullivan (00:03:38) - So Roam, what you see right now as a
+product is something that did largely evolve as a sort of cognitive
+prosthetic for me, largely to handle my ADHD and trying to learn as an
+autodidact all of these things that I needed to do to be able to build
+Roam. I'm a self-taught engineer, self-taught designer, self-taught
+manager, maybe not good at any of these things, but had to learn how to
+fundraise, had to learn how to do marketing.
+
+Conor White-Sullivan (00:04:06) - Like I studied none of these things,
+had no formal training in anything, and I had to figure out how to get
+good enough at a lot of things at the same time, more or less, or in
+various sequences. So I built Roam as a tool for helping me to organize
+my own learning and also just to I've had very severe ADHD for my whole
+life and it runs my family. But it is not. I think, Mark, I might have
+heard you say it on a podcast. Maybe it was some other colleague of
+yours that was on saying that they were characteristically unemployable
+or something.
+
+Conor White-Sullivan (00:04:41) - Well, I was fortunate for startups to
+exist because I don't think I could have held down like anything, even
+remotely resembling a white collar job for any amount of time if I had
+not been able to to build my own companies where I couldn't get fired.
+
+Conor White-Sullivan (00:04:54) - So a lot of Roam was built as a tool
+for me to be able to just organize my own thinking as I was thinking. So
+I think of it first and foremost as an extension of my working memory so
+that I can zoom in, eliminate all the extraneous things, have a clear
+workspace, but then at any point I can pick up pieces from, I can break
+problems down into smaller chunks and know that I will have the relevant
+information available the next time I'm able to pick it up, which might
+be some indefinite point in the future.
+
+Conor White-Sullivan (00:05:24) - So Roam is a tool for writing, but
+it's also, and I'll talk a little bit about, it's a little hard to fully
+explain, especially what we've been doing over the last few years, if
+you don't know the context of why I started Roam and what it's trying to
+get to and why I even got interested in software in the first place, but
+I don't want to tangent too far yet. So yeah, it's a different medium
+for writing and thinking and trying to organize your brain so that you
+can think thoughts.
+
+Conor White-Sullivan (00:05:58) - The way I said it before like this,
+there are things you can't see with the naked eye that you can see with
+the telescope, and there are things that you can't hear, but you know,
+if you've got a powerful microphone you can hear them. And I think that
+there are thoughts that we can't think unless we've got some sort of
+cognitive aids. And Brett Victor has talked a lot about this. I know you
+guys are probably fans of his work.
+
+Conor White-Sullivan (00:06:20) - I'd love to chat a little bit about
+some of those ideas, but I think that a lot of our diagramming tools,
+mathematical notations, programming languages are all cognitive
+prosthetics that allow you to think thoughts you couldn't otherwise
+think. And Roam is, it's also a programming environment. You can write
+code and execute it in code.
+
+Conor White-Sullivan (00:06:38) - We're trying to create a whole new
+kind of medium for expressing your thoughts, first to yourself, but then
+eventually be able to create a communication medium that can allow for a
+different kind of coordination and knowledge transfer and a new kind of
+collective action, collective thinking, collective intelligence. And
+that's the real thing that has been motivating me for at least the last
+15 years, which kind of leads me into the questions that I want to ask
+you guys. Well, please do.
+
+Adam Wiggins (00:07:08) - I have plenty to say about what you just said.
+
+Adam Wiggins (00:07:10) - It's very inspiring, especially because in
+many ways you're not talking about the specific features or exactly the
+way that, how does this writing slash thinking slash note slash memory
+tool differ from what comes before, but this underlying why, which is
+exactly as you said with Brett Victor, I think Andy Matuszek talks about
+this a bit in his work talking about, for example, Roman numerals versus
+Arabic numerals and how that allowed us to essentially do new things,
+think new thoughts, do new kinds of math.
+
+Adam Wiggins (00:07:38) - And the computing medium obviously has all
+this potential to open that up, but to date, even as far into this
+computer thing as we sort of are, in many ways, we're just
+transliterating, you know, okay, I've got a sketchbook. Okay, now that
+I've got an iPad, let me make a direct transliteration of what's on
+paper. I've got a typewriter. Let me turn that into a word processor and
+so forth.
+
+Adam Wiggins (00:08:00) - And I would say most notes programs, even
+pretty sophisticated ones, I don't know, you know, take Evernote and
+Prime 10 years ago, can obviously do a lot of things that like a paper
+filing system can't do, but in the end, it kind of is just that on a
+computer.
+
+Adam Wiggins (00:08:14) - And it seems very clear to me that there's so
+much more potential if we truly embrace the dynamic medium of the
+computer, and there's probably a thousand different experiments we need
+to do and different people will need different things to your point
+about what exactly is the right thinking prosthetic for you probably is
+also for a lot of other people, but maybe not everyone in the world.
+Different people need different ones. And that's why I think it's so
+important to experiment and break out of our established categories.
+
+Adam Wiggins (00:08:39) - But I felt like a few years back, you couldn't
+get past the like, again, productivity software, just kind of like
+notes, email, word processor, spreadsheet, and happily the tools for
+thought seen that you really helped seed, I think has opened our minds
+to like, okay, let's do some innovation here.
+
+Conor White-Sullivan (00:08:57) - Even the idea that you could have end
+user customization where people could actually write code. I mean, like,
+we got so much pushback when we let people run arbitrary JavaScript
+inside. And I mean, rightly so, because it's also a multiplayer tool.
+Obviously there's some security concerns, but my entire thesis is I want
+to give people power.
+
+Adam Wiggins (00:09:21) - Right.
+
+Conor White-Sullivan (00:09:22) - And I know I'm extremely neuro
+atypical. And I know that a lot of systems which worked very well for
+plenty of other people worked horribly for me, right. Schooling being
+the sort of most obvious one. So I know the feeling of being put into a
+box and the box not being extremely constraining and wanting to do more
+and needing people who do not want to give you their permission. I hate
+asking for permission. And so that's one of the reasons that first I was
+like, well.
+
+Conor White-Sullivan (00:09:55) - Wild West, you want to run JavaScript,
+we will give you the ability to completely break everything in your
+graph. Like if you want to really mess yourself up and just like grab
+some code that you found off the internet and put it in there and like
+maybe you'll lose, you know, all your notes because you've got some
+random, I don't, especially in the early days, it was still a small
+amount of attention there. I have a very different attitude than folks
+with the security mindset of, well, what if hypothetically somebody
+might be trying to steal my notes?
+
+Conor White-Sullivan (00:10:21) - I'm like, you've been using the
+product for a day and a half, like, I don't think this is a hard target
+yet, but I get ahead of myself. I have been really excited to see that
+proven out, you know, that people now are trying to do something that
+was pretty common in things like text editors and for Emacs and Vim and
+for professional programmers are very used to the idea of being able to
+modify their tools. And if you work in the trades, like my recreational
+activity is doing metalworking, you know, I like welding for fun.
+
+Mark McGranaghan (00:10:51) - Right.
+
+Conor White-Sullivan (00:10:52) - And one thing I like to do is like
+making my own tools and making jigs. And like if you're doing any kind
+of carpentry, you know, oh, you don't have the exact right tool for it.
+Well, if you've got an angle grinder and you've got a welder and you've
+got some scrap metal, like you might be able to Jerry rig something up
+that might be able to serve the purpose of what you're trying to build a
+one off tool. And we haven't had those for knowledge workers except for
+in the domain of computer programming.
+
+Conor White-Sullivan (00:11:18) - And I think that people who do other
+kinds of work, it's been very exciting to see so many like folks who are
+doctors who have never written a line of code in their life. And they're
+able to learn in the weekend enough to build some functionality into
+Rome that like is not my priority. I don't care about it. It would never
+occur to me to make it, but it's ideologically important to me that they
+not have to get my permission to make the tool do what they want to do.
+
+Conor White-Sullivan (00:11:44) - So here's the question I've got for
+you guys, which is when did you guys start caring about computers at
+all? And what was it that made you care about them?
+
+Adam Wiggins (00:11:54) - Yeah, I usually pegged myself for eight years
+old, and I think it was an Atari with one K of RAM, since I'm old enough
+that that was the kind of computing. I think we had one of these at our
+entire school, the elementary school I was in. I don't know what drew me
+to it. Maybe this is just a classic young nerd thing that you can't
+identify it. But I like to at least post hoc rationalize it that I saw
+the potential for creativity and I immediately want and all you could
+really do with program computers back then was program them, right?
+
+Adam Wiggins (00:12:23) - Like I think it used Logo, maybe later Basic,
+and you'd get in there and just the same way that a kid just wants to
+pick up that piece of paper and the crayons and start drawing scribbles
+and that it's this form of expression. I saw the same thing in the
+computer and just was endlessly fascinated with it. What about you,
+Marc?
+
+Mark McGranaghan (00:12:44) - Yeah, similar story for me. I did not have
+the experience of programming very young. I didn't do any really
+substantial programming until I was in college and the specific impetus
+for me was I was studying economics, among other things, and I wanted to
+do agent-based simulations to test out some economic ideas. And so, OK,
+I got to teach myself Java. And I remember in retrospect how completely
+terrible that Java program was, just the incredible amount of copying
+and pasting. You wouldn't even believe it.
+
+Mark McGranaghan (00:13:12) - But anyways, at that point, I got into
+that track that Adam was describing where it's an incredibly powerful
+and accessible medium for creating. I always like creating things like I
+did model airplanes and other stuff like that. But there's actually a
+pretty narrow set of things you can actually do that's both powerful and
+accessible. Maybe you are into welding, but as a 19-year-old in rural
+Maine, it's kind of tough, right?
+
+Conor White-Sullivan (00:13:32) - Yeah.
+
+Mark McGranaghan (00:13:33) - But you can get a computer and do whatever
+you want and you don't need to ask anyone's permission and the sky's the
+limit. So it's pretty cool.
+
+Conor White-Sullivan (00:13:39) - I want to touch on both of those.
+Adam, you're talking about being a nerd. If you can imagine it, I was
+such a nerd, I didn't have enough friends to play D&D with. Let's say
+that. Like, I used to play this single-player D&D type book. It was like
+a choose your... I don't know if you guys might have been actually maybe
+too old to remember the R.L. Stine choose your own adventure books.
+Those were like really big in the 90s.
+
+Mark McGranaghan (00:14:01) - Oh, yeah.
+
+Conor White-Sullivan (00:14:02) - There was a game called Quest and it
+was individual paragraphs, each with a number. And it was like, oh, if
+you go down the right hallway, go to 232. If you go down the left one,
+if you fight the goblin or whatever. But I remember playing these games
+all the way through and then I actually made them multiplayer. I did
+have two friends who were nerdy enough to indulge me in this for like a
+couple recesses before they were sick of it.
+
+Conor White-Sullivan (00:14:27) - But I played the games all the way
+through and then continued the rule set for the game and just started
+writing paragraphs at the end of the book to try to like keep the game
+going. Because they were originally supposed to publish like 10 of these
+game books, but only two of them got published in the US. So and in some
+ways, actually, there's something reminiscent of Rome in that sort of
+backstory. You're talking about agent based simulation for economics,
+Mark. Here's the next question I've got for you guys.
+
+Conor White-Sullivan (00:14:54) - What's the first problems or bigger
+problems that you remember unaware of or even caring about?
+
+Mark McGranaghan (00:15:00) - I'm going to give you sort of a half
+answer here. So there's certainly problems if I go back in my memory
+when I was a very impressionable kid, you know, whatever. The third
+grade science teacher says, you know, all the turtles are dying. So
+everyone goes home and clips all the six pack plastic things and stuff
+like that. But something that's still sticking with me is when I was
+working in computers and originally I had this very unalloyed excitement
+about the cloud coming out of college. I was like the cloud services in
+particular.
+
+Mark McGranaghan (00:15:27) - This is before I was even at Roku.
+
+Conor White-Sullivan (00:15:29) - It's just so powerful to be able to
+have a hosted service that does everything for you.
+
+Mark McGranaghan (00:15:32) - And the end game is everything moves to
+that model. And obviously, I still think there's a lot to that. But it
+was only with the experience of living in a society that has embraced
+that model. You realize some of the really tricky downsides of it.
+
+Conor White-Sullivan (00:15:45) - Something I'm still grappling with is
+someone who works in computers.
+
+Mark McGranaghan (00:15:48) - So we could do a whole episode about that.
+But that's one that I've definitely thought about.
+
+Conor White-Sullivan (00:15:53) - Our follow up question. You guys know
+the phrase, you can't solve the problems you have. It's attributed to
+Einstein. You can't solve your current problems with the thinking that
+got you into them. Do you know the exact quote?
+
+Adam Wiggins (00:16:06) - We can't solve the problems by using the same
+kind of thinking we used when we created them.
+
+Mark McGranaghan (00:16:09) - Yeah.
+
+Conor White-Sullivan (00:16:10) - Yes.
+
+Adam Wiggins (00:16:11) - And I do think there's maybe a positive spin
+on that. One is like we had dumb thinking and then that led us to be in
+a bad situation and we need to be less dumb. But another way to put it
+might be that in moving yourself or your group or society forward with
+better thinking, well, that creates new problems like the cloud version
+there that Mark mentioned. And now you need to solve those new problems.
+But on net, you're probably better off than where you were before.
+
+Adam Wiggins (00:16:40) - It's just that the idea that anything is going
+to bring a panacea, a utopia where all your problems are solved. And now
+we don't need to have new thinking and new solutions and be aware of the
+downsides of the world we've created. That will basically never happen.
+
+Mark McGranaghan (00:16:55) - I think you could even generalize it and
+say, even if there's not progress, there's change. The world is
+different.
+
+Conor White-Sullivan (00:16:59) - Yeah.
+
+Mark McGranaghan (00:16:59) - There's no going back. You know, that's
+the way it is. The only way out is through.
+
+Conor White-Sullivan (00:17:04) - So I thought that's the potential hope
+is networks. I politically became really alive when I read Yochai
+Benkler's The Wealth of Networks. And, you know, saw Clay Shirky's
+organizations institutions. My life plan was to sell John Deere tractors
+in Africa because it seems like the coolest job I could do. I was
+planning on like doing a few years in college and then like going and
+being like a heavy equipment salesman in Africa because I wanted to
+travel. And that looked like a job that would pay for me to travel to
+really crazy places.
+
+Conor White-Sullivan (00:17:37) - And I thought, you know, excavators
+and tractors were cool. So I was like, that probably do that. That was
+like my freshman year plan. And then I was like, oh, but actually we
+might be at a period of history that is as important as the printing
+press.
+
+Adam Wiggins (00:17:50) - Part of the thesis, I guess, of The Wealth of
+Networks is that the creation of this network society through the ever
+increasing communication capabilities, the Internet being the kind of at
+least to date, the ultimate manifestation of that creates a moment of
+opportunity to have an impact, to change the way the world works. Again,
+that's certainly where the startup world sees itself as in this highly
+dynamic, you know, early stage thing where you have the opportunity to
+maybe have more impact than you would as an individual.
+
+Adam Wiggins (00:18:18) - So was it that part of the book that sort of
+inspired you to think, OK, that...
+
+Conor White-Sullivan (00:18:22) - Well, at least a couple of things. It
+was the idea of nonrival goods. So first, the idea of I'd make something
+and it costs zero dollars for there to now be a million versions of it.
+
+Adam Wiggins (00:18:31) - Right.
+
+Conor White-Sullivan (00:18:31) - And that because the goods are
+nonrival and they're post scarcity, like they have a different kind of
+economic pattern to them. That was one aspect of it. And so he sort of
+had a four part quadrant that he was sort of laying things out. He was
+thinking about the state, the firm, the market and the network. So a
+state would be something which is public goods like, you know, they're
+trying to manage resources that cannot be sort of carved up into small
+pieces.
+
+Conor White-Sullivan (00:19:00) - You couldn't have property rights on
+things like clean air, you know, so places where there's lots of
+externalities and like one person could hurt the commons. But there
+isn't less private incentive for people to maintain or protect the
+commons. So the state historically has used coercion for the governance
+of the commons. So the state would be centralized management of a
+commons. The firm would be centralized management of private resources.
+The market would be decentralized management of private resources.
+
+Conor White-Sullivan (00:19:29) - And the network is decentralized
+management of public resources. So like it allows for the creation of
+new kinds of commons, particularly information commons.
+
+Adam Wiggins (00:19:38) - And so here we're thinking, what, open source
+or the way that like DNS works where there's no...
+
+Conor White-Sullivan (00:19:43) - I mean, I also was interested in Ray
+Kurzweil at the time. So I was thinking general like techno utopian post
+scarcity, like what happens when we can 3D print organs? And the more we
+can get to actually we might be on the cusp of technology that allows
+you to take things from the digital world into the physical world. And
+this could...
+
+Conor White-Sullivan (00:20:00) - would be potentially somewhat
+revolutionary in terms of if I can get any medicine that I need by like
+downloading it and if someone can make an open source version of the
+medicine that I need, like that was the kind of one aspect of what I was
+thinking, that was that book. But the other thing, I think it was mostly
+just I got some hope that like, hey, there's, you know, Lennox. I also
+got then disillusioned, but I did a bunch of open source stuff.
+
+Conor White-Sullivan (00:20:24) - My undergraduate thesis was on trying
+to create a way of Wikifying a local government and actually like making
+a more direct democracy type approach under the assumption that, you
+know, people have a ton of tacit knowledge. Like there's voices that are
+not heard that have expertise that is not like recognized. And you need
+culturally relevant solutions.
+
+Conor White-Sullivan (00:20:46) - I was coming from anthropology
+background, so I was thinking a lot about like the thing that is going
+to work in a rural village in Ghana is like not going to work
+necessarily in Boston, Massachusetts, and even the thing that's going to
+work in Southie is not going to work in Jamaica Plain maybe. Like you
+need to tap into the resources and the culture and like the actual life
+and local context, lived experience of people who are in a community.
+
+Adam Wiggins (00:21:11) - Yeah, well, I'm a huge fan of being close to
+the problem lets you, like you said, have a tacit knowledge, understand
+it in a way that you just can't, but yet as our societies get bigger and
+literally this is just a scaling the number of humans thing that exists,
+which is governments are going to naturally get further away from the
+people, right? The government of the United States, 200 years ago, when
+the population of the United States was a tiny fraction, you know, it's
+much closer to those people whose problems it's hopefully trying to
+solve.
+
+Conor White-Sullivan (00:21:40) - Do you guys remember your first
+ideology?
+
+Mark McGranaghan (00:21:44) - Baby's first ideology?
+
+Conor White-Sullivan (00:21:46) - Baby's first ideology?
+
+Adam Wiggins (00:21:48) - Yeah, I mean, the classic thing you have with,
+let's say, university students is, yeah, they get really into
+environmentalism or something like that. And it becomes almost the
+purism of it, right?
+
+Conor White-Sullivan (00:21:57) - Do you remember the first thing you
+were ideological about? It's easier to call it an ideology if you're
+like post, if you've left it in some ways.
+
+Adam Wiggins (00:22:03) - Yeah, probably open source, actually.
+
+Conor White-Sullivan (00:22:04) - Open source? How old were you?
+
+Adam Wiggins (00:22:05) - And Linux specifically. This is the year of
+Linux on the desktop.
+
+Conor White-Sullivan (00:22:09) - This year is Linux on the desktop?
+
+Adam Wiggins (00:22:11) - Well, being the kind of lover of open source
+belief in what that could bring and thinking, OK, commercial software's
+days are numbered. Eventually we're all going to be running, you know,
+things that are developed in the common for the common good. It's just a
+matter of time. So, yeah, I think that was probably one of my first in
+the late 90s.
+
+Conor White-Sullivan (00:22:29) - I was definitely in that ideological
+camp until I tried to run an open source project. And then I realized
+it's a lot easier if people actually can make a living and do the thing
+full time.
+
+Adam Wiggins (00:22:40) - Yeah.
+
+Conor White-Sullivan (00:22:41) - What about you, Mark? Do you remember
+your baby's first ideology?
+
+Mark McGranaghan (00:22:44) - Oh, I was going to give you another half
+answer, which is I've always been more of an is than an ought person. I
+associate isms with ought. You know, the world ought to look like this.
+And there's something to that. And of course, people having ought
+notions feeds back into what is. But for me, I keep myself busy just
+trying to understand what's actually going on and the dynamics that are
+unfolding. As you understand things better, you certainly develop
+notions about how they might be different, how you might want them to be
+different.
+
+Mark McGranaghan (00:23:11) - But I try to keep a real close eye on how
+the world actually is, because just understanding that is quite hard. To
+give you a concrete example, you talked a little bit about technological
+determinism, just understanding how the various technologies that have
+and are evolving, what that means for us is incredibly not obvious, even
+something like computers or even networking. Is networking going to be
+decentralizing? I don't know. It's right in the name.
+
+Mark McGranaghan (00:23:35) - Shouldn't it be or is it going to be
+highly centralizing as for example, Samuel Burge has argued in one of
+his pieces that we can link to? It's not obvious to me.
+
+Conor White-Sullivan (00:23:43) - All right, well, I mean, we can take a
+second on this because I think the best kind of prophecy is
+forthtelling, right, where certain kinds of things like the most
+interesting predictions are self-fulfilling predictions, right?
+Something where because you imagine a thing to be possible and you
+believe that it's worth your energy to try to make that thing possible,
+you can make the thing possible, right? I mean, both of you guys have
+made startups happen out of nothing. Like nobody makes anything happen
+out of nothing.
+
+Conor White-Sullivan (00:24:10) - But like the early stages are crazy
+because it's not a Ponzi scheme per se, but like you need to convince
+investors that you're going to be able to convince engineers that you're
+going to be able to convince customers. Like it is a crazy balancing act
+where you have to make a vision into reality, even just in the
+assembling of the early team and the raising of enough capital for
+people to quit their jobs for long enough to get the proof points to
+convince more.
+
+Adam Wiggins (00:24:34) - Yeah, I think there is a faith-based element
+to it. Yeah.
+
+Conor White-Sullivan (00:24:38) - I mean, my thinking is there are two
+ways. You know, the idea of a map territory conflict?
+
+Adam Wiggins (00:24:41) - Yeah, absolutely.
+
+Conor White-Sullivan (00:24:42) - If the map I have in my head doesn't
+match the territory, there's two ways I can change things. I can try to
+update my map or I can get a bulldozer and I can try to change the
+territory, right?
+
+Adam Wiggins (00:24:52) - Yeah, there is something to that. The power of
+the ideological person and often the world are changed by young people
+that have sort of like an unrealistic vision because they aren't stuck
+in the status quo and they are willing to take that bulldozer in. But it
+has to be balanced somehow by pragmatism.
+
+Conor White-Sullivan (00:25:08) - My first company was trying to make an
+online town common. The idea was if you could get the for any local
+issue and every issue could be made into a local issue was the sort of
+the hope, right? If you could accumulate political capital online.
+
+Conor White-Sullivan (00:25:25) - So if you could confirm that all the
+people on this little forum thing were actual registered voters in this
+town was the mechanism that we had for trying to accumulate political
+capital, then you could sort of force a more responsive local government
+and start to sort of decentralize the place where people are most likely
+to influence and get some power. And the idea at the time, I was hoping,
+you know, oh, if you gave people that like then we could actually have
+democracy experiment everywhere, you know, like. But it totally didn't
+work.
+
+Conor White-Sullivan (00:25:59) - It totally like I didn't even want to
+use it because I realized I didn't care that much about, like, you know,
+the property taxes and like the paving of the roads and like what to
+name the new library, like just the local politics issues were so boomer
+and I was like this little 19 year old, like libertarian socialist, like
+we're going to have an Internet anarchism revolution and all of my users
+for that product were like 60 plus. And I was so glad that I had no
+power to coerce anyone to do anything because I just didn't understand
+the world.
+
+Conor White-Sullivan (00:26:33) - So I became even more pro startups
+because there's something beautiful where you have to be right about
+making something people want. You have to both have a vision, but that
+vision does get tested against reality of like, will it blend? Like, can
+you ship it like when you ship it? Will anyone care? Like if you build
+it, will they come? Right.
+
+Conor White-Sullivan (00:26:53) - You kind of have to believe it in
+order to build it, but reality will test you there, which is one of the
+reasons I like startups and it's also one of the reasons why I'm hopeful
+for more diversity of political entrepreneurship or things like that.
+Like it's one thing I really do share in common with biology and the
+hope that there will be more micronation someday in the future and
+actual entrepreneurship and meaning bounded communities or something,
+something like that. Utah is a great example.
+
+Conor White-Sullivan (00:27:26) - Somebody put out a vision and a bunch
+of people with the same kind of ideas. Utah is the original network
+state.
+
+Adam Wiggins (00:27:32) - Certainly makes me think of charter cities,
+which is certainly another kind of libertarianism type sphere idea, but
+yet is that idea of it's not just about self-governance and getting to
+choose, but also to let a thousand flowers bloom. We have to try a bunch
+of stuff because, as you said, ideas have to be tested in the real world
+and we can sit around and debate them. And indeed, people do.
+
+Adam Wiggins (00:27:53) - But until you can try it at scale over time,
+see how it actually impacts people's lives, do people really want to
+live in that place that does change society in some fundamental way?
+
+Conor White-Sullivan (00:28:03) - Yeah. So here's another question I've
+got for you guys, which is like, and I'll give my answer first, but I've
+been thinking recently about just beliefs that sort of lodge in your
+head that end up propagating into all sorts of other things. And you
+don't necessarily go back that often to re-examine them. So I'll give
+one, which is the idea that creative work can't be coerced.
+
+Conor White-Sullivan (00:28:26) - And I think this is part of why I've
+been so pro-voluntaristic type associations and trying to figure out
+networks for mutual aid and ways for people to help each other, where it
+is a very opt-in system. But I think it might also be just directly
+related to me having a pretty oppositional, like, low-agreeableness
+personality where I really don't like to be coerced in anything. So
+like, I just, I assume that good work can't happen under real coercion
+because I won't work under coercion.
+
+Conor White-Sullivan (00:29:00) - Therefore, you know, I don't know if
+anything jumps to mind for you guys in terms of like little beliefs like
+that that might color.
+
+Adam Wiggins (00:29:08) - The core of critical thinking, I think, is
+trying to examine beliefs that are in your mind and how do they get
+embedded in the reality is it's rarely a thing. I encountered a new
+idea, fact-checked it carefully, and then decided to make it part of my
+worldview. It's more you get exposed to something a lot over and over
+again, and it just, through osmosis, sinks into how you see the world.
+
+Adam Wiggins (00:29:29) - And I always find it funny to stumble across
+little beliefs, even just things like, you know, should you keep this
+particular food item in the fridge versus is it okay to, you know, sit
+on its shelf stable? And sometimes there's just something I picked up
+when I was a kid from one of my parents or something, and I didn't
+realize until I was an adult that actually you can stick that on the
+shelf.
+
+Conor White-Sullivan (00:29:49) - Wait, wait, wait.
+
+Adam Wiggins (00:29:50) - I just never examined it, right?
+
+Conor White-Sullivan (00:29:51) - What did you keep in the fridge that
+you didn't need to keep in the fridge?
+
+Adam Wiggins (00:29:53) - Yeah, I'm trying to remember what, maybe it
+was potatoes? Was one that was like that. It does slow down their like
+budding or something like that. But I don't know, I think my mom always
+stirred potatoes in the fridge. And then I had a roommate that was just
+like, I'm just going to put them on the shelf, we don't have room in the
+fridge. And I'm like, wait, you can't do that? You know, they'll spoil.
+But then I'm stopping and thinking, well, wait, how do I know that? Or
+why do I think that? And the answer is, you know, it's just something I
+absorbed.
+
+Conor White-Sullivan (00:30:17) - What about you, Marc? Do you have any
+things you've noticed that were like, it's the most general question. Do
+you have any unexamined beliefs? What a terrible question, Mike. I
+apologize.
+
+Mark McGranaghan (00:30:28) - I'm not sure if this is exactly what you
+were asking, but there are some lenses I keep in my pocket. I'm always
+putting them up and using them to look at the world. So, one lens is the
+lens of trade-offs from economics. That's very easy to speak in
+absolutes or to speak in terms of improvement or degradation. The
+reality is almost always one of trade-offs. Another one that I use all
+the time relatedly is distributed information processing. This kind of
+is related to your idea of mutual association.
+
+Mark McGranaghan (00:30:58) - The world is so complicated that there's
+no way for it to be understood centrally, especially when you consider
+that a lot of the things that are important to understand are matters of
+personal preference. So, it's not physically possible to bring that
+information into one place, compute, and spit out results about what
+ought to happen. So, it has to be done in a distributed way. And it's so
+easy to fall into the trap of, you know, what if we just brought all the
+information in one place and figured out what to do? It just can't be
+done.
+
+Mark McGranaghan (00:31:24) - And when you remind yourself of that all
+the time, you come across many cases where you see people trying to do
+that, to try to extract the information and put it through an explicit
+machine and turn out an answer. And you have to instead just let it be
+out there and let the network process the information and decide what
+should happen.
+
+Conor White-Sullivan (00:31:41) - Can you go into more detail?
+
+Mark McGranaghan (00:31:42) - Well, this is a whole key tenet of
+Austrian economics or Hayekian economics. People can look up those
+things and read about it. There's a famous, I think it's an essay
+written about the manufacture of a lead pencil. And something as simple
+as that, there's actually no one in the world who knows how to
+manufacture a lead pencil. It has to involve many different people from
+around the world and they all have their own test of knowledge and
+understanding of what kind of wood is right.
+
+Mark McGranaghan (00:32:08) - And they know about the quirks of the
+machine and how it's always off by one degree. So you've got to
+counteract that. That sort of thing that it seems so simple, but even
+something as basic as that can be known centrally and needs to be
+distributed. By the way, not even to mention how many should be
+produced, at what price, where, what materials, just an incredible
+amount of complexity that can only be computed on and distributed away.
+I just find that a handy idea to go back to often.
+
+Conor White-Sullivan (00:32:33) - Can you think of examples besides the
+market? The first thing that you were making me think of was, I feel
+like I've only in the last few years gotten language for thinking about
+why it makes sense to listen to emotions so much. Thinking of emotions
+almost as like Bayes net massive information compression systems, where
+you're just getting a vibe about like, oh, this feels off. There's an
+essay called the limits of legibility, or it's like a less wrong post
+that I like.
+
+Conor White-Sullivan (00:33:04) - But often when you ask somebody,
+especially an expert or somebody who's like accumulated a large amount
+of experiential data around a problem area or around a skill or
+something like this, like, well, why do you think we should do it this
+way or that way? They're fabricating an answer. Like they actually have
+way more information than they could possibly convert into a bit stream
+that is compressed into verbal symbolic language.
+
+Conor White-Sullivan (00:33:30) - And so if you treat the answer that
+somebody gives you of why as if it's actually meaningful, many people
+actually treat the why, especially if they want to argue about it, as
+though that's the real thing, rather than a tiny symbolic representation
+of what in that moment they were able to generate, which might not even
+be the real thing. And the inability to articulate something doesn't
+mean that there isn't knowledge there. That is like such a like taste is
+real and experience is real.
+
+Conor White-Sullivan (00:34:03) - And you can have a lot of knowledge
+that can be extremely difficult to articulate. I found this to be
+extremely challenging when I was trying to introduce sort of
+counterintuitive cultural norms into the company. And I was bringing
+people who were used to working in. Since I finally found a moment where
+I actually made a point, Rome is not a normal company because I think
+normal companies are what got us into the situation we're in. I wouldn't
+want to work at Google. I wouldn't want to work at Microsoft. I would
+have no interest in being there.
+
+Conor White-Sullivan (00:34:33) - They're not building products for
+people like me. And also they kind of are. But the thing that I'm
+interested in is trying to figure out a different way of thinking
+together and in a bunch of different ways. But especially as I was
+having folks coming in who I'm trying to communicate certain practices,
+especially practices around how I work with Rome that had just evolved
+over time.
+
+Conor White-Sullivan (00:34:56) - I've got a whole very different way of
+using the tool than your average user and trying to communicate why I do
+things a certain way or why I was even asking somebody to do something a
+certain way. It was very hard to do if there wasn't trust that there was
+some intuition there and that the words that were going to be used as
+the explanation for why we're trying a thing were not the actual only
+reasons. Like I could come up with a hundred reasons for why we might
+try to do the thing.
+
+Mark McGranaghan (00:35:25) - Yeah. It's such an important point. And
+we've mentioned it on the podcast many times, but I think it's worth
+reiterating that experience and judgment and expertise, they're
+incredibly multidimensional. Millions and millions and billions of
+dimensions. And there's no way to compact it down either in terms of the
+model itself of experience, say, or the answer to some discrete symbols,
+as you were saying. And furthermore, when you get discrete symbols out,
+they're often just back-solved.
+
+Mark McGranaghan (00:35:53) - Like this huge multidimensional model
+spits out an intuitive answer, but then it's unsatisfying to convey that
+so the brain just like finds a way back through symbols it knows to
+convey something that sort of ends up at the destination. And it sort of
+plausibly sounds like a quote unquote argument or quote unquote reason,
+but it's just totally back-solved. That's not how they actually got to
+the answer.
+
+Mark McGranaghan (00:36:12) - Now I'm going to turn this around because
+this is an idea that I've embraced in my own thinking, but what does
+that mean for a tool like Roam or other tools for thought, which are
+inevitably collections of discretized pages and links and things like
+that? How do you reconcile those two worlds?
+
+Conor White-Sullivan (00:36:29) - TLDR, my first startup, I started as
+an open source project, could not recruit anybody to actually work on
+it, was somehow able to pitch it as a business plan competition, like at
+business plan competition. It's got 10k, suddenly could get actually
+better engineers and the ability for them to work full time. And so I
+found having an open source political project, plenty of people who were
+interested in the idea, but nobody could actually help me build the
+thing.
+
+Conor White-Sullivan (00:36:56) - A lot of the talent, as soon as I
+framed it as, oh, well, I guess we'll make it a media startup and maybe
+we'll sell the data. It's disgusting to think about the idea of selling
+political data now. But at the time I was just trying to figure out how
+do I win this business plan competition so somebody will give me some
+money. I worked construction before I got into tech. That was my summer
+job, but it was a terrible business.
+
+Conor White-Sullivan (00:37:17) - I got to give some TEDx talks and go
+to the Aspen Institute and we did end up getting acquired by AOL, but it
+was not a good business model. We were selling software to newspapers to
+get high quality use generated content on super niche issues that they
+were like civically important for the mission of newspapers. It was just
+a bad, bad business. And I was trying to solve so many problems at once
+in terms of how do you build a user interface for collective
+intelligence?
+
+Conor White-Sullivan (00:37:43) - How do you think about the political
+dynamics of like, okay, what people are excluded if you're using real
+names and you're using local like voter registrations? The problem of
+political coordination plus how do you crowdsource from a large body of
+people the actual best ideas from a broad perspective so that you don't
+have to read every comment? I was trying to solve a bunch of things at
+once and I found that I actually had to do some sort of science and the
+fact that I couldn't isolate any variable was like just blah.
+
+Conor White-Sullivan (00:38:13) - So after that company was bought, I
+was still interested in how do you build a better way for groups of
+people to in a weird way centralize their decentralized knowledge? So
+maybe the Hayek point is it's not even perfect execution. This is just a
+bad idea. I've wasted my whole career. Maybe like if I just read Hayek,
+I'll be like, okay, the collective intelligence stuff isn't going to
+happen, but I wanted to simplify the problem. And so my first thought
+was if I am able to be as a single player able to take the best writing
+that was done.
+
+Conor White-Sullivan (00:38:48) - So like one problem we had in the
+first company was how do you get critical mass for a social network and
+then how do you create a ecosystem that actually inspires people to be
+as articulate as they possibly can be about what their position is or
+like why you should do the thing? How do you actually get people to give
+really, really high quality content? And then how do you from a large
+mass of users identify the best content from a diversity of
+perspectives?
+
+Conor White-Sullivan (00:39:13) - Because instead of just having people
+vote down ideas that are good articulations, but they happen to disagree
+with, how could you actually get the best ideas from many different
+perspectives and see this sort of multi-dimensional object of like any
+kind of question. But we were particularly starting with these local
+political questions. And my thought was the simplified version of this
+problem is well, one, we had only been able to launch in places where we
+had critical mass for my first company, which was called localocracy.
+
+Conor White-Sullivan (00:39:41) - And so I was like, the tool has to
+work without critical mass. It has to work as a single player tool. And
+if I can start with the best writing throughout all of history, and I
+can be the one who's aggregating it, and I can figure out how to like
+map these different perspectives together. Well, now I've just.
+
+Conor White-Sullivan (00:40:00) - isolated a bunch of variables because
+I don't have to worry about getting the best articulation of an idea.
+I've got the entire corpus of human history. I can just pick out what I
+think are the best articulations of the idea. And I don't have to worry
+about critical mass because as long as I'm interested in the problem, I
+can do this or as long as anyone's interested in the problem. And so
+there was a book called The Syntopicon. They'd spent like 50 million
+bucks.
+
+Conor White-Sullivan (00:40:22) - It was from Encyclopedia Britannica
+and it was a great book's course of all the best ideas of Western
+history and the first two sections of the book are an index of these
+ideas where they sort of summarize it and they point to the paragraph
+number of where the idea is articulated by Descartes or Hegel or Marx or
+Kant or Plato or whatever. So I was like, well, if I can make a digital
+version of this and I can make it for a single player and then I just
+charge money for that.
+
+Conor White-Sullivan (00:40:48) - I don't have to worry about selling
+software to newspapers who then run it to advertisers.
+
+Conor White-Sullivan (00:40:51) - And I have to convince a bunch of
+other people if I can just find people who want to organize thoughts and
+I just sell it to single players, then I can maybe get the iteration
+cycles that I'm going to need, I can basically keep this company alive
+long enough to run through all the iterations to solve this potentially
+impossible UX problem of how do you actually create these high
+dimensional objects that represent many different perspectives around a
+single sort of truth thing? Like how do you build a truth engine?
+
+Conor White-Sullivan (00:41:20) - How do you build a system that
+actually allows you to sort of create this Bayes net so that your
+beliefs could propagate?
+
+Adam Wiggins (00:41:27) - Well, I see the breadcrumbs now. You start
+with kind of collective action and you're thinking in terms of
+governance, but you're also thinking in terms of networks and how to
+bring together sort of computing and some of the open source and maybe
+kind of more freedom oriented ways of organizing ourselves. You tried to
+do that with software for kind of participation in government.
+
+Conor White-Sullivan (00:41:48) - And that was a total bust. But it
+leads you into the like it was so I mean, it's like imagine selling
+software to government. Now, imagine that you have to sell software to
+government and to the newspapers that are going through like massive
+decline at the same time. And the subject matter that is going to be
+discussed on there is like extremely boring. You guys familiar with
+Michael Nielsen's Reinventing Discovery?
+
+Conor White-Sullivan (00:42:14) - That was the book I was looking for
+for forever after my experience with localocracy and then trying to work
+on because when I ran a labs group briefly and poorly at Huffington
+Post, because after we were bought by AOL, we ended up in the editorial
+division for HuffPost. And then I just was able to spin out my own
+little labs group for about a year, focusing on kind of collective
+intelligence, crowdsourcing knowledge, figuring out ways of doing new
+stuff.
+
+Conor White-Sullivan (00:42:42) - And anyways, the book that I found
+that was sort of one of the better textbooks on thinking about the
+problem of collective intelligence is that one, and he talks about
+things like the problem of a conference where even if you have all the
+experts in the same place, you're not necessarily routing the right
+people for the right conversations.
+
+Conor White-Sullivan (00:43:01) - You have to worry about when you're
+making everything synchronous, whether people had enough coffee or
+whether they're distracted by something like you want to be able to
+allow for a certain kind of serendipity to be more predictably happening
+and remove the sort of constraint of they have to be in the physically
+right place at the right time. They have to just happen to bump into
+each other. When you run into somebody, you don't know that they know
+something that you need to know in order to solve the problem that
+you're working on.
+
+Conor White-Sullivan (00:43:32) - But you don't know what the name of
+their knowledge is. And there's certain kinds of human routing or
+information routing problems that he lays out pretty well in there. He
+calls it efficient allocation of expert attention. And so one of the
+reasons Roam is block-based even is just trying to work with that. So
+not just thinking about thinking in terms of blending programming and
+writing. So you're not just writing paragraphs. You're actually trying
+to think about a kind of data structure of a pattern of thought.
+
+Conor White-Sullivan (00:44:02) - And that's a lot of what I've been
+trying to create as a medium is, you know, if you think about block
+references, which is something that none of these so-called Roam clones
+do at all, I don't know any of them that are actually multiplayer,
+right? The reason I referenced your offline talk is like, we've been
+multiplayer from day one, even though we've been a single player tool.
+
+Adam Wiggins (00:44:20) - Right.
+
+Conor White-Sullivan (00:44:21) - That was actually architecturally some
+of the hard stuff to figure out was like, how do I make this thing work
+as sort of a collaborative real time thing with a graph database and
+start thinking about the interpersonal dynamics of referencing somebody
+else's thought or like what are the different ways that you write when
+you're trying to write almost as statements that you're expecting to be
+reused by other people? How do you think about version control of a
+statement or like the way someone might transform a statement or
+rephrase a statement?
+
+Conor White-Sullivan (00:44:45) - Like these are the kinds of, you know,
+it's thinking about language in a different way than paragraphs or
+pages, because we're trying to think about how to create an object where
+you're not going to have to read the entire history of a Slack channel
+when you go into it to get up to speed on what the group knows.
+Actually, if you've got a new piece of knowledge that really would have
+unlocked something that the group is talking about six months ago, you
+know, and the group kind of shelved that whole discussion because they
+didn't have that knowledge.
+
+Conor White-Sullivan (00:45:12) - How does your knowledge immediately
+fit in and unlock that?
+
+Adam Wiggins (00:45:15) - Right.
+
+Conor White-Sullivan (00:45:16) - So it's thinking about a different
+kind of collaborative thought data structure. And so things like block
+references and the ability to build a statement up out of other
+statements, having unique ideas for those. Yeah, that's the kind of work
+that I think is important about Roam and something that never gets
+talked about on any of the YouTube videos of users.
+
+Conor White-Sullivan (00:45:36) - I'm not complaining about it because
+if people weren't happy with the things that I thought of as basic,
+which is the stuff that everyone imitated, right, I needed to get those
+basic things to even get to the place where I could think about the
+block references and all these other things, which are still rough,
+therefore a problem people don't know. They have like nobody's trying to
+like reinvent pros. I'm trying to reinvent pros. I don't think pros
+works for large scale, collaborative problem solving, like essays do not
+work. I mean, they can work.
+
+Conor White-Sullivan (00:46:06) - They're the best that we have right
+now. I saw you shaking your head, Mark. Right. Like and in fact, there's
+a whole other thing, which is like being able to go from convincing
+rhetoric that is storytelling, where the author is taking you on a
+journey with them into the structure, you kind of may want to have both,
+you might want to have a sequentially ordered narrative that is being
+presented.
+
+Conor White-Sullivan (00:46:27) - But then if you're trying to analyze
+the logic of it or like debug the program, you might want to have a more
+sort of structured graphical representation of it for the analysis of
+like where the weak points in the narrative.
+
+Adam Wiggins (00:46:41) - I find it very interesting, your vision for
+where you want to be longer term, which is really about collective
+intelligence more than individual intelligence, but you can't bootstrap
+into getting everyone to use something at the same time.
+
+Conor White-Sullivan (00:46:54) - Also, your past and future selves are
+totally different people. Right. The past is a foreign country. So the
+other reason that I started with a single player tool has been I didn't
+have to convince anybody else to use it to be able to iterate on it.
+Other authors were other people and myself across time was other people.
+And so it is an easier and still extremely difficult problem to solve
+the problem of organizing your own thoughts over time as your thoughts
+change, being able to go back and actually reexamine them.
+
+Conor White-Sullivan (00:47:21) - These are actually more related than
+people think. Like people don't realize how many selves they have. I
+actually think the idea that you are just one self is kind of so many
+different sub agents running around. Like one day you think this, if
+you're hungry, you think that. If you're tired, you think that. Like,
+how do you actually bring all your internal family systems? I don't know
+if you guys have ever gotten into that kind of stuff. But like, you're
+many.
+
+Adam Wiggins (00:47:46) - You are many.
+
+Conor White-Sullivan (00:47:47) - Yeah.
+
+Adam Wiggins (00:47:48) - Contain multitudes.
+
+Conor White-Sullivan (00:47:49) - Absolutely.
+
+Adam Wiggins (00:47:50) - Certainly writing is a technology for not only
+communicating with others, but also communicating with your past and
+future self is a powerful piece of it.
+
+Conor White-Sullivan (00:47:58) - And present self. I don't know what I
+think until I write it sometime.
+
+Adam Wiggins (00:48:01) - Absolutely. Yeah. The externalizing the
+thought, the conversation with the page. You see what's there and that
+becomes a loop that's different from the kind of thinking inside the
+brain.
+
+Conor White-Sullivan (00:48:11) - Or to tie it back to Mark saying, you
+know, when you were talking about you got into programming so you could
+build those multi-agent models for doing economic simulations, like
+that's the kind of stuff I want people to be able to do. It in Roam.
+It's like Roam is the database of all their notes, all their thinking.
+And so if they want to just start playing with stuff, they shouldn't
+have to worry about setting up a web server or web page or whatever.
+It's like, OK, they write some JavaScript and suddenly they're embedding
+a little.
+
+Conor White-Sullivan (00:48:38) - And that's one of the cool things with
+Clojure is like Clojure interpreter inside Rome and a JavaScript
+interpreter inside Rome. So hopefully someday the future Mark is
+thinking through his economics thoughts with little simulations inside
+the notes and like they're part of his scaffolding of his own thinking.
+And he's going to be able to go back and not just read his old thoughts,
+but like play with the simulations that he was writing.
+
+Adam Wiggins (00:49:02) - That's super interesting. And definitely the
+programmability built into the tool that again programmers, editors have
+had since forever, but bringing that to something that's more for other
+kinds of knowledge workers or other kinds of obviously power users, but
+people who are more working in the realm of ideas, not necessarily code.
+Putting those two things together, I think was a surprising but
+important innovation.
+
+Conor White-Sullivan (00:49:25) - I'll say one word here too, which is
+that someone asked, what are we working on? What have we been working
+on? One thing that is still an open research problem that I've seen no
+one else even thinking about is the idea of that there are higher order
+functions for regular thinking.
+
+Adam Wiggins (00:49:42) - Right.
+
+Conor White-Sullivan (00:49:43) - If you do weird San Francisco hippie,
+like intentional relation stuff with other groups of people, like you
+get used to these kind of patterns of questions.
+
+Adam Wiggins (00:49:52) - Right.
+
+Conor White-Sullivan (00:49:53) - For instance, I ran a learning cult
+because I was trying to do it with workflow in Excel. Like I was trying
+to build a sort of peer to peer research group with just friends and
+folks that I met when I was in the Bay Area. I was trying to figure out
+the minimum thing I would need to build for Rome to build a
+decentralized research group.
+
+Adam Wiggins (00:50:13) - Right.
+
+Conor White-Sullivan (00:50:13) - And so I was in order to stress test,
+I was like, how close could I get to the ideal social and like
+information structure without building anything with like off the shelf
+tools? And I used workflow, which was in tree based outliner, and I used
+Google Sheets and I would do stuff like I would ask people, what are the
+like seven best books you've read in your life? OK, for each book, like
+what were the three big ideas for each of those big ideas? How did that
+impact you for each of those ideas? Can you find two quotes from the
+book?
+
+Conor White-Sullivan (00:50:45) - Can you go back and do these things?
+And even just a simple thing like a for each function, right? Even just
+like being able to separate out, I want to ask questions and then I want
+to take those answers and I want to map new questions onto the answers,
+onto these things, and I want to create a data structure out of this
+map, filter and reduce. Like we don't have higher order functions for
+these basic qualitative kinds of interpersonal interactions.
+
+Conor White-Sullivan (00:51:09) - And so one of the main things that
+I've been working on with Rome is trying to build a programming system
+for maybe for like teachers or like group facilitators or something like
+that. For me, this was a very important practice for being an autodidact
+was I had a methodology for like deconstructing books, for like managing
+my attention. And it was always really inconvenient to have to go back
+and forth between like what step am I on right now?
+
+Conor White-Sullivan (00:51:35) - And then I couldn't just like set up
+this is the sequence of events that I want to do and just like look at
+each thing one at a time and separate out the sort of cognitive
+scaffolding from the actual thinking.
+
+Conor White-Sullivan (00:51:47) - And so I'm trying to build a sort of
+higher order programming language for creating cognitive scaffolds, for
+guiding your own thinking, for like intentional reflection or
+investigation and like that kind of stuff like that, because I think
+there's a whole domain of programming that is about programming your
+mind, you being the programmer of your mind and being able to like let
+me think about the thinking I want to be doing and let me create prompts
+for myself where like I'm the evaluator. So that is what Roam really is.
+
+Conor White-Sullivan (00:52:17) - It's about building a programming
+language for human cognition, which could be individual or multiplayer.
+
+Adam Wiggins (00:52:23) - Well, let's wrap it there. Thanks, everyone,
+for listening. Join us on Discord to discuss this episode with me, Mark,
+and our community. Links in the show notes. And you can follow us on
+Twitter at MuseAppHQ. Connor, I'm so glad that you're helping us think
+big thoughts about how we can just be better at collective intelligence
+because it's pretty clear that that's a place that humanity can get a
+lot better. And thanks for coming on the show.
+
+Conor White-Sullivan (00:52:47) - Thanks so much.
