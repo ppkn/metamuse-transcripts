@@ -1,0 +1,733 @@
+---
+number: 84
+title: Retrospective
+layout: default
+---
+<h1>{{ page.title }}</h1>
+<a href="{{ site.baseurl }}/" class="back">Back</a>
+<div class="speaker-timestamp">Mark McGranaghan (00:00:00)</div>
+<p>I think it's important to deliberately not decide too soon what you're going to do in that situation because you need time for the existing structure of your brain to basically disintegrate a little bit, like let those pathways fade away, let the daily patterns of thinking and doing melt away and create some space for new ideas and new ventures to enter.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:00:28)</div>
+<p>Hello and welcome to Metamuse. Muse is a tool for deep work on iPad and Mac. This podcast isn't about Muse the product, it's about the small team and the big ideas behind it. I'm Adam Wiggins here with my colleague, Mark McGranaghan. Hey Adam. So by now I think a lot of the listeners have heard the news that the Muse team is downsizing, talked extensively with Adam Wolf about that in the last episode since he's the one carrying the torch forward here.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:00:54)</div>
+<p>But I felt like it would be really worthwhile for you and I to discuss, reflect on this podcast here because I think it has in some ways its own life that's a little bit independent from Muse the product or the company, even though in many ways it's also intertwined which we'll talk about. But one implication of this news, of course, is you and I both are not going to be doing Muse as our day job anymore and I'll ask you the same question I asked Wolf, which is feelings check. Where are you at right now?</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:01:23)</div>
+<p>Well, I'm excited for Adam Wolf and the product to continue. I think Adam's a great person to be carrying that torch and as a very heavy user of Muse still, I'm happy to see that for sure. You know, otherwise it's certainly a little bit saddening and disappointing. You work on this so hard for four or five years, plus if you include the work at the lab, it doesn't quite pan out the way that you'd hoped. It's a bummer for sure. But at the same time, it feels like the right move. It feels like the right time.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:01:50)</div>
+<p>There's always a natural four or five year cadence I found where it makes sense to pick your head up and look at new stuff.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:01:58)</div>
+<p>Yeah, the four or five year duration thing, when I look back to my career as an entrepreneur and other projects I've been involved in, that usually is kind of about the period of time that can kind of keep extended concentration on one particular topic. You know, you could certainly say the four or five years I spent on Ink and Switch were very closely related to the four or five years I spent on Muse. That in some sense is like a resetting of the venue, a different, I don't know, environment, a slightly different team, even if there's overlap.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:02:30)</div>
+<p>Yeah, I don't know. Sometimes that can be a good thing, even if this isn't quite the way I would have wanted to do it. But there is something about that timeline. Well, for this episode, I thought we could spend some time reviewing, retrospecting, and indeed, I think taking a bit of a victory lap for all we've done here on this podcast, which, as I said, I think has had almost its own life and identity that is complimentary to but also stands apart from Muse.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:02:57)</div>
+<p>Maybe it's a little bit of a self-indulgent episode, but you know, I don't know, I think we've earned it. Yeah. So just to start us off, I took the liberty of doing a little lightweight data science here and just kind of dug in on our episode history. So I don't know, maybe some interesting insights to glean here. So not counting this episode, there's 83 episodes currently in our back catalog, and they total 83 hours, 5 minutes, and 52 seconds.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:03:27)</div>
+<p>The shortest episode was episode 4, which was Partnership, Freedom, and Responsibility at 37 minutes and 20 seconds, and the longest was actually a very recent one on Spatial Computing that was an hour and 35 minutes. And the median ends up being almost exactly an hour, which I was surprised by. I actually thought it would be a little longer than that. But I'm also pleased because that's kind of what I'm shooting for. We usually record for hour and 15, maybe an hour and a half, and then trim it down.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:03:56)</div>
+<p>And there's various schools of thought around this, but for me, an hour is the right chunk of time. It allows you to go deep on something, but it's not so long that, for example, if you listen to a podcast on a run or a commute or something, that you're going to need to listen to it in chunks. I thought that was interesting, but I'm glad we kind of landed there.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:04:16)</div>
+<p>Yeah, I really like this length. I can even go longer. It's interesting. I listen to a lot of podcasts that are 40 minutes, 30 minutes, even 20 minutes nominal time, which by the way, you listen at 2x, so it's half that in real life. And so often, they're in a good conversation and the host is like, well, our time's up. That's it for today. Bro, it's your podcast. You can go as long as you want. What are you doing?</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:04:37)</div>
+<p>Right, right. This isn't network TV where you have a slot to hit, right?</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:04:41)</div>
+<p>Yeah.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:04:43)</div>
+<p>Yeah, well, there's very much something to be said for having time to really get into something I've noticed, for example, with guests, I feel like the conversation usually starts to get really juicy around 30 to 40 minutes in, and there's probably something there about you have the context, you've hit all the not quite service level things, but basic questions. And then that's a foundation upon which you can go a little deeper.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:05:06)</div>
+<p>There was one podcast I listened to for a while that would typically do like three hour interviews, and they explicitly say, we want to go deeper with our guests than if they're interviewed on a talk show on TV or something, you probably are only going to get to those same talking points and those same questions that they get asked over and over. But if you do the longer conversation, you spend the first hour on that stuff, and then you kind of go off script or you get a little deeper. So I see that, but I'm also a one X listener.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:05:35)</div>
+<p>And so for me, a three hour podcast, I basically never get to the end, no matter how interesting it is. So yeah, there's pros and cons there. And certainly we try to let the episodes be their natural length, while at the same time, I guess, respecting the listener's time and trying to, you know, kind of make it information dense perhaps. Another piece of the podcast I have always, I guess, been proud of is our show notes.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:05:59)</div>
+<p>And so this is something where stuff we talk about, which is often weird, obscure projects or articles or whatever, we try to link that so that you don't need to just Google around for it. So we have a total of 1943 notes, all of which are links, so that's around 23 per episode. And then the other thing I thought was interesting was just the podcast format, the RSS format calls it author, which is a little odd, but basically the people who are on the podcast.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:06:25)</div>
+<p>And so I did a little breakdown there, and it turns out that, well, not surprisingly, I am on 83 episodes, you are on 75. And then a few of our team members, like Leonard and Adam Wolfe and Yulia, were on a few each. And then we have a couple of guests, like Jeffrey Lidd and Max Schoening, who are on a couple of times. And then, of course, after that, it's the one-offs.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:06:48)</div>
+<p>And the author thing points to what I would call almost a type breakdown, which is when we started the podcast, and we can tell the origin story here in a minute, but we didn't necessarily envision it as a guest thing. We kind of experimented with that early on, it worked well, and we expanded that. But when I kind of did a breakdown, I discovered that episodes that are just me and you, which I think of as kind of our baseline or what have you, we're the co-hosts, is actually only 28% of the total, whereas 57% are something with a guest.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:07:17)</div>
+<p>So when you look at it that way, it actually seems like this podcast is more about having guests than it is about you and I. But on the other hand, I think those kind of non-guest episodes are pretty often touch on pretty foundational topics. And then the last category, which actually might be my favorite, and I almost wish we could have gotten more of, is what I call the team episodes. And that's where we bring on someone who is on the Muse team, so they're not an external guest, but they are someone who you don't normally hear from.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:07:43)</div>
+<p>And so that's about 15% of our episodes. And we'll talk about some of our favorites, but I think that category is the one I, in some ways, like the best.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:07:52)</div>
+<p>Yeah. And this makes sense to me, because ultimately, the podcast ended up being about ideas. So there are podcasts that are about the personalities of the hosts, and there are podcasts that are about the lives and activities of the guests. But ours ended up being more about the ideas around computing and Muse and so on. And we have a lot of ideas, obviously. The team members have experience and things to contribute there, too, and then all these different guests. It kind of makes sense to me in that respect.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:08:18)</div>
+<p>Now, the origin story here is that I've sort of always wanted to start a podcast about something. I just really like the audio format. I actually got a portable MP3 player, not an iPod, but some other product a long time ago just for that. Because I always liked, for example, like NPR. My mom listened to NPR. But for me, and I have the same problem with broadcast television, I just can't do it on someone else's schedule. I need to do it on my own time.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:08:46)</div>
+<p>And eventually, when it became possible to get like audio format through, again, MP3s or even in some cases like audio CDs, books on audiobooks, I just love that format. There's something kind of, even though it's slower or less efficient in some ways than reading, there's also something intimate and you get to know the personality or character of the host in a certain way and it can be engaging. And importantly, it's something you can do while you're doing something else. You're driving, you're running, you're doing chores in the house.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:09:19)</div>
+<p>It's a really nice way to keep the intellect part of your brain stimulated while you're doing something a little more rote.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:09:25)</div>
+<p>Also, you got to put that radio voice to work. I don't know if we've ever mentioned this on the podcast, but I get comments constantly about Adam's perfect radio voice.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:09:34)</div>
+<p>Well, I'm glad. I never would have guessed that. I mean, most people don't like hearing their own voice recorded and I count myself among that. And I just kind of powered through it because I felt it was a good format and it's not that important how your voice sounds. But yeah, glad to hear the good feedback there.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:09:52)</div>
+<p>So yeah, I guess we've always both liked the podcast format and then, I don't know, inspiration struck. It was actually our very last in-person team summit right before COVID hit. This would have been, I think, January 2020. We were in Sedona, Arizona, and I just pitched you this idea. We did a little test recording just using the memo, audio memo apps in our phones up in that freezing attic in that house we were staying in. It was only maybe 20 minutes long, but we sort of spliced it together and were able to listen to a little prototype, basically.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:10:22)</div>
+<p>Yeah, that was funny. I remember my teeth were almost chattering. It was so cold up there. And then I was really impressed because you edited the whole episode on your iPad. I just can't do any production work on iPads, but you did it somehow.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:10:34)</div>
+<p>Yeah. Well, I can back-reference you to our episode on iPad where we had differing ideas on that. But yeah, certainly at the time, I was excited about the iPad as a place for productivity. There's a nice bit of audio editing software there called Ferrite that, in a lot of ways, I think, with the stylus, it's actually very natural. I managed to kind of put it together with some, even threw in some stock music at the start just to kind of give it that sense.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:10:57)</div>
+<p>And yeah, I had one of our colleagues listen to it, and they said, yeah, I think there's a spark here. You know, I think you and I have a natural dynamic. We've been working together so long, and obviously, we have lots of ideas. And so yeah, those two things kind of made us say, let's give it a go at this.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:11:12)</div>
+<p>Yeah, and you alluded to this when you mentioned in the origin story how the idea was capture the conversations that you were hearing in the team. But for me, that goes back, I don't know what it is, 12 or 13 years. So we've been having these conversations for that long. I remember we went on those ski trips when we worked together on Heroku. We were on the ski lift, and we would talk about our schemes for making Heroku better and stuff. And so we've been at it for a while, just formalizing with the podcast.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:11:36)</div>
+<p>Yeah, absolutely. Now, I think in the original idea I had was that it would be something that was a little more spread out across the team. We would have different combinations of people, and it wouldn't be kind of one fixed host and ultimately kind of became my thing, I would say. I think even in the beginning, you and I traded off reading in the intro and stuff like that. And in the end, I think that works fine. I'm the kind of organizer, showrunner, you know, kind of main host.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:11:59)</div>
+<p>And then we can have this rotating cast of characters, which indeed even extends out into the guests from the Tools for Thought community. One of my big influences from the podcast world is the genre I've heard described as two guys talking. You know, that sounds gendered. It's not always two men. But there's something about two that makes a really good, you know, assuming the people have good dynamic and interesting topics, there's something kind of nice about that number and the back and forth. One person looks a little too monotone.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:12:27)</div>
+<p>Once you get to three, and especially above, there's a lot of voices, it's hard to keep track of it all. And one of my favorites on that was a podcast called Hello Internet, which was not really about anything in particular, but just the hosts had interesting personalities that kind of contrasted each other. And there's lots of others as well, like Gastropod is a great one that's kind of focused on food history. And Lexicon Valley, which is a linguistics podcast back then, had these two hosts.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:12:55)</div>
+<p>But one similarity across them, I think, was that, yeah, you have these two people in this kind of exchange, but then sometimes almost a contrast or something about the dynamic is you have the differing personalities maybe that play off each other.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:13:08)</div>
+<p>For example, I've often described you in talking about the format of the show as being the kind of contrarian philosopher, you know, so maybe I come in with the more direct perspective or something like that, and you come in with the contrarian and philosophical perspective, and something about that just works.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:13:25)</div>
+<p>So you mentioned two guys talking, I think there's kind of two dimensions there. There's the two, there's also the just talking. So a lot of podcasts are heavily produced, and they're like, they're basically read, you know, you write out script, and then you read them, you might even have dramatic music going on in the background and everything, and, you know, there's something to that. I've always been a fan, both in podcasting and on YouTube, of the just talking format.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:13:47)</div>
+<p>It's less scripted, it's more train of thought, day in the life, whatever it may be. I think there's something really to that, because importantly, there are a lot of ideas that you're just never going to get out of someone if they have to go through production. Write it down, get to produce it, especially with guests, you don't know when it's time for that, but everyone has time to sit down and talk into the microphone for an hour. So you get a lot of stuff out that you wouldn't otherwise get.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:14:10)</div>
+<p>The informality of it, the sense that you're listening in on a conversation by practitioners in your field is certainly something I was always going for. I try to prep our guests, actually, and say, look, listen, I'm not going to treat this like an interview, where it's just like question and answer.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:14:27)</div>
+<p>Hopefully the feeling a listener has is there's sort of a fly on the wall at a hallway conversation at a conference, where there's two people that maybe are meeting for the first time but have this shared interest or this work in a shared domain, and you're sort of listening in on that. The highly produced style, which I can appreciate sometimes, as you said, like This American Life, I think, kind of pioneered that, and there's Gimlet Media has a whole series. I feel like that's a style now, but yeah, it's very much scripted.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:14:56)</div>
+<p>And that's less compelling to me. Now, the other far extreme of that is just turn on a microphone and start talking. We do do both prep work, which for me is helpful because you kind of have some notes we're working from in a rough structure, but we also do editing.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:15:13)</div>
+<p>We'll maybe talk about the production process a little bit, but we remove false starts, we remove people talking over each other, in some cases, less often, but we'll remove the whole sections that feel repetitious or boring, so a little bit of that editing to try to make it as listenable as possible and kind of respect the listener's time and attention, but hopefully it still has most of that kind of raw, unscripted, just real sense of people talking to each other.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:15:43)</div>
+<p>Well, over the years, we've got so many nice emails, people tweeting about the podcast, reviews people leave on Apple Podcasts and other places. And I wanted to read a couple of those on air, again, partially for the indulgent victory lap, but partially because it's so interesting to hear what people find valuable or interesting about what we've done, you know, it gives you a little bit of a mirror back onto your own work. So I'll read a few here to you and we can react a bit live maybe.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:16:14)</div>
+<p>So maybe I'll start with this one from Andy Dent Perth, who says, this is the only tech slash design startup podcast I've been able to get my wife to listen to and not tune how well stuck in the car with me. And I like that one a lot because one of my goals generally with communications around the work I do, but certainly with podcast specifically is to make it deep and specific to the field. It's obviously very much a niche, but at the same time, kind of try to make it approachable. It's not like dripping with jargon or something like that.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:16:47)</div>
+<p>Or if someone does use a term that maybe not everyone is likely to know right offhand that we try to stop and define that or you can, you know, it's in the show notes, you can tap on it or click on it to get more information. So I've tried to sort of keep it accessible, but also for experts, I don't know if that works. But I feel like that review kind of captured, yeah, maybe the accessible part has been at least somewhat successful.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:17:12)</div>
+<p>Yeah.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:17:12)</div>
+<p>And it's encouraging to hear. For me, if there's one theme that ran through a lot of our episodes, it was software that reflects the way people actually think. And so, okay, the software piece that can be more technical, but the way people think everyone should be able to relate to that if we're doing it right. So hopefully that provides some surface area for people to latch onto.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:17:30)</div>
+<p>Another review here that touches on something that we were trying to achieve and sounds like we did, which is Winnifer left a review saying, listening to the Metamuse podcast is like eavesdropping on a conversation among friends. So certainly trying to create some of that warmth, create some of that, I mean, obviously this is, we're talking about professional topics, we're talking about the work we do, but I think for all of us and certainly for our guests, we are really passionate about it. It's our life's work.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:17:55)</div>
+<p>We put a lot of our heart and soul into it, even though in some cases it's pretty abstract stuff. And obviously we are doing it as a livelihood, but also, yeah, we're trying to make it something we enjoy from a social perspective is right, the right way to put it, but yeah, we should be friends. We should be a certain kind of professional or business friends among all of us here on the team and with our guests and with people in this community or set of overlapping communities that we're a part of.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:18:24)</div>
+<p>And speaking of community, we have a review from underscore PPKN that's titled Center of the Tools for Thought Community. And I think it's very generous to call it a center, but I do think we have been a helpful gathering point for folks in this emerging space. And the review basically talks about guests from the thinking technology space and how tools shape the way we think and so on.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:18:49)</div>
+<p>So yeah, a big part of, it wasn't necessarily our intention when we started, but I think you called it out from pretty early on that, especially once we started bringing guests into the mix, this can be a form of community gathering, even though it's not a forum where people can freely participate. It is something where we can bring folks who are working in the field, have, again, these fairly intimate and in-depth discussion. And then of course, folks can discuss the ideas prompted by that on social media and so on.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:19:18)</div>
+<p>Yeah, I agree. It's quite generous to call it the center, but it's certainly been great to be a piece of that.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:19:24)</div>
+<p>It's a special community.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:19:25)</div>
+<p>There's a lot of cool work going on and a lot of people who care deeply about software to help people think. So it's been fun to be a part of that.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:19:34)</div>
+<p>Yeah, the word community gets thrown around a lot. Commercial companies use it to just describe people who use their product or something like that, which I don't think is quite right. But I think that a community, especially when you talk about a professional pursuit like this, can be just a set of people who share values, but if they're all out kind of scattered on the internet and you don't know how to find them or where they are, you can sort of just feel isolated.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:19:57)</div>
+<p>I have these weird interests, no one around me understands or appreciates those things. And then when you do find a community, I felt that way, for example, coming to Silicon Valley and discovering the entrepreneurial community there, where it was something that previously I'd only had known a few people, basically my business partners, who cared about or thought about or worked on the kind of things that I spent my days on.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:20:20)</div>
+<p>And then suddenly here's a whole group of people who are all in touch with each other and supporting each other, not only intellectually, but also emotionally, to be honest. So I hope to some extent we've helped people discover and become part of the community and indeed inspire them to, well, realize you can make a career out of this stuff or at least some very passionate side projects.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:20:41)</div>
+<p>Another one I'll highlight here is, this is a tweet actually, it's from Arnav Gosain, and they say, the Metamuse podcast sets the bar so high for the time spent to knowledge gained ratio. Each episode leaves me with so much to research about. Again I liked this one because, yeah, I strive to do this, right? I want it to be information dense, to me that's respecting the listener's time as well as our guest time and so forth. And that also loops around to the show notes a bit, which is a good episode.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:21:14)</div>
+<p>I think we'll have some, you look at the show notes and you're thinking, okay, all these obscure interesting niche things, what possible conversation thread is going to tie them all together? So that was a nice one to read. Yeah.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:21:27)</div>
+<p>And I think this also reflects an important aspect of modern quote unquote social media, which is that a lot of the value is in taste, not taste in the sense of what color is the logo? Oh, that can be important too. But what is important to pay attention to, what's important to look at and to learn about. And so a lot of the work that we ended up doing on the podcast is just collecting and synthesizing and filtering down that from our experience, from our colleagues experience, from industry happenings, from prior art, from theory and so on.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:22:00)</div>
+<p>One of the personal journeys I went on in my career or life even is, I think when I was younger, I would kind of approach everything blank slate, oh, I need to price my product. I need to figure out how to roll out a major data migration. And in every case, I would just try to invent from first principles like no one's ever done this before. And at some point I realized actually lots of people have done maybe not the exact thing that I or my team is trying to do, but you can benefit so much from experience.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:22:29)</div>
+<p>And I feel like learning from wisdom of the elders is just not a thing that's really a part of the tech world that tends to skew young and yeah, maybe startup culture tends to attract young founders who are sort of almost like take pride in their naivety. And that's part of what allows you to do new things is you're not constrained by the thinking of the past. But at the same time, it can be a weakness because while you're actually naive.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:22:55)</div>
+<p>And so for me, each podcast episode is not only a chance to talk about my experience and what we've, for example, been working on at Muse around a certain thing, whether it's pricing or product launches or whatever else, but also a chance to go research a little bit.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:23:07)</div>
+<p>In some cases, look back at notes on books I've read or yeah, do a little web searching, talk to some people and try to expand my own knowledge and just sort of realize that anything you want to do, someone else has already done it, thought about it, probably written a book about it, you know, there's knowledge out there if you want to go take the time to find it. And the last review I'll mention here is from Matavi Bay. And this one's titled Genuinely Curious, of course, curious is a word we like a lot.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:23:37)</div>
+<p>We try to cultivate curiosity in ourselves and in the product we're working on. But this person writes, this podcast is an exploration of how we can work and think creatively with modern technology. The hosts approach each topic in an open and philosophical way. And again, that one caught my attention because I often even joke on it in this show, we can't just talk about, hey, we're launching this product and let's talk about the details of that or we're building a local first sync engine, so let's talk about the details of that.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:24:06)</div>
+<p>But actually, I always want to start with like really zoomed out, philosophical, explain like I'm five, whatever type of thing. Like let's try to really understand in a big picture way what this thing is and how what we're trying to do now fits into that context. So open and philosophical is quite what I'm going for. So I'm glad that comes through. Yeah. Well, let's talk about some favorite episodes. And of course, there's so many, there's no way we can touch on all the lovely moments we've had, especially with guests.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:24:40)</div>
+<p>And one thing I did, again, kind of in that data science-y realm was just to dig into our analytics a little bit to see which episodes were most downloaded or kind of reflecting popularity. And that wasn't that useful partially because podcast analytics are quite tricky. You have these downloads, but that by itself may not tell you a lot. A given podcast player might download things multiple times or only once for multiple people. And then you can kind of filter by unique IP, but that in any case, it wasn't that revealing.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:25:10)</div>
+<p>I will say our most downloaded episode of all time, according to these analytics is episode 30 with Molly Mielke, and that's Computers and Creativity, which indeed is a great episode and also is one I tend to point people to when they say, okay, what's an episode I should start with? Just because I think that really does talk about certainly the tools for thought elements, but also the kind of creative tools and what's happening in the field there.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:25:35)</div>
+<p>It's just a very zoomed out, I think, look at a lot of the things that we tend to circle around on this podcast.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:25:41)</div>
+<p>But then the number two was actually our Sync episode, which you might be interested in. I think you mentioned that as one of your favorites. And that's definitely a much more technical episode, but I think for helping the local first community or movement get off the ground and reporting, you know, kind of our real world experience there, I think that's been a very helpful thing. And I've told gets passed around sometimes in more technical communities as kind of like a starting place for someone that wants to learn about this world.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:26:10)</div>
+<p>Yeah, that's certainly the one that I've linked out the most myself.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:26:15)</div>
+<p>And then the other one I'll mention that's from the most downloaded list is episode 12. Now, I think to some extent, these tend to be sort of backloaded because of course, they've had years to accumulate downloads. But our fourth most downloaded is Andy Matuszek, Growing Ideas. And that one was kind of a breakout hit for us. In some ways, that was our first high profile guest. We were still figuring out the guest format, but of course, Andy's such a sparkling, you know, conversationalist, wide mind that can go in so many different directions.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:26:45)</div>
+<p>And then of course, he shared us with his audience. And that in turn brought a lot of new listeners to the podcast. So that's in many ways quite a seminal one for us, I think. So Mark, I'll turn it to you. Do you have some favorite episodes or even sort of themes of episodes that come to mind when you think back on these 80 plus hours in front of the mic?</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:27:09)</div>
+<p>Yeah, so I did look through every episode and I came up with about a dozen that are my favorite. I don't know if I'll go read through them all, but there were a few themes. So the first and biggest theme was this tools for thought, reflecting how people think. So things like having good ideas, growing ideas, those are right up that alley. You know, performance has been a big one for me. We did a few things on that. That's one of the topics that I feel like I have much more to say about.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:27:35)</div>
+<p>Then we did a series of episodes on Local First, so the Sync episode, the Local First episode. I think we had one Sync Revisited or something like that, or Local First one year later. Those were some of my favorites. And then we also had a few what seemed like oddball episodes with the episode on cities. We had episodes on hiring and our corporate structure. And those reflect my interest in economics very broadly defined. And that's something that, again, we touched on, but I have a lot more to say about that.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:28:01)</div>
+<p>But I was happy to have a few episodes sharing some thoughts on it.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:28:06)</div>
+<p>Yeah.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:28:06)</div>
+<p>Speaking as the showrunner or sort of editorial editor-in-chief that needs to sort of guide what topics we explore, definitely some of these, as you call them, oddball ones. Yeah, we had one on film production. We had one on progress studies. We had the one on cities, as you point out. And I guess I feel, especially since we're all about ideas and curiosity, that being a little bit broad in kind of not necessarily just tech world stuff or just running a company or tools for thought or something like that, that that would sort of be too narrow.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:28:39)</div>
+<p>And indeed, we are curious people with wide range of interests, so that seemed natural to do. On the other hand, yeah, I think there's probably points at which you go too far. You got to have some uniting themes and topics and things that, as an editor, you're going to sort of draw, okay, this is clearly in, this is clearly out. There's things I'm personally interested in and you're personally interested in that wouldn't be suitable for a podcast like that. So in some cases, those were sort of taking risks.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:29:07)</div>
+<p>And where we could, we also tried to relate it back. You know, the cities episode, even though it's mostly about urban design and urban planning, the guest there, Devin Zugel, is from the tech world and a product manager slash developer who could put things very much in terms that I think are familiar to what a lot of listeners of the podcast will resonate with them, even if it's in this area that is something I maybe never even thought about before.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:29:34)</div>
+<p>So yeah, those are some of the funnest to me, even if, yeah, there's probably questions about where the edges should be, I guess.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:29:41)</div>
+<p>And certainly it's fair to have editorial ideas about where the edges would be. Although, I would say that both performance and economics, those are extremely related to software in my mind. The city's discussion was basically about externalities, the economics of externalities and how they manifest in cities. But it's also a huge deal in software and coordination problems. Again, a huge deal. So I have no problem justifying it, at least.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:30:06)</div>
+<p>Yeah, looking back at a few of my favorites, looking across guests, we've had so many great guests, but one that actually really stands out for me was this is episode 48, which is called Rich Text. That was with Slim. And Slim has worked with Hink and Switch, has worked at Notion, is now I think working in the academic world. But she is just so deep on this topic of kind of text as it is represented within computers.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:30:34)</div>
+<p>And indeed was even for me a mind-expanding conversation because we went beyond just, okay, what you would think of, which is the text box in your messaging app or even the rich text editor inside your word processor. But we got into like equation editors and musical scoring and things like diagram tools, all these kind of like structured symbolic manipulation. And she's able to go both very deep and technical, but also we talk about why symbolic representation is just such a important and foundational technology for human knowledge.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:31:05)</div>
+<p>So that one was very memorable for me, both to record and to listen back to later.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:31:11)</div>
+<p>It's funny- you mentioned that someone was just messaging me about rich text and man, one does not simply write a rich text editor.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:31:18)</div>
+<p>Yes, on the team side- and I mentioned that sometimes these team episodes are some of my favorites and yeah, it's almost become a little bit of a joke on the team that you know I try to drag one of our colleagues in front of the microphone who very often they prefer building stuff and you know maybe English isn't their first language and yet in general just not super excited about being recorded, but they have so much amazing knowledge to my perspective and I get to hear about that and be exposed to that through our in our team discussions.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:31:50)</div>
+<p>But I think it's really nice when we can to get that documented for the wider world. And you know I really liked the episode Mac app design. But one I think that I've heard folks come back to again and again is the one we did on future of iPad, which obviously in many ways we bet our business on iPad as a platform from the beginning, as having this potential as a thinking tool, particularly with the pencil, and this was kind of coming back to that like what is the future of this device, what potential does it have a few years into it?</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:32:22)</div>
+<p>And it was revealing because, even though we'd had those, some of those conversations internally, having it for more of an external audience, I think revealed the way that me and you and Leonard, who is the other team member who is on with us- thought maybe about it a little bit differently and maybe even our ideas about it had evolved since we had started the company.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:32:40)</div>
+<p>It might be a little less timeless than some of our other stuff, because we were talking about kind of the state of the iPad then, but I also kind of imagine that a lot of what we talked about then is still applicable. And then for episodes that are just you and I- I mean, there's so many. I love that. Episode 3 on manuals, I think was one of the first ones where I got some, you know, private messages from people like, wow, you're on to something here again. A great example of something we were developing: the first manual for news.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:33:08)</div>
+<p>That caused me to start reflecting on: okay, wait, actually, what do I want out of documentation, product documentation and indeed this also? I was able to find an old tweet here by mikhail Park Cola who says: if you're building a product, don't skimp on the manual. It can be so much more than a boring description of your interface.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:33:28)</div>
+<p>I feel inspired to dream bigger by this episode of the Muse app HQ podcast, and this to me again speaks to part of why we're doing this is not just to kind of verbalize and vocalize our experience, but also hopefully to inspire others to see, for example, manuals is something of a product, documentation is less of a like- okay, I guess we have to do this before we ship the product- and more something that can be an important and integrated part of the product experience and indeed something good and inspiring just as much as any other part of what you're building.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:34:00)</div>
+<p>I'll also highlight the episodes on brand and product launches as being two that were really good for me personally. To be able to kind of reflect on everything I had learned is a lot of the Muse journey for me has been growing in the areas of storytelling, but also just kind of general marketing and that side of a business where I've traditionally been more on the product development side.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:34:22)</div>
+<p>So being able to- in cat you know, I'd read a bunch of books and talked to a bunch of people and then tried to do the work myself and not say that I'm an expert at it, but in many ways the best person to explain something to you is someone who's just recently learned it, and so I think both of those episodes were for me. It had some light bulbs turn on around those topics- brand and product launches- and it was for me a chance to just kind of encapsulate that and talk through it all with you and, in a way, kind of lock in that knowledge for myself.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:34:50)</div>
+<p>I see you also have the learning from games episode on your list, which I did as well. This is reminding me of something interesting. So there's the extent to which I feel like we've said what we need or wanted to say about a topic, and then there's the extent to which it, to my mind, has landed. So, for example, are like tools for thought, visual interfaces, infinite canvas stuff. I feel like we've said a lot of what we have to say about that.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:35:14)</div>
+<p>It feels to me like it's landed, like people kind of understood what we were saying and it's percolated through the community, but some stuff like the local first thing stuff is sort of in between. We said quite a bit. It's starting to percolate but it's still hitting some barriers and for some reason it's not fully out there. And then some stuff I feel like just hasn't really landed. It's like the performance stuff and the importance of the game industry and architectures is.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:35:38)</div>
+<p>I think that's like a huge deal and people just don't seem to know about it or care or whatever. So I don't know if our delivery has been unconvincing or I'm misreading the state of the community, but it's a little bit frustrating, disappointing, that some of that stuff hasn't gotten out there, but I'm glad at least we gave it a shot. It's in the record.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:35:52)</div>
+<p>The learning from games episode specifically. I think that was so perfect because we both come at it from different perspectives but also have drawn a lot of inspiration from video games, and it felt like a non sequitur. But then in many ways I think it was, you know, quite perfect and we got very good feedback on that one.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:36:09)</div>
+<p>Yeah, now when it comes to software performance, generally, and why people are putting, you know, the struggles in the industry with computers keep getting faster, but our actual lived experience of them keeps being more and more spinners and delays and waiting on computers to do their thing. Yeah, it's hard to say whether, you know, is it a matter of timing? Is it a matter of say it more? Is it a matter of say it better? Or is it a matter of, you know, we perceive something that others don't like?</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:36:35)</div>
+<p>For me, it's just so clearly better when I use a piece of software that runs at 60 or more frames per second. It's so superior to something where you're staring at a spinner for per seconds, but some other people maybe don't experience it that way. It's not a huge deal for them. They're, I don't know, more patient than I am or something.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:36:54)</div>
+<p>So it's really hard to say to the extent we want to like, you know, illuminate this and get people to care and be excited and offer some positive directions you can go in terms of making software faster and more responsive to its users needs versus our desires and interests and tastes just aren't in step with what most of the rest of humanity and our industry wants.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:37:16)</div>
+<p>Yeah, I mean, there's a lot of factors there. My suspicion, though, is that people do in fact like fast software, but for systems reasons, it's incredibly hard to deliver. And candidly, we've seen that with Muse, you know, as much as I care about performance and you and I care about performance, it's hard to deliver.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:37:33)</div>
+<p>And so I think the way that it happens is there needs to be some very deep systems thinking about what, from a systems perspective, ends up making fast software, in addition to like, frankly, probably a lot of brute forcing in the form of very determined personalities.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:37:48)</div>
+<p>Yeah.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:37:48)</div>
+<p>But if there's one kind of regret I have about the podcast, it's that I didn't spend more time on the systems ideas like around the economics of software and performance and stuff like that. So maybe that's some topics for future episodes, either a guest or a transition host or something.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:38:06)</div>
+<p>Indeed, I do want to talk about some episodes we want to do or haven't gotten to or hope to do in the future or something like that. But I thought it would also be interesting here to take a little sidebar into the production process. Been in the position recently that a couple of folks who, for various reasons, are thinking about starting podcasts and ask us about our approach, which I don't think it's too wildly different from what folks in the rest of the, what other podcast folks do.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:38:34)</div>
+<p>But we do have a particular process and maybe it'd be interesting to share it with the audience.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:38:39)</div>
+<p>Yeah, I think it'd be worth just going through it, start to finish quickly.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:38:42)</div>
+<p>Yeah. I guess there's the, what we call pre-production. And so this is largely coming up with topics. And I guess I've developed a little radar for this in the form of, yeah, we're having discussion on the team about something we're tackling again, we're setting pricing, we're working on the sync engine, we're designing the Mac app, whatever. And then I go, oh, you know what? There's a rich vein of discussion to be had here. But also there's the guest side of it, which in some cases is driven by the topic.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:39:10)</div>
+<p>There's a topic I want to talk about and I want to go find the guest. But in many cases, it's just there's someone I follow on Twitter or someone whose work I admire or someone who's working on a product that I think is interesting or has an interesting philosophy that's relevant to our audience and, you know, basically just cold email them and say, what do you think? Do you want to come do this? And get a pretty good response rate. Now guests are a whole other thing because they need to be prepped.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:39:33)</div>
+<p>You know, maybe you do an initial call if you don't know them that well and kind of talk through what kind of topics you might have, what the format of the show is. We do have a guest guide. Maybe I'll just make that into a public notion link and post that in the show notes for those who are interested. But yeah, we try to offer things like mic technique tips and things about, yeah, just kind of how we approach it. We're also quite particular about having the right kind of mic.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:39:56)</div>
+<p>So we either get someone to borrow from a friend or most people are able to find or track down some kind of, doesn't need to be super high end, but a podcast quality mic, right? Not just AirPods or whatever kind of Bluetooth headset you use. And that doesn't always work. Sometimes there's background noise in the room they're recording or, you know, it's actually difficult to configure these things to have the right pickup settings or whatever. But all of this is to say that actually quite a bit of work happens before we do come on air with guests.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:40:26)</div>
+<p>A little less for non-guests episodes there. It's more like with the guests, I kind of count on them to say a bunch of smart things. All I need to do is kind of ask questions and keep the conversation going. When it's just us, I do a lot more prep work so that I feel like I have useful things to say for an hour.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:40:44)</div>
+<p>Yeah. And for both topics and guests, I go back to this idea of growing or cultivating, like we talked about in our episode, Growing Ideas, I think it's called. You don't just sit down and decide, okay, we're gonna talk about X today. It takes weeks or months. You start with a possible episode title and then you say, okay, can I write 12 bullet points of interesting things about this? Maybe, maybe not. Maybe try to find a guest. They actually want to talk about something different. So it's an iterative organic process for sure.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:41:08)</div>
+<p>Yeah, exactly. And discovering whether there's enough depth to a topic to be sort of worth the recording time and the listener's listening time is largely a matter of, you know, for me, I make a blank board in Muse and I start filling it out with stuff and trying to see and, you know, what are the connections here and what's related and what's not, and is this actually two episodes or actually is there not enough here to even fill one episode? So that's the kind of open-ended ideation that, of course, Muse was exactly built for.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:41:36)</div>
+<p>And of course, it's especially nice now that we have the collaboration capability because you and I and whoever else is going to work on the episode can kind of pull our notes in this very loose, freeform, messy format. How much time would you say you spend on prep in the cases where I send you a board and say basically, hey, here's what I think we should talk about. Can you add your ideas?</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:41:58)</div>
+<p>Well, if it's a topic that I've already thought a lot about, the prep work per se is pretty brief. It's a matter of getting the bullet points down of things that I want to be sure to cover and collecting links and references.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:42:11)</div>
+<p>Yeah, I think the citations is big because otherwise you're stumbling on air, oh, there was this book and it was that, was it called this thing? And, you know, this kind of thing versus you can just grab the link to the book's website is right there on the Muse board. I could confidently read out the name of the book in the moment. Yeah.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:42:26)</div>
+<p>But there have been some topics where they weren't as much in my wheelhouse and I got to go think about them for a while, for sure.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:42:33)</div>
+<p>And in terms of those ideas, what would you say is sort of the working material that goes into what eventually is going to kind of pop out the other end on the recording?</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:42:42)</div>
+<p>Yeah, I think the working material is actually really important because if you go in there and just start talking based on just first principles, it's actually not that compelling. So for me, it's our experience, not only in Muse, but in the decade plus in the industry. It's specifically also the work in progress that we have, the stuff that we're currently working through, the challenges there, what's working, what's not. It's everything that the guest has to offer.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:43:07)</div>
+<p>And then something that we've done kind of uniquely, I think, is we look a lot at the prior art and we go into Google Scholar and type whatever, local first or whatever it is that we're interested in and relatedly the theory behind it, which can be, you know, computer science, design, human factors, economics, whatever it may be. And then a source of material that a lot of podcasts use, but we use pretty sparingly as current events. And we tried to make these episodes pretty timeless. So I think sometimes there's something to be said for that.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:43:32)</div>
+<p>But that is certainly a source that you can draw on that's very fruitful.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:43:36)</div>
+<p>Yeah, that really describes well, not just kind of how we go about the ideas for the podcast episodes, but to me, what makes good ideas generally. It's really getting the whole picture. You need that tacit boots on the ground, real world knowledge. You need the prior art and the theory, the theoretical thinking that kind of provides context and a balance to the more pragmatic aspects or practical knowledge. And the timelessness bit that you mentioned is also interesting, is certainly something I have aimed for.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:44:07)</div>
+<p>And when I do occasionally hear people, they'll tweet something like that they discovered the podcast and then went back to listen to every single episode or something like that, which is certainly very nice to hear. But I hope at least most of them will sort of stand the test of time in the sense that, obviously, like a news podcast reacting to current events in the news, it'd be sort of maybe historical curiosity, but fairly boring to go back and listen to a podcast from two years ago.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:44:33)</div>
+<p>But here, hopefully, the vast majority of it, it's taking this bigger view. So therefore, it should still be very relevant today. Also, to your point about kind of having good ideas and sleeping mind and that sort of thing, what also helps me is I dump a lot of what I think we might talk about in the topic into a board. And then I'm thinking about what I might say when I'm just, I don't know, walking my dog or doing something like that. Because important to me was I didn't want it to be scripted.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:45:01)</div>
+<p>The whole point is that it's an open-ended conversation and it can flow where it flows. But I wanted to just have those seeds so you have the right place to start and you can make sure it's a productive use of the time and information dense and you don't forget anything and that sort of thing. So then recording in some ways is the, we call it the easy part, but the fun part, maybe you get to have a conversation with your friends and colleagues.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:45:25)</div>
+<p>And for that, we started out originally using kind of like asking people to record into GarageBand and we want to make sure we have the local lossless audio for all you kind of audio nerds out there. You know, just recording a Skype call, which is the way that some people did kind of like multi-person podcasts in the early days is, you know, the quality is bad. If your internet has a hiccup, you don't want that. Unfortunately, we did have a couple of instances of losing the audio file. It wasn't properly recording or it was on the wrong whatever.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:45:53)</div>
+<p>Happily, now there's kind of a category of SaaS tools. We use one called Riverside. That's very good. It has the video chat and the audio chat, but it also does a clever trick with the browser where it's essentially recording your audio in chunks in a lossless format, saving it into the browser's local cache and then uploading those chunks as it goes. So it might be a little behind where you are in the conversation, but so far we've had very good luck in terms of not losing anything and it's really turnkey for our guests, which is nice.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:46:20)</div>
+<p>So I think an important tool like this is a good tool in the tool chain for podcasting.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:46:27)</div>
+<p>Yeah, I've been very happy with Riverside. It makes a big difference, especially for guests, as you said. My only complaint is it only works in Chrome. So every time we do an episode, I click on the link, opens up Safari, you know, so I'm always two minutes late to these things.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:46:41)</div>
+<p>Yeah.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:46:41)</div>
+<p>And in terms of guiding it, you know, of course, again, kind of targeting that hour, hour and a half range. And I try to play host and kind of I have a rough structure in mind and try to make sure we're sort of moving through all those and we don't miss anything. But for the most part, also, again, let it be a conversation. Let it flow. Often it can just go places I never would have guessed or wasn't really part of our prep work. And those can often be the best moments in a lot of ways.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:47:09)</div>
+<p>So while that leads us to the post-production side of things, now in the very earliest episodes, I did the audio editing and I didn't do a ton on the audio quality in terms of like noise reduction or what have you. I focused more on really what's called the editorial in the same way that you would edit a piece of writing by removing filler words or, you know, fixing the grammar.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:47:30)</div>
+<p>I would go in and essentially just kind of snip stuff out, which incidentally made me, first of all, incredibly aware of the filler words that I use because I'm in there having to manually select them as much as I can and delete them actually, you know, like. And I think to some extent, doing that process of audio editing has helped me use fewer filler words, at least in the recording setting.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:47:53)</div>
+<p>But yeah, this is a really natural thing that everyone does and you don't notice it in normal conversation, but I think it can impact the listenability and the signal-to-noise ratio in a more kind of produced recorded format like this. And the other thing I did there was to just take advantage of that I'm in there listening to it and I think, okay, this part is boring. I'm just going to delete this whole minute, which more often than not was me. And so I would discover that I would start to talk on a topic.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:48:21)</div>
+<p>I would say something interesting and be like, oh, that's pretty good. And then I would keep talking after that and kind of say the same thing again, but worse. And I eventually learned, once you've made a point, just make the point, shut up. Now I did the first few episodes. You later took over and brought a more kind of professional tool and more, yeah, levels balancing and noise reduction and I'm not sure exactly what, but it seemed like you went a little bit down the audio editing rabbit hole for fun.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:48:49)</div>
+<p>Oh yeah, I really went down that rabbit hole. I tried to teach myself audio editing from scratch with a focus on improving the audio quality. The modern audio editing software is kind of amazing. There's all kinds of filters and stuff you can do to reduce noise and improve the quality and balance of the audio, but it's kind of a dark art. So I watched a bunch of YouTube videos on how to do it and I think I eventually got okay. But it's a lot of work if you're an amateur, it took me about a day to edit a podcast episode.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:49:16)</div>
+<p>And if you think it's bad to listen to your own recorded voice, how about listening to it 10 times on a loop?</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:49:26)</div>
+<p>Yeah, I was amazed the results that you were able to get. Yeah, I think it was somewhere around episode four or five that you took it over and the difference is really notable. And again, I appreciate that. I think it's respecting the listener and making it listenable and yeah, it's a good thing, especially when you have guests who, yeah, their levels might be different or the way they speak might not even be something the audiences used to and I think it was really valuable. Also seemed to be a fun experience for you.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:49:53)</div>
+<p>But yes, so labor-intensive and I think that's true for professionals as well. I think for every minute of recorded audio you hear, it's several minutes at least of editing. It's a big job.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:50:05)</div>
+<p>Now most of that time is for editing all the, we need a word for this, but what's the call when you edit all the ahs and ums out? There should be, like there's line editing, content editing, what's the equivalent for audio?</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:50:15)</div>
+<p>Yeah. I don't know if there's a, we should ask our audio editor, but I just think of it as removing filler words.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:50:20)</div>
+<p>Yeah. Anyways, that's where most of the time was the baseline and improving the audio quality. First of all, there's these noise filters that basically work out of the box and I hear a lot of podcasts these days that clearly don't apply it and that's really leaving money on the table because it's really easy to do this. You run it through these filters, it sounds much better right away.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:50:40)</div>
+<p>And then there's some basic balancing that you can do and that you kind of got to do it for each episode, at least for each new guest and for each new room that you're in. But once you do that, it's pretty straightforward to do for every episode. So I think at least doing that is really worth it and you can teach yourself to do that for sure.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:50:54)</div>
+<p>Yeah.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:50:55)</div>
+<p>But yeah, I think then somewhere around, I don't know, maybe it was episode 10 or in that ballpark, you realizing that spending this huge amount of time on the audio editing was not maybe the best use of your time when we're also trying to get a product off the ground. So you went hunting for a freelancer that could help us with that and you found someone really amazing who has done every episode since then. So I have to give a big shout out to Mark Lamorgesi. He is a really talented professional.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:51:25)</div>
+<p>He's done audio work for major TV shows and that sort of thing. I have no idea how we were able to land him for our relatively small little corner of the internet here, but he just does amazing work. But the other place where Mark's editing has made a huge difference is with guests. And so these are folks who, although we try to get them the right equipment and teach them some basics of how to keep your mouth the right distance from the mic and that sort of thing, they're just probably new to podcasting.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:51:53)</div>
+<p>They don't necessarily have the same kind of techniques and disciplines of all that we do. And in many cases, there are folks who are non-native speakers. Some of our really great guests, you know, you think of someone like Ballant from Kraft. He's not a native English speaker. He's not someone who does a lot of public speaking from what I've seen, but that actually made him all the more someone that I wanted to hear from. Here's a great operator and a great person building a great company who you don't hear from that often.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:52:20)</div>
+<p>And to me, that makes him really high value to get in front of the mic. But he, like many of our other non-native speakers, it's hard. It's hard to sound articulate and intelligent in a language that's not the one you grew up with. And this is a place where, first of all, giving folks the opportunity to know that they are struggling a little bit with an answer. They can stop and restart. You and I do that, of course, all the time. And then we edit that out so that we always sound perfectly articulate.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:52:45)</div>
+<p>And furthermore, if someone has, yeah, the combination of background noise, mic technique, etc., non-native speaker, etc., and we can just kind of like make them sound as good as possible. And in this sense, not sound in the sense of what they're saying because their words are their words, of course, but kind of elevate the audio quality that gives the best possible stage for the really worthy ideas.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:53:10)</div>
+<p>And so one of the places where I think Mark's editing work I'm most happy about is when we have guests who come back and say, wow, you know, I was really nervous about getting in front of the mic, but this sounds amazing. You made me sound so smart. And I'm thinking, well, you know, you are smart. It's just that we kind of created the right audio environment for that to come through.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:53:31)</div>
+<p>Another big deal about the editing work that Mark does is he does the content editing with from what I can tell little or no direction and it comes out correct. Like this is something I was really worried about when we were initially trying to outsource the editing is part of the reason I wanted to do it myself first is to convince myself I knew what really good looked like. But then people have to navigate these two or three people talking about this tech stuff and figuring out where to start and stop and how to re-edit so the content makes sense.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:53:58)</div>
+<p>It's quite hard to do without direction. And if you have to give someone a lot of direction, then it kind of defeats the purpose. You know, you want to be able to say, please make this episode good and you get it back and it's good. And I feel like, I mean, correctly if I'm wrong, I feel like that's basically how you operate with Mark.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:54:11)</div>
+<p>Completely.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:54:11)</div>
+<p>Yeah.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:54:12)</div>
+<p>So there is some back and forth, which is he wasn't sure about should this section be in? It seems like a duplicate. Was this part of mistake? How should this part flow? So there is some back and forth there. I'll also give a shout out to a more recent addition to our podcast team, which is Jenna Miller. I think she's done the last 20 or 25 episodes and she works closely with Mark on some of that content editing, making decisions about what should be in and out. Things like description, show notes.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:54:37)</div>
+<p>She also makes the audiogram, which is that little kind of video preview thing that we can embed on Twitter. But she's also just like another pair of ears to help figure out, yeah, what should be there or not. And that also includes things like I try to avoid, I don't know, some kind of like veering off into like charged political topic, for example, or something like that. Not because I'm afraid of talking about those, but just again, coming back to that editor in chief, trying to decide what's in and out.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:55:05)</div>
+<p>And I try to make it a kind of calm, I don't know, safe space, quite the right word for it, but something that's not going to be too triggering. And so sometimes it does happen that guests mention things and I go kind of, eh, I don't know if that quite is, should be in there or not. And yeah, so all those kinds of decisions are things that Jenna now can largely make with a little bit of input from me, finding links for things and so on.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:55:31)</div>
+<p>So that combination, the two of them are an incredible team and certainly I'll link to their profiles if anyone wants to ask if they can help you out on your podcasting journey. It's still a lot of work to come up with the topics and find the guests and do the prep and so on. But having the whole post-production thing be largely in the hands of a talented team of experts has made a huge difference.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:55:54)</div>
+<p>And did we talk at all about hardware?</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:55:57)</div>
+<p>I don't think we did.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:55:59)</div>
+<p>Yes, I've been on quite a journey with hardware. When we first started the podcast, I looked up this site on Marco org. He has this incredible podcasting microphones mega review and he bought like three dozen microphones and he recorded himself with all of them. It's really an incredible resource and I bought one of the and he even embeds the samples of himself speaking, oh yeah, in that page so you can compare the same person saying the same thing side by side, and it's amazing how different the mics sound.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:56:30)</div>
+<p>Yeah, so on the basis of that, I ended up trying a few different mics. I at one point had a pretty high-end XLR setup, XLR being the plug type that's used by I don't know DJs and bands and things for like pro audio gear, right, right, right, in contrast to the typical consumer mic, which is the USB plug-and-play mic, which is actually what I use now, because I had two XLR units. They both broke, so that was enough of that.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:56:53)</div>
+<p>But anyways, my takeaway from that is that actually there are some modern USB mics that costs, you know, on the order of 150 bucks that are really good and they're, in my opinion, a plenty good enough for a casual podcast. So don't let the microphone thing be a discourager for you. All you need really is a decent microphone. You need to get close to the microphone, you need to set the gain things correctly and the mode of the mic and you need to be in a room that's not too hard. This was an issue for me when we started.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:57:22)</div>
+<p>I was in Seattle, was like this really lush room with a huge rug and these massive curtains and everything, so it's fine. And then when I moved out to Idaho, I was in this room. It's a two-story room and it's just hardwood and glass everywhere. I remember we tried to record this episode. It was a complete disaster. So what I had to do was I brought every comforter and blanket that I owned into the house, you recall, because back behind me I had these things draped, you know, over the wall and stuff until I got some furniture in here.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:57:48)</div>
+<p>As long as you have a reasonably soft room, it's fine, and then from there you can handle most of the rest with the editing. So it's actually quite approachable.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:57:56)</div>
+<p>Yeah, the soft room thing actually reminds me of, I think, a lot of pro podcasters that I listened to. Suddenly in the pandemic they were doing it from home. I think something they all independently figured out is go into your closet, yeah, and literally record there, and it feels weird to be like locked in this tiny dark room surrounded by clothes. But this actually is ideal. You don't get the echo enos of the big room. You've got soft padding stuff everywhere.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:58:19)</div>
+<p>Of course, if you want to get more pro, you can buy that black egg carton foam stuff that you can put on the walls. But, yeah, that's key. The echoes are really distracting. They can be edited out, but that comes at a cost. A lot of software, including Riverside, has echo cancellation built-in, but you definitely don't want to turn that on for the live thing because you want the purest possible signal. You want unprocessed signal so you can do all the processing after the fact.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:58:45)</div>
+<p>Yeah, for me the solution ended up being a road podcaster, which is a USB mic, but from a company that makes good quality pro audio gear with the pop filter is a key thing. So I think I didn't have that. Some of the early episodes and all the P sounds and some of the other plosives, as they call them, yeah, come across rather badly, and then I have a little boom arm that kind of suspends it. So then people walking elsewhere in the house or something, doesn't perturb it as much.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (00:59:11)</div>
+<p>The boom arm is nice. I'm a little bit jealous of the boom arm- and it has that really cool pro. Look where it has the like nested cradle thing where the microphone is held by rubber bands. It looks so pro.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:59:22)</div>
+<p>Yeah, yeah, no, that's true. It's like this elastic, yeah, exactly like cats cradle thing, so that the mic itself isn't attached to anything kind of hard. It's sort of like a suspension system for the mic. So even if you do sort of shake the desk a bit, the mic will be dampened from that. And again, it's not an expensive setup. I think it was a few hundred bucks for these things. And then, yeah, the other trick is, as you said, just get your mouth close to the mic and try to keep it in a steady position, because otherwise it's hard to get around that.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (00:59:52)</div>
+<p>If you have that good, clean signal and a lossless thing and you hand it off to a good audio editor who knows what they're doing, like our pal mark, yeah, you can make stuff that sounds good.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (01:00:03)</div>
+<p>That's a little peek at how metamuse gets made and that actually gives me a nice transition into the next thing I wanted to talk about, which is episodes we want to make or we've sort of had in the back of our mind or in our tickler file but we haven't gotten to or maybe haven't gotten to yet, and one of the first one that I put on the list there is actually just doing an episode about podcasting, and I think we covered a good swath of it there with the discussion of the process and so on, but I think we probably have more to say.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (01:00:34)</div>
+<p>So that's when I could easily imagine doing a whole episode on.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (01:00:37)</div>
+<p>Yeah, I think we've talked a fair amount about some of the mechanics, but we've only alluded very briefly to why podcasting is so unique and important, and I feel like this is still underestimated and misunderstood. It's a very unique medium. It affords a lot of ideas getting out there that otherwise wouldn't, and I think it's important to understand exactly why that is, and I think we have some theories about that. But yeah, maybe for a future show.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (01:01:03)</div>
+<p>Another one that I've wanted to do since ever, but in some ways is almost too big a topic. I'm almost intimidated to approach it, which is design. And it's right there in our tagline. We say Metamuse podcast about tools for thought, product design, how to have good ideas. And indeed, we have had episodes specifically on how to have good ideas and tools for thought, but we've never had an episode on either product design specifically or design broadly.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (01:01:29)</div>
+<p>And part of the challenge there, in addition to the bigness of the topic, let's say, is also that even who I want to talk about that with, I think is a challenge because there's a lot of people I'd want to talk about it with. A lot of my thinking about fundamentally what is design comes from my longtime friend and colleague James Lindenbaum, who's been a guest on the podcast before.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (01:01:51)</div>
+<p>And he introduced me to his way of thinking about design, which is as sort of a series of considered decisions and that it's for him, it's almost like a mathematical process. It's almost like solving the equation more than some touchy-feely kind of purely artistic thing. So, yeah, that's very interesting. But we also have these two talented designers on our team, Leonard and Linda. Of course, I'd love to hear their voices. They probably have their own perspective on it. You have your perspective on it.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (01:02:17)</div>
+<p>I think of you as more like architecture mastermind, but you were sort of the head of the product design for our company for at least the first six or 12 months. So, yeah, I don't know. There's quite a lot we could explore there.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (01:02:30)</div>
+<p>I don't know.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (01:02:31)</div>
+<p>Maybe it even needs to be a series of episodes. I'm not quite sure.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (01:02:33)</div>
+<p>Oh, yeah. I think we could do at least several episodes. There's visual and graphic design, there's product design, and there's technical design. That's at least three.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (01:02:43)</div>
+<p>Another one I'd love to do is user research. I think this is something that's sort of understudied, perhaps, underappreciated. It's often rolled in with other kinds of, I don't know, product management, design, etc. And would also have been an excuse to get Linda on our podcast, which is unfortunately one of the team members who I was angling to get on, but we didn't quite get around to. And she, in addition to being a very talented designer, is also great at user research.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (01:03:09)</div>
+<p>But regardless of who we had as the guest, just covering that topic to me would be very interesting. Now, coming to things that are more sort of in the zeitgeist, let's say. I think AI is sort of an obvious one here. Now, one reason I haven't tackled it in addition to my general, like, interest in timeless topics is I don't know if I have a ton to say on it. I'm not sure if you do either.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (01:03:31)</div>
+<p>And indeed, if we wanted to take a deeper dive on large language models and what that means for creative tools and productive software, I'd probably reach back out to some of our past guests, folks like Jeffrey Litt or Linus Lee, who are working directly with that. And I could just sit back and ask them questions if they were kind enough to come give us more of their time. But yeah, I guess that one's tricky. It's so everyone has something to say about it. I feel like I don't have that much to say about it.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (01:03:58)</div>
+<p>But then often folks in our audience have asked, you know, what do you think or where do you stand on this? Or how do you think this impacts everything you've been talking about, which is fair. But then, yeah, I'm not sure if I have a great answer or certainly a podcast-sized answer.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (01:04:12)</div>
+<p>Yeah, I don't feel like I have a ton to say right now. And a lot of things, frankly, are going to be kind of contrarian. I think if I was doing an episode about AI, I would want to get someone who's actually done something like bring in someone who's shipped an AI-infused product and tell us about that experience, you know, it's supposed to be magic. Okay. Did it work? How? Why? What didn't work? What was surprising? I think that would be valuable.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (01:04:36)</div>
+<p>There's so much just guessing, conjecturing about AI. Well, precisely because it is so early in so many ways, yeah. Another one that I'm not 100% certain would make a whole episode but is something I'm very interested in is feedback. So this is something that I think is kind of an art, a fine art, and there's getting great feedback from someone on your work or on your career is an incredible gift. And indeed, there is also a technique to how you receive feedback well, use it, incorporate it into your work and your life.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (01:05:10)</div>
+<p>But yeah, how to give feedback on a written piece, again, in a performance review, something like that. And one reason that topic even came to my mind was I think Muse is an incredible tool for giving feedback, being able to mark stuff up and circle things and point to it. And did you think about this, for example, for a written piece, but also for other kinds of work like user experience flows and visual arts and that sort of thing. So I don't know, it might be a weird one, but I feel like I'd have a lot to say on that.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (01:05:38)</div>
+<p>Yeah, well, now that you mentioned it, I think feedback as we traditionally think about it in the corporate sense of performance reviews and stuff, and I don't know if I could do a full episode on that, but feedback with that plus feedback around developing ideas and strategies for doing it and how to do a layered approach, that's really interesting to me. I bet we could do an episode about that.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (01:05:58)</div>
+<p>What are some of the episode topics that you feel like stones we have left unturned? You mentioned performance. What else?</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (01:06:08)</div>
+<p>Yeah, I keep coming back to this idea of the economics of computing. And by that, I don't mean like the economics of SaaS businesses or whatever. That's important, but that's quite well understood at this point. We have much to say about it. Maybe a better word is ecology of computing and how all these different interlocking systems and initial conditions and trajectories.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (01:06:31)</div>
+<p>interact to give us the computing world that we have now. I still think this is like way understudied and it's very important. And a lot of the things that we care about, like, okay, you want to program with a better programming language for whatever that means to you. That problem cannot be solved by sitting down and designing a better programming language. Sorry, that's not the way it works anymore. Like it's going to cost, I don't know, let's call it a billion dollars to make an ecosystem that's really worth programming in.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (01:06:54)</div>
+<p>How are you going to get a billion dollars or the equivalent amount of open source labor? This connects to a topic that I've had in the back of my head for a few years, which is the uncertain legacy of computers in the cloud. And maybe the short version is that network computers can be very centralizing and centralized. And once you have a centralized entity that can be controlled at a switch of the button, that can be used for some very dark things.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (01:07:18)</div>
+<p>So I think it'd be worth exploring that so that we can understand the risks there and how to defend against them. It's worth some serious discussion, I think. So this is perhaps the most pessimistic or surprising variant of this thesis. This is due to someone called John Michael Greer, who is, you might call him a philosopher or a theorist, but he's actually quite the character. You really should look him up on Wikipedia and see the fullness of his bibliography, which includes economic history and being a druid, like no joke.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (01:07:51)</div>
+<p>But seriously, it's a very interesting thing to say. And one of his hypotheses is that maybe computers won't be economically viable for most use cases in the fullness of time, say in a few decades. And that in the same way that we've gradually adopted network computers incrementally for more and more use cases, we might find that more and more of them become unviable for whatever reason. And it would take some more time to go into why that might be the case. But I don't know. I think it's actually quite plausible. Like, let me give you an example.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (01:08:21)</div>
+<p>Search, unless I'm looking for a specific proper noun and I want to go to their website, everything else in Google and DuckDuckGo, it's all completely broken. And I think that's the case for most people. Now, there are alternative systems. You can use Twitter, you can use Reddit, or you can use YouTube, for example, to get at some of the same functionality.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (01:08:39)</div>
+<p>But the ecology of that aspect of computing has deteriorated massively, which is contrary to our notions of we have more computing power, we have more data, we're putting more work into it, everything's getting better. Well, not really. We shall see. I think the future could be a lot weirder than people realize.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (01:08:56)</div>
+<p>It could always make sense to bet on a weirder future than you can guess.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (01:09:01)</div>
+<p>Yeah.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (01:09:02)</div>
+<p>Well, the last one I'll mention, which is a much lighter topic, is what I call maker biographies. I don't know if you remember, but this is a term you coined and quickly became the name for one of my tags or shelves in Goodreads. So, maker biography is the inside story of someone who creates something, including a team, perhaps. And this could be an autobiography, someone telling their own story. I think you can think of someone like Jordan Mechner, who published a book about the making of Prince of Persia, a very seminal video game.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (01:09:37)</div>
+<p>He basically kind of edited and published all his journals from the time, showing that kind of work-in-progress struggle of creating what would turn out to be an incredible piece of video game art. But there are also biographical works. For example, Walter Isaacson is a pretty well-known author who writes typically about maker types. For example, he has an excellent biography of Leonardo da Vinci, obviously told from a historical perspective, but really digging deep into how did he spend his life? What were his struggles?</p>
+
+<div class="speaker-timestamp">Adam Wiggins (01:10:06)</div>
+<p>How did he make these great things that he did? Why were those breakthroughs important and interesting at the time? Where did he have false starts and go wrong? Really showing not just the amazing output of a great maker, but also the path they took to get there, which is usually full of pain and difficulty and mistakes.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (01:10:26)</div>
+<p>Yeah, this is a very interesting topic. By the way, I got to go back and say, if you haven't read this book, Making of the Prince of Persia, you have to read it. It's one of the most incredible books that I've ever read. And it's almost totally unique because this individual kept a journal of his work and his feelings around the work for years. So that's not something you can go back and do retroactively. And it's very rare that anyone did that and wrote about it and the topic was such an incredible and seminal work. So you got to read this book.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (01:10:57)</div>
+<p>And there's a great new Stripe Press edition. Anyways, maker biographies. It's interesting to think about how we would actually do this episode. I almost want to go back and look at some of my favorite maker biographies and figure out why they're so interesting and important. You know, you read biography, like, why is it that interesting? You know, people did stuff, okay. But you learn these incredible details in the good maker biographies that you're not going to get anywhere else. You're not going to get from theory.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (01:11:24)</div>
+<p>You're not going to get from broad history. And you're not going to learn from your own experience until it's too late. So it's a really unique genre. But I almost want to go back and look at some of my favorite ones and figure out why that format was so important so that there's some real meat on the conversation.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (01:11:41)</div>
+<p>Yeah, absolutely. It would be at least 50% of my motivation there would be getting to go back and review my favorite maker biographies, look up some of my highlights and, you know, flip through them and remind myself of some of the insights that came from them.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (01:11:55)</div>
+<p>But yeah, broadly, I think that category also to me, in addition to providing inspiration and, you know, a reference point for my own work, I think it's important because we have so many biographies of, you know, what we would usually call leaders, which usually means like political leaders or military leaders that we, in some ways, the people we choose as a society to lionize through biographies, we're sort of saying their lives are important and worth examination and worth learning about and understanding.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (01:12:26)</div>
+<p>And so we see that for Napoleon and George Washington, okay, fair enough. But what about the people who create? I think that is a noble and important thing that can and should be lionized in our society. And so going to read a biography, yes, about Leonardo da Vinci or Marie Curie or anyone else who has contributed something useful to science, to art, to the world in this way, that's an important kind of meta point to me. Well, as a place to end, let's talk a little bit about the future.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (01:12:58)</div>
+<p>And I'll have to be honest and say the future of the podcast is a bit uncertain. We do think there's something special here and something that has a life that is somewhat independent from the work we were doing at Muse, but at the same time, I think it has really been the animating force that has driven the topics that we choose. And you talked about the working materials and what goes into each episode. A lot of it is the work we are doing together day to day, building this product.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (01:13:22)</div>
+<p>And if we're not doing that work as directly anymore, then yeah, the podcast has less purpose. But at the same time, we've heard from lots of folks, there's a lot of value to this as a kind of meeting point for the community and for something broader than Muse, the business and the product. And so we're thinking about what to do there, but happily, Ink and Switch has offered to kind of step up and help with some of the production costs as well as some of the show running.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (01:13:49)</div>
+<p>And I could imagine a transition under the umbrella of the lab that lets us kind of use more of the weird and wild world of research as an animating force for what happens in the podcast here. So and I'm certainly interested in continuing to be a host under that setting. But yeah, we need to kind of figure that out. So Mark, how are you thinking about a potential future for this podcast?</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (01:14:13)</div>
+<p>Well, a few thoughts. One is I do really think the lab should have a podcast or they should do podcasting. There's an incredible amount of stuff happening there and all kinds of ideas percolating and I feel like it would help them and help the community if they did podcasting. So mechanically, I don't know how that might work with what is now the Metamuse podcast and the lab, but I think there's something there for sure.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (01:14:33)</div>
+<p>You know, I think realistically, because so much of our podcasting in Metamuse was about the working material around the app and everything around that, like I don't think it would make sense to continue to do the same thing going forward, given what's happening with the app and the company. But after doing this episode, I've realized there's some stuff that I still really got to talk about, especially around this economics of computing and ecology of computing. And it just seemed like it would be a shame to leave that out there.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (01:14:57)</div>
+<p>So maybe we do an epilogue. Maybe the lab has me on to talk about it there. Maybe I go on someone else's podcast.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (01:15:03)</div>
+<p>I don't know.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (01:15:04)</div>
+<p>Maybe I'll start my own podcast if I want to talk about it. But I feel like it'd be a shame if I didn't get to that.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (01:15:09)</div>
+<p>And thinking of the future more broadly, one question that, of course, is coming in through a lot of channels from a lot of lovely folks is wondering what's next for us personally. So, Mark, how do you think about what comes in the post-MUSE world for you?</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (01:15:24)</div>
+<p>Yeah, well, step zero is to see MUSE and especially the sync and the backend stuff that I've worked on a lot with Adam Wolf, make sure that's in a good spot. And I think we're getting really close there. And that's important to me, you know, just as a matter of pride and also I'm a big user of the app. So I really want to see it doing well for the next few years. But yeah, beyond that, I think I'm going to take a period where I open up the aperture real wide. I'm not planning to jump right into the next startup, whatever, in two weeks.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (01:15:52)</div>
+<p>And I think it's important to deliberately not decide too soon what you're going to do in that situation, because you need time for the existing structure of your brain to basically disintegrate a little bit, like let those pathways fade away. Let the daily patterns of thinking and doing melt away and create some space for new ideas and new ventures to enter. So for me, that's a pretty deliberate process because you're pretty anxious to get back to doing something every day and there's all kinds of great opportunities out there.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (01:16:22)</div>
+<p>So it'd be very easy to just start something right back up. But I find there's a lot of value in taking that time. You get a lot of value in a few weeks, but even better is a few months to let it really percolate. And in the meantime, you're doing basically experiments and giving yourself exposure to new ideas and new people and new projects and using that as a sort of raw material that you're going to rebuild with going forward. That said, there are certainly a few areas that I've been thinking a lot about.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (01:16:51)</div>
+<p>I'll kind of give them from most adjacent to least adjacent. So the most adjacent would be computing and the type of stuff that we've worked on in the lab and Muse. I do feel like I have more to say and to do there if I have the chance, especially around local first and sync and performance. And I had this project that I've wanted to do in the lab for a long time around a squash.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (01:17:15)</div>
+<p>stack.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (01:17:15)</div>
+<p>Like I said before, there's all these layers in the stack and the issues with the previous layer. But when you stack that up so high, you've kind of lost the plot basically by the time it gets to the top and you can't access the underlying primitives, which are now completely different from when you started, whatever it was, 50 years ago or something. So I think it'd be interesting to do an experiment where you just squash that all down and see what comes out of it. Anyways, I could imagine a lot of stuff like that with the lab.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (01:17:40)</div>
+<p>I've alluded to on this podcast a few times about having a premonition that we're entering into a very important period, potentially as soon as the next 12 months, but certainly over the next decade or so. I feel like a lot of stuff is going to happen. And I think it'd be worth spending some time thinking about that and helping people prepare for it a little bit. I know it's kind of vague.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (01:18:00)</div>
+<p>It's kind of potentially vague, but I've just had this feeling that there's some really interesting stuff that's about to go down and being at least aware of it and ready for it. So that's a potential way to spend some time. And then I've had this long running thread around working in the real world, like making, manufacturing, stuff like that. And it's not something that I spend a ton of time with, but I've been doing a little bit with it here and there, and I found it really rewarding.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (01:18:24)</div>
+<p>And I think it's going to be very important as we, for example, try to pull more manufacturing out of China and into North America. So I feel like there's something fruitful to be doing there as well. But most of all, it's take some time off and see what happens as I have some more breathing room. And if anyone has any interesting ideas or just wants to chat, I'd love to hear from you as I'm in this period. What about you, Adam?</p>
+
+<div class="speaker-timestamp">Adam Wiggins (01:18:50)</div>
+<p>Yeah, well, similar to you, I want to complete this transition successfully and make sure that Muse, the product is, of course, it's in great hands with Adam Wolf, but there's a lot of knowledge transfer and other things to be done. Once that's completed, open aperture, divergent, put your head up and see what's going on in the world, how things have changed in the industry and so on.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (01:19:15)</div>
+<p>Since the time I started, you know, working on this specific domain, that thing you describe of the structures of your brain disintegrating, you build up certain structures that are very useful for the specific focus of the work that you're doing, but there's value to letting that decay to get some, I guess, some plasticity that allows you to then shape yourself to whatever's going to be next.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (01:19:40)</div>
+<p>And I've experienced this a bunch of times as an entrepreneur, depending on how you count, this is my seventh or so venture and, you know, they've had differing ends, you know, some have been great successes, some have been closer to failures, most end up somewhere in the middle. But regardless, at the end, yeah, you really got to pause, take a breath, literally not know what's next, wander in the world a little bit on some time horizon that's probably not years but certainly perhaps a better part of a year.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (01:20:11)</div>
+<p>And yeah, I think in the end, I'll probably end up working in this domain of creative tools, productivity software, improving computing, all the things the lab is working on. Indeed, I'm still involved in the lab and very likely will be doing things in that domain. You know, I wrote this article, Making Computers Better, a while back where I tried to document a lot of the different areas that I think need improvement and perhaps that I have something to say on or can contribute to.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (01:20:36)</div>
+<p>But part of the value of that open-ended time is, yeah, seeing what projects are out there, what opportunities exist and, you know, I often start things like Ink and Switch and Heroku and Muse, but I'm also open to potentially joining other projects on shorter, longer-term basis. Or I don't know what, I just want to be open to what's out in the world, wander, see what possibilities exist while I let that brain structure turn a little more fluid, and yeah.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (01:21:04)</div>
+<p>But I'm certainly not done making things, and I think I have much more to say on the topic of creative computing, so this will hopefully be more of a chapter change than an end.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (01:21:15)</div>
+<p>You know, I and many others will be looking forward to where you do land, and I suspect our paths will be crossing again.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (01:21:22)</div>
+<p>I think that's right. Well, let's wrap it there. Thanks everyone for listening. You can join us on Discord to discuss this episode with our community, the link's in the show notes. And, Mark, it's been an awesome four, five, what is it, six years that we've been...</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (01:21:39)</div>
+<p>Man.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (01:21:40)</div>
+<p>It depends on how you count.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (01:21:41)</div>
+<p>Yeah.</p>
+
+<div class="speaker-timestamp">Adam Wiggins (01:21:42)</div>
+<p>But it's been an absolute joy, and as you said, our paths will cross again.</p>
+
+<div class="speaker-timestamp">Mark McGranaghan (01:21:47)</div>
+<p>Right on, Adam. </p>
+
